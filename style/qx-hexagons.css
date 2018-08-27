@@ -735,6 +735,9 @@
 			height: 1.8em;
 			max-width: 100%;
 			border-radius: var(--brd-rad-2);
+			color: var(--txtclr3);
+			background-color: var(--bkgrd0);
+			border: var(--brd-type-1) var(--brd-clr-3);
 		}
 		/* Hide the select arrow */
 		#loginbox select {
