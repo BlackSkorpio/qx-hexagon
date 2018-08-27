@@ -133,10 +133,14 @@
 		#whole,
 		#column_left,
 		#column_right,
+		* > .list .odd,
+		* > .list .even,
 		#column_center {
 			overflow: initial !important;
 		}
 		.divider,
+		.list .odd,
+		.list .even,
 		.smalldivider,
 		.listpagelinks,
 		.listpagenumber,
