@@ -1,0 +1,47 @@
+/* minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: $1.min.$2 */
+/******************************************
+	QRUISER HEXAGON CLEAN
+	Theme Name: QX Hexagon Clean
+	Theme URI: https://qruiser.com
+	Description: A modernized theme for qruiser.com
+	Version: 2.0.0
+	Author: Bjarne Varöystrand
+	www: varoystrand.se
+	GitHub: github.com/BlackSkorpio/qx-hexagon
+	QX: www.qruiser.com/?id=469474
+******************************************/
+/* HIDE THIS */
+
+/*
+   The center sub nav bar is redundant, since these items
+   is already displayed in the drop downs of the main nav!
+*/
+#column_center > #subnavbar {
+	display: none;
+}
+
+/* Outdated stuff */
+a[href*="javascript:openEdit('sms')"],
+
+/* Empty stuff scattered all over the place */
+div:empty:not(.divider):not(.orangeline),
+span:empty,
+a:empty,
+p:empty,
+option:empty,
+div[style="float:left;width:70px"],
+div > div[style="float:left;width:140px"],
+/*br[clear='all'],*/
+
+/* General rules */
+#topstatus,
+#langnav,
+#qruiser-panorama,
+#column_center .standardbanner,
+/*#column_center .homepageblock:last-of-type,*/
+#goldmemberbanner.standardbanner.warningbanner,
+
+/* Adds & shit */
+hr.dotline, div#stripe, div#ads,
+div[style="margin:auto auto auto 1px;height:55px;width:1024px;border:0;overflow:hidden;"]
+{display: none !important;}
