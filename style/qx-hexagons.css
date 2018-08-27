@@ -1,15 +1,15 @@
 @-moz-document domain("qruiser.com") {
-	/******************************************
-		QRUISER HEXAGONS
-		Theme Name: QX Hexagone
-		Theme URI: https://qruiser.com
-		Description: A modernized theme for qruiser.com
-		Version: 3.0.1
-		Author: Bjarne Varöystrand
-		www: varoystrand.se
-		GitHub: @black_skorpio
-		QX: https://www.qruiser.com/?id=469474
-	******************************************/
+/******************************************
+	QRUISER HEXAGON
+	Theme Name: QX Hexagon
+	Theme URI: https://qruiser.com
+	Description: A modernized theme for qruiser.com
+	Version: 3.0.3
+	Author: Bjarne Varöystrand
+	www: varoystrand.se
+	GitHub: github.com/BlackSkorpio/qx-hexagon
+	QX: www.qruiser.com/?id=469474
+******************************************/
 	/*@import url('https://fonts.googleapis.com/css?family=Oxygen|Roboto+Slab');*/
 	@supports (display: grid) {
 		:root {
