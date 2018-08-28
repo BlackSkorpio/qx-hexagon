@@ -2373,11 +2373,11 @@
 	#column_center [style='margin-top: 10px;'] {
 		display: flow-root;
 	}
-/* Code 11 */
 }
 }
 
 @-moz-document url-prefix("https://www.qruiser.com/photoalbum_nav.php") {
+/* Code 11 */
 @supports (display: grid) {
 	#bar {
 		font-size: 1em;
@@ -2404,11 +2404,11 @@
 	#thumbs {}
 	#thumbs_inner {}
 	#thumbs img {}
-/* Code 12 */
 }
 }
 
 @-moz-document url-prefix("https://www.qruiser.com/photo.php") {
+/* Code 12 */
 @supports (display: grid) {
 	body {
 		height: 100% !important;
@@ -2425,11 +2425,11 @@
 	#currentmedia img {}
 	td span.smalltext {}
 	div[style='position: absolute; left: 10px; top: 10px;'] {}
-/* Code 13 */
 }
 }
 
 @-moz-document domain("blog.qruiser.com") {
+/* Code 13 */
 @supports (display: grid) {
 	/* blog.qruiser.com */
 	html {
