@@ -1,1 +1,12 @@
+/******************************************
+	QRUISER HEXAGON CLEAN
+	Theme Name: QX Hexagon Clean
+	Theme URI: https://qruiser.com
+	Description: A modernized theme for qruiser.com
+	Version: 2.0.1
+	Author: Bjarne Varöystrand
+	www: varoystrand.se
+	GitHub: github.com/BlackSkorpio/qx-hexagon
+	QX: www.qruiser.com/?id=469474
+******************************************/
 @namespace url(http://www.w3.org/1999/xhtml);@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4}).*$"){#column_center > #subnavbar{display:none}a[href*="javascript:openEdit('sms')"],div:empty:not(.divider):not(.orangeline),span:empty,a:empty,p:empty,option:empty,div[style="float:left;width:70px"],div > div[style="float:left;width:140px"],#topstatus,#langnav,#qruiser-panorama,#column_center .standardbanner,#goldmemberbanner.standardbanner.warningbanner,hr.dotline,div#stripe,div#ads,div[style="margin:auto auto auto 1px;height:55px;width:1024px;border:0;overflow:hidden;"]{display:none!important}}
