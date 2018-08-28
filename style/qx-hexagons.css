@@ -1,5 +1,4 @@
 /* minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: $1.min.$2 */
-@-moz-document domain("qruiser.com") {
 /******************************************
 	QRUISER HEXAGON
 	Theme Name: QX Hexagon
@@ -11,7 +10,10 @@
 	GitHub: github.com/BlackSkorpio/qx-hexagon
 	QX: www.qruiser.com/?id=469474
 ******************************************/
-	/*@import url('https://fonts.googleapis.com/css?family=Oxygen|Roboto+Slab');*/
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("qruiser.com") {
+/* Code 2 */
 @supports (display: grid) {
 	:root {
 		--ui--clr-1: rgba(170, 139, 89, 1)/*#AA8B59*/;
@@ -154,7 +156,8 @@
 	[style*='width: 130px'],
 	[style*='width: 134px;'],
 	[style*='width: 195px;'],
-	[style*='width:200px;'] {
+	[style*='width:200px;'],
+	[style*='width:210px'] {
 		width: auto !important;
 	}
 	[style*='height: 120px'] {
@@ -282,7 +285,6 @@
 		);
 		font-size:100%;
 		line-height: normal;
-		color: var(--txtclr1);
 		padding: 0;
 		margin: var(--margin-z);
 		overflow: initial;
@@ -291,6 +293,9 @@
 	body > * {
 		-ms-flex-negative: 0;
 		      flex-shrink: 0;
+	}
+	body, .feedback, .homepage, #column_center {
+		color: var(--txtclr1);
 	}
 	a {
 		color: inherit;
@@ -316,8 +321,10 @@
 	input[type='password'] {
 		/*width: 100%;*/
 		max-width: inherit;
+		height: 1.9em;
 		font-size: var(--font-1);
 		line-height: 1.5em;
+		padding: 0.2em 0 0.2em 0.2em;
 		text-transform: capitalize;
 	}
 	input[type='submit'] {
@@ -340,6 +347,22 @@
 		color: inherit;
 		margin: inherit;
 	}
+	/* Forms special handling */
+	#loginbox select,
+	#changemood select,
+	select#showallpicsselect,
+	#loginbox input[type='text'],
+	#changemood input[type='text'],
+	#loginbox input[type='password'],
+	div#satellite form#moodstatus select,
+	#search select, #search input[type='text'],
+	div#satellite form#moodstatus input[type='text'] {
+		border-radius: var(--brd-rad-2);
+		color: var(--txtclr3);
+		background-color: var(--bkgrd2);
+		border: var(--brd-type-1) var(--brd-clr-3);
+	}
+	/*--------------------------------------------*/
 
 	#whole {
 		display: grid;
@@ -729,16 +752,8 @@
 	#loginbox input[type='password'],
 	#loginbox select {
 		font-size: var(--font-4);
-		line-height: 1em;
-		text-indent: var(--padding-s);
 		margin: var(--margin-m) auto !important;
-		padding: 0 var(--padding-s);
-		height: 1.8em;
 		max-width: 100%;
-		border-radius: var(--brd-rad-2);
-		color: var(--txtclr3);
-		background-color: var(--bkgrd0);
-		border: var(--brd-type-1) var(--brd-clr-3);
 	}
 	/* Hide the select arrow */
 	#loginbox select {
@@ -772,7 +787,7 @@
 		position: sticky;
 	}
 	#column_left p:last-of-type {
-		top: 10em;
+		top: 33em;
 	}
 	#column_left #loginbox ~ p:nth-last-of-type(2) {
 		width: 90%;
@@ -825,6 +840,32 @@
 	#column_left > p:nth-of-type(7),
 	#column_left > p:nth-of-type(8) {
 		padding-left: 0.5em;
+	}
+	/* Make the important sections sticky */
+	#column_left > p:nth-of-type(n+5):nth-of-type(-n+9) {
+		position: sticky;
+		background: var(--bkgrd2);
+		z-index: 2;
+	}
+	/* Inkorg -> Flörtar */
+	#column_left > p:nth-of-type(5) {
+		top: 10.3em;
+	}
+	/* Favoriter */
+	#column_left > p:nth-of-type(6) {
+		top: 16.7em;
+	}
+	/* Bloggar stuff */
+	#column_left > p:nth-of-type(7) {
+		top: 18.7em;
+	}
+	/* Klubbar -> Presentkort */
+	#column_left > p:nth-of-type(8) {
+		top: 21.9em;
+	}
+	/* Din verifiering */
+	#column_left > p:nth-of-type(9) {
+		top: 29.6em;
 	}
 	#column_left > p:nth-of-type(6),
 	#column_left > p:nth-of-type(9),
@@ -891,6 +932,11 @@
 	}
 	#column_right a[href*="openEdit('spotlight')"] {}
 	#column_right a[href="/spotlights.php"] {}
+	/* Fråga Sentry */
+	#column_right div > [href='/sentry.php'] > [src$='sentry_logo.png'] {
+		width: 100%;
+		height: auto;
+	}
 	/* New Face Pic */
 	#column_right .smalldivider + a > img[src^='/thumbcorners.php'] {
 		width: 100% !important;
@@ -921,6 +967,11 @@
 	}
 	.smallclubname a {
 		font-size: var(--font-3r);
+	}
+	/* Nytt Klotter */
+	#column_right .smalldivider ~ div div [href='/forum/scribbleboard/'] img[src*='/scribbleimages/'] {
+		width: 100%;
+		height: auto;
 	}
 	/*--------------------------------------------*/
 
@@ -996,6 +1047,10 @@
 	.homepage [style*='10px'],
 	.homepageblock .line .header span[style] {
 		font-size: var(--font-3) !important;
+	}
+	/* Profile status */
+	.homepage [style='position: relative; font-size: 10px; line-height: 14px;'] b {
+		color: var(--txtclr3);
 	}
 	/* New member in quarantine */
 	.quarantined {
@@ -1193,14 +1248,18 @@
 	}
 	/*--------------------------------------------*/
 
-	/* TEST AREA */
-	.clublink {}
+	/* Favoriter */
+	.list .insertmember + div[style*='width:210px;float:right'] > .smalltext br:last-of-type {
+		display: none;
+	}
+	.list .insertmember + div[style*='width:210px;float:right'] .icons {
+		float: right;
+	}
+	.list .insertmember + div[style*='width:210px;float:right'] .icons li {
+		padding: 0 0 0 1rem;
+	}
 	/*--------------------------------------------*/
-}
-}
 
-@-moz-document domain("qruiser.com") {
-@supports (display: grid) {
 	/* MEMBER CONTAINERS */
 	/* RESET member */
 	.gallery {
@@ -1435,11 +1494,15 @@
 		margin-top: 0.5em;
 		margin-left: -4px;
 		margin-bottom: 1em;
-		height: 5.5em;
+		min-height: 5.5em;
 		top: 2.4em;
 		z-index: 1;
 		background: var(--bkgrd2);
 		border-bottom: var(--brd-type-1) var(--brd-clr-1);
+	}
+	#column_left .insertmember:first-of-type .mood,
+	#column_left .insertmember:first-of-type .membericon {
+		margin-left: 0.15em
 	}
 	#column_left .insertmember:first-of-type .link a {
 		max-width: none;
@@ -1448,16 +1511,15 @@
 		width: 1rem;
 		height: 1rem;
 	}
+	#column_left .insertmember:first-of-type .mood {
+		margin-bottom: 0.3em;
+	}
 	#column_left .insertmember:first-of-type .stretch {
 		background-color: var(--bkgrd2);
-		height: 5.5em;
+		min-height: 5.5em;
 	}
 	/*--------------------------------------------*/
-}
-}
 
-@-moz-document domain("qruiser.com") {
-@supports (display: grid) {
 	/* ICONS */
 	#column_center ul.lockicons {
 		float: right;
@@ -1848,7 +1910,7 @@
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg id='remove' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 95.334 95.334' style='enable-background:new 0 0 95.334 95.334;' xml:space='preserve' width='512px' height='512'%3e%3cpath fill='black' d='M47.667,0C21.341,0,0,21.341,0,47.667s21.341,47.667,47.667,47.667s47.667-21.341,47.667-47.667S73.993,0,47.667,0z M80.438,56.641H14.896c-0.862,0-1.561-0.699-1.561-1.562V40.254c0-0.862,0.699-1.561,1.561-1.561h65.542 c0.862,0,1.562,0.699,1.562,1.561v14.825C81.999,55.941,81.3,56.641,80.438,56.641z'/%3e%3c/svg%3e");
 	}
 	* > #column_center .infoicon {
-		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg id='infoicon' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 100 100' style='enable-background:new 0 0 100 100;' xml:space='preserve'%3e%3cpath d='M62.162,0c6.696,0,10.043,4.567,10.043,9.789c0,6.522-5.814,12.555-13.391,12.555 c-6.344,0-10.045-3.752-9.869-9.947C48.945,7.176,53.35,0,62.162,0z M41.543,100c-5.287,0-9.164-3.262-5.463-17.615l6.07-25.457 c1.057-4.077,1.23-5.707,0-5.707c-1.588,0-8.451,2.816-12.51,5.59L27,52.406C39.863,41.48,54.662,35.072,61.004,35.072 c5.285,0,6.168,6.361,3.525,16.148L57.58,77.98c-1.234,4.729-0.703,6.359,0.527,6.359c1.586,0,6.787-1.963,11.896-6.041L73,82.377 C60.488,95.1,46.83,100,41.543,100z'/%3e%3c/svg%3e");
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg id='infoicon' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 100 100' style='enable-background:new 0 0 100 100;' xml:space='preserve'%3e%3cpath d='M62.162,0c6.696,0,10.043,4.567,10.043,9.789c0,6.522-5.814,12.555-13.391,12.555 c-6.344,0-10.045-3.752-9.869-9.947C48.945,7.176,53.35,0,62.162,0z M41.543,100c-5.287,0-9.164-3.262-5.463-17.615l6.07-25.457 c1.057-4.077,1.23-5.707,0-5.707c-1.588,0-8.451,2.816-12.51,5.59L27,52.406C39.863,41.48,54.662,35.072,61.004,35.072 c5.285,0,6.168,6.361,3.525,16.148L57.58,77.98c-1.234,4.729-0.703,6.359,0.527,6.359c1.586,0,6.787-1.963,11.896-6.041L73,82.377 C60.488,95.1,46.83,100,41.543,100z'/%3e%3c/svg%3e");
 	}
 	* > #column_center .homeicon {
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg id='homeicon' version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='545.588px' height='545.588px' viewBox='0 0 545.588 545.588' style='enable-background:new 0 0 545.588 545.588;' xml:space='preserve'%3e%3cpath d='M500.446,491.766V292.34c0-12.47-7.114-28.286-17.403-35.333L288.866,123.227c-10.289-7.048-26.986-6.99-37.237,0.115 L69.77,249.375c-10.242,7.105-18.762,22.969-18.762,35.439v206.951c0,12.47,10.528,24.872,22.998,24.872h406.369 C492.844,516.638,500.446,504.235,500.446,491.766z M278.635,462.964l-1.684,0.975 c-104.824-42.313-145.216-140.052-99.048-182.376c46.158-42.314,99.048,15.138,99.048,15.138h0.383 c0,0,52.891-57.452,99.058-15.138C422.55,323.887,383.459,420.649,278.635,462.964z'/%3e%3cpath d='M535.713,208.601L288.876,39.938c-10.299-7.038-26.89-6.904-37.074,0.296L9.545,211.441 c-10.175,7.191-12.604,21.286-5.403,31.46l0.593,0.842c7.201,10.184,21.286,12.604,31.47,5.403L250.999,97.341 c10.184-7.201,26.804-7.363,37.131-0.383l221.63,149.959c10.328,6.99,24.365,4.284,31.347-6.043l0.583-0.861 C548.689,229.705,546.002,215.629,535.713,208.601z'/%3e%3cpath d='M424.654,113.97c10.078,7.334,18.417,2.707,18.417-9.763V47.76c0-12.46-10.423-18.81-22.893-18.81H382.55 c-12.469,0-22.576,7.382-22.576,18.81s8.176,25.704,18.254,33.029L424.654,113.97z'/%3e%3c/svg%3e");
@@ -1959,10 +2021,22 @@
 	}
 }
 }
+@-moz-document domain("qruiser.com") {
+/* Code 3
+	TEST AREA */
+@supports (display: grid) {
+	.clublink {}
+	#sentry_frame {
+		width: 100%;
+		margin: 0;
+	}
+}
+}
 
 @-moz-document url-prefix("https://www.qruiser.com/satellite.php") {
+/* Code 04
+	SATELITE */
 @supports (display: grid) {
-	/* SATELITE */
 	body[onload='timer()'] {
 		min-width: auto !important;
 		width: auto !important;
@@ -2023,8 +2097,10 @@
 	div#satellite form#moodstatus input:not([type='submit']) {
 		width: 100%;
 		font-size: var(--font-1);
-		line-height: 1.5em;
 		text-transform: capitalize;
+	}
+	div#satellite form#moodstatus input[name='mood_comment'] {
+		height: 2em;
 	}
 	p[style='margin: 10px'],
 	div#satellite form#moodstatus input[type='submit'] {
@@ -2058,7 +2134,6 @@
 		 justify-content: center;
 		border-top: var(--brd-type-1) var(--brd-clr-1);
 		padding: var(--padding-m) 0;
-		margin-top:;
 	}
 	div#satellite form#moodstatus p > a {
 		-webkit-box-flex: 1;
@@ -2133,12 +2208,13 @@
 }
 
 @-moz-document url-prefix("http://qruiser.com/clubs/"), url-prefix("https://qruiser.com/clubs/"), url-prefix("http://www.qruiser.com/clubs/"), url-prefix("https://www.qruiser.com/clubs/"), url-prefix("http://qruiser.com/members/"), url-prefix("https://qruiser.com/members/"), url-prefix("http://www.qruiser.com/members/"), url-prefix("https://www.qruiser.com/members/"), url-prefix("http://qruiser.com/pics/faceimages/"), url-prefix("https://qruiser.com/pics/faceimages/"), url-prefix("http://www.qruiser.com/pics/faceimages/"), url-prefix("https://www.qruiser.com/pics/faceimages/") {
+/* Code 05
+	Common styles for URL sections
+	https://www.qruiser.com/clubs/
+	https://www.qruiser.com/members/
+	https://www.qruiser.com/pics/faceimages/
+*/
 @supports (display: grid) {
-	/* Common styles for URL sections
-		https://www.qruiser.com/clubs/
-		https://www.qruiser.com/members/
-		https://www.qruiser.com/pics/faceimages/
-	*/
 	#column_center .list {
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -2148,15 +2224,15 @@
 		    -ms-flex-flow: row wrap;
 		        flex-flow: row wrap;
 	}
-	/*------------------------------------------------*/
 }
 }
 
 @-moz-document url-prefix("http://qruiser.com/clubs/"), url-prefix("https://qruiser.com/clubs/"), url-prefix("http://www.qruiser.com/clubs/"), url-prefix("https://www.qruiser.com/clubs/") {
+/* Code 06
+	CLUBS SECTION
+	https://www.qruiser.com/clubs/
+*/
 @supports (display: grid) {
-	/* CLUBS SECTION
-		https://www.qruiser.com/clubs/
-	*/
 	#column_center .list > *:not([class^='listpage']) {
 		-webkit-box-flex: 1;
 		    -ms-flex: 1 50%;
@@ -2164,15 +2240,15 @@
 		-ms-flex-positive: 1;
 		        flex-grow: 1;
 	}
-	/*------------------------------------------------*/
 }
 }
 
 @-moz-document url-prefix("http://qruiser.com/members/"), url-prefix("https://qruiser.com/members/"), url-prefix("http://www.qruiser.com/members/"), url-prefix("https://www.qruiser.com/members/") {
+/* Code 07
+	MEMBERS SECTION
+	https://www.qruiser.com/members/
+*/
 @supports (display: grid) {
-	/* MEMBERS SECTION
-		https://www.qruiser.com/members/
-	*/
 	#column_center .list > *:not([class^='listpage']) {
 		-webkit-box-flex: 1;
 		    -ms-flex: 1 50%;
@@ -2192,16 +2268,15 @@
 	#column_center .list .listpagelinks {
 		margin-top: 1em;
 	}
-	/*------------------------------------------------*/
 }
 }
 
 @-moz-document url-prefix("http://qruiser.com/movies/"), url-prefix("https://qruiser.com/movies/"), url-prefix("http://www.qruiser.com/movies/"), url-prefix("https://www.qruiser.com/movies/") {
+/* Code 08
+	Rules for the Movies section
+	https://www.qruiser.com/movies/
+*/
 @supports (display: grid) {
-	/* Rules for the Movies section
-		https://www.qruiser.com/movies/
-	*/
-
 	#column_center > div[style*='margin-top: 10px'] {
 		margin-top: 2em !important;
 	}
@@ -2240,15 +2315,15 @@
 	#column_center [style*='width: 140px;'] {
 		width: 100% !important;
 	}
-	/*------------------------------------------------*/
 }
 }
 
 @-moz-document url-prefix("http://qruiser.com/pics/faceimages/"), url-prefix("https://qruiser.com/pics/faceimages/"), url-prefix("http://www.qruiser.com/pics/faceimages/"), url-prefix("https://www.qruiser.com/pics/faceimages/") {
+/* Code 09
+	PICTURES FACES SECTION
+	https://www.qruiser.com/pics/faceimages/
+*/
 @supports (display: grid) {
-	/* PICTURES FACES SECTION
-		https://www.qruiser.com/pics/faceimages/
-	*/
 	#column_center .gallery > *:not([class^='listpage']) {
 		-webkit-box-flex: 1;
 		    -ms-flex: 1 33%;
@@ -2256,13 +2331,14 @@
 		-ms-flex-positive: 1;
 		        flex-grow: 1;
 	}
-	/*------------------------------------------------*/
 }
 }
 
 @-moz-document url-prefix("http://qruiser.com/pics/homepageimages/"), url-prefix("https://qruiser.com/pics/homepageimages/"), url-prefix("http://www.qruiser.com/pics/homepageimages/"), url-prefix("https://www.qruiser.com/pics/homepageimages/") {
+/* Code 10
+	HOMEPAGE IMAGES SECTION
+*/
 @supports (display: grid) {
-	/* HOMEPAGE IMAGES SECTION */
 	#column_center > .odd,
 	#column_center > .even {
 		width: auto;
@@ -2297,7 +2373,7 @@
 	#column_center [style='margin-top: 10px;'] {
 		display: flow-root;
 	}
-	/*------------------------------------------------*/
+/* Code 11 */
 }
 }
 
@@ -2328,7 +2404,7 @@
 	#thumbs {}
 	#thumbs_inner {}
 	#thumbs img {}
-	/*------------------------------------------------*/
+/* Code 12 */
 }
 }
 
@@ -2349,7 +2425,7 @@
 	#currentmedia img {}
 	td span.smalltext {}
 	div[style='position: absolute; left: 10px; top: 10px;'] {}
-	/*------------------------------------------------*/
+/* Code 13 */
 }
 }
 
@@ -2383,7 +2459,6 @@
 		-ms-flex-positive: initial;
 		        flex-grow: initial;
 	}
-	/*------------------------------------------------*/
 
 	#blog_whole {
 		display: grid;
@@ -2402,6 +2477,15 @@
 	#blog_whole #column_center {
 		grid-column: text;
 		width: auto;
+	}
+}
+}
+
+@-moz-document domain("www.sentry.nu") {
+/* CODE 14 */
+@supports (display: grid) {
+	.iframed-content-wrapper {
+		max-width: 100%;
 	}
 }
 }
