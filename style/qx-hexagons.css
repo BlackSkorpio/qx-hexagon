@@ -4,7 +4,7 @@
 	Theme Name: QX Hexagon
 	Theme URI: https://qruiser.com
 	Description: A modernized theme for qruiser.com
-	Version: 3.0.3
+	Version: 3.0.4
 	Author: Bjarne Varöystrand
 	www: varoystrand.se
 	GitHub: github.com/BlackSkorpio/qx-hexagon
@@ -12,7 +12,7 @@
 ******************************************/
 @namespace url(http://www.w3.org/1999/xhtml);
 
-@-moz-document domain("qruiser.com") {
+@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4}).*$") {
 /* Code 2 */
 @supports (display: grid) {
 	:root {
@@ -130,7 +130,8 @@
 	[style*='width: 400px'],
 	[style*='width: 410px'],
 	[style*='width:410px'],
-	[style*='width: 414px;'] {
+	[style*='width: 414px;'],
+	.list .insertmember + [style*='width: 195px;'] {
 		width: 100% !important
 	}
 	#whole,
@@ -2021,7 +2022,7 @@
 	}
 }
 }
-@-moz-document domain("qruiser.com") {
+@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4}).*$") {
 /* Code 3
 	TEST AREA */
 @supports (display: grid) {
@@ -2033,7 +2034,7 @@
 }
 }
 
-@-moz-document url-prefix("https://www.qruiser.com/satellite.php") {
+@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4})(\/satellite\.php).*$") {
 /* Code 04
 	SATELITE */
 @supports (display: grid) {
@@ -2207,7 +2208,7 @@
 }
 }
 
-@-moz-document url-prefix("http://qruiser.com/clubs/"), url-prefix("https://qruiser.com/clubs/"), url-prefix("http://www.qruiser.com/clubs/"), url-prefix("https://www.qruiser.com/clubs/"), url-prefix("http://qruiser.com/members/"), url-prefix("https://qruiser.com/members/"), url-prefix("http://www.qruiser.com/members/"), url-prefix("https://www.qruiser.com/members/"), url-prefix("http://qruiser.com/pics/faceimages/"), url-prefix("https://qruiser.com/pics/faceimages/"), url-prefix("http://www.qruiser.com/pics/faceimages/"), url-prefix("https://www.qruiser.com/pics/faceimages/") {
+@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4})\/(clubs|members|pics\/faceimages).*$") {
 /* Code 05
 	Common styles for URL sections
 	https://www.qruiser.com/clubs/
@@ -2227,7 +2228,7 @@
 }
 }
 
-@-moz-document url-prefix("http://qruiser.com/clubs/"), url-prefix("https://qruiser.com/clubs/"), url-prefix("http://www.qruiser.com/clubs/"), url-prefix("https://www.qruiser.com/clubs/") {
+@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4})\/(clubs).*$") {
 /* Code 06
 	CLUBS SECTION
 	https://www.qruiser.com/clubs/
@@ -2243,7 +2244,7 @@
 }
 }
 
-@-moz-document url-prefix("http://qruiser.com/members/"), url-prefix("https://qruiser.com/members/"), url-prefix("http://www.qruiser.com/members/"), url-prefix("https://www.qruiser.com/members/") {
+@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4})\/(members).*$") {
 /* Code 07
 	MEMBERS SECTION
 	https://www.qruiser.com/members/
@@ -2271,7 +2272,7 @@
 }
 }
 
-@-moz-document url-prefix("http://qruiser.com/movies/"), url-prefix("https://qruiser.com/movies/"), url-prefix("http://www.qruiser.com/movies/"), url-prefix("https://www.qruiser.com/movies/") {
+@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4})\/(movies).*$") {
 /* Code 08
 	Rules for the Movies section
 	https://www.qruiser.com/movies/
@@ -2318,7 +2319,7 @@
 }
 }
 
-@-moz-document url-prefix("http://qruiser.com/pics/faceimages/"), url-prefix("https://qruiser.com/pics/faceimages/"), url-prefix("http://www.qruiser.com/pics/faceimages/"), url-prefix("https://www.qruiser.com/pics/faceimages/") {
+@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4})\/(pics\/faceimages).*$") {
 /* Code 09
 	PICTURES FACES SECTION
 	https://www.qruiser.com/pics/faceimages/
@@ -2334,7 +2335,7 @@
 }
 }
 
-@-moz-document url-prefix("http://qruiser.com/pics/homepageimages/"), url-prefix("https://qruiser.com/pics/homepageimages/"), url-prefix("http://www.qruiser.com/pics/homepageimages/"), url-prefix("https://www.qruiser.com/pics/homepageimages/") {
+@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4})\/(pics\/homepageimages).*$") {
 /* Code 10
 	HOMEPAGE IMAGES SECTION
 */
@@ -2376,7 +2377,7 @@
 }
 }
 
-@-moz-document url-prefix("https://www.qruiser.com/photoalbum_nav.php") {
+@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4})(\/photoalbum_nav\.php).*$") {
 /* Code 11 */
 @supports (display: grid) {
 	#bar {
@@ -2407,7 +2408,7 @@
 }
 }
 
-@-moz-document url-prefix("https://www.qruiser.com/photo.php") {
+@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4})(\/photo\.php).*$") {
 /* Code 12 */
 @supports (display: grid) {
 	body {
@@ -2428,7 +2429,7 @@
 }
 }
 
-@-moz-document domain("blog.qruiser.com") {
+@-moz-document regexp("(^http|https):\/\/blog\.qruiser\.(.[a-z]{1,4}).*$") {
 /* Code 13 */
 @supports (display: grid) {
 	/* blog.qruiser.com */
@@ -2481,7 +2482,7 @@
 }
 }
 
-@-moz-document domain("www.sentry.nu") {
+@-moz-document regexp("(^http|https):\/\/(|www\.)sentry\.(.[a-z]{1,4}).*$") {
 /* CODE 14 */
 @supports (display: grid) {
 	.iframed-content-wrapper {
