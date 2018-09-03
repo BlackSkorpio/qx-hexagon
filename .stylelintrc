@@ -1,0 +1,13 @@
+{
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "comment-empty-line-before": "ignore",
+        "comment-whitespace-inside": "ignore",
+        "at-rule-empty-line-before": "ignore",
+        "selector-list-comma-newline-after": "ignore",
+        "rule-empty-line-before": "ignore",
+        "no-descending-specificity": "ignore",
+        "selector-pseudo-element-colon-notation": "ignore",
+        "indentation": "ignore"
+    }
+}
