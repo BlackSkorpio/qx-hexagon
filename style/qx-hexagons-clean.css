@@ -17,8 +17,10 @@
    is already displayed in the drop downs of the main nav!
 */
 #column_center > #subnavbar {
+/*#column_center > #subnavbar {
 	display: none;
 }
+}*/
 /* Outdated stuff */
 a[href*="javascript:openEdit('sms')"],
 /* Empty stuff scattered all over the place */
