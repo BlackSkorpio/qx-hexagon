@@ -1,0 +1,7 @@
+<svg id='action-delete' version='1.0' xmlns='http://www.w3.org/2000/svg' width='620' height='620' viewBox='0 0 62 62' xml:space='preserve'>
+	<circle id='field' fill='red' stroke='red' stroke-width='2' stroke-opacity='0.5' cx='31' cy='31' r='25.8'/>
+	<g fill='white'>
+		<rect width='35.294373' height='7.2467527' x='-17.647186' y='40.217243' transform='matrix(0.7071068,-0.7071068,0.7071068,0.7071068,0,0)'/>
+		<rect width='7.2467527' height='35.42857' x='-3.6233766' y='26.126335' transform='matrix(0.7071068,-0.7071068,0.7071068,0.7071068,0,0)'/>
+	</g>
+</svg>
