@@ -24,7 +24,7 @@
 /* Outdated stuff */
 a[href*="javascript:openEdit('sms')"],
 /* Empty stuff scattered all over the place */
-div:empty:not(.divider):not(.orangeline),
+div:empty:not(.divider):not(.orangeline):not(.filldot),
 span:empty,
 a:empty,
 p:empty,
