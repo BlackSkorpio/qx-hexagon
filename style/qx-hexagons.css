@@ -1730,6 +1730,128 @@
 	}
 	/*--------------------------------------------*/
 
+	/** Satellite **/
+	body[onload='timer()'] {
+		min-width: auto !important;
+		width: auto !important;
+		height: 100% !important;
+		display: grid;
+		overflow: hidden;
+	}
+
+	div#satellite img[alt="Qruiser"],
+	div#satellite div[style='margin: 10px'] > div:before {
+		padding: 15px 50px;
+	}
+	div#satellite div[style='margin: 10px'] > div:before {
+		content: '';
+		display: block;
+		width: 100% !important;
+		margin: var(--margin-m) auto;
+		background-position-x: center;
+	}
+
+	div#satellite,
+	div#satellite div[style='margin: 10px'] {
+		width: 85%;
+		min-width: 200px;
+		max-width: 280px;
+		background-color: var(--bkgrd-b1);
+		margin: auto;
+		padding: var(--padding-s);
+		border: var(--brd-type-1) var(--brd-clr-h);
+		border-radius: var(--brd-rad-2);
+		font-size: var(--font-1);
+		color: var(--txt-aside-clr);
+	}
+	div#satellite > a[href='javascript:openloc("", 0)'] {
+		display: flow-root;
+		padding-bottom: var(--padding-m);
+		border-bottom: var(--brd-type-1) var(--brd-clr-h);
+		margin-bottom: var(--margin-m);
+	}
+	div#satellite > a[href='javascript:openloc("", 0)'] img {
+		display: block;
+		margin: var(--margin-c);
+	}
+	div#satellite div#loggedinname {
+		font-size: var(--font-1);
+		font-weight: 700;
+		margin: var(--margin-z);
+		margin-bottom: var(--margin-m);
+	}
+	div#satellite form div {
+		margin-bottom: calc(2 * var(--margin-m));
+	}
+	div#satellite form > div > div {
+		font-size: var(--font-2);
+	}
+	div#satellite select,
+	div#satellite [type='text'] {
+		width: 100%;
+	}
+	div#satellite [type='text'] {
+		height: 2em;
+	}
+	div#satellite [type='submit'] {
+		display: block;
+		width: 80%;
+		background: var(--txt-high-clr);
+	}
+	div#satellite form p {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: row wrap;
+		        flex-flow: row wrap;
+		-webkit-box-pack: center;
+		   -ms-flex-pack: center;
+		 justify-content: center;
+		border-top: var(--brd-type-1) var(--brd-clr-h);
+		padding: var(--padding-m) 0;
+	}
+	div#satellite form p > a {
+		-webkit-box-flex: 1;
+		    -ms-flex: 1 100%;
+		        flex: 1 100%;
+	}
+	div#satellite form p a:not([href*='?']) {
+		-webkit-box-flex: 1;
+		    -ms-flex: 1 auto;
+		        flex: 1 auto;
+		-webkit-box-ordinal-group: 2;
+		-ms-flex-order: 1;
+		         order: 1;
+	}
+	div#satellite p > a[href*='?'] {
+		-webkit-box-flex: 1 !important;
+		    -ms-flex: 1 auto !important;
+		        flex: 1 auto !important;
+		-webkit-box-ordinal-group: 3;
+		-ms-flex-order: 2;
+		         order: 2;
+		margin: var(--margin-z) !important;
+		text-align: center;
+	}
+
+	div#satellite p[style='margin: 10px'],
+	div#satellite div[style='margin: 10px'] {
+		margin: auto !important;
+	}
+	div#satellite div[style='margin: 10px'] > div {
+		background-color: var(--bkgrd-w1) !important;
+		padding: var(--padding-m) !important;
+		margin-bottom: auto !important;
+		border: var(--brd-error) !important;
+		font-size: var(--font-3) !important;
+		color: var(--txt-error-clr) !important;
+		line-height: var(--lh-2) !important;
+		letter-spacing: var(--ls-xs);
+	}
+	/*--------------------------------------------*/
+
 	/* ICONS */
 	#column_center ul.lockicons {
 		float: right;
@@ -1778,6 +1900,21 @@
 		height: var(--ui--icon-m);
 		font-size: var(--font-z);
 		margin-left: -1rem;
+	}
+
+	/** Satellite **/
+	div#satellite a[href='?']:before,
+	div#satellite a[href*='logout']:before,
+	div#satellite a[href*='messages']:before,
+	div#satellite a[href*='favourites.php']:before {
+		display: inline-block;
+		content: '';
+		width: var(--ui--icon-s);
+		height: var(--ui--icon-s);
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin-right: var(--margin-s);
+		vertical-align: middle;
 	}
 
 	li#qmenu_edit a:before,
@@ -2026,6 +2163,9 @@
 	#qmenu #qmenu_home a.menu_selected img,*/
 	#qmenu_home img[src*='home.png'],
 	li#qmenu_edit a:before {
+	div#satellite a[href='?']:before,
+	div#satellite a[href*='logout']:before,
+	div#satellite a[href*='messages']:before {
 		-webkit-filter: var(--filter-inv-3);
 		        filter: var(--filter-inv-3);
 	}
@@ -2047,6 +2187,8 @@
 	p a[href="/favourites.php"]:before {
 		-webkit-filter: var(--filter-sat-1);
 		        filter: var(--filter-sat-1);
+	div#satellite a[href*='favourites.php']:before {
+		filter: none;
 	}
 
 	/* The Actual icons */
@@ -2390,172 +2532,8 @@
 }
 }
 
-@-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}[/satellite.php].*") {
-/* Code 04
-	SATELITE */
-@supports (display: grid) {
-	body[onload='timer()'] {
-		min-width: auto !important;
-		width: auto !important;
-		height: 100% !important;
-		display: grid;
-		overflow: hidden;
-	}
-
-	#satellite img[alt="Qruiser"],
-	div[style='margin: 10px'] > div:before {
-		padding: 15px 50px;
-	}
-	div[style='margin: 10px'] > div:before {
-		content: '';
-		display: block;
-		width: 100% !important;
-		margin: var(--margin-m) auto;
-		background-position-x: center;
-	}
-
-	div#satellite,
-	div[style='margin: 10px'] {
-		width: 85%;
-		min-width: 200px;
-		max-width: 280px;
-		background-color: var(--bkgrd-b1);
-		margin: auto;
-		padding: var(--padding-s);
-		border: var(--brd-type-1) var(--brd-clr-h);
-		border-radius: var(--brd-rad-2);
-		font-size: var(--font-1);
-		color: var(--txt-aside-clr);
-	}
-	div#satellite > a[href='javascript:openloc("", 0)'] {
-		display: flow-root;
-		padding-bottom: var(--padding-m);
-		border-bottom: var(--brd-type-1) var(--brd-clr-h);
-		margin-bottom: var(--margin-m);
-	}
-	div#satellite > a[href='javascript:openloc("", 0)'] img {
-		display: block;
-		margin: var(--margin-c);
-	}
-	div#satellite div#loggedinname {
-		font-size: var(--font-1);
-		font-weight: 700;
-		margin: var(--margin-z);
-		margin-bottom: var(--margin-m);
-	}
-	/*div#satellite form#moodstatus {}*/
-	div#satellite form#moodstatus div {
-		margin-bottom: calc(2 * var(--margin-m));
-	}
-	div#satellite form#moodstatus > div > div {
-		font-size: var(--font-2);
-	}
-	div#satellite form#moodstatus select,
-	div#satellite form#moodstatus input:not([type='submit']) {
-		width: 100%;
-		font-size: var(--font-1);
-		text-transform: capitalize;
-	}
-	div#satellite form#moodstatus input[name='mood_comment'] {
-		height: 2em;
-	}
-	p[style='margin: 10px'],
-	div#satellite form#moodstatus input[type='submit'] {
-		display: block;
-		width: 80%;
-		background: var(--txt-high-clr);
-		font-size: var(--font-1);
-		letter-spacing: var(--ls-s);
-		color: var(--txt-aside-clr);
-		font-weight: 700;
-		text-align: center;
-		text-transform: uppercase;
-		margin: var(--margin-l) auto;
-		padding: var(--padding-m);
-		border-radius: var(--brd-rad-2);
-	}
-	p[style='margin: 10px']:hover,
-	div#satellite form#moodstatus input[type='submit']:hover {
-		text-shadow: 0 var(--ls-s) 0 var(--txt-base-clr);
-	}
-	div#satellite form#moodstatus p {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		    -ms-flex-flow: row wrap;
-		        flex-flow: row wrap;
-		-webkit-box-pack: center;
-		   -ms-flex-pack: center;
-		 justify-content: center;
-		border-top: var(--brd-type-1) var(--brd-clr-h);
-		padding: var(--padding-m) 0;
-	}
-	div#satellite form#moodstatus p > a {
-		-webkit-box-flex: 1;
-		    -ms-flex: 1 100%;
-		        flex: 1 100%;
-	}
-	div#satellite form#moodstatus p a:not([href*='?']) {
-		-webkit-box-flex: 1;
-		    -ms-flex: 1 auto;
-		        flex: 1 auto;
-		-webkit-box-ordinal-group: 2;
-		-ms-flex-order: 1;
-		         order: 1;
-	}
-	div#satellite p > a[href*='?'] {
-		-webkit-box-flex: 1 !important;
-		    -ms-flex: 1 auto !important;
-		        flex: 1 auto !important;
-		-webkit-box-ordinal-group: 3;
-		-ms-flex-order: 2;
-		         order: 2;
-		margin: var(--margin-z) !important;
-		text-align: center;
-	}
-
-	p[style='margin: 10px'],
-	div[style='margin: 10px'] {
-		margin: auto !important;
-	}
-	div[style='margin: 10px'] > div {
-		background-color: var(--bkgrd-w1) !important;
-		padding: var(--padding-m) !important;
-		margin-bottom: auto !important;
-		border: var(--brd-error) !important;
-		font-size: var(--font-3) !important;
-		color: var(--txt-error-clr) !important;
-		line-height: var(--lh-2) !important;
-		letter-spacing: var(--ls-xs);
-	}
-
-	/* ICONS */
-	/* Common stuff */
-	div#satellite a[href='?']:before,
-	div#satellite a[href*='logout']:before,
-	div#satellite a[href*='messages']:before,
-	div#satellite a[href*='favourites.php']:before {
-		display: inline-block;
-		content: '';
-		width: var(--ui--icon-s);
-		height: var(--ui--icon-s);
-		background-size: cover;
-		background-repeat: no-repeat;
-		margin-right: var(--margin-s);
-		vertical-align: middle;
-		-webkit-filter: var(--filter-inv-3);
-		        filter: var(--filter-inv-3);
-	}
-	div#satellite a[href*='favourites.php']:before {
-		filter: none;
-	}
-}
-}
-
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(clubs|members|pics\/faceimages).*") {
-/* Code 05
+/* Code 04
 	Common styles for URL sections
 	https://www.qruiser.com/clubs/
 	https://www.qruiser.com/members/
@@ -2576,7 +2554,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(clubs).*") {
-/* Code 06
+/* Code 05
 	CLUBS SECTION
 	https://www.qruiser.com/clubs/
 */
@@ -2592,7 +2570,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(members).*") {
-/* Code 07
+/* Code 06
 	MEMBERS SECTION
 	https://www.qruiser.com/members/
 */
@@ -2620,7 +2598,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(movies).*") {
-/* Code 08
+/* Code 07
 	Rules for the Movies section
 	https://www.qruiser.com/movies/
 */
@@ -2667,7 +2645,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(pics\/faceimages).*") {
-/* Code 09
+/* Code 08
 	PICTURES FACES SECTION
 	https://www.qruiser.com/pics/faceimages/
 */
@@ -2683,7 +2661,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(pics\/homepageimages).*") {
-/* Code 10
+/* Code 09
 	HOMEPAGE IMAGES SECTION
 */
 @supports (display: grid) {
@@ -2725,7 +2703,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(photoalbum_nav\.php).*") {
-/* Code 11 */
+/* Code 10 */
 @supports (display: grid) {
 	#bar {
 		font-size: 1em;
@@ -2756,7 +2734,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(photo\.php).*") {
-/* Code 12 */
+/* Code 11 */
 @supports (display: grid) {
 	body {
 		height: 100% !important;
@@ -2777,7 +2755,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/blog\.qruiser\.[a-z]{1,4}.*") {
-/* Code 13 */
+/* Code 12 */
 @supports (display: grid) {
 	/* blog.qruiser.com */
 	html {
@@ -2830,7 +2808,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*sentry\.[a-z]{1,4}.*") {
-/* CODE 14 */
+/* CODE 13 */
 @supports (display: grid) {
 	.iframed-content-wrapper {
 		max-width: 100%;
