@@ -2014,6 +2014,7 @@
 	}
 	img[src*='flag_'] {
 		border-radius: var(--brd-rad-4);
+		vertical-align: top;
 	}
 	.membericon img,
 	img[class^='flagicon_'] {
