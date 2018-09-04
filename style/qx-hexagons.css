@@ -425,7 +425,7 @@
 	[href*='/createclub/']:hover,
 	[href^='?adddiscussion']:hover {
 		background: var(--bkgrd-h1);
-		color: var(--txt-aside-clr);
+		color: var(--txt-aside-clr) !important;
 		text-shadow: 0 var(--ls-s) 0 var(--txt-base-clr);
 		box-shadow: 4px 5px 3px var(--shadow-dark);
 		transform: /*scaleX(0.98)*/ translateY(-3px);
