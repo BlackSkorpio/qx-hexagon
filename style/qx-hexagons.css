@@ -1363,6 +1363,10 @@
 		display: initial;
 		content: none;
 	}
+	/* "Hero images" in the blog section */
+	#column_center .list > *:not([class^='listpage']) img[src*='/blogbox/'] {
+		width: 100% !important;
+	}
 	/*--------------------------------------------*/
 
 	/* Pagenation */
