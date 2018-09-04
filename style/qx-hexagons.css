@@ -1114,6 +1114,19 @@
 	/*--------------------------------------------*/
 
 	/* COLUMN CENTER */
+	div.errorText {
+		background-image: none;
+		background-color: var(--bkgrd-w2);
+		padding: var(--padding-m);
+		border: var(--brd-error);
+		border-radius: var(--brd-rad-2);
+	}
+	div.errorPart {
+		margin: 0;
+		color: var(--txt-error-clr);
+		font-size: var(--font-1);
+		font-weight: 700;
+	}
 	#error_texts {
 		display: flow-root;
 		height: auto;
