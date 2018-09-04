@@ -438,6 +438,7 @@
 	}
 	h3 [href^='/signup.php'],
 	[href^='?addscribble'],
+	[href*='/createclub/'],
 	[href^='?adddiscussion'] {
 		display: inline-block;
 		width: -webkit-fit-content;
