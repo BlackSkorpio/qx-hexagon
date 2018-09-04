@@ -4,7 +4,7 @@
 	Theme Name: QX Hexagon
 	Theme URI: https://qruiser.com
 	Description: A modernized theme for qruiser.com
-	Version: 3.0.5
+	Version: 3.0.6
 	Author: Bjarne Varöystrand
 	www: varoystrand.se
 	GitHub: github.com/BlackSkorpio/qx-hexagon
@@ -2508,7 +2508,7 @@
 }
 }
 
-@-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(clubs|members|pics\/faceimages).*$") {
+@-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(clubs|members|pics\/faceimages).*") {
 /* Code 05
 	Common styles for URL sections
 	https://www.qruiser.com/clubs/
@@ -2529,7 +2529,7 @@
 }
 }
 
-@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4})\/(clubs).*$") {
+@-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(clubs).*") {
 /* Code 06
 	CLUBS SECTION
 	https://www.qruiser.com/clubs/
@@ -2545,7 +2545,7 @@
 }
 }
 
-@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4})\/(members).*$") {
+@-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(members).*") {
 /* Code 07
 	MEMBERS SECTION
 	https://www.qruiser.com/members/
@@ -2573,7 +2573,7 @@
 }
 }
 
-@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4})\/(movies).*$") {
+@-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(movies).*") {
 /* Code 08
 	Rules for the Movies section
 	https://www.qruiser.com/movies/
@@ -2620,7 +2620,7 @@
 }
 }
 
-@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4})\/(pics\/faceimages).*$") {
+@-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(pics\/faceimages).*") {
 /* Code 09
 	PICTURES FACES SECTION
 	https://www.qruiser.com/pics/faceimages/
@@ -2636,7 +2636,7 @@
 }
 }
 
-@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4})\/(pics\/homepageimages).*$") {
+@-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(pics\/homepageimages).*") {
 /* Code 10
 	HOMEPAGE IMAGES SECTION
 */
@@ -2678,7 +2678,7 @@
 }
 }
 
-@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4})(\/photoalbum_nav\.php).*$") {
+@-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(photoalbum_nav\.php).*") {
 /* Code 11 */
 @supports (display: grid) {
 	#bar {
@@ -2709,7 +2709,7 @@
 }
 }
 
-@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4})(\/photo\.php).*$") {
+@-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(photo\.php).*") {
 /* Code 12 */
 @supports (display: grid) {
 	body {
