@@ -2129,7 +2129,11 @@
 	.clublink img[src*='blank.gif'],
 	.emptymembericon,
 	* > #column_center .emptymembericon,
-	.clubxxx1hidden, .clubxxx2hidden, .clubxxx3hidden, .clubxxx4hidden {
+	.clubxxx1hidden, .clubxxx2hidden, .clubxxx3hidden, .clubxxx4hidden,
+	#column_left img[src*='online_2'],
+	#column_right img[src*='online_2'],
+	#qmenu a.menu_selected img[src*='home.png'],
+	#qmenu #qmenu_home:hover img[src*='home.png'] {
 		-webkit-filter: var(--filter-inv-1);
 		        filter: var(--filter-inv-1);
 	}
@@ -2164,19 +2168,12 @@
 	/*#qmenu #qmenu_home:hover img,
 	#qmenu #qmenu_home a.menu_selected img,*/
 	#qmenu_home img[src*='home.png'],
-	li#qmenu_edit a:before {
+	li#qmenu_edit a:before,
 	div#satellite a[href='?']:before,
 	div#satellite a[href*='logout']:before,
 	div#satellite a[href*='messages']:before {
 		-webkit-filter: var(--filter-inv-3);
 		        filter: var(--filter-inv-3);
-	}
-	#column_left img[src*='online_2'],
-	#column_right img[src*='online_2'],
-	#qmenu a.menu_selected img[src*='home.png'],
-	#qmenu #qmenu_home:hover img[src*='home.png'] {
-		-webkit-filter: var(--filter-inv-1);
-		        filter: var(--filter-inv-1);
 	}
 
 	#column_left img[src*='online_4'],
@@ -2529,8 +2526,6 @@
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: center;
-		/*object-fit: contain;
-		object-position: top;*/
 	}
 	/*.clublink {}*/
 	#sentry_frame {
