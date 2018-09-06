@@ -432,7 +432,7 @@
 		border: var(--brd-type-1) var(--bkgrd-b1);
 		border-radius: var(--brd-rad-2);
 		-webkit-transition: all 0.3s ease-in-out;
-		transition: all 0.3s ease-in-out;
+		        transition: all 0.3s ease-in-out;
 	}
 
 	button:hover,
