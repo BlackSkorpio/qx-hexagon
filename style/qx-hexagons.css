@@ -1141,6 +1141,11 @@
 		width: 100% !important;
 		background-size: cover;
 	}
+	/* New Album Pic */
+	#column_right .smalldivider + [href^='/pics/newphotos/'] > [src*='photothumbnails'] {
+		width: 100%;
+		height: auto;
+	}
 	/* Popular movie */
 	#column_right .smalldivider + div[style*='#63300e'] img[style*='video.qruiser'] {
 		width: 100% !important;
