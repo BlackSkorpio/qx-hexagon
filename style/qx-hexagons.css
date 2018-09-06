@@ -411,15 +411,14 @@
 		float: none !important;
 	}
 	button,
-	/*.button,*/
 	[type="reset"],
 	[type="button"],
 	[type="submit"],
-	/*button[disabled],*/
 	h3 [href^='/signup.php'],
-	[href^='?addscribble'],
-	[href*='/createclub/'],
-	[href^='?adddiscussion'] {
+	[href*='addscribble'],
+	div:not([class*='button']) > [href*='/createclub/'],
+	[href*='becomemember'],
+	[href*='adddiscussion'] {
 		/*display: block;*/
 		background: inherit;
 		color: inherit;
@@ -437,19 +436,18 @@
 	}
 
 	button:hover,
-	/*.button:hover,*/
 	[type="reset"]:hover,
 	[type="button"]:hover,
 	[type="submit"]:hover,
-	/*button[disabled],*/
 	h3 [href^='/signup.php']:hover,
-	[href^='?addscribble']:hover,
-	[href*='/createclub/']:hover,
-	[href^='?adddiscussion']:hover {
+	[href*='addscribble']:hover,
+	div:not([class*='button']) > [href*='/createclub/']:hover,
+	[href*='becomemember']:hover,
+	[href*='adddiscussion']:hover {
 		background: var(--bkgrd-h1);
 		color: var(--txt-aside-clr) !important;
 		text-shadow: 0 var(--ls-s) 0 var(--txt-base-clr);
-		box-shadow: 4px 5px 3px var(--shadow-dark);
+		box-shadow: var(--shadow-size-2) var(--shadow-gray);
 		transform: /*scaleX(0.98)*/ translateY(-3px);
 	}
 
@@ -457,19 +455,24 @@
 	#column_center button,
 	#column_center [type="submit"]:not([name='cancel']),
 	#column_center h3 [href^='/signup.php'],
-	#column_center [href^='?addscribble'],
-	#column_center [href*='/createclub/'],
-	#column_center [href^='?adddiscussion'] {
+	#column_center [href*='addscribble'],
+	div:not([class*='button']) > [href*='/createclub/'],
+	#column_center [href*='becomemember'],
+	#column_center [href*='adddiscussion'] {
 		border-radius: var(--brd-rad-3) 0;
 	}
 	h3 [href^='/signup.php'],
-	[href^='?addscribble'],
-	[href*='/createclub/'],
-	[href^='?adddiscussion'] {
+	[href*='addscribble'],
+	div:not([class*='button']) > [href*='/createclub/'],
+	[href*='becomemember'],
+	[href*='adddiscussion'] {
 		display: inline-block;
 		width: -webkit-fit-content;
 		   width: -moz-fit-content;
 		        width: fit-content;
+	}
+	#subnavbar ~ p [href*="adddiscussion"] {
+		margin: 1em 0;
 	}
 	#search [type='submit'],
 	#column_left [type='submit'] {
