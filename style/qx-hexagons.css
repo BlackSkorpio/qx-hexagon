@@ -16,13 +16,13 @@
 /* Code 2 */
 @supports (display: grid) {
 	:root {
-		--ui--clr-highlight: rgba(170, 139, 89, 1)/*#AA8B59*/;
-		--ui--clr-white1: rgba(242, 242, 242, 1)/*#f2f2f2*/;
+		--ui--clr-highlight: rgba(170, 139, 89, 1);
+		--ui--clr-white1: rgba(242, 242, 242, 1);
 		--ui--clr-white2: rgba(230, 230, 230, 1);
 		--ui--clr-black: rgba(18, 21, 22, 1);
-		--ui--clr-gray1: rgba(63, 63, 63, 1)/*#3f3f3f*/;
+		--ui--clr-gray1: rgba(63, 63, 63, 1);
 		--ui--clr-gray2: rgba(159, 159, 159, 0.92);
-		--ui--clr-red: rgba(178, 27, 27, 1)/*#B21B1B*/;
+		--ui--clr-red: rgba(178, 27, 27, 1);
 		--ui--clr-t: transparent;
 		--ui--wrapper: 1050px;
 		--ui--aside: 200px;
