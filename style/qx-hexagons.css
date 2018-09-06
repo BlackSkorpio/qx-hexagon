@@ -391,9 +391,7 @@
 	#column_center textarea {
 		/*width: 100%;*/
 		max-width: inherit;
-		height: 1.9em;
 		font-size: var(--font-1);
-		line-height: var(--lh-4);
 		padding: 0.2em 0 0.2em 0.2em;
 		text-transform: capitalize;
 		border: var(--brd-type-1);
