@@ -2611,6 +2611,9 @@
 		width: 100%;
 	}
 
+	/* forms */
+	a[href*="/goldmember.php"] + .gallerylink {
+		cursor: not-allowed;
 	}
 	/* Pure CSS Fancy Checkbox/Radio
 		https://codepen.io/raubaca/pen/ONzBxP
