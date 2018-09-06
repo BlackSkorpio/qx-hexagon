@@ -759,6 +759,11 @@
 		height: auto;
 		width: auto;
 	}
+	/* Display the sub nav */
+	#qmenu li ul {
+		-webkit-transition: visibility 0.3s ease-in-out 0.2s;
+		        transition: visibility 0.3s ease-in-out 0.2s;
+	}
 	#qmenu li:hover ul {
 		border: var(--brd-type-1);
 		border-top: none;
