@@ -1172,6 +1172,14 @@
 	.smallclubname a {
 		font-size: var(--font-3r);
 	}
+	/* Active discussions */
+	#column_right .smalldivider ~ div:nth-last-child(even) > [style='padding-top: 2px; padding-bottom: 4px;'] {
+		margin-top: 0.5em;
+		padding-top: 1rem !important;
+		border-top: var(--brd-type-1) var(--brd-clr-t);
+		-o-border-image: linear-gradient(to right, var(--brd-clr-t) 20%, var(--brd-clr-w)) 1;
+		   border-image: linear-gradient(to right, var(--brd-clr-t) 20%, var(--brd-clr-w)) 1;
+	}
 	/* Nytt Klotter */
 	#column_right .smalldivider ~ div div [href='/forum/scribbleboard/'] img[src*='/scribbleimages/'] {
 		width: 100%;
