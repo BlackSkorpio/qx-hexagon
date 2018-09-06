@@ -492,6 +492,13 @@
 	#column_center [href*='adddiscussion'] {
 		border-radius: var(--brd-rad-3) 0;
 	}
+	#column_center select,
+	#column_center textarea,
+	#column_center input[type='text'],
+	#column_center input[type='password'] {
+		border: var(--brd-type-1) var(--bkgrd-b1);
+		border-radius: var(--brd-rad-2);
+	}
 	h3 [href^='/signup.php'],
 	[href*='addscribble'],
 	div:not([class*='button']) > [href*='/createclub/'],
@@ -950,6 +957,15 @@
 	/*--------------------------------------------*/
 
 	/* COLUMN LEFT */
+	#lc_unread_messages,
+	#lc_online_favourites,
+	#column_left [href='/showclubs.php'] + b,
+	#column_left b a[href='/showclubs.php?updated=1'] {
+		color: var(--txt-high-clr);
+		animation: view_notice 6s infinite;
+		-webkit-transition: 1s;
+		transition: 1s;
+	}
 	#column_left {
 		border-left-color: var(--brd-clr-h);
 		border-right: var(--brd-type-1) var(--brd-clr-t);
@@ -1502,6 +1518,34 @@
 	}
 	.list .insertmember + div[style*='width:210px;float:right'] .icons li {
 		padding: 0 0 0 var(--padding-xlr);
+	}
+	/*--------------------------------------------*/
+
+
+	/* QX Notice */
+	.smalldivider  [href^='/noticeboard'] {
+		color: var(--txt-error-clr) !important;
+	}
+	.noticetext {
+		font-size: inherit !important;
+	}
+	.noticetext:before {
+		display: inline-block;
+		width: auto;
+		height: var(--ui--size-xl);
+		content: '*';
+		font-size: var(--ui--size-xl-r);
+		text-align: center;
+		vertical-align: sub;
+		animation: qx_notice 6s infinite;
+	}
+	.noticetext:hover:before {
+		animation: paused;
+	}
+	/* Fråga Sentry */
+	#sentry_frame {
+		width: 100%;
+		margin: 0;
 	}
 	/*--------------------------------------------*/
 
@@ -2524,23 +2568,6 @@
 /* Code 3
 	TEST AREA */
 @supports (display: grid) {
-
-	/* Display the sub nav */
-	#qmenu li ul {
-		-webkit-transition: visibility 0.3s ease-in-out 0.2s;
-		transition: visibility 0.3s ease-in-out 0.2s;
-	}
-
-	#lc_unread_messages,
-	#lc_online_favourites,
-	#column_left [href='/showclubs.php'] + b,
-	#column_left b a[href='/showclubs.php?updated=1'] {
-		color: var(--txt-high-clr);
-		animation: view_notice 6s infinite;
-		-webkit-transition: 1s;
-		transition: 1s;
-	}
-
 	/* signup.php */
 	#signup h2 > i {
 		display: inline-block;
@@ -2549,13 +2576,6 @@
 	#signup h2 > i:first-letter {
 		color: var(--txt-high-clr);
 		font-style: normal;
-	}
-
-	#column_center select,
-	#column_center input[type='text'],
-	#column_center input[type='password'] {
-		border: var(--brd-type-1) var(--bkgrd-b1);
-		border-radius: var(--brd-rad-2);
 	}
 
 	#subnavbar {
@@ -2571,12 +2591,7 @@
 		width: 100%;
 	}
 
-	/* QX Notice */
-	.smalldivider  [href^='/noticeboard'] {
-		color: var(--txt-error-clr) !important;
 	}
-	.noticetext {
-		font-size: inherit !important;
 	/* Pure CSS Fancy Checkbox/Radio
 		https://codepen.io/raubaca/pen/ONzBxP
 	*/
@@ -2586,15 +2601,10 @@
 		opacity: 0;
 		z-index: -1;
 	}
-	.noticetext:before {
 	form:not([id^='poll_']) input[type="radio"]:not(:disabled) + label,
 	form:not([id^='poll_']) input[type='checkbox']:not(:disabled) + label {
 		position: relative;
 		display: inline-block;
-		width: auto;
-		height: var(--ui--size-xl);
-		content: '*';
-		font-size: var(--ui--size-xl-r);
 		margin-right: 10px;
 		margin-bottom: 10px;
 		padding-left: 30px;
@@ -2680,13 +2690,9 @@
 		padding: 2rem 1rem;
 		margin-bottom: 1em;
 		text-align: center;
-		vertical-align: sub;
-		animation: qx_notice 6s infinite;
 		box-shadow: 0px 3px 10px -2px rgba(161, 170, 166, 0.5);
 		position: relative;
 	}
-	.noticetext:hover:before {
-		animation: paused;
 
 	form .datetime input[type="radio"]:checked + label {
 		background: #20df80;
@@ -2768,17 +2774,10 @@
 		100% {
 			color: inherit;
 		}
-	}*/
-	/* Posted images in forums */
-	div[style*="width: 400px"] img[style*='/scribbleimages/'] {
-		width: 100%;
-		height: auto;
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center;
 	}
 	/*.clublink {}*/
-	#sentry_frame {
+}
+}
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(readmessage\.php).*") {
 /* Code 4
