@@ -2672,13 +2672,34 @@
 	}*/
 	/*--------------------------------------------*/
 
-	}
-	/*@keyframes qx_notice {
+	@-webkit-keyframes qx_notice {
 		0% {
 			color: inherit;
 		}
 		70% {
 			color: var(--txt-error-clr);
+		}
+		100% {
+			color: inherit;
+		}
+	}
+	@keyframes qx_notice {
+		0% {
+			color: inherit;
+		}
+		70% {
+			color: var(--txt-error-clr);
+		}
+		100% {
+			color: inherit;
+		}
+	}
+	@-webkit-keyframes view_notice {
+		0% {
+			color: inherit;
+		}
+		70% {
+			color: var(--txt-high-clr);
 		}
 		100% {
 			color: inherit;
