@@ -451,6 +451,37 @@
 		transform: /*scaleX(0.98)*/ translateY(-3px);
 	}
 
+	button:disabled,
+	[type="reset"]:disabled,
+	[type="button"]:disabled,
+	[type='submit']:disabled {
+		cursor: not-allowed;
+		color: var(--ui--clr-disabled) !important;
+		border-color: var(--ui--clr-disabled);
+		background: none;
+		text-shadow: initial;
+		box-shadow: none;
+		transform: none;
+	}
+	select:disabled,
+	textarea:disabled,
+	input:disabled,
+	input:disabled + label {
+		cursor: not-allowed;
+		color: var(--ui--clr-disabled) !important;
+		border-color: var(--ui--clr-disabled) !important;
+	}
+	input[type='text']:disabled {
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==) repeat;
+		background: repeating-linear-gradient(
+			-55deg,
+			rgba(34, 34, 34, 0),
+			rgba(34, 34, 34, 0.68) var(--ui--size-1),
+			rgba(51, 51, 51, 0) var(--ui--size-1),
+			rgba(51, 51, 51, 0) var(--ui--size-4)
+			);
+	}
+
 	/* Forms special handling */
 	#column_center button,
 	#column_center [type="submit"]:not([name='cancel']),
