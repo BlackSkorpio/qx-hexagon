@@ -405,6 +405,8 @@
 		line-height: var(--lh-4);
 		height: 1.9em;
 	}
+	input[type='radio'] {}
+	input[type='checkbox'] {}
 
 	/* BUTTONS */
 	[type='button'][style*='float:'] {
