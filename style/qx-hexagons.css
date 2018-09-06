@@ -2163,6 +2163,7 @@
 	#column_center .header .icons {
 		padding-right: 0.3em;
 	}
+	#column_center .header .pollicon,
 	#column_center .header .diaryicon,
 	#column_center .header .photoalbumicon,
 	#column_center .header .movieicon,
