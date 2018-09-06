@@ -16,6 +16,7 @@
 /* Code 2 */
 @supports (display: grid) {
 	:root {
+		--ui--clr-disabled: rgba(188, 194, 191, 1);
 		--ui--clr-highlight: rgba(170, 139, 89, 1);
 		--ui--clr-white1: rgba(242, 242, 242, 1);
 		--ui--clr-white2: rgba(230, 230, 230, 1);
