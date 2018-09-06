@@ -2501,19 +2501,154 @@
 	}
 	.noticetext {
 		font-size: inherit !important;
+	/* Pure CSS Fancy Checkbox/Radio
+		https://codepen.io/raubaca/pen/ONzBxP
+	*/
+	form:not([id^='poll_']) input[type="radio"]:not(:disabled),
+	form:not([id^='poll_']) input[type='checkbox']:not(:disabled) {
+		position: absolute;
+		opacity: 0;
+		z-index: -1;
 	}
 	.noticetext:before {
+	form:not([id^='poll_']) input[type="radio"]:not(:disabled) + label,
+	form:not([id^='poll_']) input[type='checkbox']:not(:disabled) + label {
+		position: relative;
 		display: inline-block;
 		width: auto;
 		height: var(--ui--size-xl);
 		content: '*';
 		font-size: var(--ui--size-xl-r);
+		margin-right: 10px;
+		margin-bottom: 10px;
+		padding-left: 30px;
+		padding-right: 10px;
+		line-height: 36px;
+		cursor: pointer;
+	}
+	form:not([id^='poll_']) input[type="radio"]:not(:disabled) + label:before,
+	form:not([id^='poll_']) input[type='checkbox']:not(:disabled) + label:before {
+		content: " ";
+		position: absolute;
+		top: 6px;
+		left: 0;
+		display: block;
+		width: 1.5em;
+		height: 1.5em;
+		border: 2px solid rgba(170, 139, 89, 1);
+		border-radius: 4px;
+		/*z-index: -1;*/
+	}
+	form:not([id^='poll_']) input[type="radio"]:not(:disabled) + label:before,
+	form:not([id^='poll_']) input[type='checkbox']:not(:disabled) +label:before {
+		border-radius: 1.5em;
+	}
+	/* Checked */
+	form:not([id^='poll_']) input[type="radio"]:checked + label,
+	form:not([id^='poll_']) input[type='checkbox']:checked + label {
+		padding-left: 10px;
+		color: #323232;
+	}
+	form:not([id^='poll_']) input[type="radio"]:checked + label::before,
+	form:not([id^='poll_']) input[type='checkbox']:checked + label:before {
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(170, 139, 89, 0.5);
+	}
+	/* Transition */
+	form:not([id^='poll_']) input[type="radio"]:not(:disabled) + label,
+	form:not([id^='poll_']) input[type='checkbox']:not(:disabled) + label,
+	form:not([id^='poll_']) input[type="radio"]:not(:disabled) + label:before,
+	form:not([id^='poll_']) input[type='checkbox']:not(:disabled) + label:before {
+		-webkit-transition: 0.25s all ease;
+		        transition: 0.25s all ease;
+	}
+
+	/* Radio buttons
+		https://codepen.io/adamstuartclark/pen/pbYVYR
+	*/
+	/*form .odd {
+		display: flow-root !important;
+		margin-top: 1em;
+	}
+	form .odd > span.datetime {
+		margin-top: 1.2em;
+		display: flex;
+		padding: 0.5em;
+	}
+	form .odd > span.datetime > * {
+		flex: 1;
+	}
+	form .datetime input[type="radio"] {
+		display: none;
+	}
+	form .datetime input[type="radio"]:not(:disabled) ~ label {
+		cursor: pointer;
+	}
+	input:disabled {
+		cursor: not-allowed;
+		color: #bcc2bf;
+		border-color: #bcc2bf;
+	}
+	form .datetime input[type="radio"]:disabled ~ label {
+		box-shadow: none;
+	}
+
+	form .datetime label {
+		height: 50px;
+		display: block;
+		background: white;
+		border: 2px solid #20df80;
+		border-radius: 20px;
+		padding: 2rem 1rem;
+		margin-bottom: 1em;
 		text-align: center;
 		vertical-align: sub;
 		animation: qx_notice 6s infinite;
+		box-shadow: 0px 3px 10px -2px rgba(161, 170, 166, 0.5);
+		position: relative;
 	}
 	.noticetext:hover:before {
 		animation: paused;
+
+	form .datetime input[type="radio"]:checked + label {
+		background: #20df80;
+		color: white;
+		box-shadow: 0px 0px 1em rgba(210, 105, 30, 0.75);
+	}
+	form .datetime input[type="radio"]:checked + label::after {
+		color: #3d3f43;
+		font-family: FontAwesome;
+		border: 2px solid #1dc973;
+		content: "\f00c";
+		font-size: 24px;
+		position: absolute;
+		top: -25px;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 50px;
+		width: 50px;
+		line-height: 50px;
+		text-align: center;
+		border-radius: 50%;
+		background: white;
+		box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.25);
+	}
+
+	form .datetime input[type="radio"]#save_read_message_no:checked + label {
+		background: #d2691e;
+		border-color: #d2691e;
+	}
+	form .datetime input[type="radio"]#save_read_message_no:checked + label::after {
+		border-color: #d2691e;
+	}
+	form .datetime input[type="radio"]#save_read_message_delete:checked + label {
+		background: red;
+		border-color: red;
+	}*/
+	/*--------------------------------------------*/
+
 	}
 	/*@keyframes qx_notice {
 		0% {
