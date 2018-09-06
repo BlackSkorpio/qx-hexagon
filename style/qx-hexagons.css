@@ -24,9 +24,9 @@
 		--ui--clr-gray2: rgba(159, 159, 159, 0.92);
 		--ui--clr-red: rgba(178, 27, 27, 1);
 		--ui--clr-t: transparent;
-		--ui--wrapper: 1050px;
-		--ui--aside: 200px;
 		--ui--size-xxs: 0.0625rem;
+		--ui--wrapper: 65.625rem;
+		--ui--aside: 12.5rem;
 		--ui--size-xs: 0.1rem;
 		--ui--size-s: 0.3em;
 		--ui--size-m: 0.5em;
