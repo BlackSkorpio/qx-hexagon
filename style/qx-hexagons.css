@@ -106,7 +106,9 @@
 		--font-7r: 2rem;
 		--shadow-dark: var(--ui--clr-gray2);
 		--shadow-light: var(--ui--clr-gray1);
+		--shadow-gray: var(--ui--clr-disabled);
 		--shadow-size-1: var(--ui--size-1) var(--ui--size-3) var(--ui--size-3) 0;
+		--shadow-size-2: var(--ui--size-4) var(--ui--size-5) var(--ui--size-3);
 		--filter-inv-1: invert(20%);
 		--filter-inv-2: invert(50%);
 		--filter-inv-3: invert(100%);
