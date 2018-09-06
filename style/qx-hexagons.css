@@ -1253,6 +1253,11 @@
 		font-size: var(--font-1r);
 		line-height: var(--lh-1);
 	}
+	/* Number of items  */
+	.header span[style='margin-right: 4px; font-size: 9px; font-weight: normal;'] {
+		color: var(--brd-clr-h);
+		font-weight: 700 !important;
+	}
 
 	/* Profile section */
 	/* Nick name */
