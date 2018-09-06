@@ -1212,7 +1212,8 @@
 		float: none;
 	}
 	/* Used in Polls */
-	.filldot {
+	.filldot,
+	#column_center .filldot {
 		background-color: var(--bkgrd-h1);
 	}
 	/*#column_center a:visited {
