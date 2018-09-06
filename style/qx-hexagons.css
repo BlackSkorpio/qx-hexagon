@@ -1247,6 +1247,7 @@
 		background-color: var(--bkgrd-w1) !important;
 		background-image: none;
 		float: none;
+		box-shadow: var(--shadow-size-2) var(--shadow-gray);
 	}
 	/* Used in Polls */
 	.filldot,
@@ -2803,6 +2804,7 @@
 			color: inherit;
 		}
 	}
+	/* Posted images in forums */
 	/*.clublink {}*/
 }
 }
