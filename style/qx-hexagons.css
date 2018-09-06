@@ -2096,6 +2096,7 @@
 		vertical-align: middle;
 	}
 	#column_center .header [href^='/showclubs.php']:before,
+	#column_center .header [href^='/showfavourites.php']:before {
 		content: '';
 		margin-right: 0.5em;
 	}
@@ -2202,6 +2203,7 @@
 	#qmenu a.menu_selected img[src*='home.png'],
 	#qmenu #qmenu_home:hover img[src*='home.png'],
 	#column_center .header [href^='/showclubs.php']:before,
+	#column_center .header [href^='/showfavourites.php']:before {
 		-webkit-filter: var(--filter-inv-1);
 		        filter: var(--filter-inv-1);
 	}
@@ -2312,7 +2314,8 @@
 	img[src*='heart'],
 	span[class^='favouriteicon_'],
 	p a[href="/favourites.php"]:before,
-	div#satellite a[href*='favourites.php']:before {
+	div#satellite a[href*='favourites.php']:before,
+	#column_center .header [href^='/showfavourites.php']:before {
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D'nav-favorites'%20fill%3D'white'%20stroke%3D'%23000'%20version%3D'1'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20510%20510'%3E%3Cpath%20d%3D'M255%20490l-36-36C87%20337%200%20258%200%20161%200%2082%2061%2020%20140%2020c44%200%2087%2021%20115%2054%2028-33%2071-54%20115-54%2079%200%20140%2062%20140%20141%200%2097-87%20176-219%20293l-36%2036z'%2F%3E%3C%2Fsvg%3E");
 	}
 	/* Gold member icon */
