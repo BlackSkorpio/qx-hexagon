@@ -1524,6 +1524,15 @@
 	}
 	/*--------------------------------------------*/
 
+	/* Images posted as "scribbles" */
+	div[style*="width: 400px"] img[style*='/scribbleimages/'] {
+		width: 100%;
+		height: auto;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+	/*--------------------------------------------*/
 
 	/* QX Notice */
 	.smalldivider  [href^='/noticeboard'] {
