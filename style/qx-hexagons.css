@@ -776,12 +776,15 @@
 		height: 100%;
 	}
 	#subnavbar .button {
-		padding: 3px 0 4px;
+		/*padding: 3px 0 4px;*/
+		padding: 0;
 	}
 	#subnavbar .button a,
 	#subnavbar .selectedbutton,
 	#subnavbar .selectedbutton a {
-		padding: 3px 8px 4px;
+		/*padding: 3px 8px 4px;*/
+		padding: 0;
+		line-height: 1.5rem;
 	}
 	#subnavbar .button,
 	#subnavbar .button a {
