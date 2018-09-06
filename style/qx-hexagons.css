@@ -150,6 +150,7 @@
 	[style*='width: 410px'],
 	[style*='width:410px'],
 	[style*='width: 414px;'],
+	#column_center textarea,
 	.list .insertmember + [style*='width: 195px;'] {
 		width: 100% !important;
 	}
@@ -174,9 +175,13 @@
 	}
 	[style*='width:130px'],
 	[style*='width: 130px'],
+	[style*='width:134px;'],
 	[style*='width: 134px;'],
+	[style*='width:195px;'],
 	[style*='width: 195px;'],
 	[style*='width:200px;'],
+	[style*='width: 200px;'],
+	[style*='width: 210px'],
 	[style*='width:210px'] {
 		width: auto !important;
 	}
