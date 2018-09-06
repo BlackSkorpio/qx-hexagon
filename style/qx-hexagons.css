@@ -2034,8 +2034,16 @@
 	#column_center .header .photoalbumicon,
 	#column_center .header .movieicon,
 	#column_center .header .guestbookicon,
-	#column_center .header .lockicon {
-		background-size: 1.2rem;
+	#column_center .header .lockicon,
+	#column_center .header [href^='/showclubs.php']:before,
+	#column_center .header [href^='/showfavourites.php']:before {
+		background-size: contain;
+		padding: 0.15rem 0.75rem;
+		vertical-align: middle;
+	}
+	#column_center .header [href^='/showclubs.php']:before,
+		content: '';
+		margin-right: 0.5em;
 	}
 	.pollicon,
 	.polllargeicon,
@@ -2138,7 +2146,8 @@
 	#column_left img[src*='online_2'],
 	#column_right img[src*='online_2'],
 	#qmenu a.menu_selected img[src*='home.png'],
-	#qmenu #qmenu_home:hover img[src*='home.png'] {
+	#qmenu #qmenu_home:hover img[src*='home.png'],
+	#column_center .header [href^='/showclubs.php']:before,
 		-webkit-filter: var(--filter-inv-1);
 		        filter: var(--filter-inv-1);
 	}
@@ -2404,6 +2413,10 @@
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D'club-hidden'%20version%3D'1'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20512%20512'%20fill%3D'%23B3404A'%3E%3Cpath%20d%3D'M256%20421c-58%200-120-27-180-79-45-38-72-76-73-78-4-5-4-11%200-16%201-2%2030-41%2076-81%2060-50%20119-76%20177-76s117%2026%20177%2076c46%2040%2075%2079%2076%2081%204%205%204%2011%200%2016%200%201-23%2032-59%2066a14%2014%200%201%201-19-20c24-22%2042-43%2050-54-10-13-34-41-66-68-37-32-95-70-159-70s-122%2038-159%2070c-32%2027-56%2055-66%2068%2024%2030%20117%20138%20225%20138%2034%200%2069-11%20105-31a14%2014%200%201%201%2014%2023c-41%2023-80%2035-119%2035z'%2F%3E%3Cpath%20d%3D'M256%20421a165%20165%200%201%201%20165-165%2014%2014%200%201%201-27%200%20138%20138%200%201%200-138%20138%2014%2014%200%201%201%200%2027z'%2F%3E%3Ccircle%20fill%3D'%23FFF'%20cx%3D'256'%20cy%3D'256'%20r%3D'86'%2F%3E%3Cpath%20d%3D'M256%20355a99%2099%200%201%201%200-199%2099%2099%200%200%201%200%20199zm0-171a72%2072%200%201%200%200%20144%2072%2072%200%200%200%200-144z'%2F%3E%3Cpath%20d%3D'M437%20451c-3%200-7-2-10-4L65%2085a14%2014%200%200%201%2020-20l362%20362a14%2014%200%200%201-10%2024z'%2F%3E%3C%2Fsvg%3E");
+	}
+	/* Clubs on the profile page */
+	#column_center .header [href^='/showclubs.php']:before {
+		background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D%22clubs-header%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20d%3D%22M10%203c4.4%200%208%202.8%208%206.4%200%203-3%206.3-7.9%206.3-1.6%200-2.7-.3-3.7-.6-1%20.6-1.3.8-3%201.4.4-1.5.4-2.2.3-3.2-.9-1-1.7-2.1-1.7-3.9C2%205.9%205.6%203%2010%203zm0-2C4.7%201%200%204.5%200%209.4c0%201.7.6%203.4%201.7%204.7%200%201.5-.9%203.7-1.7%205.3%202.2-.4%205.3-1.3%206.6-2.1%201.2.3%202.3.4%203.4.4%205.9%200%209.9-4%209.9-8.3C20%204.5%2015.2%201%2010%201zm11.5%2011.2l-.6%201.4c1.7%201.3%202.3%203.2.5%205.4l.1%201.9c-.9-.3-1-.4-1.7-.8-2.1.5-4.3.7-6.1-.9l-1.7.4c1.5%201.9%204.3%202.9%207.6%202.1.9.6%202.9%201.1%204.4%201.4-.5-1-1.1-2.5-1.1-3.5a5%205%200%200%200-1.4-7.4zm-15-3.8c-.6%200-1.1.5-1.1%201.1s.5%201.1%201.1%201.1%201.1-.5%201.1-1.1-.5-1.1-1.1-1.1zm3.5%200c-.6%200-1.1.5-1.1%201.1s.5%201.1%201.1%201.1%201.1-.5%201.1-1.1-.5-1.1-1.1-1.1zm3.5%200c-.6%200-1.1.5-1.1%201.1s.5%201.1%201.1%201.1%201.1-.5%201.1-1.1-.5-1.1-1.1-1.1z%22%2F%3E%3C%2Fsvg%3E');
 	}
 	/* Empty avatar */
 	.emptymembericon,
