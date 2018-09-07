@@ -1652,6 +1652,7 @@
 		   -ms-flex-align: start;
 		      align-items: start;
 		margin-top: 0.5em;
+		width: 100%;
 	}
 	#column_left .insertmember:last-of-type,
 	#column_right .insertmember:last-of-type {
