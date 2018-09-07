@@ -4,7 +4,7 @@
 	Theme Name: QX Hexagon Clean
 	Theme URI: https://qruiser.com
 	Description: A modernized theme for qruiser.com
-	Version: 2.0.1
+	Version: 2.0.2
 	Author: Bjarne Varöystrand
 	www: varoystrand.se
 	GitHub: github.com/BlackSkorpio/qx-hexagon
@@ -12,27 +12,7 @@
 ******************************************/
 @namespace url(http://www.w3.org/1999/xhtml);
 @-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4}).*$") {
-/*
-   The center sub nav bar is redundant, since these items
-   is already displayed in the drop downs of the main nav!
-*/
-/*#column_center > #subnavbar {
-	display: none;
-}*/
-/* Outdated stuff */
-a[href*="javascript:openEdit('sms')"],
-/* Empty stuff scattered all over the place */
-div:empty:not(.divider):not(.orangeline):not(.filldot),
-span:empty,
-a:empty,
-p:empty,
-option:empty,
-div[style="float:left;width:70px"],
-div > div[style="float:left;width:140px"],
-/*br[clear='all'],*/
 /* General rules */
-#topstatus,
-#langnav,
 #qruiser-panorama,
 #column_center .standardbanner,
 /*#column_center .homepageblock:last-of-type,*/
