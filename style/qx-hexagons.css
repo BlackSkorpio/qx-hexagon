@@ -2052,9 +2052,9 @@
 		vertical-align: text-top;
 	}
 	li#qmenu_edit img,
+	a[href*="/goldmember.php"] img,
 	.hideself_ a[href*='buygold'] img,
 	li#qmenu_gold a[href*='goldmember'] img,
-	a[href*="/goldmember.php"] img,
 	#column_left p a[href="/goldmember.php"] img,
 	#column_center form[name='listform'] a[href*="/goldmember.php"] img {
 		display: none;
