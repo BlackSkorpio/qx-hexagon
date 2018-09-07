@@ -4,7 +4,7 @@
 	Theme Name: QX Hexagon
 	Theme URI: https://qruiser.com
 	Description: A modernized theme for qruiser.com
-	Version: 3.1.1
+	Version: 3.1.0
 	Author: Bjarne Varöystrand
 	www: varoystrand.se
 	GitHub: github.com/BlackSkorpio/qx-hexagon
@@ -119,23 +119,7 @@
 		--gray--t: rgba(14, 19, 25, 0);
 	}
 
-	/*** Hide stuff ***/
-	/* Outdated stuff */
-	a[href*="javascript:openEdit('sms')"],
-	/* Empty stuff scattered all over the place */
-	div:empty:not(.divider):not(.orangeline):not(.filldot),
-	span:empty,
-	a:empty,
-	p:empty,
-	option:empty,
-	div[style="float:left;width:70px"],
-	div > div[style="float:left;width:140px"],
-	#topstatus,
-	#langnav {
-		display: none !important;
-	}
-
-	/*** QX RESET !!!! ***/
+	/* QX RESET !!!! */
 	body[onload*=handleImageXxxSetting] {
 		padding-left: 0 !important;
 		max-width: 100vw;
@@ -345,10 +329,10 @@
 	a {
 		color: inherit;
 	}
-	[id^='column_'] a:visited {
+	a:visited {
 		text-decoration: none;
 	}
-	[id^='column_'] a:hover {
+	a:hover {
 		opacity: 0.8;
 	}
 	b,
@@ -772,24 +756,7 @@
 		font-size: var(--font-3r);
 	}
 	#qmenu li#qmenu_logut {
-		display: inline-block !important;
 		float: right !important;
-		border: var(--brd-type-1) var(--brd-clr-w);
-		border-radius: var(--brd-rad-2);
-		padding: 3px 8px 4px;
-		background-color: var(--bkgrd-b1);
-	}
-	#qmenu li#qmenu_logut a{
-		padding: 0;
-	}
-	#qmenu li#qmenu_logut:hover {
-		transform: translateY(1px);
-		filter: drop-shadow(2px 3px rgb(101, 102, 102));
-	}
-	#qmenu li#qmenu_logut:hover,
-	#qmenu li#qmenu_logut:hover a {
-		color: var(--link-clr2-h);
-		background-color: var(--bkgrd-w2);
 	}
 	#qmenu #qmenu_home ul {
 		padding-left: 0;
@@ -829,8 +796,6 @@
 		display: block;
 		width: 100%;
 		height: 100%;
-		line-height: initial;
-		padding: var(--ui--size-3) 0;
 	}
 	#subnavbar .button,
 	#subnavbar .selectedbutton {
@@ -849,7 +814,6 @@
 	#column_center #subnavbar .selectedbutton a {
 		background-color: var(--bkgrd-w2);
 		color: var(--link-clr2-h);
-		opacity: 1;
 	}
 	/*--------------------------------------------*/
 
@@ -1300,16 +1264,6 @@
 	}
 
 	/* Index Not logged in */
-	/* signup.php */
-	#signup h2 > i {
-		display: inline-block;
-		color: var(--bkgrd-b1);
-	}
-	#signup h2 > i:first-letter {
-		color: var(--txt-high-clr);
-		font-style: normal;
-	}
-
 	#publish_info_text {
 		padding: var(--padding-s);
 	}
@@ -1754,8 +1708,8 @@
 		display: none;
 	}
 
-	#column_right .spotlight .insertmember,
-	#column_right .gallery .insertmember {
+	.spotlight .insertmember,
+	.gallery .insertmember {
 		grid-template-columns: [info] 1fr;
 	}
 	/*--------------------------------------------*/
@@ -2052,9 +2006,9 @@
 		vertical-align: text-top;
 	}
 	li#qmenu_edit img,
-	a[href*="/goldmember.php"] img,
 	.hideself_ a[href*='buygold'] img,
 	li#qmenu_gold a[href*='goldmember'] img,
+	a[href*="/goldmember.php"] img,
 	#column_left p a[href="/goldmember.php"] img,
 	#column_center form[name='listform'] a[href*="/goldmember.php"] img {
 		display: none;
@@ -2094,7 +2048,6 @@
 	}
 
 	/** Satellite **/
-	#qmenu_logut > a#qlogout:after,
 	div#satellite a[href='?']:before,
 	div#satellite a[href*='logout']:before,
 	div#satellite a[href*='messages']:before,
@@ -2107,10 +2060,6 @@
 		background-repeat: no-repeat;
 		margin-right: var(--margin-s);
 		vertical-align: middle;
-	}
-	#qmenu_logut > a#qlogout:after {
-		vertical-align: bottom;
-		margin-left: var(--margin-s);
 	}
 
 	li#qmenu_edit a:before,
@@ -2340,7 +2289,6 @@
 	.clubxxx1hidden, .clubxxx2hidden, .clubxxx3hidden, .clubxxx4hidden,
 	#column_left img[src*='online_2'],
 	#column_right img[src*='online_2'],
-	#qmenu_logut:hover > a#qlogout:after,
 	#qmenu a.menu_selected img[src*='home.png'],
 	#qmenu #qmenu_home:hover img[src*='home.png'],
 	#column_center .header [href^='/showclubs.php']:before/*,
@@ -2384,7 +2332,6 @@
 	/*#qmenu #qmenu_home:hover img,
 	#qmenu #qmenu_home a.menu_selected img,*/
 	#qmenu_home img[src*='home.png'],
-	#qmenu_logut > a#qlogout:after,
 	li#qmenu_edit a:before,
 	div#satellite a[href='?']:before,
 	div#satellite a[href*='logout']:before,
@@ -2644,7 +2591,6 @@
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D'action-reload'%20version%3D'1'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20280%20280'%3E%3Cpath%20d%3D'M154%20131l8-19c2-5%200-13-5-16C125%2074%2015%2013%203%20151c0%206-1%207-2%201-2-21-3-68%2024-92l18-14c18-11%2063-31%20127%203%205%203%2011%201%2012-5l4-21c2-6%205-7%208-2l53%2088c3%205%201%2010-5%2011l-82%2018c-6%201-9-2-6-7zm82%20108c-18%2012-63%2032-127-2-5-3-11-1-13%205l-6%2016c-1%205-5%206-8%200l-42-80c-3-5-1-11%205-13l70-21c6-2%209%201%207%207l-6%2022c-1%206%201%2014%206%2017%2033%2021%20143%2080%20155-57%201-6%202-6%202%200%202%2021%202%2068-25%2093l-18%2013z'%2F%3E%3C%2Fsvg%3E");
 	}
 	/* Logout Icon */
-	#qmenu_logut > a#qlogout:after,
 	div#satellite a[href*='logout']:before {
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D'action-logout'%20version%3D'1'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201000%201000'%3E%3Cpath%20d%3D'M4813%204994a624%20624%200%200%201-391-402c-29-85-31-271-27-1752l6-1658%2048-96a674%20674%200%200%201%20297-297c136-67%20377-67%20517%200a694%20694%200%200%201%20297%20297l48%2096v3392l-48%2096a680%20680%200%200%201-297%20295%20679%20679%200%200%201-450%2029z'%20transform%3D'matrix(.1%200%200%20-.1%200%20512)'%2F%3E%3Cpath%20d%3D'M2953%203261c-72-19-377-213-571-364a4285%204285%200%200%201%20715-7236c424-207%20759-316%201236-396%20345-60%20997-60%201342%200%20466%2080%20805%20187%201217%20387a4330%204330%200%200%201%202262%202752c102%20389%20130%20635%20132%201091%202%20464-21%20657-124%201071a4335%204335%200%200%201-1921%202597c-194%20117-276%20131-345%2064-42-42-42-54-48-585-8-667-17-630%20263-924%20253-262%20333-360%20467-565%20215-332%20351-667%20437-1074%2064-293%2064-837%202-1144a3099%203099%200%200%200-2486-2453c-266-52-814-46-1096%209A3063%203063%200%200%200%202269%20875c150%20301%20297%20500%20629%20843%20176%20186%20226%20248%20245%20317%2017%2061%2021%20235%2017%20615-5%20481-9%20535-40%20569-40%2044-99%2060-167%2042z'%20transform%3D'matrix(.1%200%200%20-.1%200%20512)'%2F%3E%3C%2Fsvg%3E");
 	}
@@ -2655,19 +2601,6 @@
 /* Code 3
 	TEST AREA */
 @supports (display: grid) {
-	/* Clubs with no club image */
-	#column_right [href^='/clubs/club.php?id='] [style='float: left; width:32px; height:40px;'] {
-		width: 40px !important;
-		height: 45px !important;
-		background-size: contain;
-		border: var(--brd-type-2) var(--brd-clr-h);
-		border-radius: var(--brd-rad-2);
-		-webkit-filter: var(--filter-inv-1);
-		        filter: var(--filter-inv-1);
-	}
-	#column_right [href^='/clubs/club.php?id='] [style='float: left; width:32px; height:40px;'] {
-		background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D'default-club'%20version%3D'1'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'570'%20height%3D'570'%3E%3Cpath%20d%3D'M266%2095c0%203-2%206-4%209%2075%2064%20101%204%204-9zm-4%2011l-1-1%201%201zm-13-32v-1%201zm18%2018zm-21-18c-12-98-66-76-8%203%202-1%205-3%208-3zm17%207l3%209c98-11%2076-66-3-9zm0-2l-1%201%201-1zm-28%2025l-1%201%201-1zm-6-12zm2-2c0-4%201-7%204-9-75-62-101-3-4%209zm20-16c3%200%206%202%209%204%2062-75%203-101-9-4zm-17%2029l-3-9c-99%2013-78%2067%203%209zm2-24l-1-1%201%201zm4%2014l2%204v1l1%201%204%201%201%201h1l1-1%203-1%201-1h1v-1l2-4v-2l-2-4v-1l-1-1-4-1-1-1h-1l-1%201-3%201-1%201-1%201-2%204v2z'%2F%3E%3Cpath%20d%3D'M495%20196c100-43%2027-115-15-16%2042-99-68-99-23%200-45-99-115-27-15%2016-100-43-100%2067%200%2023-100%2044-30%20114%2015%2015-19%2041-11%2065%202%2072v40c-5-7-11-10-18-11-11-1-27%207-46-5%202%2048%2044%2061%2057%2053l7-5v30H325v-9l6%202c11%202%2038-20%2025-56-10%2014-23%2013-31%2017v-14c6-7%208-21%200-42%2029%2062%2076%2015%209-14%2068%2030%2068-46%200-16%2068-30%2018-79-11-11%2029-68-46-68-16%200-30-68-78-19-10%2011-17-8-30-9-39-6V148c18%2053%2050%2027%201-41h-1l-8%204h-2l-2-1a18%2018%200%200%201-9-4c-56%2066-18%2094%202%2035v267H124v-41l10%207c12%208%2054-6%2056-54-19%2013-35%204-46%206-7%200-14%204-20%2013v-34c12-9%2019-33%202-71%2042%2099%20115%2029%2016-15%2099%2044%2099-66%200-23%2099-43%2026-115-16-16%2042-99-68-99-23%200-45-99-114-27-15%2016-99-43-99%2067%200%2023-99%2044-30%20114%2015%2015-19%2041-11%2065%202%2072v22l-8-2c-11-2-27%207-46-6%202%2046%2040%2060%2054%2055v33H19c-10%200-19%208-19%2019v115c0%2010%209%2019%2019%2019h497c11%200%2020-9%2020-19V427c0-11-9-19-20-19h-38V305c12-9%2018-33%202-71%2042%2099%20115%2029%2015-15%20100%2044%20100-66%200-23zm-394%2011a13%2013%200%201%201%2027%200%2013%2013%200%200%201-27%200zm222%2076a8%208%200%201%201-16%200%208%208%200%200%201%2016%200zm-65%2015c9%202%2022%201%2039-6-67%2030-22%2077%209%2013-10%2023-7%2038%200%2044v59h-48V298zm230%20129a19%2019%200%201%201%200%2038H48a19%2019%200%201%201%200-38h57v29h19v-29h115v29h19v-29h48v29h19v-29h134v29h19v-29h10zm-20-207a13%2013%200%201%201%200-27%2013%2013%200%200%201%200%2027z'%2F%3E%3C%2Fsvg%3E%0D%0A") !important;
-	}
 	/* Latest from QX.SE */
 	#column_right > .smalldivider + div > b > [href^='https://www.qx.se'] {
 		display: list-item;
@@ -2838,7 +2771,7 @@
 	}*/
 	/*--------------------------------------------*/
 
-	/*@-webkit-keyframes qx_notice {
+	@-webkit-keyframes qx_notice {
 		0% {
 			color: inherit;
 		}
@@ -2881,7 +2814,7 @@
 		100% {
 			color: inherit;
 		}
-	}*/
+	}
 	/* Posted images in forums */
 	/*.clublink {}*/
 }
