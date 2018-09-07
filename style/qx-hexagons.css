@@ -730,10 +730,17 @@
 	/* TOP NAVIGATION */
 	#qmenu,
 	#qmenu a,
-	#qmenu ul,
-	#subnavbar,
-	#subnavbar .button {
+	#qmenu ul {
 		background-color: var(--bkgrd-b1);
+		font-size: var(--font-3r);
+		color: var(--link-clr2);
+		letter-spacing: var(--ls-s);
+		padding: 3px 8px 4px;
+	}
+	#qmenu a:hover,
+	#qmenu a.menu_selected {
+		background-color: var(--bkgrd-w2);
+		color: var(--link-clr2-h);
 	}
 	/* Special HACK to get rid of a text only node */
 	#qmenu_home {
@@ -772,55 +779,42 @@
 		        box-shadow: var(--shadow-size-1) var(--shadow-dark);
 	}
 
+	/* Subnavbar */
 	#subnavbar {
+		display: flex;
+		flex-flow: row wrap;
 		height: 1.5rem;
-		display: flow-root;
+		/* Negative value needed since we have a small padding on the parent */
+		margin: var(--margin-c);
+		width: calc(100% + 0.6em);
+		margin-left: -0.3em;
+	}
+	#subnavbar > * {
+		flex: 1 1 auto;
+		text-align: center;
+	}
+	#subnavbar div a {
+		display: block;
+		width: 100%;
+		height: 100%;
 	}
 	#subnavbar .button,
 	#subnavbar .selectedbutton {
 		height: 100%;
-	}
-	#subnavbar .button {
-		/*padding: 3px 0 4px;*/
-		padding: 0;
-	}
-	#subnavbar .button a,
-	#subnavbar .selectedbutton,
-	#subnavbar .selectedbutton a {
-		/*padding: 3px 8px 4px;*/
-		padding: 0;
+		font-size: var(--font-3r);
 		line-height: 1.5rem;
+		padding: 0;
 	}
 	#subnavbar .button,
-	#subnavbar .button a {
-		font-size: var(--font-3r);
+	#column_center #subnavbar * a:not(:hover) {
+		background-color: var(--bkgrd-b1);
 		color: var(--link-clr2);
 	}
-	#subnavbar .selectedbutton {
-		color: var(--link-clr1);
-	}
-
-	#qmenu,
-	#qmenu ul,
-	#qmenu a {
-		font-size: var(--font-3r);
-		color: var(--link-clr2);
-		letter-spacing: var(--ls-s);
-		padding: 3px 8px 4px;
-	}
-	#qmenu a:hover,
-	#qmenu a.menu_selected,
+	#subnavbar .selectedbutton,
 	#subnavbar .button a:hover,
-	#subnavbar .selectedbutton {
+	#column_center #subnavbar .selectedbutton a {
 		background-color: var(--bkgrd-w2);
 		color: var(--link-clr2-h);
-	}
-
-	#subnavbar {
-		margin: var(--margin-c);
-		/* Negative value needed since we have a small padding on the parent */
-		width: calc(100% + 0.6em);
-		margin-left: -0.3em;
 	}
 	/*--------------------------------------------*/
 
@@ -2602,19 +2596,6 @@
 	#signup h2 > i:first-letter {
 		color: var(--txt-high-clr);
 		font-style: normal;
-	}
-
-	#subnavbar {
-		display: flex;
-		flex-flow: row wrap;
-	}
-	#subnavbar > * {
-		flex: 1 1 auto;
-		text-align: center;
-	}
-	#subnavbar div a {
-		display: block;
-		width: 100%;
 	}
 
 	/* forms */
