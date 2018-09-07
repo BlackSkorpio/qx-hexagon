@@ -1300,6 +1300,16 @@
 	}
 
 	/* Index Not logged in */
+	/* signup.php */
+	#signup h2 > i {
+		display: inline-block;
+		color: var(--bkgrd-b1);
+	}
+	#signup h2 > i:first-letter {
+		color: var(--txt-high-clr);
+		font-style: normal;
+	}
+
 	#publish_info_text {
 		padding: var(--padding-s);
 	}
