@@ -2880,14 +2880,14 @@
 @supports (display: grid) {
 	#column_center .list > :not([class^="listpage"]) {
 		flex-basis: auto;
-	}*/
+	}
 
 	/* Centers the first row of radio buttons */
 	form[name='messageform'] > .odd > .datetime,
 	/* Centers the buttons */
 	form[name='messageform'] > p:first-of-type {
 		display: flex;
-	}
+	}*/
 	/* Centers the first row of radio buttons */
 	form[name='messageform'] > .odd > .datetime > label {
 		flex: 1;
