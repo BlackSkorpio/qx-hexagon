@@ -772,7 +772,24 @@
 		font-size: var(--font-3r);
 	}
 	#qmenu li#qmenu_logut {
+		display: inline-block !important;
 		float: right !important;
+		border: var(--brd-type-1) var(--brd-clr-w);
+		border-radius: var(--brd-rad-2);
+		padding: 3px 8px 4px;
+		background-color: var(--bkgrd-b1);
+	}
+	#qmenu li#qmenu_logut a{
+		padding: 0;
+	}
+	#qmenu li#qmenu_logut:hover {
+		transform: translateY(1px);
+		filter: drop-shadow(2px 3px rgb(101, 102, 102));
+	}
+	#qmenu li#qmenu_logut:hover,
+	#qmenu li#qmenu_logut:hover a {
+		color: var(--link-clr2-h);
+		background-color: var(--bkgrd-w2);
 	}
 	#qmenu #qmenu_home ul {
 		padding-left: 0;
@@ -812,6 +829,8 @@
 		display: block;
 		width: 100%;
 		height: 100%;
+		line-height: initial;
+		padding: var(--ui--size-3) 0;
 	}
 	#subnavbar .button,
 	#subnavbar .selectedbutton {
@@ -2064,6 +2083,7 @@
 	}
 
 	/** Satellite **/
+	#qmenu_logut > a#qlogout:after,
 	div#satellite a[href='?']:before,
 	div#satellite a[href*='logout']:before,
 	div#satellite a[href*='messages']:before,
@@ -2076,6 +2096,10 @@
 		background-repeat: no-repeat;
 		margin-right: var(--margin-s);
 		vertical-align: middle;
+	}
+	#qmenu_logut > a#qlogout:after {
+		vertical-align: bottom;
+		margin-left: var(--margin-s);
 	}
 
 	li#qmenu_edit a:before,
@@ -2305,6 +2329,7 @@
 	.clubxxx1hidden, .clubxxx2hidden, .clubxxx3hidden, .clubxxx4hidden,
 	#column_left img[src*='online_2'],
 	#column_right img[src*='online_2'],
+	#qmenu_logut:hover > a#qlogout:after,
 	#qmenu a.menu_selected img[src*='home.png'],
 	#qmenu #qmenu_home:hover img[src*='home.png'],
 	#column_center .header [href^='/showclubs.php']:before/*,
@@ -2348,6 +2373,7 @@
 	/*#qmenu #qmenu_home:hover img,
 	#qmenu #qmenu_home a.menu_selected img,*/
 	#qmenu_home img[src*='home.png'],
+	#qmenu_logut > a#qlogout:after,
 	li#qmenu_edit a:before,
 	div#satellite a[href='?']:before,
 	div#satellite a[href*='logout']:before,
@@ -2607,6 +2633,7 @@
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D'action-reload'%20version%3D'1'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20280%20280'%3E%3Cpath%20d%3D'M154%20131l8-19c2-5%200-13-5-16C125%2074%2015%2013%203%20151c0%206-1%207-2%201-2-21-3-68%2024-92l18-14c18-11%2063-31%20127%203%205%203%2011%201%2012-5l4-21c2-6%205-7%208-2l53%2088c3%205%201%2010-5%2011l-82%2018c-6%201-9-2-6-7zm82%20108c-18%2012-63%2032-127-2-5-3-11-1-13%205l-6%2016c-1%205-5%206-8%200l-42-80c-3-5-1-11%205-13l70-21c6-2%209%201%207%207l-6%2022c-1%206%201%2014%206%2017%2033%2021%20143%2080%20155-57%201-6%202-6%202%200%202%2021%202%2068-25%2093l-18%2013z'%2F%3E%3C%2Fsvg%3E");
 	}
 	/* Logout Icon */
+	#qmenu_logut > a#qlogout:after,
 	div#satellite a[href*='logout']:before {
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D'action-logout'%20version%3D'1'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201000%201000'%3E%3Cpath%20d%3D'M4813%204994a624%20624%200%200%201-391-402c-29-85-31-271-27-1752l6-1658%2048-96a674%20674%200%200%201%20297-297c136-67%20377-67%20517%200a694%20694%200%200%201%20297%20297l48%2096v3392l-48%2096a680%20680%200%200%201-297%20295%20679%20679%200%200%201-450%2029z'%20transform%3D'matrix(.1%200%200%20-.1%200%20512)'%2F%3E%3Cpath%20d%3D'M2953%203261c-72-19-377-213-571-364a4285%204285%200%200%201%20715-7236c424-207%20759-316%201236-396%20345-60%20997-60%201342%200%20466%2080%20805%20187%201217%20387a4330%204330%200%200%201%202262%202752c102%20389%20130%20635%20132%201091%202%20464-21%20657-124%201071a4335%204335%200%200%201-1921%202597c-194%20117-276%20131-345%2064-42-42-42-54-48-585-8-667-17-630%20263-924%20253-262%20333-360%20467-565%20215-332%20351-667%20437-1074%2064-293%2064-837%202-1144a3099%203099%200%200%200-2486-2453c-266-52-814-46-1096%209A3063%203063%200%200%200%202269%20875c150%20301%20297%20500%20629%20843%20176%20186%20226%20248%20245%20317%2017%2061%2021%20235%2017%20615-5%20481-9%20535-40%20569-40%2044-99%2060-167%2042z'%20transform%3D'matrix(.1%200%200%20-.1%200%20512)'%2F%3E%3C%2Fsvg%3E");
 	}
