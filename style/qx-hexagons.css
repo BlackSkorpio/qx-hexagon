@@ -755,7 +755,6 @@
 	#qmenu_home img[src*='home.png'] {
 		font-size: var(--font-3r);
 	}
-
 	#qmenu li#qmenu_logut {
 		float: right !important;
 	}
