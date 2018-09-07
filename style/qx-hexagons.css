@@ -2825,7 +2825,7 @@
 	}*/
 	/*--------------------------------------------*/
 
-	@-webkit-keyframes qx_notice {
+	/*@-webkit-keyframes qx_notice {
 		0% {
 			color: inherit;
 		}
@@ -2880,7 +2880,7 @@
 @supports (display: grid) {
 	#column_center .list > :not([class^="listpage"]) {
 		flex-basis: auto;
-	}
+	}*/
 
 	/* Centers the first row of radio buttons */
 	form[name='messageform'] > .odd > .datetime,
