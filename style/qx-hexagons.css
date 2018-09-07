@@ -119,7 +119,23 @@
 		--gray--t: rgba(14, 19, 25, 0);
 	}
 
-	/* QX RESET !!!! */
+	/*** Hide stuff ***/
+	/* Outdated stuff */
+	a[href*="javascript:openEdit('sms')"],
+	/* Empty stuff scattered all over the place */
+	div:empty:not(.divider):not(.orangeline):not(.filldot),
+	span:empty,
+	a:empty,
+	p:empty,
+	option:empty,
+	div[style="float:left;width:70px"],
+	div > div[style="float:left;width:140px"],
+	#topstatus,
+	#langnav {
+		display: none !important;
+	}
+
+	/*** QX RESET !!!! ***/
 	body[onload*=handleImageXxxSetting] {
 		padding-left: 0 !important;
 		max-width: 100vw;
