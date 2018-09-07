@@ -345,10 +345,10 @@
 	a {
 		color: inherit;
 	}
-	a:visited {
+	[id^='column_'] a:visited {
 		text-decoration: none;
 	}
-	a:hover {
+	[id^='column_'] a:hover {
 		opacity: 0.8;
 	}
 	b,
