@@ -2602,6 +2602,13 @@
 /* Code 3
 	TEST AREA */
 @supports (display: grid) {
+	/* Latest from QX.SE */
+	#column_right > .smalldivider + div > b > [href^='https://www.qx.se'] {
+		display: list-item;
+		margin-left: 1.3em;
+		margin-bottom: 0.5em;
+		padding-left: 0.3em;
+	}
 	/* signup.php */
 	#signup h2 > i {
 		display: inline-block;
