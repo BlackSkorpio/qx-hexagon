@@ -849,6 +849,7 @@
 	#column_center #subnavbar .selectedbutton a {
 		background-color: var(--bkgrd-w2);
 		color: var(--link-clr2-h);
+		opacity: 1;
 	}
 	/*--------------------------------------------*/
 
