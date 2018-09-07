@@ -9,4 +9,4 @@
 	GitHub: github.com/BlackSkorpio/qx-hexagon
 	QX: www.qruiser.com/?id=469474
 ******************************************/
-@namespace url(http://www.w3.org/1999/xhtml);@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4}).*$"){a[href*="javascript:openEdit('sms')"],div:empty:not(.divider):not(.orangeline):not(.filldot),span:empty,a:empty,p:empty,option:empty,div[style="float:left;width:70px"],div > div[style="float:left;width:140px"],#topstatus,#langnav,#qruiser-panorama,#column_center .standardbanner,#goldmemberbanner.standardbanner.warningbanner,hr.dotline,div#stripe,div#ads,div[style="margin:auto auto auto 1px;height:55px;width:1024px;border:0;overflow:hidden;"]{display:none!important}}
+@namespace url(http://www.w3.org/1999/xhtml);@-moz-document regexp("(^http|https):\/\/(|www\.)qruiser\.(.[a-z]{1,4}).*$"){#qruiser-panorama,#column_center .standardbanner,#goldmemberbanner.standardbanner.warningbanner,hr.dotline,div#stripe,div#ads,div[style="margin:auto auto auto 1px;height:55px;width:1024px;border:0;overflow:hidden;"]{display:none!important}}
