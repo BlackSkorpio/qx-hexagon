@@ -2291,10 +2291,16 @@
 	#column_right img[src*='online_2'],
 	#qmenu a.menu_selected img[src*='home.png'],
 	#qmenu #qmenu_home:hover img[src*='home.png'],
-	#column_center .header [href^='/showclubs.php']:before,
-	#column_center .header [href^='/showfavourites.php']:before {
+	#column_center .header [href^='/showclubs.php']:before/*,
+	#column_center .header [href^='/showfavourites.php']:before*/ {
 		-webkit-filter: var(--filter-inv-1);
 		        filter: var(--filter-inv-1);
+	}
+	#column_center .header [href^='/showfavourites.php']:before {
+		filter: sepia(100%) saturate(10000%) hue-rotate(180deg) invert(70%);
+	}
+	#column_center .header [href^="/showfavourites.php"]:hover:before {
+		filter: sepia(100%) saturate(10000%) hue-rotate(180deg) invert(70%) brightness(94%);
 	}
 	.polllargeicon:hover,
 	#column_center .pollicon:hover,
