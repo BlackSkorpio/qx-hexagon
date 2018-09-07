@@ -959,14 +959,21 @@
 	/*--------------------------------------------*/
 
 	/* COLUMN LEFT */
+	/* Unread/New stuff */
+	/*#lc_unread_buffs,
+	#lc_unread_entries,
 	#lc_unread_messages,
 	#lc_online_favourites,
+	#lc_successful_flirts,
 	#column_left [href='/showclubs.php'] + b,
-	#column_left b a[href='/showclubs.php?updated=1'] {
+	#column_left b a[href='/showclubs.php?updated=1']*/
+	#column_left [id^='lc_'],
+	#column_left [href^='/show'] + b,
+	#column_left b a[href$='?updated=1'] {
 		color: var(--txt-high-clr);
 		animation: view_notice 6s infinite;
 		-webkit-transition: 1s;
-		transition: 1s;
+		        transition: 1s;
 	}
 	#column_left {
 		border-left-color: var(--brd-clr-h);
