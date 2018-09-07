@@ -1754,8 +1754,8 @@
 		display: none;
 	}
 
-	.spotlight .insertmember,
-	.gallery .insertmember {
+	#column_right .spotlight .insertmember,
+	#column_right .gallery .insertmember {
 		grid-template-columns: [info] 1fr;
 	}
 	/*--------------------------------------------*/
