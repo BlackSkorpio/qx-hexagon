@@ -2724,6 +2724,14 @@
 	#column_center #clubinfo_text ~ div.small[style='float:right;margin-bottom:10px;'] > * {
 		flex: 1 1 auto;
 	}
+	/* HACK to get rid of the "|" between link */
+	#column_center #clubinfo_text ~ div.small[style='float:right;margin-bottom:10px;'] {
+		font-size: 0 !important;
+	}
+	/* HACK to get the font size back on the links */
+	#column_center #clubinfo_text ~ div.small[style='float:right;margin-bottom:10px;'] a {
+		font-size: 1rem;
+	}
 	/* Clubs with no club image */
 	#column_right [href^='/clubs/club.php?id='] [style='float: left; width:32px; height:40px;'] {
 		width: 40px !important;
