@@ -394,8 +394,8 @@
 	 * Correct the inability to style clickable types in iOS and Safari.
 	 */
 	button,
-	[type="button"],
 	[type="reset"],
+	[type="button"],
 	[type="submit"] {
 		-webkit-appearance: button;
 	}
@@ -493,9 +493,9 @@
 		box-shadow: none;
 		transform: none;
 	}
+	input:disabled,
 	select:disabled,
 	textarea:disabled,
-	input:disabled,
 	input:disabled + label {
 		cursor: not-allowed;
 		color: var(--ui--clr-disabled) !important;
