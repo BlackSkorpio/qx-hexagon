@@ -860,6 +860,9 @@
 		padding: 0;
 	}
 	#subnavbar a,
+	#subnavbar .button {
+		background-color: inherit;
+		color: inherit;
 	}
 	#subnavbar .button:hover a,
 	#subnavbar .selectedbutton,
