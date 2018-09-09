@@ -2140,6 +2140,7 @@
 	div#satellite a[href='?']:before,
 	div#satellite a[href*='logout']:before,
 	div#satellite a[href*='messages']:before,
+	div#satellite a[href*='buffs.php']:before,
 	div#satellite a[href*='favourites.php']:before {
 		display: inline-block;
 		content: '';
@@ -2430,7 +2431,8 @@
 	li#qmenu_edit a:before,
 	div#satellite a[href='?']:before,
 	div#satellite a[href*='logout']:before,
-	div#satellite a[href*='messages']:before {
+	div#satellite a[href*='messages']:before,
+	div#satellite a[href*='buffs.php']:before {
 		-webkit-filter: var(--filter-inv-3);
 		        filter: var(--filter-inv-3);
 	}
@@ -2680,6 +2682,10 @@
 	.clubxxx1hidden, .clubxxx2hidden, .clubxxx3hidden, .clubxxx4hidden {
 		width: 40px;
 		height: 40px;
+	}
+	/* Buffs */
+	div#satellite a[href*='buffs.php']:before {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20version%3D%221%22%20id%3D%22member-buffs%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20457%20457%22%3E%3Cpath%20id%3D%22hand%22%20d%3D%22M441%20253c11-12%2016-26%2016-43%200-15-6-28-16-38a53%2053%200%200%200-39-17h-79a72%2072%200%200%201%205-13l3-5%208-16a117%20117%200%200%200%203-77c-1-4-4-8-7-13s-7-8-11-11c-5-3-10-6-17-8s-15-3-24-3c-5%200-9%202-13%206a85%2085%200%200%200-15%2029l-3%2017a718%20718%200%200%201-9%2031l-9%2014-29%2034-29%2035c-10%2011-17%2016-22%2017-4%200-8%202-12%205-3%204-5%208-5%2013v183c0%205%202%209%205%2013%204%203%208%205%2013%205%207%200%2022%205%2045%2013a1573%201573%200%200%200%2070%2019c14%203%2028%205%2041%205h36c26-1%2045-8%2057-23%2011-13%2015-30%2014-51%207-7%2012-16%2015-27%203-12%203-23%200-34%209-11%2013-24%2012-39%200-6-1-13-4-21z%22%2F%3E%3Cpath%20id%3D%22cuffs%22%20d%3D%22M101%20192H18c-5%200-9%202-13%205-3%204-5%208-5%2013v183c0%205%202%209%205%2013%204%203%208%205%2013%205h83c4%200%209-2%2012-5%204-4%206-8%206-13V210c0-5-2-9-6-13-3-3-8-5-12-5zM68%20369c-4%204-8%206-13%206s-10-2-13-6c-4-3-5-8-5-13s1-9%205-13c3-3%208-5%2013-5s9%202%2013%205c3%204%205%208%205%2013s-2%2010-5%2013z%22%2F%3E%3C%2Fsvg%3E");
 	}
 	/* Reload Icon */
 	div#satellite a[href='?']:before {
