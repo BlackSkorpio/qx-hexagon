@@ -4,7 +4,7 @@
 	Theme Name: QX Hexagon
 	Theme URI: https://qruiser.com
 	Description: A modernized theme for qruiser.com
-	Version: 3.1.2
+	Version: 3.1.3
 	Author: Bjarne Varöystrand
 	www: varoystrand.se
 	GitHub: github.com/BlackSkorpio/qx-hexagon
@@ -197,8 +197,8 @@
 	[style*='width: 195px;'],
 	[style*='width:200px;'],
 	[style*='width: 200px;'],
-	[style*='width: 210px'],
-	[style*='width:210px'] {
+	[style*='width:210px'],
+	[style*='width: 210px'] {
 		width: auto !important;
 	}
 	[style*='height: 120px'] {
@@ -430,12 +430,12 @@
 	[type="reset"],
 	[type="button"],
 	[type="submit"],
-	h3 [href^='/signup.php'],
 	[href*='addscribble'],
-	div:not([class*='button']) > [href*='/createclub/'],
-	body[onload='handleImageXxxSetting();'] #closing_link,
 	[href*='becomemember'],
-	[href*='adddiscussion'] {
+	[href*='adddiscussion'],
+	h3 [href^='/signup.php'],
+	div:not([class*='button']) > [href*='/createclub/'],
+	body[onload='handleImageXxxSetting();'] #closing_link {
 		/*display: block;*/
 		background: inherit;
 		color: inherit;
@@ -456,12 +456,12 @@
 	[type="reset"]:hover,
 	[type="button"]:hover,
 	[type="submit"]:hover,
-	h3 [href^='/signup.php']:hover,
 	[href*='addscribble']:hover,
-	div:not([class*='button']) > [href*='/createclub/']:hover,
-	body[onload='handleImageXxxSetting();'] #closing_link:hover,
 	[href*='becomemember']:hover,
-	[href*='adddiscussion']:hover {
+	[href*='adddiscussion']:hover,
+	h3 [href^='/signup.php']:hover,
+	div:not([class*='button']) > [href*='/createclub/']:hover,
+	body[onload='handleImageXxxSetting();'] #closing_link:hover {
 		background: var(--bkgrd-h1);
 		color: var(--txt-aside-clr) !important;
 		text-shadow: 0 var(--ls-s) 0 var(--txt-base-clr);
@@ -502,13 +502,13 @@
 
 	/* Forms special handling */
 	#column_center button,
-	#column_center [type="submit"]:not([name='cancel']),
-	#column_center h3 [href^='/signup.php'],
 	#column_center [href*='addscribble'],
-	div:not([class*='button']) > [href*='/createclub/'],
-	body[onload='handleImageXxxSetting();'] #closing_link,
 	#column_center [href*='becomemember'],
-	#column_center [href*='adddiscussion'] {
+	#column_center [href*='adddiscussion'],
+	#column_center h3 [href^='/signup.php'],
+	#column_center [type="submit"]:not([name='cancel']),
+	div:not([class*='button']) > [href*='/createclub/'],
+	body[onload='handleImageXxxSetting();'] #closing_link {
 		border-radius: var(--brd-rad-3) 0;
 	}
 	#column_center select,
@@ -518,12 +518,12 @@
 		border: var(--brd-type-1) var(--bkgrd-b1);
 		border-radius: var(--brd-rad-2);
 	}
-	h3 [href^='/signup.php'],
 	[href*='addscribble'],
-	div:not([class*='button']) > [href*='/createclub/'],
-	body[onload='handleImageXxxSetting();'] #closing_link,
 	[href*='becomemember'],
-	[href*='adddiscussion'] {
+	[href*='adddiscussion'],
+	h3 [href^='/signup.php'],
+	div:not([class*='button']) > [href*='/createclub/'],
+	body[onload='handleImageXxxSetting();'] #closing_link {
 		display: inline-block;
 		width: -webkit-fit-content;
 		   width: -moz-fit-content;
@@ -829,13 +829,6 @@
 		flex: 1 1 auto;
 		text-align: center;
 	}
-	#subnavbar div a {
-		display: block;
-		width: 100%;
-		height: 100%;
-		line-height: initial;
-		padding: var(--ui--size-3) 0;
-	}
 	#subnavbar .button,
 	#subnavbar .selectedbutton {
 		height: 100%;
@@ -843,14 +836,17 @@
 		line-height: 1.5rem;
 		padding: 0;
 	}
-	#subnavbar .button,
-	#column_center #subnavbar * a:not(:hover) {
-		background-color: var(--bkgrd-b1);
-		color: var(--link-clr2);
+	#subnavbar div a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		line-height: inherit;
 	}
+	#subnavbar a,
+	}
+	#subnavbar .button:hover a,
 	#subnavbar .selectedbutton,
-	#subnavbar .button a:hover,
-	#column_center #subnavbar .selectedbutton a {
+	#subnavbar .selectedbutton a {
 		background-color: var(--bkgrd-w2);
 		color: var(--link-clr2-h);
 		opacity: 1;
