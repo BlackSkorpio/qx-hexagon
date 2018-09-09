@@ -2050,6 +2050,34 @@
 	}
 	/*--------------------------------------------*/
 
+	/* Edit your profile */
+	body[onload='handleImageXxxSetting();'] img[src*='status_'] {
+		width: 0;
+		height: 0;
+		padding: 5px;
+		border: 1px solid;
+	}
+	body[onload='handleImageXxxSetting();'] img[src$='status_0.gif'] {
+		border-color: green;
+		background-color: green;
+	}
+	body[onload='handleImageXxxSetting();'] img[src$='status_1.gif'] {
+		border-color: yellow;
+		background-color: yellow;
+	}
+	body[onload='handleImageXxxSetting();'] img[src$='status_2.gif'] {
+		border-color: red;
+		background-color: red;
+	}
+	body[onload='handleImageXxxSetting();'] img[src$='status_3.gif'] {
+		border-color: gray;
+		background-color: gray;
+	}
+	body[onload='handleImageXxxSetting();'] #largeicons li.textlargeicon {
+		width: 24px;
+		height: 24px;
+	}
+
 	/* ICONS */
 	#column_center ul.lockicons {
 		float: right;
