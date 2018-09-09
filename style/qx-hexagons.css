@@ -831,7 +831,7 @@
 	#subnavbar {
 		display: flex;
 		flex-flow: row wrap;
-		height: 1.5rem;
+		min-height: 1.5rem;
 		/* Negative value needed since we have a small padding on the parent */
 		margin: var(--margin-c);
 		width: calc(100% + 0.6em);
