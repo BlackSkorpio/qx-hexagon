@@ -1349,6 +1349,14 @@
 	.homepage h2 {
 		font-size: var(--font-5);
 	}
+	.homepage #largeicons {
+		display: flex;
+		height: auto;
+	}
+	.homepage #largeicons li {
+		height: 21px;
+		width: 22px;
+	}
 	/* Profile overview */
 	.homepage [style*='10px'],
 	.homepageblock .line .header span[style] {
