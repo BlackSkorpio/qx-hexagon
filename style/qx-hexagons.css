@@ -433,6 +433,7 @@
 	h3 [href^='/signup.php'],
 	[href*='addscribble'],
 	div:not([class*='button']) > [href*='/createclub/'],
+	body[onload='handleImageXxxSetting();'] #closing_link,
 	[href*='becomemember'],
 	[href*='adddiscussion'] {
 		/*display: block;*/
@@ -458,6 +459,7 @@
 	h3 [href^='/signup.php']:hover,
 	[href*='addscribble']:hover,
 	div:not([class*='button']) > [href*='/createclub/']:hover,
+	body[onload='handleImageXxxSetting();'] #closing_link:hover,
 	[href*='becomemember']:hover,
 	[href*='adddiscussion']:hover {
 		background: var(--bkgrd-h1);
@@ -504,6 +506,7 @@
 	#column_center h3 [href^='/signup.php'],
 	#column_center [href*='addscribble'],
 	div:not([class*='button']) > [href*='/createclub/'],
+	body[onload='handleImageXxxSetting();'] #closing_link,
 	#column_center [href*='becomemember'],
 	#column_center [href*='adddiscussion'] {
 		border-radius: var(--brd-rad-3) 0;
@@ -518,6 +521,7 @@
 	h3 [href^='/signup.php'],
 	[href*='addscribble'],
 	div:not([class*='button']) > [href*='/createclub/'],
+	body[onload='handleImageXxxSetting();'] #closing_link,
 	[href*='becomemember'],
 	[href*='adddiscussion'] {
 		display: inline-block;
