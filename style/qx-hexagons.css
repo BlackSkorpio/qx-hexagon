@@ -2709,6 +2709,18 @@
 /* Code 3
 	TEST AREA */
 @supports (display: grid) {
+	/* Make the club type links sticky */
+	#column_center #clubinfo_text ~ div.small[style='float:right;margin-bottom:10px;'] {
+		float: none !important;
+		display: flex;
+		position: sticky;
+		top: 2.125rem;
+		width: 100%;
+		padding: 0.3rem 0;
+		z-index: 1;
+		background-color: inherit;
+		text-align: center;
+	}
 	/* Clubs with no club image */
 	#column_right [href^='/clubs/club.php?id='] [style='float: left; width:32px; height:40px;'] {
 		width: 40px !important;
