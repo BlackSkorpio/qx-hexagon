@@ -1485,7 +1485,9 @@
 	#column_center div > img[style*='/clubimages/'] {
 		width: 100%;
 		height: auto;
-		background-size: cover;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 	/* Member since xxx */
 	.list .memberinfo {
