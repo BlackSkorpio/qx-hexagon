@@ -423,6 +423,18 @@
 	input[type='checkbox'] {}
 
 	/* BUTTONS */
+	/* NOTE These should be marked up with role="button" to better confirm with HTML5 */
+	[href*='addscribble'],
+	#qmenu li#qmenu_logut,
+	[href*='becomemember'],
+	[href*='adddiscussion'],
+	h3 [href^='/signup.php'],
+	div:not([class*='button']) > [href*='/createclub/'],
+	body[onload='handleImageXxxSetting();'] #closing_link {
+		-webkit-appearance: button;
+		   -moz-appearance: button;
+		        appearance: button;
+	}
 	[type='button'][style*='float:'] {
 		float: none !important;
 	}
