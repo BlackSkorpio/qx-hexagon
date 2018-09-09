@@ -836,6 +836,8 @@
 		margin: var(--margin-c);
 		width: calc(100% + 0.6em);
 		margin-left: -0.3em;
+		background-color: var(--bkgrd-b1);
+		color: var(--link-clr2);
 	}
 	#subnavbar > * {
 		flex: 1 1 auto;
