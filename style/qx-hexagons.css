@@ -279,6 +279,7 @@
 		margin-bottom: var(--margin-l);
 	}
 	.divider,
+	* > .line,
 	.orangeline,
 	.smalldivider,
 	* > #column_center .line {
@@ -959,6 +960,7 @@
 
 	.line,
 	.divider,
+	* > .line,
 	.orangeline,
 	.smalldivider {
 		margin: var(--margin-l) var(--margin-z);
