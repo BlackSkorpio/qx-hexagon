@@ -412,6 +412,7 @@
 		padding: 0.2em 0 0.2em 0.2em;
 		text-transform: capitalize;
 		border: var(--brd-type-1);
+		background-color: inherit;
 	}
 	select,
 	select option,
