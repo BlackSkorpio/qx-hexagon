@@ -2763,26 +2763,34 @@
 /* Code 3
 	TEST AREA */
 @supports (display: grid) {
+	/* Clubs utility links */
+	#column_center h2 + p[style='margin-top: 0.5em;'],
 	/* Make the club type links sticky */
 	#column_center #clubinfo_text ~ div.small[style='float:right;margin-bottom:10px;'] {
 		float: none !important;
 		display: flex;
 		position: sticky;
-		top: 2.125rem;
-		width: 100%;
-		padding: 0.3rem 0;
-		z-index: 1;
+		top: 2rem;
 		background-color: inherit;
+		width: calc(100% + 0.6rem);
+		margin-left: -0.3rem;
+		padding: 0.3rem 0;
 		text-align: center;
+		z-index: 1;
 	}
+	#column_center h2 + p[style='margin-top: 0.5em;'] > *,
 	#column_center #clubinfo_text ~ div.small[style='float:right;margin-bottom:10px;'] > * {
+		display: block;
 		flex: 1 1 auto;
 	}
-	/* HACK to get rid of the "|" between link */
+	/* HACK to get rid of the text only node */
+	#column_center h2 + p[style='margin-top: 0.5em;'],
+	/* HACK to get rid of the "|" between links */
 	#column_center #clubinfo_text ~ div.small[style='float:right;margin-bottom:10px;'] {
 		font-size: 0 !important;
 	}
 	/* HACK to get the font size back on the links */
+	#column_center h2 + p[style='margin-top: 0.5em;'] a,
 	#column_center #clubinfo_text ~ div.small[style='float:right;margin-bottom:10px;'] a {
 		font-size: 1rem;
 	}
