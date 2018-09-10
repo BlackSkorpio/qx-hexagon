@@ -2108,6 +2108,11 @@
 	}
 	/*--------------------------------------------*/
 
+	body[onload='handleImageXxxSetting();'] p.feedback {
+		display: block;
+		margin: var(--margin-xl);
+		font-size: var(--font-3);
+	}
 	/* Edit your profile */
 	body[onload='handleImageXxxSetting();'] img[src*='status_'] {
 		width: 0;
