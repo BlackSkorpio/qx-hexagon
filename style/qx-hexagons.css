@@ -796,7 +796,6 @@
 		font-size: var(--font-3r);
 	}
 	#qmenu li#qmenu_logut {
-		display: inline-block !important;
 		float: right !important;
 		border: var(--brd-type-1) var(--brd-clr-w);
 		border-radius: var(--brd-rad-2);
