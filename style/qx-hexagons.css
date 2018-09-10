@@ -867,7 +867,8 @@
 		padding: 0;
 	}
 	#subnavbar a,
-	#subnavbar .button {
+	#subnavbar .button,
+	#column_center #subnavbar * a:not(:hover) {
 		background-color: inherit;
 		color: inherit;
 	}
