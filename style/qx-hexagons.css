@@ -1192,10 +1192,15 @@
 	.spotlight {
 		position: relative !important;
 		width: 100% !important;
-		left: 4px !important;
+		/*left: 4px !important;*/
 	}
 	.spotlight > div > a[style*='color:black;'] {
 		color: inherit !important;
+	}
+	.spotlight div[style*='overflow:hidden'] img {
+		width: 100% !important;
+		height: auto;
+		max-height: 100% !important;
 	}
 	.colclubname {
 		width: 100%;
