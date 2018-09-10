@@ -430,7 +430,8 @@
 	[href*='adddiscussion'],
 	h3 [href^='/signup.php'],
 	div:not([class*='button']) > [href*='/createclub/'],
-	body[onload='handleImageXxxSetting();'] #closing_link {
+	body[onload='handleImageXxxSetting();'] #closing_link,
+	body[onload='timer()'] > p > a {
 		-webkit-appearance: button;
 		   -moz-appearance: button;
 		        appearance: button;
@@ -446,6 +447,7 @@
 	[href*='becomemember'],
 	[href*='adddiscussion'],
 	h3 [href^='/signup.php'],
+	body[onload='timer()'] > p > a,
 	div:not([class*='button']) > [href*='/createclub/'],
 	body[onload='handleImageXxxSetting();'] #closing_link {
 		/*display: block;*/
@@ -545,7 +547,8 @@
 		margin: 1em 0;
 	}
 	#search [type='submit'],
-	#column_left [type='submit'] {
+	#column_left [type='submit'],
+	body[onload='timer()'] > p > a {
 		background: var(--bkgrd-h1);
 		color: var(--txt-aside-clr);
 		border-color: var(--brd-clr-w);
@@ -557,7 +560,8 @@
 		box-shadow: none;
 		transform: none;
 	}
-	#column_left [type='submit']:hover {
+	#column_left [type='submit']:hover,
+	body[onload='timer()'] > p > a:hover {
 		box-shadow: 1px 1px 2px var(--shadow-dark);
 		transform: translateY(1px);
 	}
@@ -2011,7 +2015,8 @@
 	div#satellite [type='text'] {
 		height: 2em;
 	}
-	div#satellite [type='submit'] {
+	div#satellite [type='submit'],
+	body[onload="timer()"] > a[href='javascript:openloc("", 1)'] {
 		display: block;
 		width: 80%;
 		background: var(--txt-high-clr);
