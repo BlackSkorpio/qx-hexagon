@@ -2025,6 +2025,7 @@
 	body[onload="timer()"] div[style='margin: 10px']:not(#satellite) {
 		height: calc(100vh - 8em);
 		margin: auto !important;
+		padding-top: var(--padding-l);
 	}
 	body[onload="timer()"] div:not(#satellite) > div[style*='#B21B1B'] {
 		margin-top: var(--margin-m);
