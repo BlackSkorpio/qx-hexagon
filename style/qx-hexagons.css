@@ -671,7 +671,7 @@
 		padding: 0;
 		width: var(--ui--wrapper);
 		margin: 0 auto;
-		margin-bottom: 1em;
+		padding-bottom: var(--padding-xl);
 	}
 	#top {
 		grid-row: top;
@@ -3076,11 +3076,11 @@
 		flex: 1;
 	}
 	form[name='messageform'] > p:first-of-type {
-		margin-bottom: 1em;
+		margin-bottom: var(--margin-xl);
 		white-space: nowrap;
 	}
 	form[name='messageform'] [type='text'] {
-		margin-left: 0.5em;
+		margin-left: var(--margin-m);
 		width: 100%;
 	}
 }
