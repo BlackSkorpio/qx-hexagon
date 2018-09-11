@@ -2881,6 +2881,14 @@
 		font-style: normal;
 	}
 
+	.pill {
+		min-width: inherit;
+		color: inherit;
+		text-align: inherit;
+		border-radius: inherit;
+		border: inherit;
+	}
+
 	/* forms */
 	a[href*="/goldmember.php"] + .gallerylink {
 		cursor: not-allowed;
