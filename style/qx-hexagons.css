@@ -664,6 +664,10 @@
 		grid-template-rows: [top] 3.4375em [menu] -webkit-min-content [content] -webkit-min-content;
 		grid-template-rows: [top] 3.4375em [menu] min-content [content] min-content;
 		grid-template-columns: [left] var(--ui--aside) [center] 1fr [right] var(--ui--aside);
+		grid-template-areas:
+			"top top top"
+			"menu menu menu"
+			"left content right";
 		padding: 0;
 		width: var(--ui--wrapper);
 		margin: 0 auto;
