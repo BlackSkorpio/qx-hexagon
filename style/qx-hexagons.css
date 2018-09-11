@@ -3092,6 +3092,16 @@
 	#column_center .list > :not([class^="listpage"]) {
 		flex-basis: auto;
 	}
+	/** Original Message **/
+	/* Message title */
+	#column_center .list br[clear=all] + h3 {
+		margin-left: var(--margin-m);
+		margin-bottom: 0;
+	}
+	/* Message body */
+	#column_center .list div[data-user-input] {
+		padding: var(--padding-m);
+	}
 
 	/* Centers the first row of radio buttons */
 	form[name='messageform'] > .odd > .datetime,
