@@ -3144,6 +3144,11 @@
 		-ms-flex-positive: 1;
 		        flex-grow: 1;
 	}
+	/* Clubs member title */
+	#column_center .insertmember ~ b {
+		font-size: var(--font-2);
+		font-style: italic;
+	}
 }
 }
 
