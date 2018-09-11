@@ -2362,6 +2362,7 @@
 	#column_center .header [href^='/showclubs.php']:before,
 	#column_center .header [href^='/showfavourites.php']:before {
 		background-size: contain;
+		background-repeat: no-repeat;
 		padding: 0.15rem 0.75rem;
 		vertical-align: middle;
 	}
