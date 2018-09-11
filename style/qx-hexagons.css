@@ -2479,8 +2479,7 @@
 	#qmenu_logut:hover > a#qlogout:after,
 	#qmenu a.menu_selected img[src*='home.png'],
 	#qmenu #qmenu_home:hover img[src*='home.png'],
-	#column_center .header [href^='/showclubs.php']:before/*,
-	#column_center .header [href^='/showfavourites.php']:before*/ {
+	#column_center .header [href^='/showclubs.php']:before {
 		-webkit-filter: var(--filter-inv-1);
 		        filter: var(--filter-inv-1);
 	}
