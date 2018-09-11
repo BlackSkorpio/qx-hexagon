@@ -846,6 +846,12 @@
 		-webkit-box-shadow: var(--shadow-size-1) var(--shadow-dark);
 		        box-shadow: var(--shadow-size-1) var(--shadow-dark);
 	}
+	/* HACK to also set the correct background color on the parent
+	   https://stackoverflow.com/a/19401553/6820262 */
+	#qmenu > li:hover > a {
+		background-color: var(--bkgrd-w2);
+		color: var(--link-clr2-h);
+	}
 
 	/*** Subnavbar ***/
 	#subnavbar {
