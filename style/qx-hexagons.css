@@ -2531,8 +2531,8 @@
 
 	#column_left img[src*='online_4'],
 	#column_right img[src*='online_4'] {
-		-webkit-filter: var(--filter-inv-3) brightness(50%);
-		        filter: var(--filter-inv-3) brightness(50%);
+		-webkit-filter: brightness(50%) invert(70%) sepia(100%) hue-rotate(360deg);
+		        filter: brightness(50%) invert(70%) sepia(100%) hue-rotate(360deg);
 	}
 
 	/*span[class^='favouriteicon_'],
