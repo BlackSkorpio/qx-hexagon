@@ -1758,6 +1758,11 @@
 		grid-template-rows: [link] -webkit-min-content [description] -webkit-min-content [icons] -webkit-min-content [mood] -webkit-min-content;
 		grid-template-rows: [link] min-content [description] min-content [icons] min-content [mood] min-content;
 		grid-template-columns: [avatar] 2rem [info] 1fr;
+		grid-template-areas:
+			"avatar link"
+			"avatar description"
+			"avatar icons"
+			"mood mood";
 		grid-gap: 0.2em 0.3em;
 		-webkit-box-align: start;
 		   -ms-flex-align: start;
