@@ -3089,7 +3089,7 @@
 /* Code 4
 	Read message */
 @supports (display: grid) {
-	#column_center .list > :not([class^="listpage"]) {
+	#column_center > .list > :not([class^="listpage"]):not([data-user-input]) {
 		flex-basis: auto;
 	}
 	/** Original Message **/
