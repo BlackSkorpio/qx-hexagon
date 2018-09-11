@@ -4,7 +4,7 @@
 	Theme Name: QX Hexagon
 	Theme URI: https://qruiser.com
 	Description: A modernized theme for qruiser.com
-	Version: 3.1.3
+	Version: 3.1.4
 	Author: Bjarne Varöystrand
 	www: varoystrand.se
 	GitHub: github.com/BlackSkorpio/qx-hexagon
@@ -134,8 +134,9 @@
 	#langnav {
 		display: none !important;
 	}
+	/*--------------------------------------------*/
 
-	/*** QX RESET !!!! ***/
+	/*** QX RESET ***/
 	body[onload*=handleImageXxxSetting] {
 		padding-left: 0 !important;
 		max-width: 100vw;
@@ -301,7 +302,7 @@
 		margin: 0 auto;
 		margin-top: 2em !important;
 	}
-	/* EOF QX RESET */
+	/*--------------------------------------------*/
 
 	html {
 		-webkit-box-sizing: border-box;
@@ -360,7 +361,9 @@
 		margin: var(--margin-xl);
 		padding-left: 2.5em;
 	}
-	/* FORMS */
+	/*--------------------------------------------*/
+
+	/*** FORMS ***/
 	/** From Normalize
 	 * 1. Change the font styles in all browsers.
 	 * 2. Remove the margin in Firefox and Safari.
@@ -423,8 +426,9 @@
 	}
 	input[type='radio'] {}
 	input[type='checkbox'] {}
+	/*--------------------------------------------*/
 
-	/* BUTTONS */
+	/*** BUTTONS ***/
 	/* NOTE These should be marked up with role="button" to better confirm with HTML5 */
 	[href*='addscribble'],
 	#qmenu li#qmenu_logut,
@@ -515,8 +519,9 @@
 			rgba(51, 51, 51, 0) var(--ui--size-4)
 			);
 	}
+	/*--------------------------------------------*/
 
-	/* Forms special handling */
+	/*** Forms special handling ***/
 	#column_center button,
 	#column_center [href*='addscribble'],
 	#column_center [href*='becomemember'],
@@ -652,6 +657,7 @@
 	}
 	/*--------------------------------------------*/
 
+	/*** Layout ***/
 	#whole {
 		display: grid;
 		grid-template-rows: [top] 3.4375em [menu] -webkit-min-content [content] -webkit-min-content;
@@ -717,7 +723,7 @@
 	}
 	/*--------------------------------------------*/
 
-	/* THE LOGO SECTION */
+	/*** THE LOGO SECTION ***/
 	img#logo_qruiser,
 	img[src*='puff_qruiser.gif'],
 	#satellite img[alt="Qruiser"] {
@@ -769,7 +775,7 @@
 	}
 	/*--------------------------------------------*/
 
-	/* TOP NAVIGATION */
+	/*** TOP NAVIGATION ***/
 	#qmenu,
 	#qmenu a,
 	#qmenu ul {
@@ -836,7 +842,7 @@
 		        box-shadow: var(--shadow-size-1) var(--shadow-dark);
 	}
 
-	/* Subnavbar */
+	/*** Subnavbar ***/
 	#subnavbar {
 		display: flex;
 		flex-flow: row wrap;
@@ -898,7 +904,7 @@
 		letter-spacing: var(--ls-s);
 	}
 
-	/* FONT SIZES */
+	/*** FONT SIZES ***/
 	h1, h2 {
 		font-size: var(--font-6);
 		margin: var(--margin-l) var(--margin-z);
@@ -1017,14 +1023,14 @@
 	}
 	/*--------------------------------------------*/
 
-	/* COMMON LEFT & RIGHT */
+	/*** COMMON LEFT & RIGHT ***/
 	#column_left a,
 	#column_right a {
 		color: var(--link-clr2);
 	}
 	/*--------------------------------------------*/
 
-	/* COLUMN LEFT */
+	/*** COLUMN LEFT ***/
 	/* Unread/New stuff */
 	/*#lc_unread_buffs,
 	#lc_unread_entries,
@@ -1172,7 +1178,7 @@
 	}
 	/*--------------------------------------------*/
 
-	/* COLUMN RIGHT */
+	/*** COLUMN RIGHT ***/
 	#column_right {
 		border-right-color: var(--brd-clr-h);
 		border-left: var(--brd-type-1) var(--brd-clr-t);
@@ -1286,7 +1292,7 @@
 	}
 	/*--------------------------------------------*/
 
-	/* COLUMN CENTER */
+	/*** COLUMN CENTER ***/
 	div.errorText {
 		background-image: none;
 		background-color: var(--bkgrd-w2);
@@ -1383,7 +1389,7 @@
 		font-weight: 700 !important;
 	}
 
-	/* Profile section */
+	/** Profile section **/
 	/* Nick name */
 	.homepage h2 {
 		font-size: var(--font-5);
@@ -1569,7 +1575,7 @@
 	}
 	/*--------------------------------------------*/
 
-	/* Pagenation */
+	/*** Pagenation ***/
 	.listpagelinks,
 	.listpagenumber {
 		display: flow-root;
@@ -1597,7 +1603,7 @@
 	}
 	/*--------------------------------------------*/
 
-	/* Info - FAQ */
+	/*** Info - FAQ ***/
 	span[style='line-height:18px;'] {
 		display: flow-root;
 		margin: 0 1em 1em;
@@ -1607,13 +1613,13 @@
 	}
 	/*--------------------------------------------*/
 
-	/* Dagbok */
+	/*** Dagbok ***/
 	h4[style='float:left;margin-right:5px'] {
 		font-size: 0.85em;
 	}
 	/*--------------------------------------------*/
 
-	/* Favoriter */
+	/*** Favoriter ***/
 	.list .insertmember + div[style*='width:210px;float:right'] > .smalltext br:last-of-type {
 		display: none;
 	}
@@ -1625,7 +1631,7 @@
 	}
 	/*--------------------------------------------*/
 
-	/* Images posted as "scribbles" */
+	/*** Images posted as "scribbles" ***/
 	div[style*="width: 400px"] img[style*='/scribbleimages/'] {
 		width: 100%;
 		height: auto;
@@ -1635,7 +1641,7 @@
 	}
 	/*--------------------------------------------*/
 
-	/* QX Notice */
+	/*** QX Notice ***/
 	.smalldivider  [href^='/noticeboard'] {
 		color: var(--txt-error-clr) !important;
 	}
@@ -1662,7 +1668,7 @@
 	}
 	/*--------------------------------------------*/
 
-	/* MEMBER CONTAINERS */
+	/*** MEMBER CONTAINERS ***/
 	/* RESET member */
 	.gallery {
 		background-image: none;
@@ -1809,7 +1815,7 @@
 	}
 	/*--------------------------------------------*/
 
-	/* 3 Memebers */
+	/*** 3 Memebers ***/
 	.gallery .odd,
 	.gallery .even {
 		width: calc(100% / 3);
@@ -1889,7 +1895,7 @@
 	}
 	/*--------------------------------------------*/
 
-	/* Make Things Sticky */
+	/*** Make Things Sticky ***/
 	#qmenu,
 	#subnavbar,
 	#column_left .insertmember:first-of-type,
@@ -1967,7 +1973,7 @@
 	}
 	/*--------------------------------------------*/
 
-	/** Satellite **/
+	/*** Satellite ***/
 	body[onload='timer()'] {
 		min-width: auto !important;
 		width: auto !important;
@@ -2115,6 +2121,7 @@
 	}
 	/*--------------------------------------------*/
 
+	/*** Edit settings popup ***/
 	body[onload='handleImageXxxSetting();'] p.feedback {
 		display: block;
 		margin: var(--margin-xl);
@@ -2148,7 +2155,7 @@
 		height: 24px;
 	}
 
-	/* ICONS */
+	/*** ICONS ***/
 	#column_center ul.lockicons {
 		float: right;
 		top: 0;
@@ -2201,7 +2208,7 @@
 		margin-left: -1rem;
 	}
 
-	/** Satellite **/
+	/* Satellite */
 	#qmenu_logut > a#qlogout:after,
 	div#satellite a[href='?']:before,
 	div#satellite a[href*='logout']:before,
@@ -2526,7 +2533,7 @@
 		filter: none;
 	}
 
-	/* The Actual icons */
+	/*** The Actual icons ***/
 	/* Logged in mobile */
 	img[src*='online_wap.gif'] {
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D'online-wap'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027.4%2027.4'%3E%3Cpath%20d%3D'M19.5%200H7.9a2%202%200%200%200-2%202v23.4c0%201.1%201%202%202%202h11.6a2%202%200%200%200%202-2V2a2%202%200%200%200-2-2zm-8.6%201.2h5.7c.1%200%20.2.2.2.5s0%20.5-.2.5h-5.7c-.2%200-.3-.2-.3-.5s.1-.5.3-.5zm2.8%2024.3a1.3%201.3%200%201%201%200-2.6%201.3%201.3%200%200%201%200%202.6zM20%2021H7.4V3.4H20V21z'%2F%3E%3C%2Fsvg%3E");
@@ -2775,6 +2782,7 @@
 /* Code 3
 	TEST AREA */
 @supports (display: grid) {
+	/*** Club Nav ***/
 	/* Clubs utility links */
 	#column_center h2 + p[style='margin-top: 0.5em;'],
 	/* Make the club type links sticky */
