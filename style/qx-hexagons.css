@@ -3231,6 +3231,7 @@
 	#column_center .even > div > div > a > img {
 		width: 100% !important;
 		background-color: var(--bkgrd-t) !important;
+		background-size: cover;
 	}
 	#column_center [style*='width: 127px;'],
 	#column_center [style*='width: 130px;'],
