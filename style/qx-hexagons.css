@@ -2951,6 +2951,10 @@
 		-webkit-transition: 0.25s all ease;
 		        transition: 0.25s all ease;
 	}
+	input:checked + .pill, .pill:hover {
+		color: inherit;
+		background: inherit;
+	}
 
 	/* Radio buttons
 		https://codepen.io/adamstuartclark/pen/pbYVYR
