@@ -290,6 +290,7 @@
 		white-space: normal;
 	}
 	* > #column_center .line {
+		display: flow-root;
 		margin-bottom: var(--margin-xlr);
 		height: 1rem;
 		line-height: var(--lh-1);
