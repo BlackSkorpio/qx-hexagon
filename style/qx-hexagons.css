@@ -2425,8 +2425,8 @@
 		padding: 0.55em;
 	}
 	.dropupicon, .dropdownicon {
-		width: calc(var(--ui--icon-m) / 2);
-		height: calc(var(--ui--icon-m) / 2);
+		width: 0;
+		height: 0;
 	}
 	img[src*='exclamation.gif'] {
 		display: block;
@@ -2568,6 +2568,8 @@
 		-webkit-filter: var(--filter-flower);
 		        filter: var(--filter-flower);
 	}
+	.dropupicon,
+	.dropdownicon,
 	img[src*="dropup_"],
 	img[src*="dropdown_"],
 	.polllargeicon,
