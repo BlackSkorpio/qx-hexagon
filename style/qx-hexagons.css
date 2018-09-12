@@ -1313,6 +1313,16 @@
 		margin-bottom: 0.5em;
 		padding-left: 0.3em;
 	}
+	/* Gaymap */
+	#column_right > .smalldivider:nth-last-of-type(-n+9):not(:nth-last-of-type(7)):not(:nth-last-of-type(3)) + div {
+		font-size: 0;
+	}
+	[href^='https://gaymap.qx.se/?city'] {
+		display: list-item;
+		font-size: 0.85rem;
+		margin-left: 1.3em;
+		padding-left: 0.3em;
+	}
 	/* Active discussions */
 	#column_right .smalldivider ~ div:nth-last-child(even) > [style='padding-top: 2px; padding-bottom: 4px;'] {
 		margin-top: 0.5em;
