@@ -1477,6 +1477,10 @@
 
 	/** Profile section **/
 	/* Nick name */
+	#column_center img[src*='/starsigns/'] {
+		border-radius: 50%;
+		border: 1px solid;
+	}
 	.homepage h2 {
 		font-size: var(--font-5);
 	}
