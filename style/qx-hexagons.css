@@ -733,7 +733,7 @@
 	}
 	#column_center {
 		grid-column: center;
-		padding: 0 var(--padding-s);
+		padding: 0 var(--padding-s) var(--padding-l);
 		border-radius: var(--brd-rad-1);
 	}
 	/*--------------------------------------------*/
