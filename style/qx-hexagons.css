@@ -3272,6 +3272,21 @@
 	https://www.qruiser.com/members/
 */
 @supports (display: grid) {
+	#column_center {
+		font-size: var(--font-1);
+	}
+	[style*='font-size:10px'] {
+		font-size: inherit !important;
+	}
+	form[name='search'] .html_checkboxes_cols,
+	form[name='search'] .html_checkboxes_cols label,
+	form[name='search'] .small label {
+		font-size: inherit;
+	}
+	.line .header_red,
+	[style*='color: #63300E;'] {
+		color: var(--txt-high-clr) !important;
+	}
 	#column_center .list > *:not([class^='listpage']) {
 		-webkit-box-flex: 1;
 		    -ms-flex: 1 50%;
@@ -3290,6 +3305,62 @@
 	}
 	#column_center .list .listpagelinks {
 		margin-top: 1em;
+	}
+	/* Remove the ugly dotted bkgrd img */
+	[style*='dottedline'] {
+		display: flow-root;
+		background-image: none !important;
+		/*background-color: inherit;
+		margin: var(--margin-l) var(--margin-z);
+		margin-bottom: var(--margin-xlr);
+		padding: 0 0 var(--padding-l) 0;
+		height: var(--lh-1);
+		line-height: var(--lh-1);
+		text-transform: uppercase;
+		border-bottom: var(--brd-type-1) var(--brd-clr-h);*/
+	}
+	/*[style*='dottedline'] a {
+		display: inline;
+		padding-right: var(--padding-s);
+		line-height: var(--lh-3);
+	}*/
+	/* Reset the search form */
+	input[type="checkbox"] {
+		margin-top: var(--radius-s);
+		margin-right: var(--radius-s);
+	}
+	input[type="checkbox"]:not(:disabled){
+		position: initial !important;
+		opacity: initial !important;
+		z-index: auto !important;
+	}
+	input[type="checkbox"]:not(:disabled) + label {
+		position: initial !important;
+		display: initial !important;
+		margin-right: initial !important;
+		margin-bottom: initial !important;
+		padding-left: initial !important;
+		padding-right: initial !important;
+		line-height: initial !important;
+	}
+	input[type="checkbox"]:not(:disabled) + label:before {
+		content: none !important;
+	}
+	#column_center form[name='search'] div[style*='100%'],
+	#column_center form[name='search'] span#trans_info_text[style*='block'] div[style*='100%'] {
+		display: flex;
+	}
+	#column_center form[name='search'] .html_checkboxes_cols {
+		flex: 1 1 33%;
+	}
+	#column_center form[name='search'] .html_checkboxes_cols label {
+		display: block;
+	}
+	.html_checkboxes_cols label + br {
+		display: none;
+	}
+	#column_center form[name='search'] img[src*="flag_"] {
+		vertical-align: middle
 	}
 }
 }
