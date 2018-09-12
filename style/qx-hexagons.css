@@ -436,6 +436,8 @@
 	[href*='becomemember'],
 	[href*='adddiscussion'],
 	h3 [href^='/signup.php'],
+	#currentmedia .standardbanner .action,
+	#column_center .standardbanner .action,
 	div:not([class*='button']) > [href*='/createclub/'],
 	body[onload='handleImageXxxSetting();'] #closing_link,
 	body[onload='timer()'] > p > a {
@@ -455,6 +457,8 @@
 	[href*='adddiscussion'],
 	h3 [href^='/signup.php'],
 	body[onload='timer()'] > p > a,
+	#currentmedia .standardbanner .action,
+	#column_center .standardbanner .action,
 	div:not([class*='button']) > [href*='/createclub/'],
 	body[onload='handleImageXxxSetting();'] #closing_link {
 		/*display: block;*/
@@ -481,6 +485,8 @@
 	[href*='becomemember']:hover,
 	[href*='adddiscussion']:hover,
 	h3 [href^='/signup.php']:hover,
+	#currentmedia .standardbanner .action:hover,
+	#column_center .standardbanner .action:hover,
 	div:not([class*='button']) > [href*='/createclub/']:hover,
 	body[onload='handleImageXxxSetting();'] #closing_link:hover {
 		background: var(--bkgrd-h1);
@@ -526,6 +532,8 @@
 	#column_center button,
 	#column_center [href*='addscribble'],
 	#column_center [href*='becomemember'],
+	#currentmedia .standardbanner .action,
+	#column_center .standardbanner .action,
 	#column_center [href*='adddiscussion'],
 	#column_center h3 [href^='/signup.php'],
 	#column_center [type="submit"]:not([name='cancel']),
@@ -544,6 +552,8 @@
 	[href*='becomemember'],
 	[href*='adddiscussion'],
 	h3 [href^='/signup.php'],
+	#currentmedia .standardbanner .action,
+	#column_center .standardbanner .action,
 	div:not([class*='button']) > [href*='/createclub/'],
 	body[onload='handleImageXxxSetting();'] #closing_link {
 		display: inline-block;
