@@ -1456,7 +1456,8 @@
 	#column_center .list .odd {
 		background-color: var(--bkgrd-w1);
 	}
-	.line .header {
+	.line .header,
+	.line .header_red {
 		position: initial;
 		display: inline;
 		padding-right: var(--padding-s);
