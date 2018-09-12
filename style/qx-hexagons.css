@@ -1559,6 +1559,25 @@
 		font-size: var(--font-4);
 	}
 
+	/* Member Info Blocks */
+	.homepageblock #homepageinfo[style*='block'],
+	/* Matching Clubs */
+	#column_center #matchingclubs_text[style*='block'] > .list {
+		display: flex !important;
+		flex-flow: row wrap;
+		width: auto !important;
+		padding: var(--padding-s);
+		margin: var(--margin-s);
+		border-bottom: var(--brd-type-1) var(--ui--clr-disabled);
+	}
+	.homepageblock #homepageinfo[style*='block'] .infoblock {
+		flex: 1 1 33%;
+		margin-bottom: var(--margin-m);
+	}
+	.homepageblock #homepageinfo[style*='block'] .infoblock ~ br {
+		display: none;
+	}
+
 	/* My Images */
 	.homepageblock .block[style*="410px"]:not([style*="none"]) {
 		display: -webkit-box !important;
