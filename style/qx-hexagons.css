@@ -1339,12 +1339,41 @@
 	/*--------------------------------------------*/
 
 	/*** COLUMN CENTER ***/
-	div.errorText {
-		background-image: none;
-		background-color: var(--bkgrd-w2);
-		padding: var(--padding-m);
-		border: var(--brd-error);
+	/* Error "popups" */
+	div.errorText,
+	#error_texts div:first-child,
+	#column_center .standardbanner {
+		box-shadow: var(--shadow-size-2) var(--shadow-gray);
+		border: var(--brd-type-1);
 		border-radius: var(--brd-rad-2);
+	}
+	.goldbanner,
+	#error_texts,
+	div.errorText,
+	div.errorContainer,
+	#error_texts div:first-child {
+		background-image: none;
+	}
+	.standardbanner,
+	#column_center .standardbanner {
+		display: flow-root;
+		border-color: var(--ui--clr-disabled);
+		margin-bottom: 1em;
+	}
+	.standardbanner::after {
+		content: none;
+	}
+	.standardbanner .message {
+		width: calc(95% - 91px);
+	}
+	#currentmedia .standardbanner .action,
+	#column_center .standardbanner .action {
+		margin: 0;
+	}
+	div.errorText {
+		background-color: var(--bkgrd-w2);
+		border-color: var(--txt-error-clr);
+		padding: var(--padding-m);
 	}
 	div.errorPart {
 		margin: 0;
@@ -1357,7 +1386,6 @@
 		height: auto;
 		min-height: 5rem;
 		width: auto;
-		background-image: none;
 		float: none;
 	}
 	#error_texts div:first-child {
@@ -1365,16 +1393,29 @@
 		height: auto;
 		min-height: 60px;
 		border: var(--brd-error) !important;
-		border-radius: var(--brd-rad-2);
 		color: var(--txt-error-clr) !important;
 		padding: var(--padding-m) !important;
 		font-size: var(--font-1) !important;
 		line-height: var(--lh-n) !important;
 		font-weight: 700 !important;
 		background-color: var(--bkgrd-w1) !important;
-		background-image: none;
 		float: none;
-		box-shadow: var(--shadow-size-2) var(--shadow-gray);
+	}
+	/* Info blocks */
+	a[href*='dropUpDownArrow'] {
+		display: flow-root;
+		margin-top: var(--margin-m);
+		margin-bottom: var(--margin-m);
+	}
+	#column_center #messages_text[style*='block'],
+	#column_center #clubinfo_text[style*='block'],
+	#column_center #info_text_text[style*='block'],
+	#column_center #publish_info_text[style*='block'],
+	#column_center #looking_for_info_text[style*='block'] {
+		width: auto !important;
+		padding: var(--padding-s);
+		margin: var(--margin-s) var(--margin-s) var(--margin-m);
+		border-bottom: var(--brd-type-1) var(--ui--clr-disabled);
 	}
 	/* Used in Polls */
 	.filldot,
@@ -1402,9 +1443,6 @@
 		font-style: normal;
 	}
 
-	#publish_info_text {
-		padding: var(--padding-s);
-	}
 	#publish_info_text,
 	#publish_info_text p,
 	#publish_info_text ul {
