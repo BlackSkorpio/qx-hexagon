@@ -1277,7 +1277,15 @@
 		width: 100% !important;
 		background-size: cover;
 	}
-	/* Clubs New & Active */
+	/** Clubs New & Active **/
+	/* Clubs with no club image */
+	#column_right [href^='/clubs/club.php?id='] [style='float: left; width:32px; height:40px;'] {
+		width: 40px !important;
+		height: 45px !important;
+		background-size: contain;
+		border: var(--brd-type-2) var(--brd-clr-h);
+		border-radius: var(--brd-rad-2);
+	}
 	#column_right .odd img[style*='width: 32px; height: 40px'][src*='clubicons'],
 	#column_right .even img[style*='width: 32px; height: 40px'][src*='clubicons'] {
 		min-height: 3.1875rem;
