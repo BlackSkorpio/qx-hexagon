@@ -2087,6 +2087,33 @@
 	}
 	/*--------------------------------------------*/
 
+	/*** The promotion page ***/
+	body.shop-container {
+		max-width: none;
+	}
+	body.shop-container .nav-container {
+		max-width: 650px;
+		left: auto;
+		right: auto;
+		width: 650px;
+	}
+	body.shop-container .nav-menu {
+		margin: auto;
+	}
+	body.shop-container > div.slides-container,
+	body.shop-container > ul.payments,
+	body.shop-container > header.shop-header,
+	body.shop-container > main.content,
+	body.shop-container > footer {
+		width: 650px;
+		max-width: 650px;
+		margin: 0 auto;
+	}
+	body.shop-container .list li {
+		width: 100%;
+	}
+	/*--------------------------------------------*/
+
 	/*** Satellite ***/
 	body[onload='timer()'] {
 		min-width: auto !important;
