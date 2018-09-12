@@ -2237,10 +2237,23 @@
 	/*--------------------------------------------*/
 
 	/*** Edit settings popup ***/
+	body[onload='handleImageXxxSetting();'] div[style*='width:410px'] {
+		width: 530px !important;
+	}
 	body[onload='handleImageXxxSetting();'] p.feedback {
 		display: block;
 		margin: var(--margin-xl);
 		font-size: var(--font-3);
+	}
+	a[href*='startinfo'] {
+		display: flow-root;
+		margin-bottom: var(--margin-m);
+	}
+	a[href*='startinfo'] + #startinfo_text[style*='block'] {
+		max-width: 95%;
+		margin: 0 auto var(--margin-m);
+		padding: var(--padding-s);
+		border-bottom: var(--brd-type-1) var(--ui--clr-disabled);
 	}
 	/* Edit your profile */
 	body[onload='handleImageXxxSetting();'] img[src*='status_'] {
