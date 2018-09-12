@@ -1306,6 +1306,13 @@
 	.smallclubname a {
 		font-size: var(--font-3r);
 	}
+	/* Latest from QX.SE */
+	#column_right > .smalldivider + div > b > [href^='https://www.qx.se'] {
+		display: list-item;
+		margin-left: 1.3em;
+		margin-bottom: 0.5em;
+		padding-left: 0.3em;
+	}
 	/* Active discussions */
 	#column_right .smalldivider ~ div:nth-last-child(even) > [style='padding-top: 2px; padding-bottom: 4px;'] {
 		margin-top: 0.5em;
