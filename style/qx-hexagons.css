@@ -125,7 +125,7 @@
 	/* Empty stuff scattered all over the place */
 	div:empty:not(.divider):not(.orangeline):not(.filldot),
 	span:empty,
-	a:empty,
+	a:empty:not(.banner_off_button),
 	p:empty,
 	option:empty,
 	div[style="float:left;width:70px"],
