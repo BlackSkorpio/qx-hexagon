@@ -1943,8 +1943,8 @@
 	}
 	#column_center .gallery .insertmember {
 		display: grid;
-		grid-template-rows: [bigavatar] -webkit-min-content [link] -webkit-min-content [description] -webkit-min-content [icons] -webkit-min-content [mood] -webkit-min-content;
-		grid-template-rows: [bigavatar] min-content [link] min-content [description] min-content [icons] min-content [mood] min-content;
+		grid-template-rows: 1 -webkit-min-content 2 -webkit-min-content 3 -webkit-min-content 4 -webkit-min-content 5 -webkit-min-content;
+		grid-template-rows: 1 min-content 2 min-content 3 min-content 4 min-content 5 min-content;
 		grid-template-columns: [main] auto;
 		grid-gap: 0.3em;
 		-webkit-box-align: start;
@@ -1959,7 +1959,7 @@
 		position: initial;
 	}
 	#column_center .gallery .insertmember .memberlargeicon {
-		grid-row: bigavatar;
+		grid-row: 1;
 		grid-column: main;
 		width: auto;
 		background-size: cover;
@@ -1967,15 +1967,15 @@
 		margin-bottom: var(--margin-m);
 	}
 	#column_center .gallery .insertmember .link {
-		grid-row: link;
+		grid-row: 2;
 		grid-column: main;
 	}
 	#column_center .gallery .insertmember .description {
-		grid-row: description;
+		grid-row: 3;
 		grid-column: main;
 	}
 	#column_center .gallery .insertmember .icons {
-		grid-row: icons;
+		grid-row: 4;
 		grid-column: main;
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -1987,7 +1987,7 @@
 		        flex: 0 1 auto;
 	}
 	#column_center .gallery .insertmember .mood:not(:empty) {
-		grid-row: mood;
+		grid-row: 5;
 		grid-column: main;
 	}
 	/*--------------------------------------------*/
