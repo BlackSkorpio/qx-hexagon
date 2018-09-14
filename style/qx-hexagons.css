@@ -3314,15 +3314,20 @@
 		-ms-flex-positive: 1;
 		        flex-grow: 1;
 	}
-	/* Clubs member title */
-	#column_center .insertmember ~ b {
-		font-size: var(--font-2);
+	#column_center .list .datetime,
+	#column_center .list .memberinfo:not(span) {
 		font-style: italic;
 	}
 	#column_center .list .memberinfo > span {
 		font-style: normal !important;
 	}
+	#column_center .list .insertmember + br[clear='all'] {
+		display:none;
 	}
+	/* Clubs member title */
+	#column_center .insertmember ~ b {
+		font-size: var(--font-2);
+		font-style: italic;
 	}
 
 }
