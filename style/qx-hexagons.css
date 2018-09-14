@@ -3295,7 +3295,12 @@
 		opacity: 0.5;
 		margin: 0.3em;
 	}
-	#column_center > p:first-of-type:before {
+	#column_center > p:first-of-type {
+		display: inline-block;
+		opacity: 0.5;
+		margin: 0.3em;
+	}
+	#column_center > p:first-of-type::before {
 		display: inline-block;
 		content: '♚';
 		height: 1.5em;
@@ -3304,9 +3309,20 @@
 		line-height: 1.3em;
 		text-align: center;
 		vertical-align: baseline;
-		border: 1px solid;
+		border: 1px solid transparent;
 		border-radius: 50%;
+		opacity: 0.5;
+		-webkit-transition: opacity, border, margin 0.4s linear;
+		-webkit-transition: opacity, border, margin 0.4s linear, -webkit-filter;
+		transition: opacity, border, margin 0.4s linear, -webkit-filter;
+		transition: opacity, filter, border, margin 0.4s linear;
+		transition: opacity, filter, border, margin 0.4s linear, -webkit-filter;
+	}
+	#column_center > p:first-of-type:hover::before {
+		opacity: 1;
 		margin-right: 0.3em;
+		border-color: currentcolor;
+		filter: drop-shadow(3px 3px 2px currentColor);
 	}
 		-webkit-box-flex: 1;
 		    -ms-flex: 1 50%;
