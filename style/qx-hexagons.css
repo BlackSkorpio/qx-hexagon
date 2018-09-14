@@ -1960,9 +1960,9 @@
 	}
 	#column_center .gallery .insertmember {
 		display: grid;
-		grid-template-rows: 1 -webkit-min-content 2 -webkit-min-content 3 -webkit-min-content 4 -webkit-min-content 5 -webkit-min-content;
-		grid-template-rows: 1 min-content 2 min-content 3 min-content 4 min-content 5 min-content;
-		grid-template-columns: [main] auto;
+		grid-template-rows: [avatar] min-content [link] min-content [description] min-content [icons] min-content [mood] min-content;
+		grid-template-columns: [main] 1fr;
+		grid-template-areas: "avatar" "link" "description" "icons" "mood";
 		grid-gap: 0.3em;
 		-webkit-box-align: start;
 		   -ms-flex-align: start;
@@ -1976,7 +1976,7 @@
 		position: initial;
 	}
 	#column_center .gallery .insertmember .memberlargeicon {
-		grid-row: 1;
+		grid-row: avatar;
 		grid-column: main;
 		width: auto;
 		background-size: cover;
@@ -1984,15 +1984,15 @@
 		margin-bottom: var(--margin-m);
 	}
 	#column_center .gallery .insertmember .link {
-		grid-row: 2;
+		grid-row: link;
 		grid-column: main;
 	}
 	#column_center .gallery .insertmember .description {
-		grid-row: 3;
+		grid-row: description;
 		grid-column: main;
 	}
 	#column_center .gallery .insertmember .icons {
-		grid-row: 4;
+		grid-row: icons;
 		grid-column: main;
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -2004,7 +2004,7 @@
 		        flex: 0 1 auto;
 	}
 	#column_center .gallery .insertmember .mood:not(:empty) {
-		grid-row: 5;
+		grid-row: mood;
 		grid-column: main;
 	}
 	/*--------------------------------------------*/
