@@ -3586,7 +3586,7 @@
 /* Code 13 */
 @supports (display: grid) {
 	/* blog.qruiser.com */
-	html {
+	/*html {
 		background-image: none;
 		background-color: #fff;
 	}
@@ -3640,6 +3640,6 @@
 @supports (display: grid) {
 	.iframed-content-wrapper {
 		max-width: 100%;
-	}
+	}*/
 }
 }
