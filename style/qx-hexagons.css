@@ -1990,6 +1990,8 @@
 	#column_center .gallery .insertmember .description {
 		grid-row: description;
 		grid-column: main;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	#column_center .gallery .insertmember .icons {
 		grid-row: icons;
