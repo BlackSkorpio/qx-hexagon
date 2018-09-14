@@ -1856,7 +1856,6 @@
 		font-size: var(--font-1);
 		line-height: var(--lh-n);
 	}
-	/*--------------------------------------------*/
 
 	.insertmember,
 	.list .insertmember,
@@ -2113,25 +2112,25 @@
 	.no-csspositionsticky body.shop-container {
 		max-width: none;
 	}
-	body.shop-container .nav-container {
-		max-width: 650px;
+	.no-csspositionsticky body.shop-container .nav-container {
+		max-width: 640px;
+		width: 100%;
 		left: auto;
 		right: auto;
-		width: 650px;
 	}
-	body.shop-container .nav-menu {
+	.no-csspositionsticky body.shop-container .nav-menu {
 		margin: auto;
 	}
-	body.shop-container > div.slides-container,
-	body.shop-container > ul.payments,
-	body.shop-container > header.shop-header,
-	body.shop-container > main.content,
-	body.shop-container > footer {
-		width: 650px;
-		max-width: 650px;
+	.no-csspositionsticky body.shop-container > div.slides-container,
+	.no-csspositionsticky body.shop-container > ul.payments,
+	.no-csspositionsticky body.shop-container > header.shop-header,
+	.no-csspositionsticky body.shop-container > main.content,
+	.no-csspositionsticky body.shop-container > footer {
+		max-width: 640px;
+		width: 100%;
 		margin: 0 auto;
 	}
-	body.shop-container .list li {
+	.no-csspositionsticky body.shop-container .list li {
 		width: 100%;
 	}
 	/*--------------------------------------------*/
