@@ -1062,11 +1062,23 @@
 	#column_left b a[href='/showclubs.php?updated=1']*/
 	#column_left [id^='lc_'],
 	#column_left [href^='/show'] + b,
-	#column_left b a[href$='?updated=1'] {
+	#column_left b a[href$='?updated=1'],
+	#column_left .notextdecoration:not(a) {
 		color: var(--txt-high-clr);
 		animation: view_notice 6s infinite;
 		-webkit-transition: 1s;
 		        transition: 1s;
+	}
+	#column_left .notextdecoration {
+		display: flow-root;
+		margin-left: var(--margin-m);
+		text-transform: capitalize;
+	}
+	#column_left .notextdecoration:not(a) {
+		font-weight: 700;
+	}
+	#column_left .notextdecoration a {
+		font-weight: normal;
 	}
 	#column_left {
 		border-left-color: var(--brd-clr-h);
