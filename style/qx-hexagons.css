@@ -3554,6 +3554,7 @@
 		display: block !important;
 		margin-top: 0;
 		margin-left: 0.5em;
+		width: auto;
 	}
 	#linkimage,
 	.insertmember .membericon,
