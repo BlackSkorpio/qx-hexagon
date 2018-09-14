@@ -1429,6 +1429,7 @@
 		margin: var(--margin-s) var(--margin-s) var(--margin-m);
 		border-bottom: var(--brd-type-1) var(--ui--clr-disabled);
 	}
+
 	/* Used in Polls */
 	.filldot,
 	#column_center .filldot {
@@ -1481,6 +1482,7 @@
 		font-size: var(--font-1r);
 		line-height: var(--lh-1);
 	}
+
 	/* Number of items  */
 	.header span[style='margin-right: 4px; font-size: 9px; font-weight: normal;'] {
 		color: var(--brd-clr-h);
@@ -1564,7 +1566,7 @@
 
 	/* Visa Fakta */
 	.homepageblock #homepageinfo .infoblock {
-		width: 33%;
+		/*width: 33%;*/
 		font-size: var(--font-4);
 	}
 	.homepageblock #homepageinfo .infoblock b {
@@ -2181,6 +2183,7 @@
 	/*--------------------------------------------*/
 
 	/*** Satellite ***/
+	/* 300x412px*/
 	body[onload='timer()'] {
 		min-width: auto !important;
 		width: auto !important;
@@ -3631,7 +3634,7 @@
 	#blog_whole #column_center {
 		grid-column: text;
 		width: auto;
-	}
+	}*/
 }
 }
 
@@ -3640,6 +3643,6 @@
 @supports (display: grid) {
 	.iframed-content-wrapper {
 		max-width: 100%;
-	}*/
+	}
 }
 }
