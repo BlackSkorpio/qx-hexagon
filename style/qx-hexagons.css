@@ -1578,7 +1578,7 @@
 	/* Visa Fakta */
 	.homepageblock #homepageinfo .infoblock {
 		/*width: 33%;*/
-		font-size: var(--font-4);
+		font-size: var(--font-5);
 	}
 	.homepageblock #homepageinfo .infoblock b {
 		font-size: var(--font-4);
