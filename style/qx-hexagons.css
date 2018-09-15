@@ -1432,6 +1432,7 @@
 	#column_center #messages_text[style*='block'],
 	#column_center #clubinfo_text[style*='block'],
 	#column_center #info_text_text[style*='block'],
+	#column_center #digexplained_text[style*='block'],
 	#column_center #publish_info_text[style*='block'],
 	#column_center #looking_for_info_text[style*='block'] {
 		width: auto !important;
