@@ -1626,7 +1626,7 @@
 
 	/* My & liked Movies */
 	.homepageblock > div,
-	#column_center .list {
+	#column_center > .list {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -1635,8 +1635,8 @@
 		    -ms-flex-flow: row wrap;
 		        flex-flow: row wrap;
 	}
-	.homepageblock > div > .odd,
-	.homepageblock > div > .even {
+	.homepageblock > div:not(.list) > .odd,
+	.homepageblock > div:not(.list) > .even {
 		-webkit-box-flex: 0;
 		    -ms-flex: 0 1 33%;
 		        flex: 0 1 33%;
@@ -3359,7 +3359,6 @@
 	https://www.qruiser.com/clubs/
 */
 @supports (display: grid) {
-	#column_center .list > *:not([class^='listpage']) {
 	/* Club type */
 	#column_center > p:first-of-type {
 		display: inline-block;
@@ -3395,6 +3394,7 @@
 		border-color: currentcolor;
 		filter: drop-shadow(3px 3px 2px currentColor);
 	}
+	#column_center > .list > *:not([class^='listpage']) {
 		-webkit-box-flex: 1;
 		    -ms-flex: 1 50%;
 		        flex: 1 50%;
