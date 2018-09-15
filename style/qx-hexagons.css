@@ -436,7 +436,9 @@
 	[href*='becomemember'],
 	[href*='adddiscussion'],
 	h3 [href^='/signup.php'],
+	[href$='&show_admin_members=1'],
 	#currentmedia .standardbanner .action,
+	[href*='/clubs/club_edit.php?clubid='],
 	#column_center .standardbanner .action,
 	div:not([class*='button']) > [href*='/createclub/'],
 	body[onload='handleImageXxxSetting();'] #closing_link,
@@ -457,7 +459,9 @@
 	[href*='adddiscussion'],
 	h3 [href^='/signup.php'],
 	body[onload='timer()'] > p > a,
+	[href$='&show_admin_members=1'],
 	#currentmedia .standardbanner .action,
+	[href*='/clubs/club_edit.php?clubid='],
 	#column_center .standardbanner .action,
 	div:not([class*='button']) > [href*='/createclub/'],
 	body[onload='handleImageXxxSetting();'] #closing_link {
@@ -485,7 +489,9 @@
 	[href*='becomemember']:hover,
 	[href*='adddiscussion']:hover,
 	h3 [href^='/signup.php']:hover,
+	[href$='&show_admin_members=1']:hover,
 	#currentmedia .standardbanner .action:hover,
+	[href*='/clubs/club_edit.php?clubid=']:hover,
 	#column_center .standardbanner .action:hover,
 	div:not([class*='button']) > [href*='/createclub/']:hover,
 	body[onload='handleImageXxxSetting();'] #closing_link:hover {
@@ -536,8 +542,10 @@
 	#column_center .standardbanner .action,
 	#column_center [href*='adddiscussion'],
 	#column_center h3 [href^='/signup.php'],
+	#column_center [href$='&show_admin_members=1'],
 	#column_center [type="submit"]:not([name='cancel']),
 	div:not([class*='button']) > [href*='/createclub/'],
+	#column_center [href*='/clubs/club_edit.php?clubid='],
 	body[onload='handleImageXxxSetting();'] #closing_link {
 		border-radius: var(--brd-rad-3) 0;
 	}
@@ -552,7 +560,9 @@
 	[href*='becomemember'],
 	[href*='adddiscussion'],
 	h3 [href^='/signup.php'],
+	[href$='&show_admin_members=1'],
 	#currentmedia .standardbanner .action,
+	[href*='/clubs/club_edit.php?clubid='],
 	#column_center .standardbanner .action,
 	div:not([class*='button']) > [href*='/createclub/'],
 	body[onload='handleImageXxxSetting();'] #closing_link {
