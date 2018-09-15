@@ -13,7 +13,7 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
-/* Code 2 */
+/* Code 02 */
 @supports (display: grid) {
 	:root {
 		--ui--clr-disabled: rgba(188, 194, 191, 1);
@@ -3025,7 +3025,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
-/* Code 3
+/* Code 03
 	TEST AREA */
 @supports (display: grid) {
 	.pill {
@@ -3233,7 +3233,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(readmessage\.php).*") {
-/* Code 4
+/* Code 05
 	Read message */
 @supports (display: grid) {
 	#column_center > .list > :not([class^="listpage"]):not([data-user-input]) {
@@ -3272,7 +3272,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(clubs|members|pics\/faceimages).*") {
-/* Code 05
+/* Code 06
 	Common styles for URL sections
 	https://www.qruiser.com/clubs/
 	https://www.qruiser.com/members/
@@ -3293,7 +3293,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(clubs).*") {
-/* Code 06
+/* Code 07
 	CLUBS SECTION
 	https://www.qruiser.com/clubs/
 */
@@ -3360,7 +3360,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(members).*") {
-/* Code 07
+/* Code 08
 	MEMBERS SECTION
 	https://www.qruiser.com/members/
 */
@@ -3459,7 +3459,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(movies).*") {
-/* Code 08
+/* Code 09
 	Rules for the Movies section
 	https://www.qruiser.com/movies/
 */
@@ -3507,7 +3507,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(pics\/faceimages).*") {
-/* Code 09
+/* Code 10
 	PICTURES FACES SECTION
 	https://www.qruiser.com/pics/faceimages/
 */
@@ -3523,7 +3523,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(pics\/homepageimages).*") {
-/* Code 10
+/* Code 11
 	HOMEPAGE IMAGES SECTION
 */
 @supports (display: grid) {
@@ -3565,7 +3565,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(photoalbum_nav\.php).*") {
-/* Code 11 */
+/* Code 12 */
 @supports (display: grid) {
 	#bar {
 		font-size: 1em;
@@ -3597,7 +3597,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(photo\.php).*") {
-/* Code 12 */
+/* Code 13 */
 @supports (display: grid) {
 	body {
 		height: 100% !important;
@@ -3618,7 +3618,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/blog\.qruiser\.[a-z]{1,4}.*") {
-/* Code 13 */
+/* Code 14 */
 @supports (display: grid) {
 	/* blog.qruiser.com */
 	/*html {
@@ -3671,7 +3671,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*sentry\.[a-z]{1,4}.*") {
-/* CODE 14 */
+/* CODE 15 */
 @supports (display: grid) {
 	.iframed-content-wrapper {
 		max-width: 100%;
