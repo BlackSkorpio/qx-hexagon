@@ -3028,6 +3028,14 @@
 /* Code 03
 	TEST AREA */
 @supports (display: grid) {
+	/* showmovies.php */
+	.jwplayer {
+		background-color: inherit !important
+	}
+	.jwplayer .jwuniform {
+		background-size: cover !important;
+	}
+
 	.pill {
 		min-width: inherit;
 		color: inherit;
@@ -3229,6 +3237,56 @@
 	}*/
 	/* Posted images in forums */
 	/*.clublink {}*/
+}
+}
+
+@-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(showmovies[_digged]*\.php).*") {
+/* Code 04
+   showmovies.php & showmovies_digged.php */
+@supports (display: grid) {
+	/*** Hide stuff ***/
+	br[clear='all'],
+	.line + [style='margin-top: 10px; margin-bottom: 10px;'] {
+		display: none;
+	}
+	/*** Album title ***/
+	p > span[style='font-weight:bold;'] {
+		display: flow-root;
+		margin-bottom: 0.5em;
+	}
+
+	/*** Movies grid ***/
+	#showdigs > .list,
+	div[style*='414px'],
+	div[class*='club'] > .list,
+	div#scroller > div[style*='410px'] {
+		display: flex;
+		flex-flow: row wrap;
+	}
+	div#scroller > div[style*='410px']:not(:last-child) {
+		justify-content: space-around;
+	}
+
+	/** The Movies **/
+	div#scroller > div[style*='410px'] > *,
+	div[style*='414px'] > *:not(.listpagenumber):not(.listpagelinks) {
+		flex: 0 1 33%;
+	}
+	div[style*='414px'] > *:not(.listpagenumber) > div[style*='float'] {
+		width: 100% !important
+	}
+	div[style*='414px'] > div:not(:empty),
+	div#scroller > div[style*='410px'] > div:not(:empty) {
+		padding-right: 0.1em;
+	}
+
+	#videoblock object,
+	#videoblock object > embed,
+	img[style*='video.qruiser.com'] {
+		width: 100%;
+		background-color: inherit !important;
+		background-size: cover;
+	}
 }
 }
 
