@@ -160,15 +160,15 @@
 		border: 0;
 		text-decoration: none;
 	}
-	[style*='width:100px'],
-	[style*='width: 100px'],
-	[style*='width: 127px'],
-	[style*='width: 400px'],
-	[style*='width: 410px'],
-	[style*='width:410px'],
-	[style*='width: 414px;'],
+	[style*="width:100px"],
+	[style*="width: 100px"],
+	[style*="width: 127px"],
+	[style*="width: 400px"],
+	[style*="width: 410px"],
+	[style*="width:410px"],
+	[style*="width: 414px;"],
 	#column_center textarea,
-	.list .insertmember + [style*='width: 195px;'] {
+	.list .insertmember + [style*="width: 195px;"] {
 		width: 100% !important;
 	}
 	#whole,
@@ -1855,7 +1855,7 @@
 	.noticetext {
 		font-size: inherit !important;
 	}
-	.noticetext:before {
+	.noticetext::before {
 		display: inline-block;
 		width: auto;
 		height: var(--ui--size-xl);
@@ -1865,7 +1865,7 @@
 		vertical-align: sub;
 		animation: qx_notice 6s infinite;
 	}
-	.noticetext:hover:before {
+	.noticetext:hover::before {
 		animation: paused;
 	}
 	/* Fråga Sentry */
@@ -3112,14 +3112,14 @@
 	70% {color: var(--txt-error-clr);}
 	100% {color: inherit;}
 }
-@keyframes qx_notice {
-	0% {color: inherit;}
-	70% {color: var(--txt-error-clr);}
-	100% {color: inherit;}
-}
 @-webkit-keyframes view_notice {
 	0% {color: inherit;}
 	70% {color: var(--txt-high-clr);}
+	100% {color: inherit;}
+}
+@keyframes qx_notice {
+	0% {color: inherit;}
+	70% {color: var(--txt-error-clr);}
 	100% {color: inherit;}
 }
 @keyframes view_notice {
