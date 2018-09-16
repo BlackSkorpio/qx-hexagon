@@ -3646,7 +3646,7 @@
 	}
 	/*td {}*/
 	#currentmedia {
-		background-color: none;
+		background-color: initial;
 		border: none;
 	}
 	/*#currentmedia img {}*/
