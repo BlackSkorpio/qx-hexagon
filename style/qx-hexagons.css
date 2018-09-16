@@ -1375,7 +1375,8 @@
 	/** Error "popups" **/
 	div.errorText,
 	#error_texts div:first-child,
-	#column_center .standardbanner {
+	#column_center .standardbanner,
+	div[style='border: 1px solid #B21B1B; color: #B21B1B; width: auto; padding: 8px; line-height: 18px; font-weight: bold; margin-top: 10px'] {
 		box-shadow: var(--shadow-size-2) var(--shadow-gray);
 		border: var(--brd-type-1);
 		border-radius: var(--brd-rad-2);
@@ -1421,7 +1422,8 @@
 		width: auto;
 		float: none;
 	}
-	#error_texts div:first-child {
+	#error_texts div:first-child,
+	div[style='border: 1px solid #B21B1B; color: #B21B1B; width: auto; padding: 8px; line-height: 18px; font-weight: bold; margin-top: 10px'] {
 		width: auto !important;
 		height: auto;
 		min-height: 60px;
