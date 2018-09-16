@@ -2208,17 +2208,71 @@
 	.no-csspositionsticky body.shop-container .nav-menu {
 		margin: auto;
 	}
-	.no-csspositionsticky body.shop-container > div.slides-container,
+	.no-csspositionsticky body.shop-container > footer,
 	.no-csspositionsticky body.shop-container > ul.payments,
-	.no-csspositionsticky body.shop-container > header.shop-header,
 	.no-csspositionsticky body.shop-container > main.content,
-	.no-csspositionsticky body.shop-container > footer {
+	.no-csspositionsticky body.shop-container > header.shop-header,
+	.no-csspositionsticky body.shop-container > div.slides-container {
 		max-width: 640px;
 		width: 100%;
 		margin: 0 auto;
 	}
 	.no-csspositionsticky body.shop-container .list li {
 		width: 100%;
+	}
+	.no-csspositionsticky body.shop-container > footer,
+	.no-csspositionsticky body.shop-container .shop-header {
+		border: var(--brd-type-1) var(--brd-clr-h);
+		border-radius: var(--brd-rad-2);
+		padding: var(--padding-s);
+		background-color: var(--bkgrd-b1);
+	}
+	.no-csspositionsticky body.shop-container .shop-header {
+		margin-bottom: var(--margin-xl) !important;
+	}
+	.no-csspositionsticky body.shop-container .shop-header .button {
+		color: inherit;
+		background: var(--bkgrd-h1);
+		margin: var(--margin-m) auto;
+		margin-left: var(--margin-s);
+		padding: var(--padding-m);
+	}
+	.no-csspositionsticky body.shop-container .choose-country {
+		background: inherit;
+		padding: 0;
+		margin: var(--margin-m) auto;
+		margin-right: var(--margin-s);
+	}
+	.no-csspositionsticky body.shop-container .choose-country select {
+		color: var(--txt-aside-clr);
+		background: inherit;
+		padding: 0.2em 0.3em 0.2em 0.2em;
+		border: var(--brd-type-1) var(--brd-clr-h);
+		border-radius: var(--brd-rad-2);
+		-moz-appearance: none;
+		     appearance: none;
+	}
+	.no-csspositionsticky body.shop-container .choose-country::after {
+		content: none;
+	}
+	.no-csspositionsticky body.shop-container .slides-container {
+		border-radius: var(--brd-rad-1);
+		border: var(--brd-type-1) var(--brd-clr-h);
+		border-bottom: none;
+	}
+	.no-csspositionsticky body.shop-container .slides {
+		border-radius: inherit;
+	}
+	.no-csspositionsticky body.shop-container .payments,
+	.no-csspositionsticky body.shop-container main.content {
+		border-left: var(--brd-type-1) var(--brd-clr-h);
+		border-right: var(--brd-type-1) var(--brd-clr-h);
+	}
+	.no-csspositionsticky body.shop-container main.content {
+		padding: var(--padding-s);
+	}
+	.no-csspositionsticky body.shop-container .section {
+		border: none;
 	}
 	/*--------------------------------------------*/
 
