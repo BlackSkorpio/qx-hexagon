@@ -1361,7 +1361,8 @@
 	/*--------------------------------------------*/
 
 	/*** COLUMN CENTER ***/
-	/* Error "popups" */
+	/** Links **/
+	/** Error "popups" **/
 	div.errorText,
 	#error_texts div:first-child,
 	#column_center .standardbanner {
@@ -1423,7 +1424,7 @@
 		background-color: var(--bkgrd-w1) !important;
 		float: none;
 	}
-	/* Info blocks */
+	/** Info blocks **/
 	a[href*='dropUpDownArrow'] {
 		display: flow-root;
 		margin-top: var(--margin-m);
@@ -1443,7 +1444,7 @@
 		border-bottom: var(--brd-type-1) var(--ui--clr-disabled);
 	}
 
-	/* Used in Polls */
+	/** Used in Polls **/
 	.filldot,
 	#column_center .filldot {
 		background-color: var(--bkgrd-h1);
@@ -1459,7 +1460,7 @@
 
 	/* Index Not logged in */
 	/* signup.php */
-	/* signup.php */
+	/** signup.php **/
 	#signup h2 > i {
 		display: inline-block;
 		color: var(--bkgrd-b1);
@@ -1496,7 +1497,7 @@
 		line-height: var(--lh-1);
 	}
 
-	/* Number of items  */
+	/** Number of items  **/
 	.header span[style='margin-right: 4px; font-size: 9px; font-weight: normal;'] {
 		color: var(--brd-clr-h);
 		font-weight: 700 !important;
@@ -2165,7 +2166,7 @@
 	}
 	/*--------------------------------------------*/
 
-	/*** The promotion page ***/
+	/*** Buy Gold ***/
 	#goldframe {
 		height: calc(100% - 540px) !important
 	}
