@@ -1873,10 +1873,10 @@
 		display: inline-block;
 		width: auto;
 		height: var(--ui--size-xl);
-		content: '*';
+		font-family: 'FontAwesome';
+		content: "\f005";
 		font-size: var(--ui--size-xl-r);
 		text-align: center;
-		vertical-align: sub;
 		animation: qx_notice 6s infinite;
 	}
 	.noticetext:hover::before {
