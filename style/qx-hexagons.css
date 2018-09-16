@@ -1362,6 +1362,16 @@
 
 	/*** COLUMN CENTER ***/
 	/** Links **/
+	#column_center .line .header a {
+		color: var(--txt-high-clr);
+	}
+	/*#column_center a[target='qruiser']::after {}*/
+	#column_center a[target='_blank']::after {
+		font-family: 'FontAwesome';
+		display: inline;
+		content: '\f08e';
+		opacity: 0.5;
+	}
 	/** Error "popups" **/
 	div.errorText,
 	#error_texts div:first-child,
