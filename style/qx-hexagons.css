@@ -3295,6 +3295,7 @@
 /* Code 05
 	Read message */
 @supports (display: grid) {
+	form[name='messageform'],
 	#column_center > .list > :not([class^="listpage"]):not([data-user-input]) {
 		flex-basis: auto !important;
 	}
@@ -3307,6 +3308,10 @@
 	/* Message body */
 	#column_center .list div[data-user-input] {
 		padding: var(--padding-m);
+	}
+	/* Force the form to 100% width */
+	#column_center form[name='messageform'] {
+		width: 100%;
 	}
 
 	/* Centers the first row of radio buttons */
@@ -3391,6 +3396,10 @@
 		margin-right: 0.3em;
 		border-color: currentcolor;
 		filter: drop-shadow(3px 3px 2px currentColor);
+	}
+	/* HACK Reset the display type so it wont be a flex container */
+	#column_center .odd .list:first-of-type {
+		display: initial;
 	}
 	#column_center > .list > *:not([class^='listpage']) {
 		-webkit-box-flex: 1 !important;
