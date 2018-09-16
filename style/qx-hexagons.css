@@ -1226,7 +1226,7 @@
 		border-right-color: var(--brd-clr-h);
 		border-left: var(--brd-type-1) var(--brd-clr-t);
 	}
-	#column_right img:not([style*="video.qruiser"]):not([src*='membericons']):not([src*='clubicons']) {
+	#column_right img:not([style*="video.qruiser"]):not([src*='membericons']):not([src*='clubicons']):not([src*="blogbox"]) {
 		border-radius: var(--ui--size-m);
 	}
 	#column_right [style*='height: 14px'],
