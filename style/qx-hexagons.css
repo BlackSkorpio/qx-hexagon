@@ -1481,6 +1481,20 @@
 		color: var(--txt-high-clr);
 		font-style: normal;
 	}
+	#signup p {
+		margin: var(--margin-m) auto;
+	}
+	#signup p + div[style='border: 1px solid #DACBAF; width: auto; padding: 8px; min-height: 22px; background-color: #FDF7F4; color: black;'] {
+		background-color: var(--bkgrd-w1) !important;
+		padding: var(--padding-m) !important;
+		margin: var(--margin-l) var(--margin-m);
+		border: var(--brd-type-1) var(--brd-clr-h) !important;
+		border-radius: var(--brd-rad-2);
+		box-shadow: var(--shadow-size-2) var(--shadow-gray);
+	}
+	#signup .g-recaptcha {
+		margin: var(--margin-l) var(--margin-m);
+	}
 
 	#publish_info_text,
 	#publish_info_text p,
