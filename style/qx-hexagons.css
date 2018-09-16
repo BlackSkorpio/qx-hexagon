@@ -1366,7 +1366,7 @@
 		color: var(--txt-high-clr);
 	}
 	/*#column_center a[target='qruiser']::after {}*/
-	#column_center a[target='_blank']::after {
+	#column_center a[target='_blank']:not([href*="/goldmember.php"])::after {
 		font-family: 'FontAwesome';
 		display: inline;
 		content: '\f08e';
