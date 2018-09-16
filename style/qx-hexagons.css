@@ -965,9 +965,9 @@
 	.smalltext,
 	.insertmember .description,
 	/* Movie titles */
+	/*#column_center a[href*='/showmovies.php?'],*/
 	#column_center .homepageblock .odd a[href*='/showmovies.php?'],
-	#column_center .homepageblock .even a[href*='/showmovies.php?'],
-	#column_center a[href*='/showmovies.php?'] {
+	#column_center .homepageblock .even a[href*='/showmovies.php?'] {
 		font-size: var(--font-3);
 	}
 	/* CLUBS */
