@@ -1046,8 +1046,8 @@
 	.smalldivider div,
 	.homepageblock,
 	#homepageinfo,
-	.clubscribble,
-	.homepage img[style*='homepageimages'] {
+	.clubscribble/*,
+	.homepage img[style*='homepageimages']*/ {
 		width: 100%;
 		max-width: 100%;
 		height: auto;
