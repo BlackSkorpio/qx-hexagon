@@ -1058,6 +1058,10 @@
 	#column_right a {
 		color: var(--link-clr2);
 	}
+	#column_left .smalldivider a,
+	#column_right .smalldivider a {
+		color: var(--link-clr1-v);
+	}
 	/*--------------------------------------------*/
 
 	/*** COLUMN LEFT ***/
