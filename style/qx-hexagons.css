@@ -3175,6 +3175,30 @@
 /* Code 03
 	TEST AREA */
 @supports (display: grid) {
+	.homepageblock {
+		display: flex;
+		flex-flow: row wrap;
+	}
+	.homepageblock > .odd,
+	.homepageblock > .even {
+		flex: 1 1 50%;
+	}
+	/* Icons used to tell you what is updated at your favorites */
+	.list .insertmember + div[style*="width:210px;float:right"] .smalltext .icons {
+		display: flex;
+		height: auto;
+	}
+	.list .insertmember + div[style*="width:210px;float:right"] .smalltext .icons li {
+		flex: 1 1 auto;
+		display: block;
+		height: var(--ui--icon-l);
+		width: var(--ui--icon-l);
+		border: var(--brd-type-1);
+		border-radius: 50%;
+		text-align: center;
+		background-size: var(--ui--icon-m);
+		background-position: center;
+	}
 	/* showmovies.php */
 	.jwplayer {
 		background-color: inherit !important
