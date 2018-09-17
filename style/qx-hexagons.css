@@ -12,6 +12,7 @@
 	QX: www.qruiser.com/?id=469474
 ******************************************/
 :root {
+	--ui--radial-bkrgd: radial-gradient(ellipse at bottom right, var(--gray--t), var(--gray) 90%);
 	--ui--clr-disabled: rgba(188, 194, 191, 1);
 	--ui--clr-highlight: rgba(170, 139, 89, 1);
 	--ui--clr-white1: rgba(242, 242, 242, 1);
@@ -325,12 +326,7 @@
 		        flex-direction: column;
 	}
 	body {
-		background:
-		radial-gradient(
-			ellipse at bottom right,
-			var(--gray--t),
-			var(--gray) 90%
-		);
+		background: var(--ui--radial-bkrgd);
 		font-size: 100%;
 		line-height: var(--lh-n);
 		padding: 0;
