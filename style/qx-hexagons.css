@@ -118,6 +118,26 @@
 	--gray: rgb(14, 19, 25);
 	--gray--t: rgba(14, 19, 25, 0);
 }
+@-webkit-keyframes qx_notice {
+	0% {color: inherit;}
+	70% {color: var(--txt-error-clr);}
+	100% {color: inherit;}
+}
+@-webkit-keyframes view_notice {
+	0% {color: inherit;}
+	70% {color: var(--txt-high-clr);}
+	100% {color: inherit;}
+}
+@keyframes qx_notice {
+	0% {color: inherit;}
+	70% {color: var(--txt-error-clr);}
+	100% {color: inherit;}
+}
+@keyframes view_notice {
+	0% {color: inherit;}
+	70% {color: var(--txt-high-clr);}
+	100% {color: inherit;}
+}
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
@@ -3147,27 +3167,6 @@
 	div#satellite a[href*='logout']:before {
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D'action-logout'%20version%3D'1'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201000%201000'%3E%3Cpath%20d%3D'M4813%204994a624%20624%200%200%201-391-402c-29-85-31-271-27-1752l6-1658%2048-96a674%20674%200%200%201%20297-297c136-67%20377-67%20517%200a694%20694%200%200%201%20297%20297l48%2096v3392l-48%2096a680%20680%200%200%201-297%20295%20679%20679%200%200%201-450%2029z'%20transform%3D'matrix(.1%200%200%20-.1%200%20512)'%2F%3E%3Cpath%20d%3D'M2953%203261c-72-19-377-213-571-364a4285%204285%200%200%201%20715-7236c424-207%20759-316%201236-396%20345-60%20997-60%201342%200%20466%2080%20805%20187%201217%20387a4330%204330%200%200%201%202262%202752c102%20389%20130%20635%20132%201091%202%20464-21%20657-124%201071a4335%204335%200%200%201-1921%202597c-194%20117-276%20131-345%2064-42-42-42-54-48-585-8-667-17-630%20263-924%20253-262%20333-360%20467-565%20215-332%20351-667%20437-1074%2064-293%2064-837%202-1144a3099%203099%200%200%200-2486-2453c-266-52-814-46-1096%209A3063%203063%200%200%200%202269%20875c150%20301%20297%20500%20629%20843%20176%20186%20226%20248%20245%20317%2017%2061%2021%20235%2017%20615-5%20481-9%20535-40%20569-40%2044-99%2060-167%2042z'%20transform%3D'matrix(.1%200%200%20-.1%200%20512)'%2F%3E%3C%2Fsvg%3E");
 	}
-}
-
-@-webkit-keyframes qx_notice {
-	0% {color: inherit;}
-	70% {color: var(--txt-error-clr);}
-	100% {color: inherit;}
-}
-@-webkit-keyframes view_notice {
-	0% {color: inherit;}
-	70% {color: var(--txt-high-clr);}
-	100% {color: inherit;}
-}
-@keyframes qx_notice {
-	0% {color: inherit;}
-	70% {color: var(--txt-error-clr);}
-	100% {color: inherit;}
-}
-@keyframes view_notice {
-	0% {color: inherit;}
-	70% {color: var(--txt-high-clr);}
-	100% {color: inherit;}
 }
 }
 
