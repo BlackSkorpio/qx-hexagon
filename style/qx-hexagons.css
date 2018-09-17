@@ -1672,9 +1672,23 @@
 		background-size: cover;
 	}
 
+	.homepageblock {
+		display: flex;
+		flex-flow: row wrap;
+	}
+	.homepageblock > .odd,
+	.homepageblock > .even {
+		flex: 1 1 50%;
+	}
+	.homepageblock > .odd > div[style*='padding: 5px;'],
+	.homepageblock > .even > div[style*='padding: 5px;'] {
+		max-height: 100%;
+		height: calc(100% - 5px);
+	}
 	/* My & liked Movies */
 	.homepageblock > div,
 	#column_center > .list {
+		width: 100%;
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -1683,8 +1697,8 @@
 		    -ms-flex-flow: row wrap;
 		        flex-flow: row wrap;
 	}
-	.homepageblock > div:not(.list) > .odd,
-	.homepageblock > div:not(.list) > .even {
+	.homepageblock .line + div:not(.list) > .odd,
+	.homepageblock .line + div:not(.list) > .even {
 		-webkit-box-flex: 0;
 		    -ms-flex: 0 1 33%;
 		        flex: 0 1 33%;
