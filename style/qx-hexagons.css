@@ -343,6 +343,7 @@
 	}
 	body, .feedback, .homepage/*, #column_center*/ {
 		color: var(--txt-base-clr);
+		color: inherit;
 	}
 	a {
 		color: inherit;
