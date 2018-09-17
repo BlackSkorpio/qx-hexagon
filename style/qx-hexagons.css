@@ -1,4 +1,5 @@
 /* minifier: clean-css, minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: ../dist/css/$1.min.$2 */
+@-moz-document regexp("http[s]*:\/\/.*qruiser\.[a-z]{1,4}.*") {
 /*!*****************************************
 	QRUISER HEXAGON
 	Theme Name: QX Hexagon
@@ -10,115 +11,114 @@
 	GitHub: github.com/BlackSkorpio/qx-hexagon
 	QX: www.qruiser.com/?id=469474
 ******************************************/
-@namespace url(http://www.w3.org/1999/xhtml);
+:root {
+	--ui--clr-disabled: rgba(188, 194, 191, 1);
+	--ui--clr-highlight: rgba(170, 139, 89, 1);
+	--ui--clr-white1: rgba(242, 242, 242, 1);
+	--ui--clr-white2: rgba(230, 230, 230, 1);
+	--ui--clr-black: rgba(18, 21, 22, 1);
+	--ui--clr-gray1: rgba(63, 63, 63, 1);
+	--ui--clr-gray2: rgba(159, 159, 159, 0.92);
+	--ui--clr-red: rgba(178, 27, 27, 1);
+	--ui--clr-t: transparent;
+	--ui--wrapper: 65.625rem;
+	--ui--aside: 12.5rem;
+	--ui--size-1: 0.0625rem;
+	--ui--size-2: 0.125rem;
+	--ui--size-3: 0.1875rem;
+	--ui--size-4: 0.25rem;
+	--ui--size-5: 0.3125rem;
+	--ui--size-xs: 0.1rem;
+	--ui--size-s: 0.3em;
+	--ui--size-m: 0.5em;
+	--ui--size-l: 0.8em;
+	--ui--size-xl: 1em;
+	--ui--size-xl-r: 1rem;
+	--ui--icon-s: var(--ui--size-xl);
+	--ui--icon-m: var(--ui--size-xl-r);
+	--ui--icon-l: 1.2rem;
+	--bkgrd-b1: var(--ui--clr-black);
+	--bkgrd-w1: var(--ui--clr-white1);
+	--bkgrd-w2: var(--ui--clr-white2);
+	--bkgrd-h1: var(--ui--clr-highlight);
+	--bkgrd-t: var(--ui--clr-t);
+	--txt-base-clr: var(--ui--clr-gray1);
+	--txt-aside-clr: var(--ui--clr-white1);
+	--txt-high-clr: var(--ui--clr-highlight);
+	--txt-error-clr: var(--ui--clr-red);
+	--link-clr1: var(--ui--clr-gray1);
+	--link-clr2: var(--ui--clr-white1);
+	--link-clr1-h: var(--ui--clr-white1);
+	--link-clr2-h: var(--ui--clr-gray1);
+	--link-clr1-v: var(--ui--clr-highlight);
+	--padding-z: 0;
+	--padding-s: var(--ui--size-s);
+	--padding-m: var(--ui--size-m);
+	--padding-l: var(--ui--size-l);
+	--padding-xl: var(--ui--size-xl);
+	--padding-xlr: var(--ui--size-xl-r);
+	--margin-z: 0;
+	--margin-s: var(--ui--size-s);
+	--margin-m: var(--ui--size-m);
+	--margin-l: var(--ui--size-l);
+	--margin-xl: var(--ui--size-xl);
+	--margin-xlr: var(--ui--size-xl-r);
+	--margin-c: 0 auto;
+	--radius-s: var(--ui--size-s);
+	--radius-m: var(--ui--size-xl-r);
+	--radius-l: 50%;
+	--brd-type-1: var(--ui--size-1) solid;
+	--brd-type-2: var(--ui--size-1) dashed;
+	--brd-error: var(--brd-type-1) var(--txt-error-clr);
+	--brd-clr-0: 7px double var(--ui--clr-highlight);
+	--brd-clr-t: var(--ui--clr-t);
+	--brd-clr-w: var(--ui--clr-white1);
+	--brd-clr-h: var(--ui--clr-highlight);
+	--brd-rad-0: 0 0 var(--radius-s) var(--radius-s);
+	--brd-rad-1: var(--radius-s) var(--radius-s) 0 0;
+	--brd-rad-2: var(--radius-s);
+	--brd-rad-3: var(--radius-m);
+	--brd-rad-4: var(--radius-l);
+	--ls-xs: var(--ui--size-1);
+	--ls-s: var(--ui--size-xs);
+	--ls-m: 0.15em;
+	--ls-l: 0.2em;
+	--lh-n: normal;
+	--lh-1: 1rem;
+	--lh-2: 1.2em;
+	--lh-3: 1.2rem;
+	--lh-4: 1.5em;
+	--font-0: inherit;
+	--font-z: 0;
+	--font-1: 1em;
+	--font-1r: 1rem;
+	--font-2: 80%;
+	--font-3: 0.85em;
+	--font-3r: 0.85rem;
+	--font-4: 0.9em;
+	--font-5: 1.2em;
+	--font-5r: 1.2rem;
+	--font-6: 1.5em;
+	--font-7r: 2rem;
+	--shadow-dark: var(--ui--clr-gray2);
+	--shadow-light: var(--ui--clr-gray1);
+	--shadow-gray: var(--ui--clr-disabled);
+	--shadow-size-1: var(--ui--size-1) var(--ui--size-3) var(--ui--size-3) 0;
+	--shadow-size-2: var(--ui--size-4) var(--ui--size-5) var(--ui--size-3);
+	--filter-inv-1: invert(20%);
+	--filter-inv-2: invert(50%);
+	--filter-inv-3: invert(100%);
+	--filter-sat-1: saturate(50%);
+	--filter-flower: invert(30%) sepia(10%) drop-shadow(var(--ui--size-1) var(--ui--size-1) 0 rgba(62, 62, 62, 0.5));
+	--filter-heart: sepia(100%) saturate(10000%) hue-rotate(90deg) invert(76%);
+	--gray: rgb(14, 19, 25);
+	--gray--t: rgba(14, 19, 25, 0);
+}
+}
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /* Code 02 */
 @supports (display: grid) {
-	:root {
-		--ui--clr-disabled: rgba(188, 194, 191, 1);
-		--ui--clr-highlight: rgba(170, 139, 89, 1);
-		--ui--clr-white1: rgba(242, 242, 242, 1);
-		--ui--clr-white2: rgba(230, 230, 230, 1);
-		--ui--clr-black: rgba(18, 21, 22, 1);
-		--ui--clr-gray1: rgba(63, 63, 63, 1);
-		--ui--clr-gray2: rgba(159, 159, 159, 0.92);
-		--ui--clr-red: rgba(178, 27, 27, 1);
-		--ui--clr-t: transparent;
-		--ui--wrapper: 65.625rem;
-		--ui--aside: 12.5rem;
-		--ui--size-1: 0.0625rem;
-		--ui--size-2: 0.125rem;
-		--ui--size-3: 0.1875rem;
-		--ui--size-4: 0.25rem;
-		--ui--size-5: 0.3125rem;
-		--ui--size-xs: 0.1rem;
-		--ui--size-s: 0.3em;
-		--ui--size-m: 0.5em;
-		--ui--size-l: 0.8em;
-		--ui--size-xl: 1em;
-		--ui--size-xl-r: 1rem;
-		--ui--icon-s: var(--ui--size-xl);
-		--ui--icon-m: var(--ui--size-xl-r);
-		--ui--icon-l: 1.2rem;
-		--bkgrd-b1: var(--ui--clr-black);
-		--bkgrd-w1: var(--ui--clr-white1);
-		--bkgrd-w2: var(--ui--clr-white2);
-		--bkgrd-h1: var(--ui--clr-highlight);
-		--bkgrd-t: var(--ui--clr-t);
-		--txt-base-clr: var(--ui--clr-gray1);
-		--txt-aside-clr: var(--ui--clr-white1);
-		--txt-high-clr: var(--ui--clr-highlight);
-		--txt-error-clr: var(--ui--clr-red);
-		--link-clr1: var(--ui--clr-gray1);
-		--link-clr2: var(--ui--clr-white1);
-		--link-clr1-h: var(--ui--clr-white1);
-		--link-clr2-h: var(--ui--clr-gray1);
-		--link-clr1-v: var(--ui--clr-highlight);
-		--padding-z: 0;
-		--padding-s: var(--ui--size-s);
-		--padding-m: var(--ui--size-m);
-		--padding-l: var(--ui--size-l);
-		--padding-xl: var(--ui--size-xl);
-		--padding-xlr: var(--ui--size-xl-r);
-		--margin-z: 0;
-		--margin-s: var(--ui--size-s);
-		--margin-m: var(--ui--size-m);
-		--margin-l: var(--ui--size-l);
-		--margin-xl: var(--ui--size-xl);
-		--margin-xlr: var(--ui--size-xl-r);
-		--margin-c: 0 auto;
-		--radius-s: var(--ui--size-s);
-		--radius-m: var(--ui--size-xl-r);
-		--radius-l: 50%;
-		--brd-type-1: var(--ui--size-1) solid;
-		--brd-type-2: var(--ui--size-1) dashed;
-		--brd-error: var(--brd-type-1) var(--txt-error-clr);
-		--brd-clr-0: 7px double var(--ui--clr-highlight);
-		--brd-clr-t: var(--ui--clr-t);
-		--brd-clr-w: var(--ui--clr-white1);
-		--brd-clr-h: var(--ui--clr-highlight);
-		--brd-rad-0: 0 0 var(--radius-s) var(--radius-s);
-		--brd-rad-1: var(--radius-s) var(--radius-s) 0 0;
-		--brd-rad-2: var(--radius-s);
-		--brd-rad-3: var(--radius-m);
-		--brd-rad-4: var(--radius-l);
-		--ls-xs: var(--ui--size-1);
-		--ls-s: var(--ui--size-xs);
-		--ls-m: 0.15em;
-		--ls-l: 0.2em;
-		--lh-n: normal;
-		--lh-1: 1rem;
-		--lh-2: 1.2em;
-		--lh-3: 1.2rem;
-		--lh-4: 1.5em;
-		--font-0: inherit;
-		--font-z: 0;
-		--font-1: 1em;
-		--font-1r: 1rem;
-		--font-2: 80%;
-		--font-3: 0.85em;
-		--font-3r: 0.85rem;
-		--font-4: 0.9em;
-		--font-5: 1.2em;
-		--font-5r: 1.2rem;
-		--font-6: 1.5em;
-		--font-7r: 2rem;
-		--shadow-dark: var(--ui--clr-gray2);
-		--shadow-light: var(--ui--clr-gray1);
-		--shadow-gray: var(--ui--clr-disabled);
-		--shadow-size-1: var(--ui--size-1) var(--ui--size-3) var(--ui--size-3) 0;
-		--shadow-size-2: var(--ui--size-4) var(--ui--size-5) var(--ui--size-3);
-		--filter-inv-1: invert(20%);
-		--filter-inv-2: invert(50%);
-		--filter-inv-3: invert(100%);
-		--filter-sat-1: saturate(50%);
-		--filter-flower: invert(30%) sepia(10%) drop-shadow(var(--ui--size-1) var(--ui--size-1) 0 rgba(62, 62, 62, 0.5));
-		--filter-heart: sepia(100%) saturate(10000%) hue-rotate(90deg) invert(76%);
-		--gray: rgb(14, 19, 25);
-		--gray--t: rgba(14, 19, 25, 0);
-	}
-
 	/*** Hide stuff ***/
 	/* Outdated stuff */
 	a[href*="javascript:openEdit('sms')"],
