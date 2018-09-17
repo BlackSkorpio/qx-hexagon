@@ -1469,6 +1469,7 @@
 	#column_center #icontext_text[style*='block'],
 	#column_center #info_text_text[style*='block'],
 	#column_center #textformat_text[style*='block'],
+	#column_center #updated_info_text[style*='block'],
 	#column_center #digexplained_text[style*='block'],
 	#column_center #publish_info_text[style*='block'],
 	#column_center #looking_for_info_text[style*='block'] {
