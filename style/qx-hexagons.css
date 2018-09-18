@@ -1409,6 +1409,13 @@
 		margin-bottom: 0.5em;
 		padding-left: 0.3em;
 	}
+	#column_right > .smalldivider + div > b:nth-last-child(2n) > [href^="https://www.qx."] {
+		margin-bottom: 1em;
+		padding-bottom: 1em;
+		border-bottom: var(--brd-type-1) var(--brd-clr-t);
+		-o-border-image: linear-gradient(to right, var(--brd-clr-t) 20%, var(--brd-clr-w)) 1;
+		border-image: linear-gradient(to right, var(--brd-clr-t) 20%, var(--brd-clr-w)) 1;
+	}
 	/* Gaymap */
 	#column_right > .smalldivider:nth-last-of-type(-n+9):not(:nth-last-of-type(7)):not(:nth-last-of-type(3)) + div {
 		font-size: 0;
