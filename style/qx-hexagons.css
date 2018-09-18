@@ -1867,6 +1867,9 @@
 		-webkit-box-flex: 0;
 		    -ms-flex: 0 50%;
 		        flex: 0 50%;
+	/* Make every third child 100% wide */
+	#column_center .list > *:nth-child(3n):not([class^='listpage']):not([data-user-input]):not(:only-child) {
+		flex-basis: 100%
 	}
 	/*.list div[id^='divx'] div[class^='clubxxx'] .small {
 		position: absolute;
