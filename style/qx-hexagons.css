@@ -78,8 +78,8 @@
 	--brd-clr-t: var(--ui--clr-t);
 	--brd-clr-w: var(--ui--clr-white1);
 	--brd-clr-h: var(--ui--clr-highlight);
-	--brd-rad-0: 0 0 var(--radius-s) var(--radius-s);
-	--brd-rad-1: var(--radius-s) var(--radius-s) 0 0;
+	--brd-rad-btm: 0 0 var(--radius-s) var(--radius-s);
+	--brd-rad-top: var(--radius-s) var(--radius-s) 0 0;
 	--brd-rad-s: var(--radius-s);
 	--brd-rad-m: var(--radius-m);
 	--brd-rad-l: var(--radius-l);
@@ -784,7 +784,7 @@
 		width: auto;
 		border: var(--brd-type-1) var(--brd-clr-h);
 		border-bottom: none;
-		border-radius: var(--brd-rad-1);
+		border-radius: var(--brd-rad-top);
 	}
 	#column_left,
 	#column_right,
@@ -812,7 +812,7 @@
 	#column_center {
 		grid-column: center;
 		padding: 0 var(--padding-s) var(--padding-l);
-		border-radius: var(--brd-rad-1);
+		border-radius: var(--brd-rad-top);
 	}
 	/*--------------------------------------------*/
 
@@ -930,7 +930,7 @@
 	#qmenu li:hover ul {
 		border: var(--brd-type-1);
 		border-top: none;
-		border-radius: var(--brd-rad-0);
+		border-radius: var(--brd-rad-btm);
 		-webkit-box-shadow: var(--shadow-size-1) var(--shadow-dark);
 		        box-shadow: var(--shadow-size-1) var(--shadow-dark);
 	}
@@ -2363,7 +2363,7 @@
 		content: none;
 	}
 	.no-csspositionsticky body.shop-container .slides-container {
-		border-radius: var(--brd-rad-1);
+		border-radius: var(--brd-rad-top);
 		border: var(--brd-type-1) var(--brd-clr-h);
 		border-bottom: none;
 	}
