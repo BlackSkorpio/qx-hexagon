@@ -119,24 +119,72 @@
 	--gray--t: rgba(14, 19, 25, 0);
 }
 @-webkit-keyframes qx_notice {
-	0% {color: inherit;}
-	70% {color: var(--txt-error-clr);}
-	100% {color: inherit;}
+	0% {
+		color: inherit;
+		-webkit-transform: scale(0.1, 0.1);
+		        transform: scale(0.1, 0.1);
+		opacity: 0.0;
+	}
+	70% {
+		color: var(--txt-high-clr);
+		opacity: 1.0;
+	}
+	100% {
+		color: inherit;
+		-webkit-transform: scale(1.3, 1.3);
+		        transform: scale(1.3, 1.3);
+		opacity: 0.0;
+	}
 }
 @-webkit-keyframes view_notice {
-	0% {color: inherit;}
-	70% {color: var(--txt-high-clr);}
-	100% {color: inherit;}
+	0% {
+		color: inherit;
+		-webkit-transform: scale(0.1, 0.1);
+		        transform: scale(0.1, 0.1);
+		opacity: 0.0;
+	}
+	70% {
+		color: var(--txt-high-clr);
+		opacity: 1.0;
+	}
+	100% {
+		color: inherit;
+		-webkit-transform: scale(1.3, 1.3);
+		        transform: scale(1.3, 1.3);
+		opacity: 0.0;
+	}
 }
 @keyframes qx_notice {
-	0% {color: inherit;}
-	70% {color: var(--txt-error-clr);}
-	100% {color: inherit;}
+	0% {
+		color: inherit;
+		transform: scale(0.1, 0.1);
+		opacity: 0.0;
+	}
+	70% {
+		color: var(--txt-error-clr);
+		opacity: 1.0;
+	}
+	100% {
+		color: inherit;
+		transform: scale(1.3, 1.3);
+		opacity: 0.0;
+	}
 }
 @keyframes view_notice {
-	0% {color: inherit;}
-	70% {color: var(--txt-high-clr);}
-	100% {color: inherit;}
+	0% {
+		color: inherit;
+		transform: scale(0.1, 0.1);
+		opacity: 0.0;
+	}
+	70% {
+		color: var(--txt-high-clr);
+		opacity: 1.0;
+	}
+	100% {
+		color: inherit;
+		transform: scale(1.3, 1.3);
+		opacity: 0.0;
+	}
 }
 }
 
