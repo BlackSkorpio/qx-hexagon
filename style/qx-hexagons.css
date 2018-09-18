@@ -983,6 +983,8 @@
 	#subnavbar .selectedbutton,
 	#subnavbar .selectedbutton a {
 		background-color: var(--bkgrd-w2);
+		background-image: linear-gradient(var(--bkgrd-b1), var(--link-clr2));
+		background-color: initial;
 		color: var(--link-clr2-h);
 		opacity: 1;
 	}
