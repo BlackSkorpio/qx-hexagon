@@ -1864,9 +1864,10 @@
 		font-size: 0.5em;
 	}
 	#column_center .list > *:not([class^='listpage']):not([data-user-input]):not(:only-child) {
-		-webkit-box-flex: 0;
-		    -ms-flex: 0 50%;
-		        flex: 0 50%;
+		-webkit-box-flex: 1;
+		    -ms-flex: 1 50%;
+		        flex: 1 50%;
+	}
 	/* Make every third child 100% wide */
 	#column_center .list > *:nth-child(3n):not([class^='listpage']):not([data-user-input]):not(:only-child) {
 		flex-basis: 100%
