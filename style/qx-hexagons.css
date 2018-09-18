@@ -1403,7 +1403,7 @@
 		font-size: var(--font-3r);
 	}
 	/* Latest from QX.SE */
-	#column_right > .smalldivider + div > b > [href^='https://www.qx.se'] {
+	#column_right > .smalldivider + div > b > [href^='https://www.qx.'] {
 		display: list-item;
 		margin-left: 1.3em;
 		margin-bottom: 0.5em;
