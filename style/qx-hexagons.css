@@ -1547,7 +1547,9 @@
 		width: auto !important;
 		padding: var(--padding-s);
 		margin: var(--margin-s) var(--margin-s) var(--margin-m);
-		border-bottom: var(--brd-type-1) var(--ui--clr-disabled);
+		border: var(--brd-type-1) var(--ui--clr-disabled);
+		border-radius: var(--brd-rad-btm);
+		box-shadow: var(--shadow-size-2) var(--shadow-gray);
 	}
 
 	/** Used in Polls **/
