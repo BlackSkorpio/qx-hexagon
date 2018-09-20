@@ -1696,6 +1696,12 @@
 	}
 	.homepage [data-user-input] {
 		margin: 1em auto 0;
+		/* HACK To avoid overflowing the viewport
+		   https://www.qruiser.com/?id=1366117 */
+		overflow: hidden;
+		/*max-width: 41.875rem;*/
+		max-width: calc(var(--ui--wrapper) - ((2 * var(--ui--aside)) + var(--ui--size-xl)));
+		width: 100%;
 	}
 	.homepage [data-user-input]:first-line {
 		font-weight: 700;
