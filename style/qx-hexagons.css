@@ -2147,6 +2147,28 @@
 	}
 	/*--------------------------------------------*/
 
+	/*** The Blogs ***/
+	#column_center h2 + .divider ~ div:not(.divider):not(.gallery):nth-child(n+11):nth-child(-n+34) {
+		min-height: 8.75rem !important;
+		margin: 0 !important;
+	}
+	#column_center h2 + .divider ~ div:not(.divider):not(.gallery):nth-child(n+11):nth-child(-n+34):nth-child(even) {
+		width: 8.125rem !important;
+		padding: 0 10px;
+	}
+	#column_center h2 + .divider ~ div:not(.divider):not(.gallery):nth-child(even):nth-child(16),
+	#column_center h2 + .divider ~ div:not(.divider):not(.gallery):nth-child(even):nth-child(22),
+	#column_center h2 + .divider ~ div:not(.divider):not(.gallery):nth-child(even):nth-child(28),
+	#column_center h2 + .divider ~ div:not(.divider):not(.gallery):nth-child(even):nth-child(34) {
+		padding-right: 0px;
+		width: 8.75rem !important;
+	}
+	#column_center h2 + .divider ~ div:not(.divider):not(.gallery):nth-child(n+17):nth-child(-n+22),
+	#column_center h2 + .divider ~ div:not(.divider):not(.gallery):nth-child(n+29):nth-child(-n+34) {
+		margin: 1rem 0 !important;
+	}
+	/*--------------------------------------------*/
+
 	/*** 3 Members ***/
 	.divider + .gallery {
 		display: -webkit-box;
