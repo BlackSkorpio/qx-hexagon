@@ -1566,9 +1566,9 @@
 	#column_center [id$='_text'][style*='block'] {
 		width: auto !important;
 		padding: var(--padding-s);
-		margin: var(--margin-s) var(--margin-s) var(--margin-m);
-		border: var(--brd-type-1) var(--ui--clr-disabled);
-		border-radius: var(--brd-rad-btm);
+		margin: var(--margin-s) var(--margin-s) var(--margin-l);
+		border: var(--brd-info);
+		border-radius: var(--brd-rad-info);
 		box-shadow: var(--shadow-size-2) var(--shadow-gray);
 	}
 
