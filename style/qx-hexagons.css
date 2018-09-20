@@ -195,6 +195,7 @@
 @supports (display: grid) {
 	/*** Hide stuff ***/
 	/* Outdated stuff */
+	h3 + br[clear='all'],/*Index page, not logged in*/
 	a[href*="javascript:openEdit('sms')"],
 	/* Empty stuff scattered all over the place */
 	div:empty:not(.divider):not(.orangeline):not(.filldot):not(.jwpreview):not(.jwicon),
