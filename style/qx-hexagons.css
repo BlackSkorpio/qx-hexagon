@@ -1911,6 +1911,13 @@
 	/* Make every third child 100% wide
 	   https://stackoverflow.com/a/13691714/6820262 */
 	#column_center .list > *:nth-child(3n):not([class^='listpage']):not([data-user-input]):not(:only-child) {
+		flex-basis: 100%;
+		background: linear-gradient(to bottom, rgb(238, 242, 243), rgb(142, 158, 171));
+		/*mix-blend-mode: luminosity;*/
+		border-top: var(--brd-type-1);
+		border-bottom: var(--brd-type-1);
+		border-color: rgb(142, 158, 171);
+		border-radius: 0.4em;
 	}
 	/*.list div[id^='divx'] div[class^='clubxxx'] .small {
 		position: absolute;
