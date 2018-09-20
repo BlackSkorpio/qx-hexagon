@@ -74,12 +74,14 @@
 	--brd-type-1: var(--ui--size-1) solid;
 	--brd-type-2: var(--ui--size-1) dashed;
 	--brd-error: var(--brd-type-1) var(--txt-error-clr);
+	--brd-info: var(--brd-type-1) var(--ui--clr-disabled);
 	--brd-clr-0: 7px double var(--ui--clr-highlight);
 	--brd-clr-t: var(--ui--clr-t);
 	--brd-clr-w: var(--ui--clr-white1);
 	--brd-clr-h: var(--ui--clr-highlight);
 	--brd-rad-btm: 0 0 var(--radius-s) var(--radius-s);
 	--brd-rad-top: var(--radius-s) var(--radius-s) 0 0;
+	--brd-rad-info: 0 var(--radius-s) var(--radius-s) var(--radius-s);
 	--brd-rad-s: var(--radius-s);
 	--brd-rad-m: var(--radius-m);
 	--brd-rad-l: var(--radius-l);
