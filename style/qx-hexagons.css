@@ -1358,6 +1358,25 @@
 	/*#column_right a[href="/spotlights.php"] {}*/
 
 	/** QX Notice Widget **/
+	#column_right .smalldivider  [href^='/noticeboard'] {
+		color: var(--txt-error-clr) !important;
+	}
+	#column_right .noticetext {
+		font-size: inherit !important;
+	}
+	#column_right .noticetext::before {
+		display: inline-block;
+		width: auto;
+		height: var(--ui--size-xl);
+		font-family: 'FontAwesome';
+		content: "\f005";
+		font-size: var(--ui--size-xl-r);
+		text-align: center;
+		animation: qx_notice 6s infinite;
+	}
+	#column_right .noticetext:hover::before {
+		animation: paused;
+	}
 	/** Logged in Widget **/
 
 	/** Ask Sentry Widget **/
