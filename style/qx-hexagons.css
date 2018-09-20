@@ -3561,13 +3561,31 @@
 		display: initial;
 	}
 
-	#column_center > .list > *:not([class^='listpage']) {
-		-webkit-box-flex: 1 !important;
-		    -ms-flex: 1 50% !important;
-		        flex: 1 50% !important;
-		-ms-flex-positive: 1 !important;
-		        flex-grow: 1 !important;
+	#column_center h2 + p[style="margin-top: 0.5em;"] + div:not([class$='hidden']) {
+		display: flex;
+		flex-flow: row wrap;
 	}
+	#column_center h2 + p[style="margin-top: 0.5em;"] + div > [id*='divx'],
+	#column_center > .list > *:not([class^='listpage']) {
+		flex: 1 50%;
+	}
+	#column_center [id*='divx'] > .clubscribble {
+		height: 100%;
+	}
+	#column_center [id*='divx'] img[src$='blank.gif'] {
+		width: 100%;
+		height: auto;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: top center;
+	}
+	/* HACK to exclude the add scribble button from shrinking */
+	#column_center div > p:first-of-type,
+	#column_center div + br + p:last-of-type {
+		display: flow-root;
+		width: 100%
+	}
+
 	#column_center .list .datetime,
 	#column_center .list .memberinfo:not(span) {
 		font-style: italic;
