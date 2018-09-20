@@ -1562,6 +1562,7 @@
 	#column_center #digexplained_text[style*='block'],
 	#column_center #publish_info_text[style*='block'],
 	#column_center #looking_for_info_text[style*='block']*/
+	#column_center #verifiedinfo[style*='block'],
 	#column_center [id$='_text'][style*='block'] {
 		width: auto !important;
 		padding: var(--padding-s);
