@@ -1571,6 +1571,9 @@
 		border-radius: var(--brd-rad-info);
 		box-shadow: var(--shadow-size-2) var(--shadow-gray);
 	}
+	#column_center #verifiedinfo {
+		width: 100% !important;
+	}
 
 	/** Used in Polls **/
 	.filldot,
