@@ -1359,6 +1359,7 @@
 
 	/** QX Notice Widget **/
 	/** Logged in Widget **/
+
 	/** Ask Sentry Widget **/
 	#column_right div > [href='/sentry.php'] > [src$='sentry_logo.png'] {
 		width: 100%;
@@ -1891,7 +1892,6 @@
 	/* Make every third child 100% wide
 	   https://stackoverflow.com/a/13691714/6820262 */
 	#column_center .list > *:nth-child(3n):not([class^='listpage']):not([data-user-input]):not(:only-child) {
-		flex-basis: 100%
 	}
 	/*.list div[id^='divx'] div[class^='clubxxx'] .small {
 		position: absolute;
@@ -3534,6 +3534,7 @@
 	#column_center .odd .list:first-of-type {
 		display: initial;
 	}
+
 	#column_center > .list > *:not([class^='listpage']) {
 		-webkit-box-flex: 1 !important;
 		    -ms-flex: 1 50% !important;
