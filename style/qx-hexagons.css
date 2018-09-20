@@ -950,7 +950,7 @@
 		min-height: 1.5rem;
 		width: calc(100% + 0.6em);
 		/* Negative value needed since we have a small padding on the parent */
-		margin: var(--margin-c) auto var(--margin-m);
+		margin: var(--margin-c) var(--margin-m);
 		margin-left: -0.3em;
 		background-color: var(--bkgrd-b1);
 		color: var(--link-clr2);
