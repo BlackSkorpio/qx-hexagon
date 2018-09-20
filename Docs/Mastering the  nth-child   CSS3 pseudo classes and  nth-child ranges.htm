@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html class="wf-leaguegothic1-n4-active wf-bistroscriptweb1-n4-active wf-futurapt1-n7-active wf-futurapt1-i7-active wf-futurapt1-n4-active wf-ffpraterblockweb1-n4-active wf-futurapt1-i4-active wf-active"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Mastering the :nth-child | CSS3 pseudo classes and :nth-child ranges</title>
+    <link rel="stylesheet" href="Mastering%20the%20%20nth-child%20%20%20CSS3%20pseudo%20classes%20and%20%20nth-child%20ranges_files/reset.css" type="text/css">
+    <link rel="stylesheet" href="Mastering%20the%20%20nth-child%20%20%20CSS3%20pseudo%20classes%20and%20%20nth-child%20ranges_files/style.css" type="text/css">
+    <link rel="stylesheet" href="Mastering%20the%20%20nth-child%20%20%20CSS3%20pseudo%20classes%20and%20%20nth-child%20ranges_files/prettify.css" type="text/css">
+    <script type="text/javascript" src="Mastering%20the%20%20nth-child%20%20%20CSS3%20pseudo%20classes%20and%20%20nth-child%20ranges_files/prettify.js"></script>
+    <script type="text/javascript" src="Mastering%20the%20%20nth-child%20%20%20CSS3%20pseudo%20classes%20and%20%20nth-child%20ranges_files/lang-css.js"></script>
+    <script type="text/javascript" src="Mastering%20the%20%20nth-child%20%20%20CSS3%20pseudo%20classes%20and%20%20nth-child%20ranges_files/cup4mvz.js"></script>
+    <style type="text/css">.tk-league-gothic{font-family:"league-gothic-1","league-gothic-2",sans-serif;}.tk-bistro-script-web{font-family:"bistro-script-web-1","bistro-script-web-2",cursive;}.tk-ff-prater-block-web{font-family:"ff-prater-block-web-1","ff-prater-block-web-2",sans-serif;}.tk-futura-pt{font-family:"futura-pt-1","futura-pt-2",sans-serif;}</style><style type="text/css">@font-face{font-family:league-gothic-1;src:url(https://use.typekit.com/af/e048f6/000000000000000000014689/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.com/af/e048f6/000000000000000000014689/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.com/af/e048f6/000000000000000000014689/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:bistro-script-web-1;src:url(https://use.typekit.com/af/6d0279/000000000000000000011b85/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.com/af/6d0279/000000000000000000011b85/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.com/af/6d0279/000000000000000000011b85/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:ff-prater-block-web-1;src:url(https://use.typekit.com/af/c02693/00000000000000000001682b/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.com/af/c02693/00000000000000000001682b/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.com/af/c02693/00000000000000000001682b/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:futura-pt-1;src:url(https://use.typekit.com/af/058ed0/000000000000000000010091/27/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.com/af/058ed0/000000000000000000010091/27/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.com/af/058ed0/000000000000000000010091/27/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:futura-pt-1;src:url(https://use.typekit.com/af/314234/000000000000000000010092/27/l?subset_id=2&fvd=i7&v=3) format("woff2"),url(https://use.typekit.com/af/314234/000000000000000000010092/27/d?subset_id=2&fvd=i7&v=3) format("woff"),url(https://use.typekit.com/af/314234/000000000000000000010092/27/a?subset_id=2&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;}@font-face{font-family:futura-pt-1;src:url(https://use.typekit.com/af/713a19/000000000000000000013365/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.com/af/713a19/000000000000000000013365/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.com/af/713a19/000000000000000000013365/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:futura-pt-1;src:url(https://use.typekit.com/af/4a732e/000000000000000000010095/27/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.com/af/4a732e/000000000000000000010095/27/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.com/af/4a732e/000000000000000000010095/27/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}</style><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body onload="prettyPrint()">
+    <div id="decoration"></div>
+    <div id="wrap">
+        <h1>Mastering the :nth-child<br>
+        <a href="https://twitter.com/#!/jamesmenera" title=""></a>
+        </h1>
+        
+        <section id="nth_child">
+            <h2>Using :nth-child</h2>
+            <h3>:nth-child<br>
+            <span>:nth-child(8)</span></h3>
+            <ul>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+            </ul>
+<pre class="prettyprint"><code><span class="pln">
+li</span><span class="pun">:</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">child</span><span class="pun">(</span><span class="lit">8</span><span class="pun">)</span><span class="pln"> span </span><span class="pun">{</span><span class="pln">
+    background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#298EB2;</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.4</span><span class="pun">),</span><span class="pln"> inset </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> black</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span></code>
+</pre>
+                <p>Using <span>:nth-child(8)</span> it allows you to specifically choose to change only the 8th element in the parent element</p>
+        </section>
+        
+        <section id="nth_child_ranges">
+        <h2>Using the :nth-child ranges</h2>
+            <div id="example_one">
+                <h3>Positive Child Ranges <br> <span>:nth-child(n+6)</span></h3>
+                <ul>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                </ul>
+            </div>
+            <pre class="prettyprint"><code><span class="pln">
+li</span><span class="pun">:</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">child</span><span class="pun">(</span><span class="pln">n</span><span class="pun">+</span><span class="lit">6</span><span class="pun">)</span><span class="pln"> span </span><span class="pun">{</span><span class="pln">
+    background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#298EB2;</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> inset </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.4</span><span class="pun">),</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> black</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span></code>
+</pre>
+            <p>Using the <span>:nth-child(n+6)</span> like this allows you pick <span>:nth-child(6)</span> and above</p>
+            
+            <div id="example_two">
+                <h3>Negative Child Ranges<br>
+                <span>:nth-child(-n+9)</span>
+                </h3>
+                <ul>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                </ul>
+                <pre class="prettyprint"><code><span class="pln">
+li</span><span class="pun">:</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">child</span><span class="pun">(-</span><span class="pln">n</span><span class="pun">+</span><span class="lit">9</span><span class="pun">)</span><span class="pln"> span </span><span class="pun">{</span><span class="pln">
+    background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#298EB2;</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> inset </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.4</span><span class="pun">),</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> black</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span></code>
+</pre>
+                <p>Using the <span>:nth-child(-n+9)</span> like this allows you pick <span>:nth-child(9)</span> and below</p>
+            </div>
+            
+            <div id="example_three">
+                <h3>Generic Child Ranges<br>
+                <span>nth-child(n+4):nth-child(-n+8)</span>
+                </h3>
+                <ul>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                </ul>
+                <pre class="prettyprint"><code><span class="pln">
+li</span><span class="pun">:</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">child</span><span class="pun">(</span><span class="pln">n</span><span class="pun">+</span><span class="lit">4</span><span class="pun">):</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">child</span><span class="pun">(-</span><span class="pln">n</span><span class="pun">+</span><span class="lit">8</span><span class="pun">)</span><span class="pln"> span </span><span class="pun">{</span><span class="pln">
+    background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#298EB2;</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> inset </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.4</span><span class="pun">),</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> black</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span></code>
+</pre>
+                <p>Using this <span>nth-child(n+4):nth-child(-n+8)</span> we can select elements within certain ranges, in this case elements 4-8.</p>
+                
+            </div>
+            
+            <div id="example_four">
+                <h3>Advanced Generic Child Ranges<br>
+                <span>nth-child(n+2):nth-child(odd):nth-child(-n+9)</span>
+                </h3>
+                <ul>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                </ul>
+                <pre class="prettyprint"><code><span class="pln">
+li</span><span class="pun">:</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">child</span><span class="pun">(</span><span class="pln">n</span><span class="pun">+</span><span class="lit">2</span><span class="pun">):</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">child</span><span class="pun">(</span><span class="pln">odd</span><span class="pun">):</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">child</span><span class="pun">(-</span><span class="pln">n</span><span class="pun">+</span><span class="lit">9</span><span class="pun">)</span><span class="pln"> span </span><span class="pun">{</span><span class="pln">
+    background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#298EB2;</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> inset </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.4</span><span class="pun">),</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> black</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span></code>
+</pre>
+                <p>Using this <span>nth-child(n+2):nth-child(odd):nth-child(-n+9)</span> we can select elements within certain ranges (2-9) that are odd-numbered children.</p>
+                
+            </div>
+            
+            <div id="example_five">
+                <h3>
+                    <span>nth-child(3n+1):nth-child(even)</span>
+                </h3>
+                <ul>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                </ul>
+                <pre class="prettyprint"><code><span class="pln">
+li</span><span class="pun">:</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">child</span><span class="pun">(</span><span class="lit">3n</span><span class="pun">+</span><span class="lit">1</span><span class="pun">):</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">child</span><span class="pun">(</span><span class="pln">even</span><span class="pun">)</span><span class="pln"> span </span><span class="pun">{</span><span class="pln">
+    background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#298EB2;</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> inset </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> rgba</span><span class="pun">(</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="pun">.</span><span class="lit">4</span><span class="pun">),</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> black</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span></code>
+</pre>
+                <p>Using this <span>:nth-child(3n+1)</span> would normally highlight children 1, 4, 7 &amp; 10, but by using the <span>:nth-child(even)</span> we filter out the odd numbered children 1 &amp; 7 leaving only the children 4 &amp; 10.</p>
+                
+            </div>
+
+        </section>
+        
+        <section id="nth_of_type">
+            <h2>Using the :nth-of-type</h2>
+                <h3>
+                    :nth-of-type<br>
+                    <span>
+                    :nth-of-type(3)
+                    </span>
+                </h3>
+                <div id="example_six">
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                </div>
+                <pre class="prettyprint"><code><span class="pln">
+</span><span class="com">/* these are represented with blue circles */</span><span class="pln">
+span</span><span class="pun">:</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">of</span><span class="pun">-</span><span class="pln">type</span><span class="pun">(</span><span class="lit">3</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#298EB2;</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> inset </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.4</span><span class="pun">),</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> black</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="com">/* these are represented with orange squares */</span><span class="pln">
+div</span><span class="pun">:</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">of</span><span class="pun">-</span><span class="pln">type</span><span class="pun">(</span><span class="lit">4</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#E17149:</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> inset </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.4</span><span class="pun">),</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> black</span><span class="pun">;</span><span class="pln"> 
+</span><span class="pun">}</span><span class="pln">
+</span></code>
+</pre>
+
+                <p>Using the <span>:nth-of-type()</span> allows you to select a specific child within a type of element, within the same parent element.</p>
+        </section>
+        
+        <section id="nth_of_type_ranges">
+            <h2>Using the :nth-of-type Ranges</h2>
+                <h3>
+                    Using Positive Type Ranges<br>
+                    <span>
+                    span:nth-of-type(n+3)<br>
+                    div:nth-of-type(2n+2)
+                    </span>
+                </h3>
+                <div id="example_seven">
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                </div>
+                <pre class="prettyprint"><code><span class="pln">
+</span><span class="com">/* these are represented with blue circles */</span><span class="pln">
+span</span><span class="pun">:</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">of</span><span class="pun">-</span><span class="pln">type</span><span class="pun">(</span><span class="pln">n</span><span class="pun">+</span><span class="lit">3</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#298EB2;</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> inset </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.4</span><span class="pun">),</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> black</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="com">/* these are represented with orange squares */</span><span class="pln">
+div</span><span class="pun">:</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">of</span><span class="pun">-</span><span class="pln">type</span><span class="pun">(</span><span class="lit">2n</span><span class="pun">+</span><span class="lit">2</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#E17149:</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> inset </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.4</span><span class="pun">),</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> black</span><span class="pun">;</span><span class="pln"> 
+</span><span class="pun">}</span><span class="pln">
+</span></code>
+</pre>
+
+                <p>Using <span>span:nth-of-type(n+3) or div:nth-of-type(2n+2)</span> like this allows you to pick elements greater than the value in the same type, within the same parent element..</p>
+                
+                <h3>
+                    Using Negative Type Ranges<br>
+                    <span>
+                    span:nth-of-type(-n+4)<br>
+                    div:nth-of-type(-n+5)
+                    </span>
+                </h3>
+                <div id="example_eight">
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                </div>
+                <pre class="prettyprint"><code><span class="pln">
+</span><span class="com">/* these are represented with blue circles */</span><span class="pln">
+span</span><span class="pun">:</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">of</span><span class="pun">-</span><span class="pln">type</span><span class="pun">(-</span><span class="pln">n</span><span class="pun">+</span><span class="lit">4</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#298EB2;</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> inset </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.4</span><span class="pun">),</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> black</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="com">/* these are represented with orange squares */</span><span class="pln">
+div</span><span class="pun">:</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">of</span><span class="pun">-</span><span class="pln">type</span><span class="pun">(-</span><span class="pln">n</span><span class="pun">+</span><span class="lit">5</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#E17149:</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> inset </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.4</span><span class="pun">),</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> black</span><span class="pun">;</span><span class="pln"> 
+</span><span class="pun">}</span><span class="pln">
+</span></code>
+</pre>
+
+                <p>Using <span>span:nth-of-type(-n+4) or div:nth-of-type(-n+5)</span> like this allows you to pick elements less than the value in the same type, within the same parent element.</p>
+                
+                <h3>
+                    Using Generic Type Ranges<br>
+                    <span>
+                    span:nth-of-type(n+3):nth-of-type(-n+6)<br>
+                    div:nth-of-type(n+1):nth-of-type(-n+3)
+                    </span>
+                </h3>
+                <div id="example_nine">
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                </div>
+                <pre class="prettyprint"><code><span class="pln">
+</span><span class="com">/* these are represented with blue circles */</span><span class="pln">
+span</span><span class="pun">:</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">of</span><span class="pun">-</span><span class="pln">type</span><span class="pun">(</span><span class="pln">n</span><span class="pun">+</span><span class="lit">3</span><span class="pun">):</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">of</span><span class="pun">-</span><span class="pln">type</span><span class="pun">(-</span><span class="pln">n</span><span class="pun">+</span><span class="lit">6</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#298EB2;</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> inset </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.4</span><span class="pun">),</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> black</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="com">/* these are represented with orange squares */</span><span class="pln">
+div</span><span class="pun">:</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">of</span><span class="pun">-</span><span class="pln">type</span><span class="pun">(</span><span class="pln">n</span><span class="pun">+</span><span class="lit">1</span><span class="pun">):</span><span class="pln">n</span><span class="pun">-</span><span class="pln">th</span><span class="pun">-</span><span class="pln">of</span><span class="pun">-</span><span class="pln">type</span><span class="pun">(-</span><span class="pln">n</span><span class="pun">+</span><span class="lit">3</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#E17149:</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> inset </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.4</span><span class="pun">),</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> black</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span></code>
+</pre>
+
+                <p>Using <span>:nth-of-type(n+3):nth-of-type(-n+6) or div:nth-of-type(n+1):nth-of-type(-n+3)</span>this
+ way allows you to select a generic range of a type of element, within 
+the same parent element. In this example you see that I have selected 
+the squares 1-3 and circles 3-6.</p>
+                
+                <h3>
+                    Using Advanced Generic Type Ranges<br>
+                    <span>
+                    span:nth-of-type(n+3):nth-of-type(odd):nth-of-type(-n+6)<br>
+                    div:nth-of-type(n+1):nth-of-type(even):nth-of-type(-n+3)
+                    </span>
+                </h3>
+                <div id="example_ten">
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                    <div></div>
+                    <span></span>
+                </div>
+                <pre class="prettyprint"><code><span class="pln">
+</span><span class="com">/* these are represented with blue circles */</span><span class="pln">
+span</span><span class="pun">:</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">of</span><span class="pun">-</span><span class="pln">type</span><span class="pun">(</span><span class="pln">n</span><span class="pun">+</span><span class="lit">3</span><span class="pun">):</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">of</span><span class="pun">-</span><span class="pln">type</span><span class="pun">(</span><span class="pln">odd</span><span class="pun">):</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">of</span><span class="pun">-</span><span class="pln">type</span><span class="pun">(-</span><span class="pln">n</span><span class="pun">+</span><span class="lit">7</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#298EB2;</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> inset </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.4</span><span class="pun">),</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> black</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="com">/* these are represented with orange squares */</span><span class="pln">
+div</span><span class="pun">:</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">of</span><span class="pun">-</span><span class="pln">type</span><span class="pun">(</span><span class="pln">n</span><span class="pun">+</span><span class="lit">1</span><span class="pun">):</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">ofo</span><span class="pun">-</span><span class="pln">type</span><span class="pun">(</span><span class="pln">even</span><span class="pun">):</span><span class="pln">nth</span><span class="pun">-</span><span class="pln">of</span><span class="pun">-</span><span class="pln">type</span><span class="pun">(-</span><span class="pln">n</span><span class="pun">+</span><span class="lit">3</span><span class="pun">)</span><span class="pln">  </span><span class="pun">{</span><span class="pln">
+    background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#E17149:</span><span class="pln">
+    box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> inset </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3px</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.4</span><span class="pun">),</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> black</span><span class="pun">;</span><span class="pln"> 
+</span><span class="pun">}</span><span class="pln">
+</span></code>
+</pre>
+
+                <p>Using the <span>span:nth-of-type(n+3):nth-of-type(odd):nth-of-type(-n+6) or div:nth-of-type(n+1):nth-of-type(even):nth-of-type(-n+3)</span>
+ allows you to select a generic range and filter the results based on 
+odd and even. So normally it would have highlighted squares 1-3 and 
+circles 3-6. But by using  odd and even we can filter out those by 
+ranges, so we are left with circles 3 &amp; 5 and square 2.</p>
+        </section>
+    </div>
+    
+</body><iframe id="e0fe7e79ef044e56993c0a0a6874baed" scrolling="0" style="all: initial !important;display: block !important;width: 100% !important;height: 100% !important;position: fixed !important;left: 0 !important;bottom: 0 !important;margin: 0 !important;padding: 0 !important;pointer-events: none !important;z-index: 2147483647 !important;" src="moz-extension://none/" frameborder="0"></iframe></html>

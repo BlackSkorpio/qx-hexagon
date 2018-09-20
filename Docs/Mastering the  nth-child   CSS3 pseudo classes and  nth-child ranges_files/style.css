@@ -1,0 +1,529 @@
+body {
+  background-color: #747474;
+  position: relative;
+  font-family: "helvetica", sans-serif; }
+
+#decoration {
+  height: 160px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: white;
+  border-bottom: 4px solid #202020; }
+
+#wrap {
+  width: 960px;
+  margin: 0 auto; }
+
+h1 {
+  font-family: "League Gothic", league-gothic-1, league-gothic-2, sans-serif;
+  color: #202020;
+  font-size: 80px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 24px;
+  margin-bottom: 20px;
+  padding-left: 132px;
+  text-shadow: 1px 1px 0 black;
+  position: relative; }
+  h1 a {
+    width: 100px;
+    height: 100px;
+    display: block;
+    background-image: url("../images/icon.png");
+    border: 2px solid black;
+    position: absolute;
+    top: 28px;
+    left: 145px; }
+    h1 a:hover {
+      cursor: pointer;
+      background-image: url("../images/icon_hover.png"); }
+
+ul {
+  list-stye-type: none;
+  width: 665px;
+  height: 45px;
+  display: block;
+  margin: 0 auto;
+  background-color: white;
+  border: 4px solid #202020;
+  -moz-border-radius: 13px;
+  -webkit-border-radius: 13px;
+  border-radius: 13px;
+  z-index: -200px; }
+  ul li {
+    display: inline-block;
+    width: 36px;
+    padding: 0 10px;
+    margin: 0;
+    z-index: 400;
+    position: relative; }
+    ul li span {
+      border-radius: 26px;
+      -moz-box-shadow: inset 3px 3px 10px #747474;
+      -webkit-box-shadow: inset 3px 3px 10px #747474;
+      box-shadow: inset 3px 3px 10px #747474; }
+      ul li span:before {
+        width: 30px;
+        height: 30px;
+        display: block;
+        position: relative;
+        top: -2px;
+        left: -2px;
+        content: "";
+        background-color: black;
+        border-radius: 30px;
+        z-index: -100; }
+    ul li div {
+      -moz-box-shadow: inset 3px 3px 10px #747474;
+      -webkit-box-shadow: inset 3px 3px 10px #747474;
+      box-shadow: inset 3px 3px 10px #747474; }
+      ul li div:before {
+        width: 30px;
+        height: 30px;
+        display: block;
+        position: relative;
+        top: -2px;
+        left: -2px;
+        content: "";
+        background-color: black;
+        z-index: -100; }
+    ul li span, ul li div {
+      width: 26px;
+      height: 26px;
+      display: block;
+      background-color: black;
+      margin: 10px;
+      z-index: 600; }
+      ul li span:hover, ul li div:hover {
+        -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        background-color: #298eb2; }
+    ul li:nth-child(1):before {
+      content: "1";
+      position: absolute;
+      top: 60px;
+      left: 30px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    ul li:nth-child(1):before {
+      content: "1";
+      position: absolute;
+      top: 60px;
+      left: 30px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    ul li:nth-child(2):before {
+      content: "2";
+      position: absolute;
+      top: 60px;
+      left: 30px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    ul li:nth-child(3):before {
+      content: "3";
+      position: absolute;
+      top: 60px;
+      left: 30px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    ul li:nth-child(4):before {
+      content: "4";
+      position: absolute;
+      top: 60px;
+      left: 30px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    ul li:nth-child(5):before {
+      content: "5";
+      position: absolute;
+      top: 60px;
+      left: 30px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    ul li:nth-child(6):before {
+      content: "6";
+      position: absolute;
+      top: 60px;
+      left: 30px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    ul li:nth-child(7):before {
+      content: "7";
+      position: absolute;
+      top: 60px;
+      left: 30px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    ul li:nth-child(8):before {
+      content: "8";
+      position: absolute;
+      top: 60px;
+      left: 30px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    ul li:nth-child(9):before {
+      content: "9";
+      position: absolute;
+      top: 60px;
+      left: 30px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    ul li:nth-child(10):before {
+      content: "10";
+      position: absolute;
+      top: 60px;
+      left: 30px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    ul li:nth-child(11):before {
+      content: "11";
+      position: absolute;
+      top: 60px;
+      left: 30px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+
+section {
+  width: 670px;
+  margin: 0px auto;
+  padding: 15px; }
+  section h2 {
+    font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif;
+    font-size: 55px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    padding-bottom: 20px;
+    text-transform: uppercase; }
+  section h3 {
+    font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif;
+    color: black;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    padding-top: 50px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    line-height: 120%;
+    width: 100%; }
+    section h3 span {
+      color: #9fcf77;
+      text-transform: none;
+      font-size: 35px; }
+
+#nth_child ul li:nth-child(8) span {
+  -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  -webkit-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  cursor: pointer;
+  background-color: #298eb2; }
+  #nth_child ul li:nth-child(8) span:hover {
+    background-color: #eb008b; }
+#nth_child pre {
+  width: 650px; }
+
+pre {
+  background-color: #022c37;
+  background-color: #202020;
+  padding: 10px !important;
+  margin-top: 50px; }
+
+section:nth-of-type(even) {
+  background-color: rgba(0, 0, 0, 0.1) !important; }
+
+section:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.3) !important; }
+
+section:last-of-type {
+  margin-bottom: 20px; }
+
+div + p {
+  margin-top: 50px;
+  margin-bottom: 30px; }
+
+pre + p {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+p {
+  line-height: 120%;
+  padding-bottom: 30px; }
+  p span {
+    color: #9fcf77;
+    padding-bottom: 1px; }
+
+#nth_child_ranges #example_one ul li:nth-child(n+6) span {
+  -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  -webkit-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  cursor: pointer;
+  background-color: #298eb2; }
+  #nth_child_ranges #example_one ul li:nth-child(n+6) span:hover {
+    background-color: #eb008b; }
+#nth_child_ranges #example_two ul li:nth-child(-n+9) span {
+  -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  -webkit-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  cursor: pointer;
+  background-color: #298eb2; }
+  #nth_child_ranges #example_two ul li:nth-child(-n+9) span:hover {
+    background-color: #eb008b; }
+#nth_child_ranges #example_three ul li:nth-child(n+4):nth-child(-n+8) span {
+  -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  -webkit-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  cursor: pointer;
+  background-color: #298eb2; }
+  #nth_child_ranges #example_three ul li:nth-child(n+4):nth-child(-n+8) span:hover {
+    background-color: #eb008b; }
+#nth_child_ranges #example_four ul li:nth-child(n+2):nth-child(odd):nth-child(-n+9) span {
+  -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  -webkit-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  cursor: pointer;
+  background-color: #298eb2; }
+  #nth_child_ranges #example_four ul li:nth-child(n+2):nth-child(odd):nth-child(-n+9) span:hover {
+    background-color: #eb008b; }
+#nth_child_ranges #example_five ul li:nth-child(3n+1):nth-child(even) span {
+  -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  -webkit-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  cursor: pointer;
+  background-color: #298eb2; }
+  #nth_child_ranges #example_five ul li:nth-child(3n+1):nth-child(even) span:hover {
+    background-color: #eb008b; }
+
+#nth_of_type #example_six, #nth_of_type #example_seven, #nth_of_type #example_eight, #nth_of_type #example_nine, #nth_of_type #example_ten, #nth_of_type #example_eleven, #nth_of_type_ranges #example_six, #nth_of_type_ranges #example_seven, #nth_of_type_ranges #example_eight, #nth_of_type_ranges #example_nine, #nth_of_type_ranges #example_ten, #nth_of_type_ranges #example_eleven {
+  width: 665px;
+  height: 45px;
+  display: block;
+  margin: 0 auto;
+  background-color: white;
+  border: 4px solid #202020;
+  -moz-border-radius: 13px;
+  -webkit-border-radius: 13px;
+  border-radius: 13px;
+  position: relative; }
+  #nth_of_type #example_six span, #nth_of_type #example_seven span, #nth_of_type #example_eight span, #nth_of_type #example_nine span, #nth_of_type #example_ten span, #nth_of_type #example_eleven span, #nth_of_type_ranges #example_six span, #nth_of_type_ranges #example_seven span, #nth_of_type_ranges #example_eight span, #nth_of_type_ranges #example_nine span, #nth_of_type_ranges #example_ten span, #nth_of_type_ranges #example_eleven span {
+    border-radius: 26px;
+    -moz-box-shadow: inset 3px 3px 10px #747474;
+    -webkit-box-shadow: inset 3px 3px 10px #747474;
+    box-shadow: inset 3px 3px 10px #747474;
+    z-index: 600; }
+    #nth_of_type #example_six span:after, #nth_of_type #example_seven span:after, #nth_of_type #example_eight span:after, #nth_of_type #example_nine span:after, #nth_of_type #example_ten span:after, #nth_of_type #example_eleven span:after, #nth_of_type_ranges #example_six span:after, #nth_of_type_ranges #example_seven span:after, #nth_of_type_ranges #example_eight span:after, #nth_of_type_ranges #example_nine span:after, #nth_of_type_ranges #example_ten span:after, #nth_of_type_ranges #example_eleven span:after {
+      width: 26px;
+      height: 26px;
+      display: block;
+      content: "";
+      border-radius: 30px;
+      border: 2px solid black;
+      position: relative;
+      top: -2px;
+      left: -2px;
+      z-index: -200; }
+  #nth_of_type #example_six div, #nth_of_type #example_seven div, #nth_of_type #example_eight div, #nth_of_type #example_nine div, #nth_of_type #example_ten div, #nth_of_type #example_eleven div, #nth_of_type_ranges #example_six div, #nth_of_type_ranges #example_seven div, #nth_of_type_ranges #example_eight div, #nth_of_type_ranges #example_nine div, #nth_of_type_ranges #example_ten div, #nth_of_type_ranges #example_eleven div {
+    -moz-box-shadow: inset 3px 3px 10px #747474;
+    -webkit-box-shadow: inset 3px 3px 10px #747474;
+    box-shadow: inset 3px 3px 10px #747474;
+    z-index: 400; }
+    #nth_of_type #example_six div:after, #nth_of_type #example_seven div:after, #nth_of_type #example_eight div:after, #nth_of_type #example_nine div:after, #nth_of_type #example_ten div:after, #nth_of_type #example_eleven div:after, #nth_of_type_ranges #example_six div:after, #nth_of_type_ranges #example_seven div:after, #nth_of_type_ranges #example_eight div:after, #nth_of_type_ranges #example_nine div:after, #nth_of_type_ranges #example_ten div:after, #nth_of_type_ranges #example_eleven div:after {
+      width: 26px;
+      height: 26px;
+      display: block;
+      position: relative;
+      top: -2px;
+      left: -2px;
+      content: "";
+      border: 2px solid black;
+      z-index: -200; }
+  #nth_of_type #example_six span, #nth_of_type #example_six div, #nth_of_type #example_seven span, #nth_of_type #example_seven div, #nth_of_type #example_eight span, #nth_of_type #example_eight div, #nth_of_type #example_nine span, #nth_of_type #example_nine div, #nth_of_type #example_ten span, #nth_of_type #example_ten div, #nth_of_type #example_eleven span, #nth_of_type #example_eleven div, #nth_of_type_ranges #example_six span, #nth_of_type_ranges #example_six div, #nth_of_type_ranges #example_seven span, #nth_of_type_ranges #example_seven div, #nth_of_type_ranges #example_eight span, #nth_of_type_ranges #example_eight div, #nth_of_type_ranges #example_nine span, #nth_of_type_ranges #example_nine div, #nth_of_type_ranges #example_ten span, #nth_of_type_ranges #example_ten div, #nth_of_type_ranges #example_eleven span, #nth_of_type_ranges #example_eleven div {
+    width: 26px;
+    height: 26px;
+    display: block;
+    background-color: black;
+    margin: 10px 15px;
+    z-index: 600;
+    display: inline-block;
+    position: relative; }
+    #nth_of_type #example_six span:hover, #nth_of_type #example_six div:hover, #nth_of_type #example_seven span:hover, #nth_of_type #example_seven div:hover, #nth_of_type #example_eight span:hover, #nth_of_type #example_eight div:hover, #nth_of_type #example_nine span:hover, #nth_of_type #example_nine div:hover, #nth_of_type #example_ten span:hover, #nth_of_type #example_ten div:hover, #nth_of_type #example_eleven span:hover, #nth_of_type #example_eleven div:hover, #nth_of_type_ranges #example_six span:hover, #nth_of_type_ranges #example_six div:hover, #nth_of_type_ranges #example_seven span:hover, #nth_of_type_ranges #example_seven div:hover, #nth_of_type_ranges #example_eight span:hover, #nth_of_type_ranges #example_eight div:hover, #nth_of_type_ranges #example_nine span:hover, #nth_of_type_ranges #example_nine div:hover, #nth_of_type_ranges #example_ten span:hover, #nth_of_type_ranges #example_ten div:hover, #nth_of_type_ranges #example_eleven span:hover, #nth_of_type_ranges #example_eleven div:hover {
+      -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+      background-color: #298eb2; }
+    #nth_of_type #example_six span:nth-child(1):before, #nth_of_type #example_six div:nth-child(1):before, #nth_of_type #example_seven span:nth-child(1):before, #nth_of_type #example_seven div:nth-child(1):before, #nth_of_type #example_eight span:nth-child(1):before, #nth_of_type #example_eight div:nth-child(1):before, #nth_of_type #example_nine span:nth-child(1):before, #nth_of_type #example_nine div:nth-child(1):before, #nth_of_type #example_ten span:nth-child(1):before, #nth_of_type #example_ten div:nth-child(1):before, #nth_of_type #example_eleven span:nth-child(1):before, #nth_of_type #example_eleven div:nth-child(1):before, #nth_of_type_ranges #example_six span:nth-child(1):before, #nth_of_type_ranges #example_six div:nth-child(1):before, #nth_of_type_ranges #example_seven span:nth-child(1):before, #nth_of_type_ranges #example_seven div:nth-child(1):before, #nth_of_type_ranges #example_eight span:nth-child(1):before, #nth_of_type_ranges #example_eight div:nth-child(1):before, #nth_of_type_ranges #example_nine span:nth-child(1):before, #nth_of_type_ranges #example_nine div:nth-child(1):before, #nth_of_type_ranges #example_ten span:nth-child(1):before, #nth_of_type_ranges #example_ten div:nth-child(1):before, #nth_of_type_ranges #example_eleven span:nth-child(1):before, #nth_of_type_ranges #example_eleven div:nth-child(1):before {
+      content: "1";
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    #nth_of_type #example_six span:nth-child(2):before, #nth_of_type #example_six div:nth-child(2):before, #nth_of_type #example_seven span:nth-child(2):before, #nth_of_type #example_seven div:nth-child(2):before, #nth_of_type #example_eight span:nth-child(2):before, #nth_of_type #example_eight div:nth-child(2):before, #nth_of_type #example_nine span:nth-child(2):before, #nth_of_type #example_nine div:nth-child(2):before, #nth_of_type #example_ten span:nth-child(2):before, #nth_of_type #example_ten div:nth-child(2):before, #nth_of_type #example_eleven span:nth-child(2):before, #nth_of_type #example_eleven div:nth-child(2):before, #nth_of_type_ranges #example_six span:nth-child(2):before, #nth_of_type_ranges #example_six div:nth-child(2):before, #nth_of_type_ranges #example_seven span:nth-child(2):before, #nth_of_type_ranges #example_seven div:nth-child(2):before, #nth_of_type_ranges #example_eight span:nth-child(2):before, #nth_of_type_ranges #example_eight div:nth-child(2):before, #nth_of_type_ranges #example_nine span:nth-child(2):before, #nth_of_type_ranges #example_nine div:nth-child(2):before, #nth_of_type_ranges #example_ten span:nth-child(2):before, #nth_of_type_ranges #example_ten div:nth-child(2):before, #nth_of_type_ranges #example_eleven span:nth-child(2):before, #nth_of_type_ranges #example_eleven div:nth-child(2):before {
+      content: "1";
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    #nth_of_type #example_six span:nth-child(3):before, #nth_of_type #example_six div:nth-child(3):before, #nth_of_type #example_seven span:nth-child(3):before, #nth_of_type #example_seven div:nth-child(3):before, #nth_of_type #example_eight span:nth-child(3):before, #nth_of_type #example_eight div:nth-child(3):before, #nth_of_type #example_nine span:nth-child(3):before, #nth_of_type #example_nine div:nth-child(3):before, #nth_of_type #example_ten span:nth-child(3):before, #nth_of_type #example_ten div:nth-child(3):before, #nth_of_type #example_eleven span:nth-child(3):before, #nth_of_type #example_eleven div:nth-child(3):before, #nth_of_type_ranges #example_six span:nth-child(3):before, #nth_of_type_ranges #example_six div:nth-child(3):before, #nth_of_type_ranges #example_seven span:nth-child(3):before, #nth_of_type_ranges #example_seven div:nth-child(3):before, #nth_of_type_ranges #example_eight span:nth-child(3):before, #nth_of_type_ranges #example_eight div:nth-child(3):before, #nth_of_type_ranges #example_nine span:nth-child(3):before, #nth_of_type_ranges #example_nine div:nth-child(3):before, #nth_of_type_ranges #example_ten span:nth-child(3):before, #nth_of_type_ranges #example_ten div:nth-child(3):before, #nth_of_type_ranges #example_eleven span:nth-child(3):before, #nth_of_type_ranges #example_eleven div:nth-child(3):before {
+      content: "2";
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    #nth_of_type #example_six span:nth-child(4):before, #nth_of_type #example_six div:nth-child(4):before, #nth_of_type #example_seven span:nth-child(4):before, #nth_of_type #example_seven div:nth-child(4):before, #nth_of_type #example_eight span:nth-child(4):before, #nth_of_type #example_eight div:nth-child(4):before, #nth_of_type #example_nine span:nth-child(4):before, #nth_of_type #example_nine div:nth-child(4):before, #nth_of_type #example_ten span:nth-child(4):before, #nth_of_type #example_ten div:nth-child(4):before, #nth_of_type #example_eleven span:nth-child(4):before, #nth_of_type #example_eleven div:nth-child(4):before, #nth_of_type_ranges #example_six span:nth-child(4):before, #nth_of_type_ranges #example_six div:nth-child(4):before, #nth_of_type_ranges #example_seven span:nth-child(4):before, #nth_of_type_ranges #example_seven div:nth-child(4):before, #nth_of_type_ranges #example_eight span:nth-child(4):before, #nth_of_type_ranges #example_eight div:nth-child(4):before, #nth_of_type_ranges #example_nine span:nth-child(4):before, #nth_of_type_ranges #example_nine div:nth-child(4):before, #nth_of_type_ranges #example_ten span:nth-child(4):before, #nth_of_type_ranges #example_ten div:nth-child(4):before, #nth_of_type_ranges #example_eleven span:nth-child(4):before, #nth_of_type_ranges #example_eleven div:nth-child(4):before {
+      content: "2";
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    #nth_of_type #example_six span:nth-child(5):before, #nth_of_type #example_six div:nth-child(5):before, #nth_of_type #example_seven span:nth-child(5):before, #nth_of_type #example_seven div:nth-child(5):before, #nth_of_type #example_eight span:nth-child(5):before, #nth_of_type #example_eight div:nth-child(5):before, #nth_of_type #example_nine span:nth-child(5):before, #nth_of_type #example_nine div:nth-child(5):before, #nth_of_type #example_ten span:nth-child(5):before, #nth_of_type #example_ten div:nth-child(5):before, #nth_of_type #example_eleven span:nth-child(5):before, #nth_of_type #example_eleven div:nth-child(5):before, #nth_of_type_ranges #example_six span:nth-child(5):before, #nth_of_type_ranges #example_six div:nth-child(5):before, #nth_of_type_ranges #example_seven span:nth-child(5):before, #nth_of_type_ranges #example_seven div:nth-child(5):before, #nth_of_type_ranges #example_eight span:nth-child(5):before, #nth_of_type_ranges #example_eight div:nth-child(5):before, #nth_of_type_ranges #example_nine span:nth-child(5):before, #nth_of_type_ranges #example_nine div:nth-child(5):before, #nth_of_type_ranges #example_ten span:nth-child(5):before, #nth_of_type_ranges #example_ten div:nth-child(5):before, #nth_of_type_ranges #example_eleven span:nth-child(5):before, #nth_of_type_ranges #example_eleven div:nth-child(5):before {
+      content: "3";
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    #nth_of_type #example_six span:nth-child(6):before, #nth_of_type #example_six div:nth-child(6):before, #nth_of_type #example_seven span:nth-child(6):before, #nth_of_type #example_seven div:nth-child(6):before, #nth_of_type #example_eight span:nth-child(6):before, #nth_of_type #example_eight div:nth-child(6):before, #nth_of_type #example_nine span:nth-child(6):before, #nth_of_type #example_nine div:nth-child(6):before, #nth_of_type #example_ten span:nth-child(6):before, #nth_of_type #example_ten div:nth-child(6):before, #nth_of_type #example_eleven span:nth-child(6):before, #nth_of_type #example_eleven div:nth-child(6):before, #nth_of_type_ranges #example_six span:nth-child(6):before, #nth_of_type_ranges #example_six div:nth-child(6):before, #nth_of_type_ranges #example_seven span:nth-child(6):before, #nth_of_type_ranges #example_seven div:nth-child(6):before, #nth_of_type_ranges #example_eight span:nth-child(6):before, #nth_of_type_ranges #example_eight div:nth-child(6):before, #nth_of_type_ranges #example_nine span:nth-child(6):before, #nth_of_type_ranges #example_nine div:nth-child(6):before, #nth_of_type_ranges #example_ten span:nth-child(6):before, #nth_of_type_ranges #example_ten div:nth-child(6):before, #nth_of_type_ranges #example_eleven span:nth-child(6):before, #nth_of_type_ranges #example_eleven div:nth-child(6):before {
+      content: "3";
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    #nth_of_type #example_six span:nth-child(7):before, #nth_of_type #example_six div:nth-child(7):before, #nth_of_type #example_seven span:nth-child(7):before, #nth_of_type #example_seven div:nth-child(7):before, #nth_of_type #example_eight span:nth-child(7):before, #nth_of_type #example_eight div:nth-child(7):before, #nth_of_type #example_nine span:nth-child(7):before, #nth_of_type #example_nine div:nth-child(7):before, #nth_of_type #example_ten span:nth-child(7):before, #nth_of_type #example_ten div:nth-child(7):before, #nth_of_type #example_eleven span:nth-child(7):before, #nth_of_type #example_eleven div:nth-child(7):before, #nth_of_type_ranges #example_six span:nth-child(7):before, #nth_of_type_ranges #example_six div:nth-child(7):before, #nth_of_type_ranges #example_seven span:nth-child(7):before, #nth_of_type_ranges #example_seven div:nth-child(7):before, #nth_of_type_ranges #example_eight span:nth-child(7):before, #nth_of_type_ranges #example_eight div:nth-child(7):before, #nth_of_type_ranges #example_nine span:nth-child(7):before, #nth_of_type_ranges #example_nine div:nth-child(7):before, #nth_of_type_ranges #example_ten span:nth-child(7):before, #nth_of_type_ranges #example_ten div:nth-child(7):before, #nth_of_type_ranges #example_eleven span:nth-child(7):before, #nth_of_type_ranges #example_eleven div:nth-child(7):before {
+      content: "4";
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    #nth_of_type #example_six span:nth-child(8):before, #nth_of_type #example_six div:nth-child(8):before, #nth_of_type #example_seven span:nth-child(8):before, #nth_of_type #example_seven div:nth-child(8):before, #nth_of_type #example_eight span:nth-child(8):before, #nth_of_type #example_eight div:nth-child(8):before, #nth_of_type #example_nine span:nth-child(8):before, #nth_of_type #example_nine div:nth-child(8):before, #nth_of_type #example_ten span:nth-child(8):before, #nth_of_type #example_ten div:nth-child(8):before, #nth_of_type #example_eleven span:nth-child(8):before, #nth_of_type #example_eleven div:nth-child(8):before, #nth_of_type_ranges #example_six span:nth-child(8):before, #nth_of_type_ranges #example_six div:nth-child(8):before, #nth_of_type_ranges #example_seven span:nth-child(8):before, #nth_of_type_ranges #example_seven div:nth-child(8):before, #nth_of_type_ranges #example_eight span:nth-child(8):before, #nth_of_type_ranges #example_eight div:nth-child(8):before, #nth_of_type_ranges #example_nine span:nth-child(8):before, #nth_of_type_ranges #example_nine div:nth-child(8):before, #nth_of_type_ranges #example_ten span:nth-child(8):before, #nth_of_type_ranges #example_ten div:nth-child(8):before, #nth_of_type_ranges #example_eleven span:nth-child(8):before, #nth_of_type_ranges #example_eleven div:nth-child(8):before {
+      content: "4";
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    #nth_of_type #example_six span:nth-child(9):before, #nth_of_type #example_six div:nth-child(9):before, #nth_of_type #example_seven span:nth-child(9):before, #nth_of_type #example_seven div:nth-child(9):before, #nth_of_type #example_eight span:nth-child(9):before, #nth_of_type #example_eight div:nth-child(9):before, #nth_of_type #example_nine span:nth-child(9):before, #nth_of_type #example_nine div:nth-child(9):before, #nth_of_type #example_ten span:nth-child(9):before, #nth_of_type #example_ten div:nth-child(9):before, #nth_of_type #example_eleven span:nth-child(9):before, #nth_of_type #example_eleven div:nth-child(9):before, #nth_of_type_ranges #example_six span:nth-child(9):before, #nth_of_type_ranges #example_six div:nth-child(9):before, #nth_of_type_ranges #example_seven span:nth-child(9):before, #nth_of_type_ranges #example_seven div:nth-child(9):before, #nth_of_type_ranges #example_eight span:nth-child(9):before, #nth_of_type_ranges #example_eight div:nth-child(9):before, #nth_of_type_ranges #example_nine span:nth-child(9):before, #nth_of_type_ranges #example_nine div:nth-child(9):before, #nth_of_type_ranges #example_ten span:nth-child(9):before, #nth_of_type_ranges #example_ten div:nth-child(9):before, #nth_of_type_ranges #example_eleven span:nth-child(9):before, #nth_of_type_ranges #example_eleven div:nth-child(9):before {
+      content: "5";
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    #nth_of_type #example_six span:nth-child(10):before, #nth_of_type #example_six div:nth-child(10):before, #nth_of_type #example_seven span:nth-child(10):before, #nth_of_type #example_seven div:nth-child(10):before, #nth_of_type #example_eight span:nth-child(10):before, #nth_of_type #example_eight div:nth-child(10):before, #nth_of_type #example_nine span:nth-child(10):before, #nth_of_type #example_nine div:nth-child(10):before, #nth_of_type #example_ten span:nth-child(10):before, #nth_of_type #example_ten div:nth-child(10):before, #nth_of_type #example_eleven span:nth-child(10):before, #nth_of_type #example_eleven div:nth-child(10):before, #nth_of_type_ranges #example_six span:nth-child(10):before, #nth_of_type_ranges #example_six div:nth-child(10):before, #nth_of_type_ranges #example_seven span:nth-child(10):before, #nth_of_type_ranges #example_seven div:nth-child(10):before, #nth_of_type_ranges #example_eight span:nth-child(10):before, #nth_of_type_ranges #example_eight div:nth-child(10):before, #nth_of_type_ranges #example_nine span:nth-child(10):before, #nth_of_type_ranges #example_nine div:nth-child(10):before, #nth_of_type_ranges #example_ten span:nth-child(10):before, #nth_of_type_ranges #example_ten div:nth-child(10):before, #nth_of_type_ranges #example_eleven span:nth-child(10):before, #nth_of_type_ranges #example_eleven div:nth-child(10):before {
+      content: "5";
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+    #nth_of_type #example_six span:nth-child(11):before, #nth_of_type #example_six div:nth-child(11):before, #nth_of_type #example_seven span:nth-child(11):before, #nth_of_type #example_seven div:nth-child(11):before, #nth_of_type #example_eight span:nth-child(11):before, #nth_of_type #example_eight div:nth-child(11):before, #nth_of_type #example_nine span:nth-child(11):before, #nth_of_type #example_nine div:nth-child(11):before, #nth_of_type #example_ten span:nth-child(11):before, #nth_of_type #example_ten div:nth-child(11):before, #nth_of_type #example_eleven span:nth-child(11):before, #nth_of_type #example_eleven div:nth-child(11):before, #nth_of_type_ranges #example_six span:nth-child(11):before, #nth_of_type_ranges #example_six div:nth-child(11):before, #nth_of_type_ranges #example_seven span:nth-child(11):before, #nth_of_type_ranges #example_seven div:nth-child(11):before, #nth_of_type_ranges #example_eight span:nth-child(11):before, #nth_of_type_ranges #example_eight div:nth-child(11):before, #nth_of_type_ranges #example_nine span:nth-child(11):before, #nth_of_type_ranges #example_nine div:nth-child(11):before, #nth_of_type_ranges #example_ten span:nth-child(11):before, #nth_of_type_ranges #example_ten div:nth-child(11):before, #nth_of_type_ranges #example_eleven span:nth-child(11):before, #nth_of_type_ranges #example_eleven div:nth-child(11):before {
+      content: "6";
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      color: black;
+      font-family: "League Gothic", league-gothic-1, league-gothic-2, "helvetica", sans-serif; }
+#nth_of_type #example_six span:nth-of-type(3), #nth_of_type_ranges #example_six span:nth-of-type(3) {
+  -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  -webkit-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  cursor: pointer;
+  background-color: #298eb2; }
+  #nth_of_type #example_six span:nth-of-type(3):hover, #nth_of_type_ranges #example_six span:nth-of-type(3):hover {
+    background-color: #eb008b; }
+#nth_of_type #example_six div:nth-of-type(4), #nth_of_type_ranges #example_six div:nth-of-type(4) {
+  -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  -webkit-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  cursor: pointer;
+  background-color: #e17149; }
+  #nth_of_type #example_six div:nth-of-type(4):hover, #nth_of_type_ranges #example_six div:nth-of-type(4):hover {
+    background-color: #eb008b; }
+#nth_of_type #example_seven span:nth-of-type(n+3), #nth_of_type_ranges #example_seven span:nth-of-type(n+3) {
+  -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  -webkit-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  cursor: pointer;
+  background-color: #298eb2; }
+  #nth_of_type #example_seven span:nth-of-type(n+3):hover, #nth_of_type_ranges #example_seven span:nth-of-type(n+3):hover {
+    background-color: #eb008b; }
+#nth_of_type #example_seven div:nth-of-type(2n+2), #nth_of_type_ranges #example_seven div:nth-of-type(2n+2) {
+  -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  -webkit-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  cursor: pointer;
+  background-color: #e17149; }
+  #nth_of_type #example_seven div:nth-of-type(2n+2):hover, #nth_of_type_ranges #example_seven div:nth-of-type(2n+2):hover {
+    background-color: #eb008b; }
+#nth_of_type #example_eight span:nth-of-type(-n+4), #nth_of_type_ranges #example_eight span:nth-of-type(-n+4) {
+  -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  -webkit-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  cursor: pointer;
+  background-color: #298eb2; }
+  #nth_of_type #example_eight span:nth-of-type(-n+4):hover, #nth_of_type_ranges #example_eight span:nth-of-type(-n+4):hover {
+    background-color: #eb008b; }
+#nth_of_type #example_eight div:nth-of-type(-n+5), #nth_of_type_ranges #example_eight div:nth-of-type(-n+5) {
+  -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  -webkit-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  cursor: pointer;
+  background-color: #e17149; }
+  #nth_of_type #example_eight div:nth-of-type(-n+5):hover, #nth_of_type_ranges #example_eight div:nth-of-type(-n+5):hover {
+    background-color: #eb008b; }
+#nth_of_type #example_nine span:nth-of-type(n+3):nth-of-type(-n+6), #nth_of_type_ranges #example_nine span:nth-of-type(n+3):nth-of-type(-n+6) {
+  -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  -webkit-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  cursor: pointer;
+  background-color: #298eb2; }
+  #nth_of_type #example_nine span:nth-of-type(n+3):nth-of-type(-n+6):hover, #nth_of_type_ranges #example_nine span:nth-of-type(n+3):nth-of-type(-n+6):hover {
+    background-color: #eb008b; }
+#nth_of_type #example_nine div:nth-of-type(n+1):nth-of-type(-n+3), #nth_of_type_ranges #example_nine div:nth-of-type(n+1):nth-of-type(-n+3) {
+  -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  -webkit-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  cursor: pointer;
+  background-color: #e17149; }
+  #nth_of_type #example_nine div:nth-of-type(n+1):nth-of-type(-n+3):hover, #nth_of_type_ranges #example_nine div:nth-of-type(n+1):nth-of-type(-n+3):hover {
+    background-color: #eb008b; }
+#nth_of_type #example_ten span:nth-of-type(n+3):nth-of-type(odd):nth-of-type(-n+6), #nth_of_type_ranges #example_ten span:nth-of-type(n+3):nth-of-type(odd):nth-of-type(-n+6) {
+  -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  -webkit-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  cursor: pointer;
+  background-color: #298eb2; }
+  #nth_of_type #example_ten span:nth-of-type(n+3):nth-of-type(odd):nth-of-type(-n+6):hover, #nth_of_type_ranges #example_ten span:nth-of-type(n+3):nth-of-type(odd):nth-of-type(-n+6):hover {
+    background-color: #eb008b; }
+#nth_of_type #example_ten div:nth-of-type(n+1):nth-of-type(even):nth-of-type(-n+3), #nth_of_type_ranges #example_ten div:nth-of-type(n+1):nth-of-type(even):nth-of-type(-n+3) {
+  -moz-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  -webkit-box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+  cursor: pointer;
+  background-color: #e17149; }
+  #nth_of_type #example_ten div:nth-of-type(n+1):nth-of-type(even):nth-of-type(-n+3):hover, #nth_of_type_ranges #example_ten div:nth-of-type(n+1):nth-of-type(even):nth-of-type(-n+3):hover {
+    background-color: #eb008b; }
+
+#from_andyet {
+  background: none repeat scroll 0 0 white;
+  bottom: 0;
+  padding: 3px 10px;
+  position: fixed;
+  right: 17px; }
+  #from_andyet h2 {
+    background-image: url("../images/from_&yet.png");
+    background-repeat: no-repeat;
+    height: 29px;
+    line-height: 0;
+    margin-top: 0;
+    text-indent: -9999em;
+    width: 79px; }
+
+table td {
+  border: 1px solid black;
+  background-color: white; }
