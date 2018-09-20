@@ -1310,7 +1310,7 @@
 		height: auto !important;
 		font-size: inherit !important;
 	}
-	/* Spotlight */
+	/** Spotlight Widget **/
 	#column_right div:nth-of-type(2) img[style*='/clubspotlights/'],
 	#column_right .smalldivider + [href^='/?id='] > img[style*='/faceimages/'] {
 		width: 183px;
@@ -1355,27 +1355,32 @@
 	}
 	/*#column_right a[href*="openEdit('spotlight')"] {}*/
 	/*#column_right a[href="/spotlights.php"] {}*/
-	/* Fråga Sentry */
+
+	/** QX Notice Widget **/
+	/** Logged in Widget **/
+	/** Ask Sentry Widget **/
 	#column_right div > [href='/sentry.php'] > [src$='sentry_logo.png'] {
 		width: 100%;
 		height: auto;
 	}
-	/* New Face Pic */
+	/** Most visited blogs Widget **/
+
+	/** New Face Pic Widget **/
 	#column_right .smalldivider + a > img[src^='/thumbcorners.php'] {
 		width: 100% !important;
 		background-size: cover;
 	}
-	/* New Album Pic */
+	/** New Album Pic Widget **/
 	#column_right .smalldivider + [href^='/pics/newphotos/'] > [src*='photothumbnails'] {
 		width: 100%;
 		height: auto;
 	}
-	/* Popular movie */
+	/** Popular movie Widget **/
 	#column_right .smalldivider + div[style*='#63300e'] img[style*='video.qruiser'] {
 		width: 100% !important;
 		background-size: cover;
 	}
-	/** Clubs New & Active **/
+	/** Clubs New & Active Widget **/
 	/* Clubs with no club image */
 	#column_right [href^='/clubs/club.php?id='] [style='float: left; width:32px; height:40px;'] {
 		width: 40px !important;
@@ -1404,7 +1409,9 @@
 	.smallclubname a {
 		font-size: var(--font-3r);
 	}
-	/* Latest from QX.SE */
+	/** Latest Poll Widget **/
+
+	/** Latest from QX.xx Widget **/
 	#column_right > .smalldivider + div > b > [href^='https://www.qx.'] {
 		display: list-item;
 		margin-left: 1.3em;
@@ -1418,7 +1425,7 @@
 		-o-border-image: linear-gradient(to right, var(--brd-clr-t) 20%, var(--brd-clr-w)) 1;
 		border-image: linear-gradient(to right, var(--brd-clr-t) 20%, var(--brd-clr-w)) 1;
 	}
-	/* Gaymap */
+	/** Gaymap Widget **/
 	#column_right > .smalldivider:nth-last-of-type(-n+9):not(:nth-last-of-type(7)):not(:nth-last-of-type(3)) + div {
 		font-size: 0;
 	}
@@ -1428,7 +1435,7 @@
 		margin-left: 1.3em;
 		padding-left: 0.3em;
 	}
-	/* Active discussions */
+	/** Active discussions Widget **/
 	#column_right .smalldivider ~ div:nth-last-child(even) > [style='padding-top: 2px; padding-bottom: 4px;'] {
 		margin-top: 0.5em;
 		padding-top: 1rem !important;
@@ -1436,7 +1443,7 @@
 		-o-border-image: linear-gradient(to right, var(--brd-clr-t) 20%, var(--brd-clr-w)) 1;
 		   border-image: linear-gradient(to right, var(--brd-clr-t) 20%, var(--brd-clr-w)) 1;
 	}
-	/* Nytt Klotter */
+	/** New Scribbles Widget **/
 	#column_right .smalldivider ~ div div [href='/forum/scribbleboard/'] img[src*='/scribbleimages/'] {
 		width: 100%;
 		height: auto;
@@ -1870,7 +1877,8 @@
 		    -ms-flex: 1 50%;
 		        flex: 1 50%;
 	}
-	/* Make every third child 100% wide */
+	/* Make every third child 100% wide
+	   https://stackoverflow.com/a/13691714/6820262 */
 	#column_center .list > *:nth-child(3n):not([class^='listpage']):not([data-user-input]):not(:only-child) {
 		flex-basis: 100%
 	}
@@ -1970,27 +1978,7 @@
 	}
 	/*--------------------------------------------*/
 
-	/*** QX Notice ***/
-	.smalldivider  [href^='/noticeboard'] {
-		color: var(--txt-error-clr) !important;
-	}
-	.noticetext {
-		font-size: inherit !important;
-	}
-	.noticetext::before {
-		display: inline-block;
-		width: auto;
-		height: var(--ui--size-xl);
-		font-family: 'FontAwesome';
-		content: "\f005";
-		font-size: var(--ui--size-xl-r);
-		text-align: center;
-		animation: qx_notice 6s infinite;
-	}
-	.noticetext:hover::before {
-		animation: paused;
-	}
-	/* Fråga Sentry */
+	/* Ask Sentry page */
 	#sentry_frame {
 		width: 100%;
 		margin: 0;
@@ -3289,12 +3277,14 @@
 		https://codepen.io/raubaca/pen/ONzBxP
 	*/
 	form:not([id^='poll_']) input[type="radio"]:not(:disabled),
+	form:not([id^='poll_']) input[type="radio"]:not(:disabled) + label,
+	form:not([id^='poll_']) input[type="radio"]:not(:disabled) + label:before,
+	form:not([id^='poll_']) input[type="radio"]:not(:disabled) + label:before,
 	form:not([id^='poll_']):not([name='messageform']) input[type='checkbox']:not(:disabled) {
 		position: absolute;
 		opacity: 0;
 		z-index: -1;
 	}
-	form:not([id^='poll_']) input[type="radio"]:not(:disabled) + label,
 	form:not([id^='poll_']):not([name='messageform']) input[type='checkbox']:not(:disabled) + label {
 		position: relative;
 		display: inline-block;
@@ -3305,7 +3295,6 @@
 		line-height: 36px;
 		cursor: pointer;
 	}
-	form:not([id^='poll_']) input[type="radio"]:not(:disabled) + label:before,
 	form:not([id^='poll_']):not([name='messageform']) input[type='checkbox']:not(:disabled) + label:before {
 		content: " ";
 		position: absolute;
@@ -3318,17 +3307,17 @@
 		border-radius: 4px;
 		/*z-index: -1;*/
 	}
-	form:not([id^='poll_']) input[type="radio"]:not(:disabled) + label:before,
-	form:not([id^='poll_']):not([name='messageform']) input[type='checkbox']:not(:disabled) +label:before {
+	form:not([id^='poll_']):not([name='messageform']) input[type='checkbox']:not(:disabled) + label:before {
 		border-radius: 1.5em;
 	}
 	/* Checked */
 	form:not([id^='poll_']) input[type="radio"]:checked + label,
+	form:not([id^='poll_']) input[type="radio"]:checked + label::before,
 	form:not([id^='poll_']):not([name='messageform']) input[type='checkbox']:checked + label {
 		padding-left: 10px;
-		color: #323232;
+		/*color: #323232;*/
+		color: inherit;
 	}
-	form:not([id^='poll_']) input[type="radio"]:checked + label::before,
 	form:not([id^='poll_']):not([name='messageform']) input[type='checkbox']:checked + label:before {
 		top: 0;
 		width: 100%;
