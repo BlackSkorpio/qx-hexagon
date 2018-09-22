@@ -1912,7 +1912,11 @@
 		padding-left: var(--padding-m);
 	}
 
-	/* Clubs */
+	/*** Clubs ***/
+	/* Edit Icons */
+	#column_center .list [id^='divx'] .small a[onclick^='openEdit'] {
+		font-size: 0
+	}
 	/* Club Hero img */
 	#column_center div > img[style*='/clubimages/'] {
 		width: 100%;
@@ -1999,11 +2003,7 @@
 		position: absolute;
 		right: 0;
 	}
-	/* HACK to hide the "secret icon "*/
-	#column_center .list [id^='divx'] span.small > ul.icons + a:before {
-		display: initial;
-		content: none;
-	}
+
 	/* "Hero images" in the blog section */
 	#column_center .list > *:not([class^='listpage']) img[src*='/blogbox/'] {
 		width: 100% !important;
@@ -2754,14 +2754,6 @@
 		height: var(--ui--icon-m);
 		font-size: var(--font-z);
 	}
-	/* Secret/hidden clubs */
-	#column_center .list div[id^='divx'] span.small > a {
-		display: inline-block;
-		width: var(--ui--icon-m);
-		height: var(--ui--icon-m);
-		font-size: var(--font-z);
-		margin-left: -1rem;
-	}
 
 	/* Satellite */
 	#qmenu_logut > a#qlogout:after,
@@ -3174,6 +3166,20 @@
 	li#qmenu_edit a:before {
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D'action-edit'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20489.6%20489.6'%3E%3Cpath%20d%3D'M53.6%20167V437h270.2V318.7a368%20368%200%200%200%2037.2-27.9c2.8-2.2%208.3-6.7%2015.4-13.5v186a26.3%2026.3%200%200%201-26.3%2026.3H27.3A26.3%2026.3%200%200%201%201%20463.3V140.6a26.3%2026.3%200%200%201%2026.3-26.3H115c-9.6%2016.4-17.8%2034-24.7%2052.6H53.6zM482.3%204c-9-1.5-20-2.5-32.5-3.2h-3.2l-5.8-.4h-.3l-4.8-.2h-.1c-87-2.9-147.6%2023-147.6%2023-82.5%2033.4-139.3%2093.1-165%20184.2-8.2%2029.5-5.6%2060.2-1.4%2090.4.5%202.8%202%207%2010.8%201.3a409.9%20409.9%200%200%201%2081.4-131C257.7%20119.5%20307%2080.8%20368%2056.5c11.2-4.5%2021.9-7.9%2033.3-11.8.4%201-.5%202-1.4%202.4l-1%20.3a330%20330%200%200%200-88.5%2053%20612%20612%200%200%200-117%20128.2A660.6%20660.6%200%200%200%20103.8%20408s-3.6%2016.1%208.6%204.4l53.8-66.9a8%208%200%200%201%202.3-2.8%2012%2012%200%200%201%204.2-2.3c24.5-9.2%2049.3-17.6%2073-28.4a364%20364%200%200%200%2087.7-55c2.9-2.3%2032-25%2062.6-72l1.4-2%20.6-1a450.8%20450.8%200%200%200%2022.2-39.5l-61.7-8.4s69.8-9.9%2080-32.5c.7-1.2%201.4-3.3%201.9-4.6%205.4-12.2%2010.9-25.7%2017-36.9%201.9-5.8%2015.8-30.5%2030-45%203.4-3.7%200-10.3-5-11z'%2F%3E%3C%2Fsvg%3E");
 		vertical-align: middle;
+	}
+	/* Edit Icon: Displayed on homepage */
+	#column_center div[id^='divx'] .small > .icons {display: none}
+	#column_center div[id^='divx'] a[onclick^='openEdit']::before {
+		display: inline-block;
+		content: '';
+		padding: calc(var(--ui--icon-l) / 2);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D'nav-home'%20version%3D'1'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20546%20546'%3E%3Cpath%20d%3D'M500%20492V292c0-12-7-28-17-35L289%20123c-10-7-27-7-37%200L70%20249c-10%207-19%2023-19%2036v207c0%2012%2011%2025%2023%2025h406c13%200%2020-13%2020-25zm-221-29l-2%201c-105-42-145-140-99-182%2046-43%2099%2015%2099%2015s53-58%2099-15c47%2042%207%20139-97%20181z'%2F%3E%3Cpath%20d%3D'M536%20209L289%2040c-10-7-27-7-37%200L10%20211c-11%208-13%2022-6%2032l1%201c7%2010%2021%2012%2031%205L251%2097c10-7%2027-7%2037%200l222%20150c10%207%2024%204%2031-6l1-1c7-10%204-24-6-31zM425%20114c10%207%2018%203%2018-10V48c0-13-10-19-23-19h-37c-13%200-23%207-23%2019s8%2025%2018%2033l47%2033z'%2F%3E%3C%2Fsvg%3E");
+	}
+	/* Edit Icon: Secret Club */
+	#column_center div[id^='divx'] a[onclick^='openEdit'][style*='bold']::before {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D'club-hidden'%20version%3D'1'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20512%20512'%20fill%3D'%23B3404A'%3E%3Cpath%20d%3D'M256%20421c-58%200-120-27-180-79-45-38-72-76-73-78-4-5-4-11%200-16%201-2%2030-41%2076-81%2060-50%20119-76%20177-76s117%2026%20177%2076c46%2040%2075%2079%2076%2081%204%205%204%2011%200%2016%200%201-23%2032-59%2066a14%2014%200%201%201-19-20c24-22%2042-43%2050-54-10-13-34-41-66-68-37-32-95-70-159-70s-122%2038-159%2070c-32%2027-56%2055-66%2068%2024%2030%20117%20138%20225%20138%2034%200%2069-11%20105-31a14%2014%200%201%201%2014%2023c-41%2023-80%2035-119%2035z'%2F%3E%3Cpath%20d%3D'M256%20421a165%20165%200%201%201%20165-165%2014%2014%200%201%201-27%200%20138%20138%200%201%200-138%20138%2014%2014%200%201%201%200%2027z'%2F%3E%3Ccircle%20fill%3D'%23FFF'%20cx%3D'256'%20cy%3D'256'%20r%3D'86'%2F%3E%3Cpath%20d%3D'M256%20355a99%2099%200%201%201%200-199%2099%2099%200%200%201%200%20199zm0-171a72%2072%200%201%200%200%20144%2072%2072%200%200%200%200-144z'%2F%3E%3Cpath%20d%3D'M437%20451c-3%200-7-2-10-4L65%2085a14%2014%200%200%201%2020-20l362%20362a14%2014%200%200%201-10%2024z'%2F%3E%3C%2Fsvg%3E");
 	}
 	/* Edit presentation text */
 	* > .textlargeicon {
