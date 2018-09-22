@@ -195,9 +195,15 @@
 @supports (display: grid) {
 	/*** Hide stuff ***/
 	/* Outdated stuff */
-	h3 + br[clear='all'],/*Index page, not logged in*/
 	a[href*="javascript:openEdit('sms')"],
 	/* Empty stuff scattered all over the place */
+	h3 + br[clear='all'],/*Index page, not logged in*/
+	#column_left > p:empty + p:nth-of-type(3),
+	#column_left > p:nth-of-type(12),
+	#column_left > p:empty + p:nth-of-type(14),
+	#column_left > p:empty + p:nth-of-type(16),
+	/* Remove obsolete br */
+	#column_center > .list .memberinfo + br[clear='all'],
 	div:empty:not(.divider):not(.orangeline):not(.filldot):not(.jwpreview):not(.jwicon),
 	span:empty,
 	a:empty:not(.banner_off_button),
