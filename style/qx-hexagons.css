@@ -1221,12 +1221,16 @@
 	/* Unread/New stuff */
 	#column_left [id^='lc_'],
 	#column_left [href^='/show'] + b,
-	#column_left b a[href$='?updated=1'],
-	#column_left .notextdecoration:not(a) {
-		color: var(--txt-high-clr);
+	#column_left b a[href$='?updated=1'] {
 		animation: view_notice 6s infinite;
 		-webkit-transition: 1s;
 		        transition: 1s;
+	}
+	#column_left [id^='lc_'],
+	#column_left [href^='/show'] + b,
+	#column_left b a[href$='?updated=1'],
+	#column_left .notextdecoration:not(a) {
+		color: var(--txt-high-clr);
 	}
 	#column_left .notextdecoration {
 		display: flow-root;
@@ -1437,12 +1441,12 @@
 		height: var(--ui--size-xl);
 		font-family: 'FontAwesome';
 		content: "\f005";
-		font-size: var(--ui--size-xl-r);
+		font-size: inherit;
 		text-align: center;
-		animation: qx_notice 6s infinite;
+		animation: qx_notice 6s ease-in-out 1s infinite;
 	}
 	#column_right .noticetext:hover::before {
-		animation: paused;
+		animation-play-state: paused;
 	}
 	/** Logged in Widget **/
 
