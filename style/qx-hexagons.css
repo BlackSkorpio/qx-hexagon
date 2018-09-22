@@ -1638,17 +1638,31 @@
 		margin-top: var(--margin-m);
 		margin-bottom: var(--margin-m);
 	}
+	#messagebox [id$='_text'][style*='block'],
 	#column_center #verifiedinfo[style*='block'],
 	#column_center [id$='_text'][style*='block'] {
-		width: auto !important;
 		padding: var(--padding-s);
 		margin: var(--margin-s) var(--margin-s) var(--margin-l);
 		border: var(--brd-info);
 		border-radius: var(--brd-rad-info);
 		box-shadow: var(--shadow-size-2) var(--shadow-gray);
 	}
-	#column_center #verifiedinfo {
-		width: 100% !important;
+	#column_center [id$='_text'][style*='block'] {
+		width: auto !important;
+	}
+	#column_center #verifiedinfo[style*='block'] {
+		width: 100%;
+	}
+	#column_center #verifiedinfo[style*='block'] .list {
+		display: flex;
+		flex-flow: row wrap;
+	}
+	#column_center #verifiedinfo[style*='block'] .list > .odd,
+	#column_center #verifiedinfo[style*='block'] .list > .even {
+		flex: 1 1 50%;
+	}
+	#messagebox [id$='_text'][style*='block'] {
+		max-width: 90%;
 	}
 
 	/** Used in Polls **/
