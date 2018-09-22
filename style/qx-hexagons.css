@@ -2151,6 +2151,7 @@
 	.insertmember .link a {
 		line-height: var(--lh-n);
 		font-weight: 700;
+		color: inherit !important;
 	}
 	#column_left .insertmember,
 	#column_right .insertmember {
