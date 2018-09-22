@@ -1979,12 +1979,18 @@
 	   https://stackoverflow.com/a/13691714/6820262 */
 	#column_center .list > *:nth-child(3n):not([class^='listpage']):not([data-user-input]):not(:only-child) {
 		flex-basis: 100%;
-		background: linear-gradient(to bottom, rgb(238, 242, 243), rgb(142, 158, 171));
+		/*background: linear-gradient(to bottom, rgb(238, 242, 243), rgb(142, 158, 171));*/
+		background: linear-gradient(to bottom, rgb(238, 242, 243), rgba(238, 242, 243, 0.5), rgba(142, 158, 171, 0.5), rgba(142, 158, 171, 0.8));
 		/*mix-blend-mode: luminosity;*/
 		border-top: var(--brd-type-1);
 		border-bottom: var(--brd-type-1);
-		border-color: rgb(142, 158, 171);
+		border-color: rgb(238, 242, 243) transparent rgb(142, 158, 171);
 		border-radius: 0.4em;
+		margin-bottom: var(--margin-s)
+	}
+	/* Make every child after the third have a border right */
+	#column_center .list > div:nth-child(3n+1):not([class^="listpage"]):not([data-user-input]):not(:only-child) {
+		border-right: 1px dashed var(--ui--clr-disabled);
 	}
 	/* clear notification button */
 	.list span[id^='unread'] + [href^='javascript:dropContent'] {
