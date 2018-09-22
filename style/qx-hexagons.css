@@ -2514,8 +2514,28 @@
 	}
 	/*--------------------------------------------*/
 
+	/*** Misc PopUps Common ***/
+	div#satellite,
+	div#messagebox,
+	body[onload="timer()"] div[style='margin: 10px']:not(#satellite) {
+		width: 85%;
+		min-width: 200px;
+		background-color: var(--bkgrd-b1);
+		padding: var(--padding-s);
+		border: var(--brd-type-1) var(--brd-clr-h);
+		border-radius: var(--brd-rad-s);
+		font-size: var(--font-1);
+		color: var(--txt-aside-clr);
+	}
+
+
 	/*** Satellite ***/
 	/* 300x412px*/
+	div#satellite,
+	body[onload="timer()"] div[style='margin: 10px']:not(#satellite) {
+		margin: auto;
+		max-width: 280px;
+	}
 	body[onload='timer()'] {
 		min-width: auto !important;
 		width: auto !important;
@@ -2534,20 +2554,6 @@
 		padding: 15px 50px;
 	}
 
-	div#satellite,
-	/*div#satellite div[style='margin: 10px']*/
-	body[onload="timer()"] div[style='margin: 10px']:not(#satellite) {
-		width: 85%;
-		min-width: 200px;
-		max-width: 280px;
-		background-color: var(--bkgrd-b1);
-		margin: auto;
-		padding: var(--padding-s);
-		border: var(--brd-type-1) var(--brd-clr-h);
-		border-radius: var(--brd-rad-s);
-		font-size: var(--font-1);
-		color: var(--txt-aside-clr);
-	}
 	body[onload="timer()"] div[style='margin: 10px']:not(#satellite) {
 		height: calc(100vh - 8em);
 		margin: auto !important;
