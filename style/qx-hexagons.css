@@ -2670,6 +2670,41 @@
 	}
 	/*--------------------------------------------*/
 
+	/*** Send Message ***/
+	div#messagebox {
+		float: none;
+		max-width: 400px;
+		margin: var(--margin-xl) 0 0 var(--margin-xl);
+	}
+	div#messagebox p:nth-of-type(1),
+	div#messagebox .list div[style='float:left'] {
+		margin-bottom: 0.5em;
+	}
+	div#messagebox form[name='messageform'] {
+		padding: var(--padding-s) !important;
+	}
+	div#messagebox p:nth-of-type(2),
+	div#messagebox p:nth-of-type(3) {
+		text-align: center;
+	}
+	div#messagebox textarea,
+	div#messagebox input[type="text"] {
+		color: inherit;
+		font-size: inherit !important;
+		border: var(--brd-type-1);
+		border-radius: var(--brd-rad-s);
+	}
+	div#messagebox textarea {
+		width: 85% !important;
+		background-color: inherit;
+		padding: 0.2em 0 0.2em 0.2em !important;
+	}
+	div#messagebox [type='submit'] {
+		background: var(--bkgrd-h1);
+		border-color: var(--brd-clr-w);
+	}
+	/*--------------------------------------------*/
+
 	/*** Edit settings popup ***/
 	body[onload='handleImageXxxSetting();'] div[style*='width:410px'] {
 		width: 530px !important;
@@ -3062,6 +3097,7 @@
 	#largeicons li:hover,
 	.insertmember .icons li:hover,
 	#column_center li[class*='icon']:hover,
+	div#messagebox .insertmember .icons li:hover,
 	#column_center .header li[class*='icon']:hover,
 	#column_left .insertmember .icons li:hover,
 	#column_right .insertmember .icons li:hover {
@@ -3078,7 +3114,11 @@
 	#column_right img[src*='online_1'],
 	#column_right img[src*='online_3'],
 	#column_right img[src*='online_wap'],
+	div#messagebox img[src*='online_1'],
+	div#messagebox img[src*='online_3'],
+	div#messagebox img[src*='online_wap'],
 	#column_right .insertmember .icons li,
+	div#messagebox .insertmember .icons li,
 	#qmenu_home img[src*='home.png'],
 	#qmenu_logut > a#qlogout:after,
 	li#qmenu_edit a:before,
