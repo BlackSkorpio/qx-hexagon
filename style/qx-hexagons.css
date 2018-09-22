@@ -1708,7 +1708,8 @@
 	}
 
 	#column_center .list .odd {
-		background-color: var(--bkgrd-w1);
+		/*background-color: var(--bkgrd-w1);*/
+		background-color: inherit !important;
 	}
 	.line .header,
 	.line .header_red {
