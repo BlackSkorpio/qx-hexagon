@@ -1199,8 +1199,7 @@
 	.smalldivider div,
 	.homepageblock,
 	#homepageinfo,
-	.clubscribble/*,
-	.homepage img[style*='homepageimages']*/ {
+	.clubscribble {
 		width: 100%;
 		max-width: 100%;
 		height: auto;
@@ -1220,13 +1219,6 @@
 
 	/*** COLUMN LEFT ***/
 	/* Unread/New stuff */
-	/*#lc_unread_buffs,
-	#lc_unread_entries,
-	#lc_unread_messages,
-	#lc_online_favourites,
-	#lc_successful_flirts,
-	#column_left [href='/showclubs.php'] + b,
-	#column_left b a[href='/showclubs.php?updated=1']*/
 	#column_left [id^='lc_'],
 	#column_left [href^='/show'] + b,
 	#column_left b a[href$='?updated=1'],
@@ -1255,10 +1247,7 @@
 		font-size: var(--font-4);
 		line-height: var(--lh-1);
 	}
-	/*#column_left p span {
-		font-size: var(--font-3r);
-		line-height: inherit;
-	}*/
+
 	/* LOGIN */
 	#loginbox {
 		position: -webkit-sticky;
@@ -1434,8 +1423,6 @@
 		font-weight: 700;
 		padding-left: 0;
 	}
-	/*#column_right a[href*="openEdit('spotlight')"] {}*/
-	/*#column_right a[href="/spotlights.php"] {}*/
 
 	/** QX Notice Widget **/
 	#column_right .smalldivider  [href^='/noticeboard'] {
@@ -1556,7 +1543,6 @@
 	#column_center .line .header a {
 		color: var(--txt-high-clr);
 	}
-	/*#column_center a[target='qruiser']::after {}*/
 	#column_center a[target='_blank']:not([href*="/goldmember.php"])::after {
 		font-family: 'FontAwesome';
 		display: inline;
@@ -1652,16 +1638,6 @@
 		margin-top: var(--margin-m);
 		margin-bottom: var(--margin-m);
 	}
-	/*#column_center #messages_text[style*='block'],
-	#column_center #clubinfo_text[style*='block'],
-	#column_center #icontext_text[style*='block'],
-	#column_center #info_text_text[style*='block'],
-	#column_center #flirt_info_text[style*='block'],
-	#column_center #textformat_text[style*='block'],
-	#column_center #updated_info_text[style*='block'],
-	#column_center #digexplained_text[style*='block'],
-	#column_center #publish_info_text[style*='block'],
-	#column_center #looking_for_info_text[style*='block']*/
 	#column_center #verifiedinfo[style*='block'],
 	#column_center [id$='_text'][style*='block'] {
 		width: auto !important;
@@ -1680,9 +1656,6 @@
 	#column_center .filldot {
 		background-color: var(--bkgrd-h1);
 	}
-	/*#column_center a:visited {
-		color: var(--link-clr1-v);
-	}*/
 	.shop-container ul.payments,
 	.shop-container main.content,
 	.shop-container .slides-container {
@@ -1999,25 +1972,12 @@
 		border-color: rgb(142, 158, 171);
 		border-radius: 0.4em;
 	}
-	/*.list div[id^='divx'] div[class^='clubxxx'] .small {
-		position: absolute;
-		top: 0;
-		right: 10px;
-	}*/
 	/* clear notification button */
 	.list span[id^='unread'] + [href^='javascript:dropContent'] {
 		/*float: right;*/
 		position: absolute;
 		right: 0;
 	}
-	/* Club shown on profile page */
-	/*#column_center .list [id^='divx'] span.small > ul.icons + a {
-		display: initial;
-		height: auto;
-		width: auto;
-		font-size: var(--font-3);
-		overflow: visible;
-	}*/
 	/* HACK to hide the "secret icon "*/
 	#column_center .list [id^='divx'] span.small > ul.icons + a:before {
 		display: initial;
@@ -2156,11 +2116,6 @@
 		display: initial;
 		float: none;
 	}
-	/*#column_left .insertmember,
-	#column_right .insertmember {
-		margin: auto;
-		width: auto;
-	}*/
 	#whole .membericonlink,
 	#column_left .membericonlink,
 	#column_right .membericonlink,
@@ -2403,7 +2358,6 @@
 		top: 2.4em;
 		border-bottom: var(--brd-type-1) var(--brd-clr-h);
 	}
-	/*#column_left .insertmember:first-of-type .mood,*/
 	#column_left .insertmember:first-of-type .membericon {
 		margin-left: 0.15em;
 	}
@@ -2918,7 +2872,6 @@
 	/* Border radius */
 	.memberlargeicon,
 	.memberlargeicon img,
-	/*[id*="home_"].homepage > div > img*/
 	.homepage img[style*='homepageimages'] {
 		border-radius: var(--brd-rad-m);
 	}
@@ -3102,8 +3055,6 @@
 	#column_right img[src*='online_3'],
 	#column_right img[src*='online_wap'],
 	#column_right .insertmember .icons li,
-	/*#qmenu #qmenu_home:hover img,
-	#qmenu #qmenu_home a.menu_selected img,*/
 	#qmenu_home img[src*='home.png'],
 	#qmenu_logut > a#qlogout:after,
 	li#qmenu_edit a:before,
@@ -3121,11 +3072,6 @@
 		        filter: brightness(50%) invert(70%) sepia(100%) hue-rotate(360deg);
 	}
 
-	/*span[class^='favouriteicon_'],
-	p a[href="/favourites.php"]:before {
-		-webkit-filter: var(--filter-sat-1);
-		        filter: var(--filter-sat-1);
-	}*/
 	img[src*='heart'],
 	span[class^='favouriteicon_'],
 	p a[href="/favourites.php"]:before {
