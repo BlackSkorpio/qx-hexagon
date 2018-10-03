@@ -44,13 +44,15 @@
 		HexaGon.mainContent		= ".main-content";
 		HexaGon.colRight		= $("#column_right.column-right");
 		HexaGon.TeaserDiv 		= $(".blog-and-news");
-		HexaGon.evenEmpty		= $("#column_center .even:empty");
 		HexaGon.allColumns		= $('[id^="column_"]');
-		HexaGon.inlineCleaning	= $('.icons li, .line .header span, #search form, #largeediticon, a[style*="text-decoration"], i.icon, .emptymembericon, .noticetext');
-		HexaGon.removeEmpty		= $('li div[style="width: 10px; height: 9px"]:empty,div[style="width: 10px; height: 10px"]:empty');
+		HexaGon.inlineCleaning	= $('.movies-listing .even div, .movies-listing .odd div, .movies-listing > div:nth-of-type(3), .video-thumb img[src$="star.png"], .video-thumb span, .attachedicon, span.homelink, div[style*="font-size: 10px;"], .block[style*="font-size: 11px;"], .icons li, .line .header span, #search form, #largeediticon, a[style*="text-decoration"], i.icon, .emptymembericon, .noticetext');
+		HexaGon.removeEmpty		= $('#column_center .even:empty, .homepageblock div[style="float:left;width:140px"]:first-child, .block img[src$="blank.gif"]:not([style*="/photothumbnails/"]), .homepageblock div[style="float:left;width:70px"], li div[style="width: 10px; height: 9px"]:empty,div[style="width: 10px; height: 10px"]:empty');
+		HexaGon.Sticky			= $("#whole #qmenu, #column_left.column-left .container:first-of-type, .container--chat-list, .container--personal, .container--your-search, .container.logged-in");
+		HexaGon.MakeList		= $('.movies-listing > div:nth-of-type(3), .column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery)');
+		HexaGon.MemberPres		= $(".homepage div[style='display: block; min-height:150px;']:first-of-type, .homepage #buff_block + div");
 		// NOTE Elements
 		HexaGon.spanText		= '<span class="q-text" />';
-		// NOTE QX URLs
+		// NOTE QX URLs */
 		HexaGon.bodyURL			= HexaGon.pathName.match(/^\/?(\w+)\b/);
 		HexaGon.nudgeSent		= HexaGon.hrefLoc.indexOf('/buffs.php?type=sent');
 		HexaGon.msgSent			= HexaGon.hrefLoc.indexOf('/messages.php?mailbox=out');
@@ -88,12 +90,15 @@
 		HexaGon.InfoGdpr		= HexaGon.hrefLoc.indexOf("/about_cookies/");
 		HexaGon.InfoFaq			= HexaGon.hrefLoc.indexOf("/faq/")
 
-		// NOTE Put together the Body Source & Template classes
+		// NOTE HexaGon Classes
 		HexaGon.Prefix				= 'q-';
 		HexaGon.Source				= HexaGon.Prefix+'source-'
 		HexaGon.Template			= HexaGon.Prefix+'template-';
 		HexaGon.ClassMain			= 'hexagon';
 		HexaGon.ClassClean			= HexaGon.Prefix+'clean';
+		HexaGon.ClassStickyWidget	= HexaGon.Prefix+'widget--sticky';
+		HexaGon.ClassMakeList		= 'list';
+		// NOTE Put together the Body Source & Template classes
 		HexaGon.ClassXXX			= HexaGon.Template+HexaGon.bodyURL[1]+'-xxx';
 		HexaGon.ClassActive			= HexaGon.Template+HexaGon.bodyURL[1]+'-active';
 		HexaGon.ClassAll			= HexaGon.Template+HexaGon.bodyURL[1]+'-all';
@@ -159,7 +164,6 @@
 	},HexaGon.consoleMSG();
 	// NOTE SetUp the body with classes and ID's
 	HexaGon.setBody = function() {
-		//$('.insertmember').addClass('widget');
 		// NOTE To make sure we are running Hexagon
 		HexaGon.HtmlBody.addClass(HexaGon.ClassMain);
 		// NOTE Rearranger things in the body and make it predictable
@@ -168,6 +172,8 @@
 			HexaGon.colRight.appendTo(HexaGon.mainContent);
 			//blog-and-news
 			HexaGon.TeaserDiv.appendTo(HexaGon.topContent);
+			$("#subnavbar [class*='button']").wrapAll('<div class="q-subnav-grid" />');
+			HexaGon.MemberPres.addClass('q-member-presentation');
 		};
 		reArangeBody();
 		// NOTE The Source class
@@ -205,15 +211,15 @@
 		if(HexaGon.InfoAdvertise	> -1) HexaGon.Body.addClass(HexaGon.ClassInfoAdvertise);
 		if(HexaGon.InfoGdpr			> -1) HexaGon.Body.addClass(HexaGon.ClassInfoGdpr);
 		if(HexaGon.InfoFaq			> -1) HexaGon.Body.addClass(HexaGon.ClassInfoFaq);
+		HexaGon.Sticky.addClass(HexaGon.ClassStickyWidget);
+		HexaGon.MakeList.addClass(HexaGon.ClassMakeList);
 	};
 	// NOTE Clean out unwanted stuff
 	HexaGon.ClassCleanHTML = function() {
-		// NOTE Clean up center column
-		HexaGon.evenEmpty.remove();
-		// NOTE Clean up inline styles
-		HexaGon.inlineCleaning.removeAttr("style").addClass(HexaGon.ClassClean);
 		// NOTE Delete empty nodes
 		HexaGon.removeEmpty.remove();
+		// NOTE Clean up inline styles
+		HexaGon.inlineCleaning.removeAttr("style").addClass(HexaGon.ClassClean);
 		// NOTE Wrap all text nodes inside a span.text
 		HexaGon.allColumns.contents().filter(function() {
 			return this.nodeType == 3 && $.trim(this.nodeValue).length;
@@ -226,6 +232,34 @@
 		// NOTE The satellite
 		if(HexaGon.satellite > -1) window.resizeTo('320', '500');
 	};
+	// NOTE Dirty HACK to be able to keep functionality on member profiles!
+	if(window.location.href.indexOf("/?id=") > -1) {
+		var h_url			= window.location.href.split("?id=");
+		var h_HtmlBody		= $('html, body');
+		var h_DocBody		= $(document.body);
+		var h_AllColumns	= $('[id^="column_"]');
+		var h_columnRight	= $("#column_right.column-right");
+		var h_teaserTop		= $(".blog-and-news");
+		var h_makeSticky	= $("#whole #qmenu, #column_left.column-left .container:first-of-type, .container--chat-list, .container--personal, .container--your-search, .container.logged-in");
+		var h_cleanInline	= $('.video-thumb img[src$="star.png"], .video-thumb span, .attachedicon, div[style*="font-size: 10px;"], .block[style*="font-size: 11px;"], .icons li, .line .header span, #search form, #largeediticon, a[style*="text-decoration"], i.icon, .emptymembericon, .noticetext');
+		var h_removeEmpty	= $('#column_center .even:empty, .homepageblock div[style="float:left;width:140px"]:first-child, .block img[src$="blank.gif"]:not([style*="/photothumbnails/"]), .homepageblock div[style="float:left;width:70px"], li div[style="width: 10px; height: 9px"]:empty,div[style="width: 10px; height: 10px"]:empty');
+		var h_makeList		= $('.column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery)');
+		var h_memberPres	= $(".homepage div[style='display: block; min-height:150px;']:first-of-type, .homepage #buff_block + div");
+		console.info("%cMemberID: "+h_url[1], "font: 3em sans-serif; color: orange; ");
+		console.info("Qruiser: We have a renegade template"),
+		h_HtmlBody.addClass('hexagon'),
+		h_DocBody.addClass('q-source-profile q-template-profile-member').attr("id", "q_member_"+h_url[1]),
+		h_teaserTop.appendTo("#top"),
+		h_columnRight.appendTo(".main-content"),
+		h_removeEmpty.remove(),
+		h_makeSticky.addClass('q-widget--sticky'),
+		h_cleanInline.removeAttr("style").addClass('q-clean'),
+		h_makeList.addClass('list'),
+		h_memberPres.addClass('q-member-presentation'),
+		h_AllColumns.contents().filter(function() {
+			return this.nodeType == 3 && $.trim(this.nodeValue).length;
+		}).wrap('<span class="q-text" />');
+	}
 	// NOTE Don't Look Back, Just Get it Done!
 	$(document).on("ready",HexaGon.init);
 })(window, document, jQuery);
