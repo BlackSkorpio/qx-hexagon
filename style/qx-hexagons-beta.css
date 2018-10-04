@@ -1011,12 +1011,42 @@ body.hexagon::before {
 		border-radius: var(--brd-rad-s);
 	}
 	#qmenu #qmenu_home,
-	#qmenu #qmenu_logut {
+	#qmenu #qmenu_logout {
 		display: none !important;
 	}
 	.signed-in #qmenu #qmenu_home,
-	.signed-in #qmenu #qmenu_logut {
+	.signed-in #qmenu #qmenu_logout {
 		display: block !important;
+	}
+	#qmenu li#qmenu_logout {
+		background-color: var(--bkgrd-b1);
+		margin: var(--margin-s) var(--margin-s) 0 0;
+		border: var(--brd-type-1) var(--brd-clr-w);
+		border-radius: var(--brd-rad-s);
+		-webkit-transition: all 0.3s linear;
+		        transition: all 0.3s linear;
+	}
+	#qmenu li#qmenu_logout a#qlogout {
+		background-color: var(--bkgrd-t);
+		margin: 0;
+		padding: var(--padding-m) var(--padding-s);
+		letter-spacing: var(--ls-s);
+	}
+	#qmenu li#qmenu_logout:hover {
+		border-color: var(--brd-clr-h);
+		background-color: var(--bkgrd-w2);
+		box-shadow: var(--ui-size-1) var(--ui-size-1) var(--ui-size-2) var(--brd-clr-h);
+		transform: translateX(var(--ui-size-1));
+	}
+	#qmenu li#qmenu_logout:hover a#qlogout {
+		color: var(--txt-base-clr);
+	}
+	#qmenu_logout > a#qlogout::after,
+	#qmenu li#qmenu_logout:hover > a#qlogout::after {
+		transform: translateY(-2px);
+	}
+	#qmenu li#qmenu_logout:hover a#qlogout::after {
+		filter:var(--filter-inv-1);
 	}
 	/*** Subnavbar ***/
 	#subnavbar .q-subnav-grid {
@@ -1057,7 +1087,6 @@ body.hexagon::before {
 	[type="button"],
 	[type="submit"],
 	[href*='addscribble'],
-	#qmenu li#qmenu_logut,
 	[href*='becomemember'],
 	#column_center #zeroall,
 	[href*='adddiscussion'],
