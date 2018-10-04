@@ -272,6 +272,12 @@ body.hexagon::before {
 		opacity: 0.0;
 	}
 }
+/* HIDE SHIT */
+a[href*="javascript:openEdit('sms')"], /* Outdated */
+#subnavbar .clear,
+br[clear='all'], br[clear='all'] + br {
+	display: none !important;
+}
 }
 
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*") {
@@ -929,6 +935,10 @@ body.hexagon::before {
 		margin-right: var(--margin-s);
 	}
 	/*-----------------------*/
+	.smalltext {
+		font-size: 0.8em;
+		line-height: normal;
+	}
 	#column_left.column-left,
 	#column_right.column-right,
 	#column_center.column-center .insertmember {
@@ -1052,6 +1062,11 @@ body.hexagon::before {
 	#subnavbar .q-subnav-grid {
 		background-color: #ff7168;
 		border-radius: var(--brd-rad-top);
+	}
+	/* FIX background colors */
+	#subnavbar .selectedbutton,
+	#subnavbar [class$='button'] {
+		background: none !important;
 	}
 
 	/*** Forms ***/
@@ -1306,6 +1321,11 @@ body.hexagon::before {
 		animation: view_notice 6s infinite;
 		-webkit-transition: 1s;
 		        transition: 1s;
+	}
+	/* Fixing the odd aperence of full width widgets headers */
+	.container.container--no-padding .container-header {
+		margin-left: 10px !important;
+		margin-right: 10px !important;
 	}
 
 	/** Column Left **/
@@ -2156,10 +2176,9 @@ body.hexagon::before {
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*") {
 	/*** TEST AREA ***/
 @supports (display: grid) {
-	.column-center .column-content {
-		background-color: inherit;
-	}
-	.q-source-showclubs #column_center.column-center .column-content > .small[style='float:right;margin-bottom:10px;'] {
+	/** Dividers **/
+	.line,
+	#column_center.column-center .line {
 		display: flow-root;
 		position: sticky;
 		top: 3.35em;
@@ -2178,61 +2197,7 @@ body.hexagon::before {
 		width: 100% !important;
 	}
 	.list .odd, .list .even {
-		width: auto;
-	}
-	/* Modal */
-	body.hexagon.modal-open {
-		overflow: hidden !important;
-	}
-	body.hexagon.modal-open .modal-container{
-		background: rgba(0, 0, 0, 0.8);
-	}
-	body.hexagon.modal-open .modal {
-		box-shadow: var(--shadow-size-2) var(--shadow-light);
-	}
-	body.hexagon.modal-open .modal-content {
-		border: var(--brd-type-1) var(--brd-clr-h);
-	}
-	body.hexagon.modal-open .modal-content,
-	body.hexagon.modal-open iframe.modal-content-frame {
-		border-radius: var(--brd-rad-s);
-	}
-	body.hexagon.modal-open .modal-close .icon.icon-close {
-		width: var(--ui-icon-l);
-		height: var(--ui-icon-l);
-		border-radius: var(--brd-rad-l);
-		background-color: var(--bkgrd-t);
-	}
-	/*-------------------------------------------*/
-	.memberinfo,
-	.list .memberinfo {
-		display: flow-root;
-		position: relative;
-		top: auto;
-		right: auto;
 		width: 100%;
-		padding: 0;
-		font-size: var(--font-2);
-	}
-	/* HIDE SHIT */
-	a[href*="javascript:openEdit('sms')"], /* Outdated */
-	#subnavbar .clear,
-	br[clear='all'], br[clear='all'] + br {
-		display: none !important;
-	}
-	/* Fixing background colors in subnavbar */
-	#subnavbar .selectedbutton,
-	#subnavbar [class$='button'] {
-		background: none !important;
-	}
-	/* Fixing the odd aperence of full width widgets headers */
-	.container.container--no-padding .container-header {
-		margin-left: 10px !important;
-		margin-right: 10px !important;
-	}
-	.smalltext {
-		font-size: 0.8em;
-		line-height: normal;
 	}
 	img[src*='/scribbleimages/'],
 	[style*="width: 414px"],[style*="width:414px"],
@@ -2255,18 +2220,5 @@ body.hexagon::before {
 		flex-flow: row wrap;
 	}
 
-	.homepageblock {
-		display: flex;
-		flex-flow: row wrap;
-	}
-	.homepageblock > .odd,
-	.homepageblock > .even {
-		flex: 1 1 50%;
-		width: auto;
-	}
-	.homepageblock > .odd > div,
-	.homepageblock > .even > div {
-		height: 100%
-	}
 }
 }
