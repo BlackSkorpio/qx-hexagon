@@ -1476,25 +1476,22 @@ br[clear='all'], br[clear='all'] + br {
 	.container.gaymap-today {
 		display: flex;
 		flex-flow: row wrap;
-		font-size: 0;
+		font-size: var(--font-z);
 	}
 	.container.gaymap-today > a {
 		flex: 1 1 auto;
 		flex-direction: column;
 		width: auto;
-	}
-	.container.gaymap-today > a {
-		display: list-item;
-		font-size: 0.85rem;
+		font-size: var(--font-3r);
 		margin-left: 1.3em;
-		padding-left: 0.3em;
+		padding-left: var(--padding-s);
 	}
-	.container.gaymap-today .container-header {
+	#column_right.column-right .container.gaymap-today .container-header {
 		width: 100%;
 		margin-bottom: 0.5rem !important;
 	}
 	.container.gaymap-today .container-header > a {
-		font-size: 0.8rem;
+		font-size: var(--font-3r);
 	}
 
 	/*** Column Center ***/
