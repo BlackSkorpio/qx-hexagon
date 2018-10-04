@@ -2384,16 +2384,48 @@ br[clear='all'], br[clear='all'] + br {
 	.line,
 	#column_center.column-center .line {
 		display: flow-root;
-		position: sticky;
-		top: 3.35em;
-		width: 100%;
-		height: 2em;
-		background-color: inherit;
-		font-size: var(--font-2);
-		text-align: center;
-		line-height: 2em;
-		z-index: 1;
+		font-family: 'Roboto Slab', serif;
+		text-transform: uppercase;
+		font-size: var(--font-4);
+		color: var(--txt-high-clr);
+		font-weight: 700;
+		line-height: var(--lh-n);
+		letter-spacing: var(--ls-s);
+		white-space: normal;
+		/*padding: 0 0 var(--padding-l) 0;*/
+		margin: var(--margin-l) var(--margin-z);
+		vertical-align: initial;
+		border-bottom: var(--brd-type-1) var(--brd-clr-h);
+		background-image: none !important;
 	}
+	#column_center.column-center .line {
+		margin-bottom: var(--margin-xlr);
+		height: var(--lh-1);
+		line-height: var(--lh-1);
+	}
+	.line > .header,
+	.line > .header_red {
+		position: initial;
+		display: inline;
+		padding-right: var(--padding-s);
+		font-size: var(--font-5r);
+		line-height: var(--lh-3);
+		color: var(--txt-high-clr);
+	}
+	.line a,
+	.line > .header a,
+	.line > .header_red a,
+	#column_center.column-center .line a {
+		font-size: inherit;
+		color: inherit;
+	}
+	#column_center.column-center .line .block-icons {
+		top: -0.5em;
+		right: -0.6em;
+	}
+	#column_center.column-center .line .block-icons .onlyshowself a.header {position: relative;top: auto;left: auto;padding: 0;font-size: inherit;line-height: inherit;background-color: inherit;}
+	/*-------------------------------------------*/
+
 	[style*='width:130px'],[style*='width: 130px'] {
 		width: 100% !important;
 	}
