@@ -1833,6 +1833,7 @@ br[clear='all'], br[clear='all'] + br {
 		width: 1.2em;
 		height: 1.2em;
 		font-size: inherit;
+		vertical-align: bottom;
 	}
 	#largeicons li {
 		width: 1.5em;
