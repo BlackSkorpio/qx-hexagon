@@ -628,6 +628,7 @@ body.hexagon::before {
 	/*** Flex Containers ***/
 	.list,
 	#largeicons,
+	.homepageblock,
 	.container-columns,
 	.insertmember .link,
 	.insertmember .icons,
@@ -645,6 +646,8 @@ body.hexagon::before {
 		display: flex !important;
 	}
 	/* Flex items */
+	.homepageblock > .odd,
+	.homepageblock > .even,
 	.list .odd:not(:only-child), .list .even:not(:only-child),
 	.container.spotlights .container-column {
 		flex: 1 1 50%;
