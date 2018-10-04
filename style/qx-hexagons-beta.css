@@ -895,7 +895,7 @@ br[clear='all'], br[clear='all'] + br {
 		background-color: var(--bkgrd-b1);
 		color: var(--txt-aside-clr);
 	}
-	.line,
+	/*.line,
 	.divider,
 	.column-center .line {
 		top: auto;
@@ -917,7 +917,7 @@ br[clear='all'], br[clear='all'] + br {
 		padding: 0;
 		background-color: inherit;
 
-	}
+	}*/
 	.list .odd, .list .even {
 		width: auto;
 		padding: var(--margin-m) var(--margin-s);
@@ -1093,10 +1093,10 @@ br[clear='all'], br[clear='all'] + br {
 	#qmenu li:hover {
 		background-color: inherit;
 	}
-	#qmenu li,
+	/*#qmenu li,
 	#qmenu a {
 		border-radius: var(--brd-rad-s);
-	}
+	}*/
 	#qmenu #qmenu_home,
 	#qmenu #qmenu_logout {
 		display: none !important;
@@ -2435,6 +2435,12 @@ br[clear='all'], br[clear='all'] + br {
 	.list .odd, .list .even {
 		width: 100%;
 	}
+	.odd .list .odd,
+	.odd .list .even,
+	.even .list .odd,
+	.even .list .even {}
+	/*-------------------------------------------*/
+
 	img[src*='/scribbleimages/'],
 	[style*="width: 414px"],[style*="width:414px"],
 	[style*="width: 400px"],[style*="width:400px"] {
@@ -2448,6 +2454,9 @@ br[clear='all'], br[clear='all'] + br {
 	img[src*='/scribbleimages/'] {
 		height: auto !important;
 	}
+	/*-------------------------------------------*/
+
+	/* Used to check that we really is setting the right div to list */
 	.column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery) {
 		border: 1px dashed red;
 	}
@@ -2455,6 +2464,7 @@ br[clear='all'], br[clear='all'] + br {
 		display: flex;
 		flex-flow: row wrap;
 	}
+	/*-------------------------------------------*/
 
 }
 }
