@@ -847,6 +847,28 @@ body.hexagon::before {
 		width: auto;
 	}
 	/* Member Widget */
+	.insertmember .stretch,
+	.insertmember::after {
+		display: none !important;
+		content: none !important;
+	}
+	.memberinfo,
+	.insertmember .link,
+	.insertmember .mood,
+	.insertmember .icons,
+	.gallery .memberinfo,
+	.insertmember .membericon,
+	.insertmember .description,
+	.insertmember .emptymembericon {
+		position: relative;
+		height: auto;
+		left: auto;
+		top: auto;
+		margin: 0;
+		padding: 0;
+		line-height: normal;
+		font-size: inherit;
+	}
 	.insertmember {
 		font-size: inherit;
 		line-height: normal;
@@ -860,17 +882,6 @@ body.hexagon::before {
 	}
 	.list .insertmember {
 		width: auto;
-	}
-	.memberinfo,
-	.insertmember .link,
-	.gallery .memberinfo,
-	.insertmember .description,
-	.insertmember .mood {
-		height: auto;
-		margin: 0;
-		padding: 0;
-		line-height: normal;
-		font-size: inherit;
 	}
 	.column-right .insertmember {}
 	.insertmember .membericon,
