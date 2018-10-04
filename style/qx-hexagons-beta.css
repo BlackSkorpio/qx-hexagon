@@ -920,6 +920,7 @@ br[clear='all'], br[clear='all'] + br {
 	}
 	.list .odd, .list .even {
 		width: auto;
+		padding: var(--margin-m) var(--margin-s);
 	}
 	/* Member Widget */
 	.insertmember .stretch,
