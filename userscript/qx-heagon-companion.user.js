@@ -167,7 +167,7 @@
 		// NOTE To make sure we are running Hexagon
 		HexaGon.HtmlBody.addClass(HexaGon.ClassMain);
 		// NOTE Rearranger things in the body and make it predictable
-		var reArangeBody = function() {
+		HexaGon.reArangeBody = function() {
 			// Make sure that the right column realy is where it should be!
 			HexaGon.colRight.appendTo(HexaGon.mainContent);
 			//blog-and-news
@@ -175,7 +175,6 @@
 			$("#subnavbar [class*='button']").wrapAll('<div class="q-subnav-grid" />');
 			HexaGon.MemberPres.addClass('q-member-presentation');
 		};
-		reArangeBody();
 		HexaGon.SetClubs = function() {
 			var ClubURL		= HexaGon.hrefLoc.indexOf("?club=");
 			var ThredURL	= HexaGon.hrefLoc.indexOf("&view=");
@@ -192,6 +191,7 @@
 				if ( HexaGon.Scribble > -1 ) HexaGon.Body.attr( "id", ScribbleId );
 			}
 		};
+		HexaGon.reArangeBody();
 		HexaGon.SetClubs();
 		// NOTE The Source class
 		if(HexaGon.bodyURL) HexaGon.Body.addClass(HexaGon.Source+HexaGon.bodyURL[1].toLowerCase());
