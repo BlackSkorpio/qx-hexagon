@@ -1489,6 +1489,7 @@ br[clear='all'], br[clear='all'] + br {
 	#column_right.column-right .container.gaymap-today .container-header {
 		width: 100%;
 		margin-bottom: 0.5rem !important;
+		overflow: visible;
 	}
 	.container.gaymap-today .container-header > a {
 		font-size: var(--font-3r);
