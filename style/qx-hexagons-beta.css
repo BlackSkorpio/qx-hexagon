@@ -1501,10 +1501,21 @@ br[clear='all'], br[clear='all'] + br {
 	#column_center.column-center .homepageblock {
 		background-color: inherit;
 	}
+	.homepageblock > .odd,
+	.homepageblock > .even {
+		width: auto;
+	}
+	.homepageblock > .odd > div,
+	.homepageblock > .even > div {
+		height: 100%
+	}
 	#homepageinfo,
 	.list .messages,
 	#answermessage form,
 	#answermessage textarea {
+		width: 100%;
+	}
+	#column_center.column-center .column-content > .list {
 		width: 100%;
 	}
 	#homepageinfo .infoblock {
