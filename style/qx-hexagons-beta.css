@@ -2220,7 +2220,7 @@ br[clear='all'], br[clear='all'] + br {
 	.column-center .chaticon,
 	* > #column_center .chaticon,
 	.column-center .chatlargeicon {
-		background-image: var(--qx-chat);
+		background-image: var(--qx-chat) !important;
 	}
 	/* Blog Icon */
 	.blogicon,
