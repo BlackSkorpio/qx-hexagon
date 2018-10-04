@@ -1357,7 +1357,36 @@ br[clear='all'], br[clear='all'] + br {
 		margin: var(--margin-m) 0;
 		text-transform: uppercase;
 		white-space: normal;
-		overflow: auto;
+		overflow: initial;
+	}
+	.container-header::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		top: 45%;
+		height: var(--ui-size-s);
+		opacity: 0;
+		background: currentColor;
+		transform: scale3d(0, 1, 1);
+		-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+		        transition: opacity 0.3s, -webkit-transform 0.3s;
+		transition: transform 0.3s, opacity 0.3s;
+		transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+		filter: drop-shadow(0 var(--ui-size-1) var(--ui-size-2) rgba(0, 0, 0, 0.5));
+		overflow: hidden;
+		pointer-events: none;
+	}
+	#column_left.column-left .container-header::after {
+		left: calc(-1 * var(--ui-size-m)); /* NOTE calc() is used to be able to use negative values for the variable value */
+		transform-origin: 0 50%
+	}
+	#column_right.column-right .container-header::after {
+		right: calc(-1 * var(--ui-size-m));
+		transform-origin: 100% 50%;
+	}
+	.container-header:hover::after {
+		opacity: 1;
+		transform: scale3d(1, 1, 1);
 	}
 	.container-header {
 		line-height: normal;
