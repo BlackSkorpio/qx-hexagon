@@ -1693,6 +1693,76 @@ br[clear='all'], br[clear='all'] + br {
 	}
 
 	/*** Templates ***/
+	:not([id^='q_thread_']).q-template-clubs-discussions #column_center.column-center .list > .odd,
+	:not([id^='q_thread_']).q-template-clubs-discussions #column_center.column-center .list > .even {
+		display: grid;
+		grid-template-rows: [heading] min-content [date] min-content [member] min-content;
+		grid-template-columns: [title] 1fr [number] auto [status] auto;
+		grid-template-areas:
+		"title number status"
+		"date date date"
+		"member member member";
+		grid-gap: 0.3em;
+	}
+	:not([id^='q_thread_']).q-template-clubs-discussions #column_center.column-center .list > .odd br,
+	:not([id^='q_thread_']).q-template-clubs-discussions #column_center.column-center .list > .even br {
+		display: none;
+	}
+	:not([id^='q_thread_']).q-template-clubs-discussions #column_center .list > .odd > div[style='float:right'],
+	:not([id^='q_thread_']).q-template-clubs-discussions #column_center .list > .even > div[style='float:right'] {
+		grid-area: member;
+	}
+	:not([id^='q_thread_']).q-template-clubs-discussions #column_center div[style='float:right'] .insertmember,
+	:not([id^='q_thread_']).q-template-clubs-discussions #column_center div[style='float:right'] .insertmember > div {
+		width: 100%;
+	}
+	:not([id^='q_thread_']).q-template-clubs-discussions #column_center div[style="float:right"] .insertmember .icons li {
+		mix-blend-mode: overlay;
+	}
+	:not([id^='q_thread_']).q-template-clubs-discussions #column_center .list > .odd > a[href^='/clubs/clubdiscuss.php?club='],
+	:not([id^='q_thread_']).q-template-clubs-discussions #column_center .list > .even > a[href^='/clubs/clubdiscuss.php?club='] {
+		grid-area: title;
+	}
+	:not([id^='q_thread_']).q-template-clubs-discussions #column_center .list > .odd > span.q-text,
+	:not([id^='q_thread_']).q-template-clubs-discussions #column_center .list > .even > span.q-text {
+		grid-area: number;
+		font-size: var(--font-2);
+	}
+	:not([id^='q_thread_']).q-template-clubs-discussions #column_center .list > .odd > span.smalltext,
+	:not([id^='q_thread_']).q-template-clubs-discussions #column_center .list > .even > span.smalltext {
+		grid-area: status;
+	}
+	:not([id^='q_thread_']).q-template-clubs-discussions #column_center .list > .odd > span.datetime,
+	:not([id^='q_thread_']).q-template-clubs-discussions #column_center .list > .even > span.datetime {
+		grid-area: date;
+	}
+
+	.q-template-clubs-scribble #column_center.column-center h2 + p[style='margin-top: 0.5em;'] + div {
+		display: flex;
+		flex-flow: row wrap;
+	}
+	.q-template-clubs-scribble #column_center.column-center .odd,
+	.q-template-clubs-scribble #column_center.column-center .even {
+		flex: 1 1 50%;
+	}
+	.q-template-clubs-scribble #column_center.column-center .odd > div,
+	.q-template-clubs-scribble #column_center.column-center .even > div {
+		height: 100%
+	}
+
+	.q-source-showclubs #column_center.column-center .column-content > .small[style='float:right;margin-bottom:10px;'] {
+		display: flow-root;
+		position: sticky;
+		top: 3.35em;
+		width: 100%;
+		height: 2em;
+		background-color: inherit;
+		font-size: var(--font-2);
+		text-align: center;
+		line-height: 2em;
+		z-index: 1;
+	}
+
 	.q-source-visited .list div[style='float:right;margin-left:5px;'],
 	.q-source-visitors .list div[style='float:right;margin-left:5px;'] {
 		position: absolute;
