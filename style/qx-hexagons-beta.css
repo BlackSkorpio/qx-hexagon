@@ -180,7 +180,7 @@ body::before {
 	content: 'QX';
 	display: block;
 	position: fixed;
-	top: 1em;
+	bottom: 1em;
 	left: 1em;
 	height: 0;
 	width: 0;
