@@ -1001,6 +1001,16 @@ br[clear='all'], br[clear='all'] + br {
 	.insertmember .icons li {
 		margin-right: var(--margin-s);
 	}
+	.memberinfo,
+	.list .memberinfo {
+		display: flow-root;
+		position: relative;
+		top: auto;
+		right: auto;
+		width: 100%;
+		padding: 0;
+		font-size: var(--font-2);
+	}
 	/*-----------------------*/
 	.smalltext {
 		font-size: 0.8em;
