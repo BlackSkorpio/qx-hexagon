@@ -2215,8 +2215,10 @@ br[clear='all'], br[clear='all'] + br {
 	}
 	/* Chat Icon */
 	.chaticon,
+	* > .chaticon,
 	.chatlargeicon,
 	.column-center .chaticon,
+	* > #column_center .chaticon,
 	.column-center .chatlargeicon {
 		background-image: var(--qx-chat);
 	}
