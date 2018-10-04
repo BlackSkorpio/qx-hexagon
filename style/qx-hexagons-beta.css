@@ -2042,6 +2042,29 @@ br[clear='all'], br[clear='all'] + br {
 	div#satellite a[href*='favourites.php']:before {
 		filter: none;
 	}
+	img[src*='status_'] {
+		width: 0;
+		height: 0;
+		padding: var(--ui-size-5);
+		border: var(--brd-type-1);
+		border-radius: var(--brd-rad-l);
+		background-color: currentColor;
+	}
+	img[src*="status_"] {
+		vertical-align: text-top;
+	}
+	img[src$='status_0.gif'] {
+		color: green;
+	}
+	img[src$='status_1.gif'] {
+		color: yellow;
+	}
+	img[src$='status_2.gif'] {
+		color: red;
+	}
+	img[src$='status_3.gif'] {
+		color: gray;
+	}
 	/*------------------------*/
 
 	/*** The Actual icons ***/
