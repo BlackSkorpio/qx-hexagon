@@ -46,7 +46,7 @@
 		HexaGon.TeaserDiv 		= $(".blog-and-news");
 		HexaGon.allColumns		= $('[id^="column_"]');
 		HexaGon.inlineCleaning	= $('.movies-listing .even div, .movies-listing .odd div, .movies-listing > div:nth-of-type(3), .video-thumb img[src$="star.png"], .video-thumb span, .attachedicon, span.homelink, div[style*="font-size: 10px;"], .block[style*="font-size: 11px;"], .icons li, .line .header span, #search form, #largeediticon, a[style*="text-decoration"], i.icon, .emptymembericon, .noticetext');
-		HexaGon.removeEmpty		= $('#column_center .even:empty, .homepageblock div[style="float:left;width:140px"]:first-child, .block img[src$="blank.gif"]:not([style*="/photothumbnails/"]), .homepageblock div[style="float:left;width:70px"], li div[style="width: 10px; height: 9px"]:empty,div[style="width: 10px; height: 10px"]:empty');
+		HexaGon.removeEmpty		= $('#column_center .even:empty, .thinlineup, .homepageblock div[style="float:left;width:140px"]:first-child, .block img[src$="blank.gif"]:not([style*="/photothumbnails/"]), .homepageblock div[style="float:left;width:70px"], li div[style="width: 10px; height: 9px"]:empty,div[style="width: 10px; height: 10px"]:empty');
 		HexaGon.Sticky			= $("#whole #qmenu, #column_left.column-left .container:first-of-type, .container--chat-list, .container--personal, .container--your-search, .container.logged-in");
 		HexaGon.MakeList		= $('.movies-listing > div:nth-of-type(3), .column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery)');
 		HexaGon.MemberPres		= $(".homepage div[style='display: block; min-height:150px;']:first-of-type, .homepage #buff_block + div");
@@ -259,7 +259,7 @@
 		var h_teaserTop		= $(".blog-and-news");
 		var h_makeSticky	= $("#whole #qmenu, #column_left.column-left .container:first-of-type, .container--chat-list, .container--personal, .container--your-search, .container.logged-in");
 		var h_cleanInline	= $('.video-thumb img[src$="star.png"], .video-thumb span, .attachedicon, div[style*="font-size: 10px;"], .block[style*="font-size: 11px;"], .icons li, .line .header span, #search form, #largeediticon, a[style*="text-decoration"], i.icon, .emptymembericon, .noticetext');
-		var h_removeEmpty	= $('#column_center .even:empty, .homepageblock div[style="float:left;width:140px"]:first-child, .block img[src$="blank.gif"]:not([style*="/photothumbnails/"]), .homepageblock div[style="float:left;width:70px"], li div[style="width: 10px; height: 9px"]:empty,div[style="width: 10px; height: 10px"]:empty');
+		var h_removeEmpty	= $('#column_center .even:empty, .thinlineup, .homepageblock div[style="float:left;width:140px"]:first-child, .block img[src$="blank.gif"]:not([style*="/photothumbnails/"]), .homepageblock div[style="float:left;width:70px"], li div[style="width: 10px; height: 9px"]:empty,div[style="width: 10px; height: 10px"]:empty');
 		var h_makeList		= $('.column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery)');
 		var h_memberPres	= $(".homepage div[style='display: block; min-height:150px;']:first-of-type, .homepage #buff_block + div");
 		console.info("%cMemberID: "+h_url[1], "font: 3em sans-serif; color: orange; ");
