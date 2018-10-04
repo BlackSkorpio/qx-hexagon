@@ -192,7 +192,7 @@ body::before {
 	        transition: color,height,width,font-size 0.4s linear 0.4s;
 }
 body.hexagon::before {
-	content: 'QX Hexagon';
+	content: 'QX Hexagon v3.2.0';
 	height: auto;
 	width: auto;
 	min-width: 4.125rem;
