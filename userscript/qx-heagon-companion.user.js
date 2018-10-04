@@ -176,6 +176,23 @@
 			HexaGon.MemberPres.addClass('q-member-presentation');
 		};
 		reArangeBody();
+		HexaGon.SetClubs = function() {
+			var ClubURL		= HexaGon.hrefLoc.indexOf("?club=");
+			var ThredURL	= HexaGon.hrefLoc.indexOf("&view=");
+			var Thread_Id	= HexaGon.hrefLoc.split("&view=");
+			var Club_Id		= HexaGon.hrefLoc.split("?club=");
+			var ThreadId	= "q_thread_"+Thread_Id[1];
+			var ScribbleId	= "q_club_"+Club_Id[1]+"_scribble"
+			var ClubClass	= HexaGon.Prefix+'club-'+Club_Id[1];
+			if ( HexaGon.Discussions || HexaGon.Scribble > -1 ) {
+				if ( HexaGon.Discussions > -1 ) {
+					if( ThredURL > -1 ) HexaGon.Body.attr( "id", ThreadId );
+					else if( ClubURL > -1 ) HexaGon.Body.addClass( ClubClass );
+				}
+				if ( HexaGon.Scribble > -1 ) HexaGon.Body.attr( "id", ScribbleId );
+			}
+		};
+		HexaGon.SetClubs();
 		// NOTE The Source class
 		if(HexaGon.bodyURL) HexaGon.Body.addClass(HexaGon.Source+HexaGon.bodyURL[1].toLowerCase());
 		// NOTE Add Template classes
