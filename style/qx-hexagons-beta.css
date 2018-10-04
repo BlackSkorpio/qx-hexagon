@@ -331,6 +331,72 @@ br[clear='all'], br[clear='all'] + br {
 	}
 	/*-----------------------*/
 
+	/*** Modal ***/
+	body.popup {
+		max-width: 540px;
+		margin: auto !important;
+		padding: 0 !important;
+		overflow-x: hidden;
+	}
+	body.popup::before {
+		content: none;
+	}
+	body.popup .insertmember {
+		width: 50%;
+	}
+	body.popup .insertmember .link,
+	body.popup .insertmember .description,
+	body.popup .insertmember .icons {
+		width: 100%;
+	}
+	body.popup div[style*='width:410px'] {
+		max-width: 100vw;
+		background-color: var(--bkgrd-w2) !important;
+		border: var(--brd-type-1) var(--brd-clr-h) !important;
+		border-radius: var(--brd-rad-s);
+		font-size: var(--font-2);
+	}
+	body.popup p[style*='width: 230px;'] {
+		position: absolute;
+		right: 2em;
+		border: var(--brd-type-1) var(--brd-clr-h) !important;
+		border-radius: var(--brd-rad-s);
+		box-shadow: var(--shadow-size-2) var(--shadow-gray);
+	}
+	button.modal-close {
+		border-radius: var(--brd-rad-l);
+		border-color: var(--brd-clr-t);
+	}
+	button.modal-close:hover {
+		box-shadow: none;
+		text-shadow: none;
+		transform: translateY(-1px);
+		border-color: var(--ui-clr-gray1);
+	}
+	body.hexagon.modal-open {
+		overflow: hidden !important;
+	}
+	body.hexagon.modal-open .modal-container{
+		background: rgba(0, 0, 0, 0.8);
+	}
+	body.hexagon.modal-open .modal {
+		box-shadow: var(--shadow-size-2) var(--shadow-light);
+	}
+	body.hexagon.modal-open .modal-content {
+		border: var(--brd-type-1) var(--brd-clr-h);
+	}
+	body.hexagon.modal-open .modal-content,
+	body.hexagon.modal-open iframe.modal-content-frame {
+		border-radius: var(--brd-rad-s);
+	}
+	body.hexagon.modal-open .modal-close .icon.icon-close {
+		width: var(--ui-icon-l);
+		height: var(--ui-icon-l);
+		border-radius: var(--brd-rad-l);
+		background-color: var(--bkgrd-t);
+	}
+	/*-----------------------*/
+
 	/*** THE LOGO SECTION ***/
 	img#logo_qruiser,
 	img[src*='puff_qruiser.gif'],
@@ -1717,6 +1783,9 @@ br[clear='all'], br[clear='all'] + br {
 		opacity: 0.7;
 	}
 	/* Filters */
+	body.popup .icons li,
+	body.popup .simple li,
+	body.popup #largeicons li,
 	#column_center.column-center .icons li,
 	#column_center.column-center .simple li,
 	#column_center.column-center #largeicons li,
@@ -1738,6 +1807,9 @@ br[clear='all'], br[clear='all'] + br {
 		-webkit-filter: var(--filter-inv-3);
 		        filter: var(--filter-inv-3);
 	}
+	body.popup .icons li:hover,
+	body.popup .simple li:hover,
+	body.popup #largeicons li:hover,
 	#column_left.column-left .icons li:hover,
 	#column_right.column-right .icons li:hover,
 	#column_center.column-center .icons li:hover,
