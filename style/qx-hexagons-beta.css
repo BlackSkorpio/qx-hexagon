@@ -1433,12 +1433,20 @@ br[clear='all'], br[clear='all'] + br {
 	}
 	/* Counters */
 	#column_left.column-left .counter,
+	.container--favourites .notextdecoration > .q-text,
 	#column_left.column-left [href^='/show'] + b,
 	#column_left.column-left b a[href$='?updated=1'] {
 		color: var(--txt-high-clr);
+		font-weight: 700;
 		animation: view_notice 6s infinite;
 		-webkit-transition: 1s;
 		        transition: 1s;
+	}
+	#column_left.column-left a:hover + .counter,
+	#column_left.column-left .container-inner > div:hover b,
+	#column_left.column-left .container-inner > div:hover b > .q-clean,
+	.container--favourites .notextdecoration:hover > .q-text{
+		animation-play-state: paused !important;
 	}
 	/* Fixing the odd aperence of full width widgets headers */
 	.container.container--no-padding .container-header {
