@@ -1094,10 +1094,10 @@ br[clear='all'], br[clear='all'] + br {
 	#qmenu li:hover {
 		background-color: inherit;
 	}
-	/*#qmenu li,
-	#qmenu a {
-		border-radius: var(--brd-rad-s);
-	}*/
+	#qmenu #qmenu_home,
+	#qmenu #qmenu_home a {
+		border-top-left-radius: var(--brd-rad-s);
+	}
 	#qmenu #qmenu_home,
 	#qmenu #qmenu_logout {
 		display: none !important;
