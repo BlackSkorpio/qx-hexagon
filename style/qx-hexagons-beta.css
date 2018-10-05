@@ -729,6 +729,10 @@ br[clear='all'], br[clear='all'] + br {
 	.homepageblock .line + .list > .even:not(:only-child) {
 		flex: 1 1 33%;
 	}
+	.homepageblock .line + .list[style='width: 414px; padding: 0px;'] > .odd:only-child,
+	.homepageblock .line + .list[style='width: 414px; padding: 0px;'] > .even:only-child {
+		flex: 0 1 33%;
+	}
 	#homepageinfo .infoblock,
 	/* Hexagon Videoplayer */
 	.movies-listing .list > .odd,
