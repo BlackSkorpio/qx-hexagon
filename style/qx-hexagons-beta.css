@@ -1493,6 +1493,10 @@ br[clear='all'], br[clear='all'] + br {
 		width: auto;
 	}
 	/* Gaymap */
+	.column-right .container.gaymap-today .gaymap-flag {
+		right: calc(-1 * var(--ui-icon-l));
+		pointer-events: none;
+	}
 	.container.gaymap-today {
 		display: flex;
 		flex-flow: row wrap;
