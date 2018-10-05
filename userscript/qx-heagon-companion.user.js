@@ -44,7 +44,7 @@
 		HexaGon.mainContent		= ".main-content";
 		HexaGon.colRight		= $("#column_right.column-right");
 		HexaGon.TeaserDiv 		= $(".blog-and-news");
-		HexaGon.allColumns		= $('[id^="column_"], .odd, .even');
+		HexaGon.searchNodes		= $('[id^="column_"], .odd, .even, .container--favourites .notextdecoration');
 		HexaGon.inlineCleaning	= $('.movies-listing .even div, .movies-listing .odd div, .movies-listing > div:nth-of-type(3), .video-thumb img[src$="star.png"], .video-thumb span, .attachedicon, span.homelink, div[style*="font-size: 10px;"], .block[style*="font-size: 11px;"], .icons li, .line .header span, #search form, #largeediticon, a[style*="text-decoration"], i.icon, .emptymembericon, .noticetext');
 		HexaGon.removeEmpty		= $('#column_center .even:empty, .thinlineup, .homepageblock div[style="float:left;width:140px"]:first-child, .block img[src$="blank.gif"]:not([style*="/photothumbnails/"]), .homepageblock div[style="float:left;width:70px"], li div[style="width: 10px; height: 9px"]:empty,div[style="width: 10px; height: 10px"]:empty');
 		HexaGon.Sticky			= $("#whole #qmenu, #column_left.column-left .container:first-of-type, .container--chat-list, .container--personal, .container--your-search, .container.logged-in");
@@ -238,7 +238,7 @@
 		// NOTE Clean up inline styles
 		HexaGon.inlineCleaning.removeAttr("style").addClass(HexaGon.ClassClean);
 		// NOTE Wrap all text nodes inside a span.text
-		HexaGon.allColumns.contents().filter(function() {
+			HexaGon.searchNodes.contents().filter(function() {
 			return this.nodeType == 3 && $.trim(this.nodeValue).length;
 		}).wrap(HexaGon.spanText);
 	};
@@ -254,7 +254,7 @@
 		var h_url			= window.location.href.split("?id=");
 		var h_HtmlBody		= $('html, body');
 		var h_DocBody		= $(document.body);
-		var h_AllColumns	= $('[id^="column_"]');
+		var h_searchNodes	= $('[id^="column_"], .odd, .even, .container--favourites .notextdecoration');
 		var h_columnRight	= $("#column_right.column-right");
 		var h_teaserTop		= $(".blog-and-news");
 		var h_makeSticky	= $("#whole #qmenu, #column_left.column-left .container:first-of-type, .container--chat-list, .container--personal, .container--your-search, .container.logged-in");
@@ -273,7 +273,7 @@
 		h_cleanInline.removeAttr("style").addClass('q-clean'),
 		h_makeList.addClass('list'),
 		h_memberPres.addClass('q-member-presentation'),
-		h_AllColumns.contents().filter(function() {
+		h_searchNodes.contents().filter(function() {
 			return this.nodeType == 3 && $.trim(this.nodeValue).length;
 		}).wrap('<span class="q-text" />');
 	}
