@@ -2524,5 +2524,52 @@ br[clear='all'], br[clear='all'] + br {
 	}
 	/*-------------------------------------------*/
 
+	/** Every third row in lists **/
+	.homepageblock > .list > .odd:not(:only-child):not(:last-child):nth-child(3n),
+	.homepageblock > .list > .even:not(:only-child):not(:last-child):nth-child(3n),
+	#column_center > .list > .odd:nth-child(3n),
+	#column_center > .list > .even:nth-child(3n),
+	#column_center h2 + p[style="margin-top: 0.5em;"] + div > .odd:nth-child(3n),
+	#column_center h2 + p[style="margin-top: 0.5em;"] + div > .even:nth-child(3n) {
+		flex-basis: 100%;
+		background: linear-gradient(to bottom, rgb(238, 242, 243), rgba(238, 242, 243, 0.5), rgba(142, 158, 171, 0.5), rgba(142, 158, 171, 0.8));
+		border-top: var(--brd-type-1);
+		border-bottom: var(--brd-type-1);
+		border-color: rgb(238, 242, 243) transparent rgb(142, 158, 171);
+		border-radius: 0.4em;
+		color: initial;
+		margin-bottom: var(--margin-s);
+	}
+	/* Making sure that the memberinfo text is visible */
+	#column_center .list > div:nth-child(3n) a,
+	#column_center .list > div:nth-child(3n) .datetime,
+	#column_center .list > div:nth-child(3n) .memberinfo,
+	#column_center .list > div:nth-child(3n) .insertmember .link,
+	#column_center .list > div:nth-child(3n) .insertmember .mood,
+	#column_center .list > div:nth-child(3n) .insertmember .description {
+		color: initial;
+	}
+	#column_center .list > div:nth-child(3n) .emptymembericon {
+		border-color: currentColor;
+	}
+	#column_center .list > div:nth-child(3n) a[name^='post'],
+	#column_center .list > div:nth-child(3n) a[name^='post'] h3 {
+		color: inherit;
+		margin-top: var(--margin-c);
+		font-weight: 700;
+	}
+	/* Make every child after the third have a border right */
+	#column_center .list > .odd:nth-child(3n+1):not(:only-child):not(:last-of-type),
+	#column_center .list > .even:nth-child(3n+1):not(:only-child):not(:last-of-type) {
+		border-right: 1px dashed var(--ui--clr-disabled);
+	}
+	/* Remove any custom bkrd clr */
+	#column_center > .list > .odd:nth-child(3n) > div,
+	#column_center > .list > .even:nth-child(3n) > div,
+	#column_center h2 + p[style="margin-top: 0.5em;"] + div > .odd:nth-child(3n) > div,
+	#column_center h2 + p[style="margin-top: 0.5em;"] + div > .even:nth-child(3n) > div {
+		background-color: transparent !important;
+	}
+	/*-------------------------------------------*/
 }
 }
