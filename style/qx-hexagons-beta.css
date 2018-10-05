@@ -1282,6 +1282,7 @@ br[clear='all'], br[clear='all'] + br {
 		border: var(--brd-type-1) var(--bkgrd-b1);
 		border-radius: var(--brd-rad-s);
 	}
+	#column_center form,
 	#column_center textarea {
 		width: 100%;
 	}
