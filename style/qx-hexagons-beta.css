@@ -1870,11 +1870,11 @@ br[clear='all'], br[clear='all'] + br {
 	}
 	.icon[class*='icon-flag-'].q-clean {
 		width: 1.2em;
-		height: 1em;
+		height: 0.9em;
 	}
 	#langnav .icon[class*='icon-flag-'].q-clean {
 		width: 1.5em;
-		height: 1.2em;
+		height: 1.1em;
 	}
 	.column-center .dropupicon,
 	.column-center .dropdownicon {
