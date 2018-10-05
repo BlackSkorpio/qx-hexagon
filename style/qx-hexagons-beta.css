@@ -1517,6 +1517,10 @@ br[clear='all'], br[clear='all'] + br {
 	}
 
 	/*** Column Center ***/
+	#column_center.column-center .column-content {
+		width: 100%;
+		margin: 0 auto var(--margin-xl);
+	}
 	#column_center.column-center .homepage,
 	#column_center.column-center .column-content,
 	#column_center.column-center .homepageblock {
@@ -1553,10 +1557,6 @@ br[clear='all'], br[clear='all'] + br {
 	}
 	.container-column:nth-child(odd) {
 		padding-right: 0.3em;
-	}
-	.column-center .column-content {
-		width: 100%;
-		margin: 0 auto;
 	}
 	/* Infotext */
 	a.q-clean[href*='dropUpDownArrow'] {
