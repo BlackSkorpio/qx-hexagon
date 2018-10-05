@@ -50,8 +50,10 @@
 		HexaGon.Sticky			= $("#whole #qmenu, #column_left.column-left .container:first-of-type, .container--chat-list, .container--personal, .container--your-search, .container.logged-in");
 		HexaGon.MakeList		= $('.movies-listing > div:nth-of-type(3), .column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery)');
 		HexaGon.MemberPres		= $(".homepage div[style='display: block; min-height:150px;']:first-of-type, .homepage #buff_block + div");
+		HexaGon.SubNavButtons	= $("#subnavbar [class*='button']");
 		// NOTE Elements
 		HexaGon.spanText		= '<span class="q-text" />';
+		HexaGon.subNavGrid		= '<div class="q-subnav-grid" />';
 		// NOTE QX URLs */
 		HexaGon.bodyURL			= HexaGon.pathName.match(/^\/?(\w+)\b/);
 		HexaGon.nudgeSent		= HexaGon.hrefLoc.indexOf('/buffs.php?type=sent');
@@ -98,6 +100,7 @@
 		HexaGon.ClassClean			= HexaGon.Prefix+'clean';
 		HexaGon.ClassStickyWidget	= HexaGon.Prefix+'widget--sticky';
 		HexaGon.ClassMakeList		= 'list';
+		HexaGon.ClassMemIntro		= HexaGon.Prefix+'member-presentation';
 		// NOTE Put together the Body Source & Template classes
 		HexaGon.ClassXXX			= HexaGon.Template+HexaGon.bodyURL[1]+'-xxx';
 		HexaGon.ClassActive			= HexaGon.Template+HexaGon.bodyURL[1]+'-active';
@@ -230,6 +233,7 @@
 		if(HexaGon.InfoFaq			> -1) HexaGon.Body.addClass(HexaGon.ClassInfoFaq);
 		HexaGon.Sticky.addClass(HexaGon.ClassStickyWidget);
 		HexaGon.MakeList.addClass(HexaGon.ClassMakeList);
+		HexaGon.MemberPres.addClass(HexaGon.ClassMemIntro);
 	};
 	// NOTE Clean out unwanted stuff
 	HexaGon.ClassCleanHTML = function() {
@@ -238,6 +242,7 @@
 		// NOTE Clean up inline styles
 		HexaGon.inlineCleaning.removeAttr("style").addClass(HexaGon.ClassClean);
 		// NOTE Wrap all text nodes inside a span.text
+			HexaGon.SubNavButtons.wrapAll( HexaGon.subNavGrid );
 			HexaGon.searchNodes.contents().filter(function() {
 			return this.nodeType == 3 && $.trim(this.nodeValue).length;
 		}).wrap(HexaGon.spanText);
