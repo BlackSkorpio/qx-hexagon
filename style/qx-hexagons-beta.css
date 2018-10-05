@@ -766,20 +766,18 @@ br[clear='all'], br[clear='all'] + br {
 	}
 	.container.q-widget--sticky:first-of-type {
 		top: 3em;
-		padding-left: var(--padding-s);
-		padding-right: var(--padding-s);
 		z-index: 3;/* NOTE Make sure it's on top so we can hide the headers of the children */
 	}
 	.container--chat-list.q-widget--sticky {
-		top: 13.2em;
+		top: 14.3em;
 		z-index: 2;
 	}
 	.container--personal.q-widget--sticky {
-		top:22em;
+		top:23em;
 		z-index: 1;
 	}
 	.container--your-search.q-widget--sticky {
-		top: 39.7em;
+		top: 41.4em;
 		z-index: auto;
 	}
 	.container.logged-in.q-widget--sticky {
@@ -790,6 +788,13 @@ br[clear='all'], br[clear='all'] + br {
 	.container.q-widget--sticky:first-of-type {
 		 border-bottom: var(--brd-type-1);
 		border-image: var(--brd-img-left);
+	}
+	.container.q-widget--sticky:first-of-type {
+		padding-left: var(--padding-s);
+		padding-right: var(--padding-s);
+	}
+	.container.q-widget--sticky:first-of-type .insertmember {
+		min-height: 4.4375rem;
 	}
 	.hexagon .container.container--position .container-header {
 		border-top-color: transparent;
