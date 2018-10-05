@@ -665,6 +665,7 @@ br[clear='all'], br[clear='all'] + br {
 	/* Member Presentation */
 	.q-member-presentation > img[src^='/thumbcorners.php'] {
 		grid-area: avatar;
+		margin-left: 0;
 	}
 	.q-member-presentation > h2 {
 		grid-area: name;
