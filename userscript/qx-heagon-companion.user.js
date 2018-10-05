@@ -247,6 +247,7 @@
 		HexaGon.wrapper = function() {
 			// NOTE Wrap all divs so we can style there parent
 			HexaGon.SubNavButtons.wrapAll( HexaGon.subNavGrid );
+			// NOTE Wrap all text nodes inside a span.text
 			HexaGon.searchNodes.contents().filter(function() {
 				return this.nodeType == 3 && $.trim(this.nodeValue).length;
 			}).wrap(HexaGon.spanText);
@@ -276,7 +277,7 @@
 		var h_removeEmpty	= $('#column_center .even:empty, .thinlineup, .homepageblock div[style="float:left;width:140px"]:first-child, .block img[src$="blank.gif"]:not([style*="/photothumbnails/"]), .homepageblock div[style="float:left;width:70px"], li div[style="width: 10px; height: 9px"]:empty,div[style="width: 10px; height: 10px"]:empty');
 		var h_makeList		= $('.column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery)');
 		var h_memberPres	= $(".homepage div[style='display: block; min-height:150px;']:first-of-type, .homepage #buff_block + div");
-		console.info("%cMemberID: "+h_url[1], "font: 3em sans-serif; color: orange; ");
+		//console.info("%cMemberID: "+h_url[1], "font: 3em sans-serif; color: orange; ");
 		console.info("Qruiser: We have a renegade template"),
 		h_HtmlBody.addClass('hexagon'),
 		h_DocBody.addClass('q-source-profile q-template-profile-member').attr("id", "q_member_"+h_url[1]),
