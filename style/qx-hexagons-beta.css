@@ -1783,6 +1783,11 @@ br[clear='all'], br[clear='all'] + br {
 		grid-area: date;
 	}
 
+	/* HACK to get the Add Scribble button on it's own row */
+	[id^='q_club_'].q-template-clubs-scribble .column-content > div > br + p:last-of-type {
+		display: flow-root;
+		width: 100%;
+	}
 	.q-template-clubs-scribble #column_center.column-center h2 + p[style='margin-top: 0.5em;'] + div {
 		display: flex;
 		flex-flow: row wrap;
