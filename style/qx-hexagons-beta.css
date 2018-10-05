@@ -1792,6 +1792,18 @@ br[clear='all'], br[clear='all'] + br {
 		display: flow-root;
 		width: 100%;
 	}
+	/* HACK to make the club title display directly under insertmember */
+	.clubscribble .datetime + .list {
+		display: flow-root;
+		width: 100%;
+	}
+	.clubscribble .datetime + .list > .even > .insertmember + b,
+	.clubscribble .datetime + .list > .odd > .insertmember + b {
+		display: inline-block;
+		width: 100%;
+		font-size: var(--font-2);
+		font-style: italic;
+	}
 	.q-template-clubs-scribble #column_center.column-center h2 + p[style='margin-top: 0.5em;'] + div {
 		display: flex;
 		flex-flow: row wrap;
