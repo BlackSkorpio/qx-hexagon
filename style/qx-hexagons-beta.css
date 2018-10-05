@@ -949,6 +949,7 @@ br[clear='all'], br[clear='all'] + br {
 		font-size: inherit;
 		line-height: normal;
 		width: 100%;
+		max-width: calc(var(--ui-aside-r) - var(--ui-size-l));
 	}
 	.insertmember .icon {
 		margin-left: var(--margin-s);
