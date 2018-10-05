@@ -432,7 +432,7 @@ br[clear='all'], br[clear='all'] + br {
 	}
 	.q-member-presentation {
 		display: grid !important;
-		grid-template-columns: [avatar] 120px [text] 1fr [edit] 1.2em;
+		grid-template-columns: [avatar] auto [text] 1fr [edit] 1.2em;
 		grid-template-rows: [name] min-content [presentation] min-content [contact] min-content;
 		grid-template-areas:
 			"avatar name edit"
