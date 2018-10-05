@@ -169,15 +169,7 @@
 	HexaGon.setBody = function() {
 		// NOTE To make sure we are running Hexagon
 		HexaGon.HtmlBody.addClass(HexaGon.ClassMain);
-		// NOTE Rearranger things in the body and make it predictable
-		HexaGon.reArangeBody = function() {
-			// Make sure that the right column realy is where it should be!
-			HexaGon.colRight.appendTo(HexaGon.mainContent);
-			//blog-and-news
-			HexaGon.TeaserDiv.appendTo(HexaGon.topContent);
-			$("#subnavbar [class*='button']").wrapAll('<div class="q-subnav-grid" />');
-			HexaGon.MemberPres.addClass('q-member-presentation');
-		};
+		// NOTE Set som uniqe body ID's and classes for clubs
 		HexaGon.SetClubs = function() {
 			var ClubURL		= HexaGon.hrefLoc.indexOf("?club=");
 			var ThredURL	= HexaGon.hrefLoc.indexOf("&view=");
@@ -194,7 +186,6 @@
 				if ( HexaGon.Scribble > -1 ) HexaGon.Body.attr( "id", ScribbleId );
 			}
 		};
-		HexaGon.reArangeBody();
 		HexaGon.SetClubs();
 		// NOTE The Source class
 		if(HexaGon.bodyURL) HexaGon.Body.addClass(HexaGon.Source+HexaGon.bodyURL[1].toLowerCase());
@@ -231,21 +222,39 @@
 		if(HexaGon.InfoAdvertise	> -1) HexaGon.Body.addClass(HexaGon.ClassInfoAdvertise);
 		if(HexaGon.InfoGdpr			> -1) HexaGon.Body.addClass(HexaGon.ClassInfoGdpr);
 		if(HexaGon.InfoFaq			> -1) HexaGon.Body.addClass(HexaGon.ClassInfoFaq);
+		// NOTE Some "utility" classes
 		HexaGon.Sticky.addClass(HexaGon.ClassStickyWidget);
 		HexaGon.MakeList.addClass(HexaGon.ClassMakeList);
 		HexaGon.MemberPres.addClass(HexaGon.ClassMemIntro);
 	};
 	// NOTE Clean out unwanted stuff
 	HexaGon.ClassCleanHTML = function() {
-		// NOTE Delete empty nodes
-		HexaGon.removeEmpty.remove();
-		// NOTE Clean up inline styles
-		HexaGon.inlineCleaning.removeAttr("style").addClass(HexaGon.ClassClean);
-		// NOTE Wrap all text nodes inside a span.text
+		// NOTE Start cleaning of the QX code
+		HexaGon.tidyUp = function() {
+			// NOTE Delete empty nodes
+			HexaGon.removeEmpty.remove();
+			// NOTE Remove inline styles
+			HexaGon.inlineCleaning.removeAttr("style").addClass(HexaGon.ClassClean);
+		};
+		// NOTE Rearranger things in the body and make it predictable
+		HexaGon.reArangeBody = function() {
+			// NOTE Make sure that the right column realy is where it should be!
+			HexaGon.colRight.appendTo(HexaGon.mainContent);
+			// NOTE Move .blog-and-news to #top
+			HexaGon.TeaserDiv.appendTo(HexaGon.topContent);
+		};
+		// NOTE Wrap elements
+		HexaGon.wrapper = function() {
+			// NOTE Wrap all divs so we can style there parent
 			HexaGon.SubNavButtons.wrapAll( HexaGon.subNavGrid );
 			HexaGon.searchNodes.contents().filter(function() {
-			return this.nodeType == 3 && $.trim(this.nodeValue).length;
-		}).wrap(HexaGon.spanText);
+				return this.nodeType == 3 && $.trim(this.nodeValue).length;
+			}).wrap(HexaGon.spanText);
+		};
+		// NOTE Run the above
+		HexaGon.reArangeBody();
+		HexaGon.tidyUp();
+		HexaGon.wrapper();
 	};
 	// NOTE Resize popups
 	HexaGon.reSize = function() {
