@@ -1399,7 +1399,7 @@ br[clear='all'], br[clear='all'] + br {
 		top: 45%;
 		height: var(--ui-size-s);
 		opacity: 0;
-		background: currentColor;
+		/*background: currentColor;*/
 		transform: scale3d(0, 1, 1);
 		-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
 		        transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -1408,19 +1408,23 @@ br[clear='all'], br[clear='all'] + br {
 		filter: drop-shadow(0 var(--ui-size-1) var(--ui-size-2) rgba(0, 0, 0, 0.5));
 		overflow: hidden;
 		pointer-events: none;
+		border-bottom: var(--ui-size-s) solid;
 	}
 	#column_left.column-left .container-header::after {
-		left: calc(-1 * var(--ui-size-m)); /* NOTE calc() is used to be able to use negative values for the variable value */
-		transform-origin: 0 50%
+		right: calc(-1 * var(--ui-size-m)); /* NOTE calc() is used to be able to use negative values for the variable value */
+		border-image: var(--brd-img-left);
+		transform-origin: 100% 50%;
 	}
 	#column_right.column-right .container-header::after {
-		right: calc(-1 * var(--ui-size-m));
-		transform-origin: 100% 50%;
+		left: calc(-1 * var(--ui-size-m));
+		border-image: var(--brd-img-right);
+		transform-origin: 0 50%;
 	}
 	.container-header:hover::after {
 		opacity: 1;
 		transform: scale3d(1, 1, 1);
 	}
+	/*-----------------------------------*/
 	.container-header {
 		line-height: normal;
 	}
