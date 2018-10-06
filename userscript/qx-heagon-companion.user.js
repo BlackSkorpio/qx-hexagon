@@ -51,6 +51,7 @@
 		HexaGon.MakeList		= $('.movies-listing > div:nth-of-type(3), .column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery)');
 		HexaGon.MemberPres		= $(".homepage div[style='display: block; min-height:150px;']:first-of-type, .homepage #buff_block + div");
 		HexaGon.SubNavButtons	= $("#subnavbar [class*='button']");
+		HexaGon.RemoveWhiteSpace = $('.column-content p + h2 + p');
 		// NOTE Elements
 		HexaGon.spanText		= '<span class="q-text" />';
 		HexaGon.subNavGrid		= '<div class="q-subnav-grid" />';
@@ -252,9 +253,17 @@
 				return this.nodeType == 3 && $.trim(this.nodeValue).length;
 			}).wrap(HexaGon.spanText);
 		};
+		// NOTE Deletes the whitespace text only nodes
+		// https://stackoverflow.com/a/11633703/6820262
+		HexaGon.DeleteWhiteSpace = function() {
+			HexaGon.RemoveWhiteSpace.contents().filter(function() {
+				return this.nodeType == 3;
+			}).remove();
+		};
 		// NOTE Run the above
 		HexaGon.reArangeBody();
 		HexaGon.tidyUp();
+		HexaGon.DeleteWhiteSpace();
 		HexaGon.wrapper();
 	};
 	// NOTE Resize popups
