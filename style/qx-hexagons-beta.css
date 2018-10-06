@@ -1193,6 +1193,8 @@ br[clear='all'], br[clear='all'] + br {
 	[type="reset"],
 	[type="button"],
 	[type="submit"],
+	input[type="submit"],
+	button[type="submit"],
 	[href*='addscribble'],
 	[href*='becomemember'],
 	#column_center #zeroall,
@@ -1227,6 +1229,8 @@ br[clear='all'], br[clear='all'] + br {
 	[type="reset"]:hover,
 	[type="button"]:hover,
 	[type="submit"]:hover,
+	input[type="submit"]:hover,
+	button[type="submit"]:hover,
 	[href*='addscribble']:hover,
 	[href*='becomemember']:hover,
 	[href*='adddiscussion']:hover,
@@ -1249,7 +1253,9 @@ br[clear='all'], br[clear='all'] + br {
 	button:disabled,
 	[type="reset"]:disabled,
 	[type="button"]:disabled,
-	[type='submit']:disabled {
+	[type='submit']:disabled,
+	input[type="submit"]:disabled,
+	button[type="submit"]:disabled {
 		cursor: not-allowed;
 		color: var(--ui--clr-disabled) !important;
 		border-color: var(--ui--clr-disabled);
