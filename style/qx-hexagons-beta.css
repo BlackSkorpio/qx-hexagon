@@ -1644,6 +1644,10 @@ br[clear='all'], br[clear='all'] + br {
 	.column-content p + h2 + p.q-widget--sticky > b > a:hover {
 		mix-blend-mode: hard-light;
 	}
+	/* NOTE A HACK to get the first .odd to not display as flex */
+	#column_center p + h2 + p + .odd > .list {
+		display: block;
+	}
 	/* Hexagon Videoplayer */
 	#scroller > div[style='width:410px;'] .odd:not(:only-child):not(:last-child),
 	#scroller > div[style='width:410px;'] .even:not(:only-child):not(:last-child) {
