@@ -756,6 +756,7 @@ br[clear='all'], br[clear='all'] + br {
 	/*-----------------------*/
 
 	/*** Sticky ***/
+	.q-widget--sticky,
 	#qmenu.q-widget--sticky,
 	.container.q-widget--sticky {
 		position: sticky;
