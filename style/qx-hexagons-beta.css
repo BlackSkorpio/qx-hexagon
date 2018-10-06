@@ -790,7 +790,7 @@ br[clear='all'], br[clear='all'] + br {
 	/* NOTE TEST Evaluate */
 	.container--personal.q-widget--sticky,
 	.container.q-widget--sticky:first-of-type {
-		 border-bottom: var(--brd-type-1);
+		border-bottom: var(--brd-type-1);
 		border-image: var(--brd-img-left);
 	}
 	.container.q-widget--sticky:first-of-type {
@@ -1392,6 +1392,7 @@ br[clear='all'], br[clear='all'] + br {
 		white-space: normal;
 		overflow: initial;
 	}
+	/* NOTE TEST Evaluate */
 	.container-header::after {
 		content: '';
 		position: absolute;
@@ -2234,7 +2235,9 @@ br[clear='all'], br[clear='all'] + br {
 		vertical-align: middle;
 	}
 	/* Edit Icon: Displayed on homepage */
-	#column_center div[id^='divx'] .small > .icons {display: none}
+	#column_center div[id^='divx'] .small > .icons {
+		display: none;
+	}
 	#column_center div[id^='divx'] a[onclick^='openEdit']::before {
 		display: inline-block;
 		content: '';
