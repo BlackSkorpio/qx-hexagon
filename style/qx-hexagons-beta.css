@@ -1834,6 +1834,7 @@ br[clear='all'], br[clear='all'] + br {
 		display: flow-root;
 		width: 100%;
 	}
+	.list > div > .insertmember + b,
 	.clubscribble .datetime + .list > .even > .insertmember + b,
 	.clubscribble .datetime + .list > .odd > .insertmember + b {
 		display: inline-block;
