@@ -765,6 +765,9 @@ br[clear='all'], br[clear='all'] + br {
 	#qmenu.q-widget--sticky {
 		z-index: 2;
 	}
+	.column-content p + h2 + p.q-widget--sticky {
+		top: 2.5rem;
+	}
 	.container.q-widget--sticky:first-of-type {
 		top: 3em;
 		z-index: 3;/* NOTE Make sure it's on top so we can hide the headers of the children */
