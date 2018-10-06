@@ -1626,6 +1626,24 @@ br[clear='all'], br[clear='all'] + br {
 		display: flow-root;
 		width: 100%;
 	}
+	/* Clubs subnav */
+	.column-content p + h2 + p.q-widget--sticky[style*='margin-top: 0.5em;'] {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-evenly;
+		align-items: center;
+		font-size: var(--font-5r);
+		background-color: inherit;
+	}
+	.column-content p + h2 + p.q-widget--sticky > * {
+		flex: 0 1 auto;
+		padding: var(--padding-s);
+		display: inline-block;
+	}
+	.column-content p + h2 + p.q-widget--sticky > a:hover,
+	.column-content p + h2 + p.q-widget--sticky > b > a:hover {
+		mix-blend-mode: hard-light;
+	}
 	/* Hexagon Videoplayer */
 	#scroller > div[style='width:410px;'] .odd:not(:only-child):not(:last-child),
 	#scroller > div[style='width:410px;'] .even:not(:only-child):not(:last-child) {
