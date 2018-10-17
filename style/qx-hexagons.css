@@ -11,19 +11,20 @@
 	GitHub: github.com/BlackSkorpio/qx-hexagon
 	QX: www.qruiser.com/?id=469474
 ******************************************/
+
 :root {
 	--ui--radial-bkrgd: radial-gradient(ellipse at bottom right, var(--gray--t), var(--gray) 90%);
 	--ui--hex-bkrgd: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="28" height="49" viewBox="0 0 28 49"%3E%3Cg fill-rule="evenodd"%3E%3Cg id="hexagons" fill="rgb(156, 146, 172)" fill-opacity="0.1" fill-rule="nonzero"%3E%3Cpath d="M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
 	--ui--qruiser-logo: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D'qruiser-logo'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20120%2031.3'%3E%3Cpath%20d%3D'M86.6%2011.1c0-4.1-3.7-7.4-8.2-7.4l.8.1-.4-.1h-.4c-4.5%200-8.2%203.3-8.2%207.4v.1c0%204.1%203.7%207.4%208.2%207.4h.1c1.4%200%202.6.8%202.6%201.8v.1c0%201-1.2%201.8-2.6%201.8h-.3.2c-1.4%200-2.6-.8-2.6-1.8h-5.6c0%204.1%203.7%207.4%208.2%207.4h.3-.2c4.5%200%208.2-3.3%208.2-7.4v-.1c0-4.1-3.7-7.4-8.2-7.4h-.1c-1.4%200-2.6-.8-2.6-1.8v-.1c0-1%201.2-1.8%202.6-1.8l-.8-.1h.1l.3.1h.4c1.4%200%202.6.8%202.6%201.8h5.6zm13.4%209.4c0%201-1.2%201.8-2.6%201.8h-.2.1c-1.4%200-2.6-.8-2.6-1.8v-9.2c0-1%201.2-1.8%202.6-1.8h.2-.1c1.4%200%202.6.8%202.6%201.8v.2-.3c0%201-1.2%201.8-2.6%201.8h-2.7v5.6h2.7c4.5%200%208.2-3.3%208.2-7.4V11v.3c0-4.1-3.7-7.4-8.2-7.4h-.2.1c-4.5%200-8.2%203.3-8.2%207.4v9.2c0%204.1%203.7%207.4%208.2%207.4h.2-.1c4.5%200%208.2-3.3%208.2-7.4H100zM34.9%203.6v16.8c0%204.1%203.7%207.4%208.2%207.4h.2-.2c4.5%200%208.2-3.3%208.2-7.4V3.6h-5.6v16.8c0%201-1.2%201.8-2.6%201.8h-.2.2c-1.4%200-2.6-.8-2.6-1.8V3.6h-5.6zm-8.8%2024.3V11.1c0-1%201.2-1.8%202.6-1.8h3.6V3.6h-3.6c-4.5%200-8.2%203.3-8.2%207.4v16.8h5.6zm32.4-11.5h5.6v11.5h-5.6zm55.3%2011.5V11.1c0-1%201.2-1.8%202.6-1.8h3.6V3.6h-3.6c-4.5%200-8.2%203.3-8.2%207.4v16.8h5.6zM10.9%2020.4c0%201-1.2%201.8-2.6%201.8h-.2.1c-1.4%200-2.6-.8-2.6-1.8V11c0-1%201.2-1.8%202.6-1.8h.2-.1c1.4%200%202.6.8%202.6%201.8v9.4zm5.6-9.4c0-4.1-3.7-7.4-8.2-7.4h-.2.1C3.7%203.6%200%206.9%200%2011v9.4c0%204.1%203.7%207.4%208.2%207.4h.2-.1c4.5%200%208.2-3.3%208.2-7.4V11z'%2F%3E%3Cpath%20d%3D'M8.4%2023.7l5.7%207.5%204.5-3.3-5.6-7.6z'%2F%3E%3Cpath%20fill%3D'%23bc152a'%20d%3D'M63.6%204.6c.3-.4.6-.7%201.1-.9a3%203%200%200%201%201.3-.3c.8%200%201.4.3%201.9.9.5.6.8%201.3.8%202.1s-.3%201.4-.8%201.9-1.2.7-2.1.7h-.4l-.4-.1-.8-.2-.1.1v.1l.8.3c.6.2%201.1.6%201.5%201.1.4.5.6%201%20.6%201.6%200%20.7-.3%201.4-.9%202-.6.6-1.3.9-2.1.9-.7%200-1.4-.3-1.9-.9a3%203%200%200%201-.8-2V11H61v.9c0%20.8-.3%201.5-.8%202.1-.5.6-1.1.8-1.9.8-.8%200-1.5-.3-2.1-.9-.6-.6-.9-1.2-.9-2%200-.6.2-1.1.6-1.7.4-.5.9-.9%201.4-1l.8-.3v-.2l-.8.3h-.9c-.8%200-1.5-.3-2-.8s-.8-1.1-.8-1.9c0-.8.3-1.5.8-2.1.5-.6%201.2-.9%201.9-.9.5%200%20.9.1%201.3.3l1.1%201%20.5.7h.1l.1-.1-.5-.7a3%203%200%200%201-.4-.8l-.1-.9c0-.8.3-1.4.8-1.9s1.2-.8%202-.8%201.5.3%202%20.8.8%201.2.8%201.9l-.1%201-.4.8-.5.7.1.1.1.1.4-.9zm.1%203.2c0-.7-.2-1.3-.7-1.8-.5-.5-1.1-.7-1.8-.7s-1.3.2-1.8.7c-.5.5-.7%201.1-.7%201.8s.2%201.3.7%201.8c.5.5%201.1.7%201.8.7s1.3-.2%201.8-.7c.4-.5.7-1.1.7-1.8z'%2F%3E%3C%2Fsvg%3E");
 	--ui--qx-logo: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20version%3D%221%22%20id%3D%22qx-logo%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20141%2075%22%20fill%3D%22red%22%3E%3Cpath%20d%3D%22M12%2015c0-2%200-6%209-6s9%204%209%206v35c0%202%200%207-9%207s-9-5-9-7V15zM0%2067l16%202%208%206h26l-11-8c18-5%2021-11%2021-18V17c0-8-6-15-14-17H0v67z%22%2F%3E%3Cpath%20d%3D%22M81%2032L55%200h30l11%2014h1l9-14h30l-25%2032%2030%2036h-31L96%2049%2081%2068H53l28-36z%22%2F%3E%3C%2Fsvg%3E');
-	--ui--clr-disabled: rgba(188, 194, 191, 1);
-	--ui--clr-highlight: rgba(170, 139, 89, 1);
-	--ui--clr-white1: rgba(242, 242, 242, 1);
-	--ui--clr-white2: rgba(230, 230, 230, 1);
-	--ui--clr-black: rgba(18, 21, 22, 1);
-	--ui--clr-gray1: rgba(63, 63, 63, 1);
+	--ui--clr-disabled: rgb(188, 194, 191);
+	--ui--clr-highlight: rgb(170, 139, 89);
+	--ui--clr-white1: rgb(242, 242, 242);
+	--ui--clr-white2: rgb(230, 230, 230);
+	--ui--clr-black: rgb(18, 21, 22);
+	--ui--clr-gray1: rgb(63, 63, 63);
 	--ui--clr-gray2: rgba(159, 159, 159, 0.92);
-	--ui--clr-red: rgba(178, 27, 27, 1);
+	--ui--clr-red: rgb(178, 27, 27);
 	--ui--clr-t: transparent;
 	--ui--wrapper: 65.625rem;
 	--ui--aside: 12.5rem;
@@ -118,7 +119,7 @@
 	--filter-flower: invert(30%) sepia(10%) drop-shadow(var(--ui--size-1) var(--ui--size-1) 0 rgba(62, 62, 62, 0.5));
 	--filter-heart: sepia(100%) saturate(10000%) hue-rotate(90deg) invert(76%);
 	--gray: rgb(14, 19, 25);
-	--gray--t: rgba(14, 19, 25, 0);
+	--gray--t: var(--ui--clr-t);
 }
 @-webkit-keyframes qx_notice {
 	0% {
@@ -193,40 +194,50 @@
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /* Code 02 */
 @supports (display: grid) {
+	/* TEST */
+	/*.list {
+		display: flex;
+		flex-flow: row wrap;
+	}
+	.odd, .even {
+		flex: 1 1 50%;
+	}*/
+	/* EOF TEST */
+
 	/*** Hide stuff ***/
-	/* Outdated stuff */
-	a[href*="javascript:openEdit('sms')"],
-	/* Empty stuff scattered all over the place */
+	p:empty,
+	#langnav,
+	#topstatus,
+	span:empty,
+	option:empty,
+	p:empty + br,
+	.insertmember + br,
 	h3 + br[clear='all'],/*Index page, not logged in*/
-	#column_left > p:empty + p:nth-of-type(3),
+	a:empty:not(.banner_off_button),
 	#column_left > p:nth-of-type(12),
+	div[style='float:left;width:70px'],
+	.list .memberinfo + br[clear='all'], /* Obsolete br */
+	.insertmember + br + br[clear='all'], /* Obsolete double <br> after the member containers */
+	a[href*="javascript:openEdit('sms')"], /* Outdated */
+	div > div[style="float:left;width:140px"],
+	#column_left > p:empty + p:nth-of-type(3),
 	#column_left > p:empty + p:nth-of-type(14),
 	#column_left > p:empty + p:nth-of-type(16),
-	/* Remove obsolete br */
-	#column_center > .list .memberinfo + br[clear='all'],
-	div:empty:not(.divider):not(.orangeline):not(.filldot):not(.jwpreview):not(.jwicon),
-	span:empty,
-	a:empty:not(.banner_off_button),
-	p:empty,
-	option:empty,
-	div[style="float:left;width:70px"],
-	div > div[style="float:left;width:140px"],
-	#topstatus,
-	#langnav {
+	div:empty:not(.divider):not(.orangeline):not(.filldot):not(.jwpreview):not(.jwicon) {
 		display: none !important;
 	}
 	/*--------------------------------------------*/
 
 	/*** QX RESET ***/
-	body[onload*=handleImageXxxSetting] {
+	body[onload*='handleImageXxxSetting'] {
 		padding-left: 0 !important;
 		max-width: 540px;
 		overflow-x: hidden;
 	}
-	body[onload*=handleImageXxxSetting] [style*='width:390px;'] {
+	body[onload*='handleImageXxxSetting'] [style*='width:390px;'] {
 		width: 100% !important;
 	}
-	body[onload*=handleImageXxxSetting] [style*='width:410px;'] {
+	body[onload*='handleImageXxxSetting'] [style*='width:410px;'] {
 		max-width: 100vw;
 	}
 	body * {
@@ -251,7 +262,9 @@
 	[style*="width:410px"],
 	[style*="width: 414px;"],
 	#column_center textarea,
-	.list .insertmember + [style*="width: 195px;"] {
+	.list .insertmember + [style*="width: 195px;"],
+	/* "Hero images" in the blog section */
+	#column_center .list > div:not([class^='listpage']) img[src*='/blogbox/'] {
 		width: 100% !important;
 	}
 	#whole,
@@ -269,7 +282,9 @@
 	.listpagelinks,
 	.listpagenumber,
 	#column_left #loginbox select,
+	.homepage img[style*='homepageimages'],
 	#column_center [style='margin-top: 10px;'],
+	#column_center #verifiedinfo[style*='block'],
 	#column_left #loginbox input:not([name='submit']) {
 		width: 100%;
 	}
@@ -282,7 +297,12 @@
 	[style*='width:200px;'],
 	[style*='width: 200px;'],
 	[style*='width:210px'],
-	[style*='width: 210px'] {
+	[style*='width: 210px'],
+	#column_center [id$='_text'][style*='block'],
+	/* Member Info Blocks */
+	.homepageblock #homepageinfo[style*='block'],
+	/* Matching Clubs */
+	#column_center #matchingclubs_text[style*='block'] > .list  {
 		width: auto !important;
 	}
 	[style*='height: 120px'] {
@@ -319,10 +339,6 @@
 		line-height: var(--lh-n);
 	}
 
-	/*#column_center .odd > *:not(:first-child),*/
-	/*#column_center .even > *:not(:first-child),*/
-	/*#column_center .homepageblock .odd > *,*/
-	/*#column_center .homepageblock .even > *,*/
 	#column_center .odd > div > img,
 	#column_center .even > div > img,
 	#column_center .odd > div > div > img,
@@ -420,7 +436,7 @@
 		-ms-flex-negative: 0;
 		      flex-shrink: 0;
 	}
-	body, .feedback, .homepage/*, #column_center*/ {
+	body, .feedback, .homepage {
 		color: var(--txt-base-clr);
 		color: inherit;
 	}
@@ -489,7 +505,6 @@
 	input[type='text'],
 	input[type='password'],
 	#column_center textarea {
-		/*width: 100%;*/
 		max-width: inherit;
 		font-size: var(--font-1);
 		padding: 0.2em 0 0.2em 0.2em;
@@ -504,8 +519,6 @@
 		line-height: var(--lh-4);
 		height: 1.9em;
 	}
-	input[type='radio'] {}
-	input[type='checkbox'] {}
 	/*--------------------------------------------*/
 
 	/*** BUTTONS ***/
@@ -513,15 +526,18 @@
 	[href*='addscribble'],
 	#qmenu li#qmenu_logut,
 	[href*='becomemember'],
+	#column_center #zeroall,
 	[href*='adddiscussion'],
 	h3 [href^='/signup.php'],
+	body[onload='timer()'] > p > a,
 	[href$='&show_admin_members=1'],
 	#currentmedia .standardbanner .action,
 	[href*='/clubs/club_edit.php?clubid='],
 	#column_center .standardbanner .action,
 	div:not([class*='button']) > [href*='/createclub/'],
 	body[onload='handleImageXxxSetting();'] #closing_link,
-	body[onload='timer()'] > p > a {
+	#column_center .small + .list + p + div[style='float:right;'],
+	form[name='sort'] + .list + div[style='margin-top:10px; float: right']:last-of-type {
 		-webkit-appearance: button;
 		   -moz-appearance: button;
 		        appearance: button;
@@ -535,6 +551,7 @@
 	[type="submit"],
 	[href*='addscribble'],
 	[href*='becomemember'],
+	#column_center #zeroall,
 	[href*='adddiscussion'],
 	h3 [href^='/signup.php'],
 	body[onload='timer()'] > p > a,
@@ -543,8 +560,9 @@
 	[href*='/clubs/club_edit.php?clubid='],
 	#column_center .standardbanner .action,
 	div:not([class*='button']) > [href*='/createclub/'],
-	body[onload='handleImageXxxSetting();'] #closing_link {
-		/*display: block;*/
+	body[onload='handleImageXxxSetting();'] #closing_link,
+	#column_center .small + .list + p + div[style='float:right;'],
+	form[name='sort'] + .list + div[style='margin-top:10px; float: right']:last-of-type {
 		background: inherit;
 		color: inherit;
 		font-size: var(--font-1);
@@ -567,13 +585,16 @@
 	[href*='addscribble']:hover,
 	[href*='becomemember']:hover,
 	[href*='adddiscussion']:hover,
+	#column_center #zeroall:hover,
 	h3 [href^='/signup.php']:hover,
 	[href$='&show_admin_members=1']:hover,
 	#currentmedia .standardbanner .action:hover,
 	[href*='/clubs/club_edit.php?clubid=']:hover,
 	#column_center .standardbanner .action:hover,
 	div:not([class*='button']) > [href*='/createclub/']:hover,
-	body[onload='handleImageXxxSetting();'] #closing_link:hover {
+	body[onload='handleImageXxxSetting();'] #closing_link:hover,
+	#column_center .small + .list + p +  div[style='float:right;']:hover,
+	form[name='sort'] + .list + div[style='margin-top:10px; float: right']:last-of-type:hover {
 		background: var(--bkgrd-h1);
 		color: var(--txt-aside-clr) !important;
 		text-shadow: 0 var(--ls-s) 0 var(--txt-base-clr);
@@ -605,10 +626,10 @@
 		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==) repeat;
 		background: repeating-linear-gradient(
 			-55deg,
-			rgba(34, 34, 34, 0),
+			var(--ui--clr-t),
 			rgba(34, 34, 34, 0.68) var(--ui--size-1),
-			rgba(51, 51, 51, 0) var(--ui--size-1),
-			rgba(51, 51, 51, 0) var(--ui--size-4)
+			var(--ui--clr-t) var(--ui--size-1),
+			var(--ui--clr-t) var(--ui--size-4)
 			);
 	}
 	/*--------------------------------------------*/
@@ -644,7 +665,7 @@
 		display: block;
 		width: 1.5em;
 		height: 1.5em;
-		border: 2px solid rgba(170, 139, 89, 1);
+		border: 2px solid rgb(170, 139, 89);
 		border-radius: 4px;
 		/*z-index: -1;*/
 	}
@@ -687,6 +708,7 @@
 
 	/*** Forms special handling ***/
 	#column_center button,
+	#column_center #zeroall,
 	#column_center [href*='addscribble'],
 	#column_center [href*='becomemember'],
 	#currentmedia .standardbanner .action,
@@ -697,7 +719,9 @@
 	#column_center [type="submit"]:not([name='cancel']),
 	div:not([class*='button']) > [href*='/createclub/'],
 	#column_center [href*='/clubs/club_edit.php?clubid='],
-	body[onload='handleImageXxxSetting();'] #closing_link {
+	body[onload='handleImageXxxSetting();'] #closing_link,
+	#column_center .small + .list + p + div[style='float:right;'],
+	form[name='sort'] + .list + div[style='margin-top:10px; float: right']:last-of-type {
 		border-radius: var(--brd-rad-m) 0;
 	}
 	#column_center select,
@@ -709,6 +733,7 @@
 	}
 	[href*='addscribble'],
 	[href*='becomemember'],
+	#column_center #zeroall,
 	[href*='adddiscussion'],
 	h3 [href^='/signup.php'],
 	[href$='&show_admin_members=1'],
@@ -716,12 +741,33 @@
 	[href*='/clubs/club_edit.php?clubid='],
 	#column_center .standardbanner .action,
 	div:not([class*='button']) > [href*='/createclub/'],
-	body[onload='handleImageXxxSetting();'] #closing_link {
+	body[onload='handleImageXxxSetting();'] #closing_link,
+	#column_center .small + .list + p + div[style='float:right;'],
+	form[name='sort'] + .list + div[style='margin-top:10px; float: right']:last-of-type {
 		display: inline-block;
 		width: -webkit-fit-content;
 		   width: -moz-fit-content;
 		        width: fit-content;
 	}
+	/* Clear all notifications */
+	#column_center #zeroall,
+	#column_center .small + .list + p + div[style='float:right;'],
+	/* Mark all msg as read */
+	form[name='sort'] + .list + div[style='margin-top:10px; float: right']:last-of-type {
+		font-size: var(--font-2);
+	}
+	#column_center #zeroall:hover a,
+	a[href='/messages.php?action=markasread'],
+	#column_center .small + .list + p +  div[style='float:right;']:hover a {
+		color: inherit !important;
+	}
+	#column_center #zeroall a:first-of-type,
+	a[href='/messages.php?action=markasread']:first-of-type img,
+	#column_center .small + .list + p +  div[style='float:right;'] > [href='/showclubs.php?action=zeroall']:first-of-type img {
+		margin-right: 0 !important;
+		vertical-align: bottom;
+	}
+
 	#subnavbar ~ p [href*="adddiscussion"] {
 		margin: 1em 0;
 	}
@@ -917,6 +963,7 @@
 	img#logo_qruiser {
 		padding: 22.5px 75px;
 	}
+
 	/* #TOP */
 	#top > * {
 		flex: 1 1 150px;
@@ -1030,9 +1077,8 @@
 		flex-flow: row wrap;
 		min-height: 1.5rem;
 		width: calc(100% + 0.6em);
-		/* Negative value needed since we have a small padding on the parent */
 		margin: var(--margin-c) var(--margin-m);
-		margin-left: -0.3em;
+		margin-left: -0.3em; /* Negative value needed since we have a small padding on the parent */
 		background-color: var(--bkgrd-b1);
 		color: var(--link-clr2);
 	}
@@ -1053,7 +1099,6 @@
 		width: 100%;
 		height: 100%;
 		line-height: inherit;
-		/*padding: var(--ui--size-3) 0;*/
 		padding: 0;
 	}
 	#subnavbar a,
@@ -1118,7 +1163,6 @@
 	.smalltext,
 	.insertmember .description,
 	/* Movie titles */
-	/*#column_center a[href*='/showmovies.php?'],*/
 	#column_center .homepageblock .odd a[href*='/showmovies.php?'],
 	#column_center .homepageblock .even a[href*='/showmovies.php?'] {
 		font-size: var(--font-3);
@@ -1254,8 +1298,6 @@
 
 	/* LOGIN */
 	#loginbox {
-		position: -webkit-sticky;
-		position: sticky;
 		top: 2.5em;
 		background-color: var(--bkgrd-b1);
 		border: var(--brd-type-1) var(--brd-clr-h);
@@ -1282,6 +1324,7 @@
 		color: var(--txt-high-clr);
 	}
 	/* MAKE THINGS STICKY */
+	#loginbox,
 	#column_left p:last-of-type,
 	#column_left #loginbox ~ p:nth-last-of-type(2),
 	#column_left #loginbox ~ p:last-of-type {
@@ -1331,32 +1374,6 @@
 	#column_left > p:nth-of-type(8) {
 		padding-left: 0.5em;
 	}
-	/* Make the important sections sticky */
-	/*#column_left > p:nth-of-type(n+5):nth-of-type(-n+9) {
-		position: sticky;
-		background: var(--bkgrd-b1);
-		z-index: 2;
-	}*/
-	/* Inkorg -> Flörtar */
-	/*#column_left > p:nth-of-type(5) {
-		top: 7.9em;
-	}*/
-	/* Favoriter */
-	/*#column_left > p:nth-of-type(6) {
-		top: 14.3em;
-	}*/
-	/* Bloggar stuff */
-	/*#column_left > p:nth-of-type(7) {
-		top: 16.3em;
-	}*/
-	/* Klubbar -> Presentkort */
-	/*#column_left > p:nth-of-type(8) {
-		top: 19.5em;
-	}*/
-	/* Din verifiering */
-	/*#column_left > p:nth-of-type(9) {
-		top: 27.2em;
-	}*/
 	#column_left > p:nth-of-type(6),
 	#column_left > p:nth-of-type(9),
 	#column_left > p:nth-of-type(10) {
@@ -1398,7 +1415,6 @@
 	.spotlight {
 		position: relative !important;
 		width: 100% !important;
-		/*left: 4px !important;*/
 	}
 	.spotlight > div > a[style*='color:black;'] {
 		color: inherit !important;
@@ -1651,12 +1667,6 @@
 		border-radius: var(--brd-rad-info);
 		box-shadow: var(--shadow-size-2) var(--shadow-gray);
 	}
-	#column_center [id$='_text'][style*='block'] {
-		width: auto !important;
-	}
-	#column_center #verifiedinfo[style*='block'] {
-		width: 100%;
-	}
 	#column_center #verifiedinfo[style*='block'] .list {
 		display: flex;
 		flex-flow: row wrap;
@@ -1680,8 +1690,7 @@
 		background-color: var(--bkgrd-w2);
 	}
 
-	/* Index Not logged in */
-	/* signup.php */
+	/*** Index Not logged in ***/
 	/** signup.php **/
 	#signup h2 > i {
 		display: inline-block;
@@ -1712,7 +1721,6 @@
 	}
 
 	#column_center .list .odd {
-		/*background-color: var(--bkgrd-w1);*/
 		background-color: inherit !important;
 	}
 	.line .header,
@@ -1736,11 +1744,11 @@
 	}
 
 	/** Profile section **/
-	/* Nick name */
 	#column_center img[src*='/starsigns/'] {
 		border-radius: 50%;
 		border: 1px solid;
 	}
+	/* Nick name */
 	.homepage h2 {
 		font-size: var(--font-5);
 	}
@@ -1777,7 +1785,6 @@
 
 	/* Profile Hero img */
 	.homepage img[style*='homepageimages'] {
-		width: 100%;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
@@ -1811,16 +1818,10 @@
 	}
 
 	/* Verified section */
-	#verifiedinfo p {
-		font-size: var(--font-4);
-	}
-	#verifiedinfo .dontshowself .text {
-		font-size: var(--font-4);
-	}
-
+	#verifiedinfo p,
+	#verifiedinfo .dontshowself .text,
 	/* Visa Fakta */
 	.homepageblock #homepageinfo .infoblock {
-		/*width: 33%;*/
 		font-size: var(--font-4);
 	}
 	.homepageblock #homepageinfo .infoblock b {
@@ -1833,7 +1834,6 @@
 	#column_center #matchingclubs_text[style*='block'] > .list {
 		display: flex !important;
 		flex-flow: row wrap;
-		width: auto !important;
 		padding: var(--padding-s);
 		margin: var(--margin-s);
 		border-bottom: var(--brd-type-1) var(--ui--clr-disabled);
@@ -1935,7 +1935,7 @@
 	/* Make the club type links sticky */
 	#column_center #clubinfo_text ~ div.small[style='float:right;margin-bottom:10px;'] {
 		float: none !important;
-		display: flex;
+		/*display: flex;*/
 		position: sticky;
 		top: 2rem;
 		background-color: inherit;
@@ -1979,38 +1979,54 @@
 		width: auto;
 		font-size: 0.5em;
 	}
-	#column_center .list > *:not([class^='listpage']):not([data-user-input]):not(:only-child) {
+	#column_center .list > div:not([class^='listpage']):not([data-user-input]):not(:only-child) {
 		-webkit-box-flex: 1;
 		    -ms-flex: 1 50%;
 		        flex: 1 50%;
 	}
 	/* Make every third child 100% wide
 	   https://stackoverflow.com/a/13691714/6820262 */
-	#column_center .list > *:nth-child(3n):not([class^='listpage']):not([data-user-input]):not(:only-child) {
+	#column_center .list > div:nth-child(3n):not([class^='listpage']):not([data-user-input]):not(:only-child) {
 		flex-basis: 100%;
-		/*background: linear-gradient(to bottom, rgb(238, 242, 243), rgb(142, 158, 171));*/
 		background: linear-gradient(to bottom, rgb(238, 242, 243), rgba(238, 242, 243, 0.5), rgba(142, 158, 171, 0.5), rgba(142, 158, 171, 0.8));
-		/*mix-blend-mode: luminosity;*/
 		border-top: var(--brd-type-1);
 		border-bottom: var(--brd-type-1);
 		border-color: rgb(238, 242, 243) transparent rgb(142, 158, 171);
 		border-radius: 0.4em;
+		color: initial;
 		margin-bottom: var(--margin-s)
 	}
+
+	/* Making sure that the memberinfo text is visible */
+	#column_center .list > div:nth-child(3n) a,
+	#column_center .list > div:nth-child(3n) .datetime,
+	#column_center .list > div:nth-child(3n) .memberinfo,
+	#column_center .list > div:nth-child(3n) .insertmember .link,
+	#column_center .list > div:nth-child(3n) .insertmember .mood,
+	#column_center .list > div:nth-child(3n) .insertmember .description {
+		color: initial;
+	}
+	#column_center .list > div:nth-child(3n) .emptymembericon {
+		border-color: currentColor;
+	}
+
+	#column_center .list > div:nth-child(3n) a[name^='post'],
+	#column_center .list > div:nth-child(3n) a[name^='post'] h3 {
+		color: inherit;
+		margin-top: var(--margin-c);
+		font-weight: 700;
+	}
+	#column_center .list > div:nth-child(3n) .insertmember .icons {
+		mix-blend-mode: overlay;
+	}
 	/* Make every child after the third have a border right */
-	#column_center .list > div:nth-child(3n+1):not([class^="listpage"]):not([data-user-input]):not(:only-child) {
+	#column_center .list > div:nth-child(3n+1):not([class^="listpage"]):not([data-user-input]):not(:only-child):not(:last-of-type) {
 		border-right: 1px dashed var(--ui--clr-disabled);
 	}
 	/* clear notification button */
 	.list span[id^='unread'] + [href^='javascript:dropContent'] {
-		/*float: right;*/
 		position: absolute;
 		right: 0;
-	}
-
-	/* "Hero images" in the blog section */
-	#column_center .list > *:not([class^='listpage']) img[src*='/blogbox/'] {
-		width: 100% !important;
 	}
 	/*--------------------------------------------*/
 
@@ -2102,21 +2118,21 @@
 		background-image: none;
 	}
 	.insertmember,
+	.insertmember .mood,
 	.list .insertmember,
+	.insertmember .link,
+	.insertmember .icons,
+	.list .insertmember .link,
 	#column_left .insertmember,
+	.insertmember .description,
+	.list .insertmember .icons,
 	#column_right .insertmember,
 	#column_center .insertmember,
-	#column_center .gallery .insertmember .memberlargeicon,
-	.insertmember .link,
-	.list .insertmember .link,
-	#column_center .gallery .insertmember .link,
-	.insertmember .description,
 	.list .insertmember .description,
-	#column_center .gallery .insertmember .description,
-	.insertmember .icons,
-	.list .insertmember .icons,
+	#column_center .gallery .insertmember .link,
 	#column_center .gallery .insertmember .icons,
-	.insertmember .mood {
+	#column_center .gallery .insertmember .description,
+	#column_center .gallery .insertmember .memberlargeicon {
 		display: initial;
 		left: auto;
 		right: auto;
@@ -2189,7 +2205,6 @@
 	.insertmember .membericon,
 	.list .insertmember .membericon {
 		position: relative;
-		/*grid-row: link / span 4;*/
 		grid-row: link / icons;
 		grid-column: avatar;
 	}
@@ -2321,9 +2336,6 @@
 	#column_center .gallery .insertmember .icons {
 		grid-row: icons;
 		grid-column: main;
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
 	}
 	#column_center .gallery .insertmember .icons > * {
 		-webkit-box-flex: 0;
@@ -2367,7 +2379,6 @@
 		z-index: 1;
 	}
 	#qmenu {
-		/*top: -0.0625rem;*/
 		top: 0;
 		z-index: 2;
 	}
@@ -2410,7 +2421,7 @@
 	}
 	/* Inkorg -> Flörtar */
 	#column_left > p:nth-of-type(5) {
-		top: 7.9em/*10.3em*/;
+		top: 7.9em;
 	}
 	/* Favoriter */
 	#column_left > p:nth-of-type(6) {
@@ -2437,9 +2448,24 @@
 	.no-csspositionsticky body.shop-container {
 		max-width: none;
 	}
-	.no-csspositionsticky body.shop-container .nav-container {
+	.no-csspositionsticky body.shop-container > footer,
+	.no-csspositionsticky body.shop-container > ul.payments,
+	.no-csspositionsticky body.shop-container > main.content,
+	.no-csspositionsticky body.shop-container .nav-container,
+	.no-csspositionsticky body.shop-container > header.shop-header,
+	.no-csspositionsticky body.shop-container > div.slides-container {
 		max-width: 640px;
+	}
+	.no-csspositionsticky body.shop-container > footer,
+	.no-csspositionsticky body.shop-container .list li,
+	.no-csspositionsticky body.shop-container > ul.payments,
+	.no-csspositionsticky body.shop-container > main.content,
+	.no-csspositionsticky body.shop-container .nav-container,
+	.no-csspositionsticky body.shop-container > header.shop-header,
+	.no-csspositionsticky body.shop-container > div.slides-container {
 		width: 100%;
+	}
+	.no-csspositionsticky body.shop-container .nav-container {
 		left: auto;
 		right: auto;
 	}
@@ -2451,17 +2477,21 @@
 	.no-csspositionsticky body.shop-container > main.content,
 	.no-csspositionsticky body.shop-container > header.shop-header,
 	.no-csspositionsticky body.shop-container > div.slides-container {
-		max-width: 640px;
-		width: 100%;
 		margin: 0 auto;
 	}
-	.no-csspositionsticky body.shop-container .list li {
-		width: 100%;
+	.no-csspositionsticky body.shop-container .choose-country,
+	.no-csspositionsticky body.shop-container .shop-header .button {
+		margin: var(--margin-m) auto;
 	}
 	.no-csspositionsticky body.shop-container > footer,
-	.no-csspositionsticky body.shop-container .shop-header {
+	.no-csspositionsticky body.shop-container .shop-header,
+	.no-csspositionsticky body.shop-container .choose-country select {
 		border: var(--brd-type-1) var(--brd-clr-h);
 		border-radius: var(--brd-rad-s);
+	}
+
+	.no-csspositionsticky body.shop-container > footer,
+	.no-csspositionsticky body.shop-container .shop-header {
 		padding: var(--padding-s);
 		background-color: var(--bkgrd-b1);
 	}
@@ -2471,22 +2501,17 @@
 	.no-csspositionsticky body.shop-container .shop-header .button {
 		color: inherit;
 		background: var(--bkgrd-h1);
-		margin: var(--margin-m) auto;
 		margin-left: var(--margin-s);
 		padding: var(--padding-m);
 	}
 	.no-csspositionsticky body.shop-container .choose-country {
 		background: inherit;
 		padding: 0;
-		margin: var(--margin-m) auto;
 		margin-right: var(--margin-s);
 	}
 	.no-csspositionsticky body.shop-container .choose-country select {
-		color: var(--txt-aside-clr);
 		background: inherit;
 		padding: 0.2em 0.3em 0.2em 0.2em;
-		border: var(--brd-type-1) var(--brd-clr-h);
-		border-radius: var(--brd-rad-s);
 		-moz-appearance: none;
 		     appearance: none;
 	}
@@ -2512,6 +2537,10 @@
 	.no-csspositionsticky body.shop-container .section {
 		border: none;
 	}
+	.no-csspositionsticky body.shop-container > footer,
+	.no-csspositionsticky body.shop-container .choose-country select {
+		color: var(--txt-aside-clr);
+	}
 	/*--------------------------------------------*/
 
 	/*** Misc PopUps Common ***/
@@ -2527,8 +2556,6 @@
 		font-size: var(--font-1);
 		color: var(--txt-aside-clr);
 	}
-
-
 	/*** Satellite ***/
 	/* 300x412px*/
 	div#satellite,
@@ -2549,11 +2576,9 @@
 		height: 30px;
 		background-position: center top;
 	}
-
 	div#satellite img[alt="Qruiser"] {
 		padding: 15px 50px;
 	}
-
 	body[onload="timer()"] div[style='margin: 10px']:not(#satellite) {
 		height: calc(100vh - 8em);
 		margin: auto !important;
@@ -2571,7 +2596,7 @@
 		background-color: initial !important;
 	}
 	body[onload="timer()"] > p {
-		display: flex;
+		/*display: flex;*/
 		width: 100%;
 		text-align: center;
 		margin: var(--margin-z) !important;
@@ -2707,7 +2732,9 @@
 
 	/*** Edit settings popup ***/
 	body[onload='handleImageXxxSetting();'] div[style*='width:410px'] {
-		width: 530px !important;
+		width: 480px !important;
+		margin: 0.9em 0em 0.9em 0.9em !important;
+		padding: 0.3em !important;
 	}
 	body[onload='handleImageXxxSetting();'] p.feedback {
 		display: block;
@@ -2912,8 +2939,8 @@
 	}
 
 	/* Icons used to tell you what is updated at your favorites */
-	#column_center .list .insertmember + div[style*="width:210px;float:right"] .smalltext .icons {
-		display: flex;
+	#column_center .list .insertmember + div[style*="width:210px;float:right"] .smalltext .icons {*/
+		/*display: flex;*/
 		height: auto;
 	}
 	#column_center .list .insertmember + div[style*="width:210px;float:right"] .smalltext .icons li {
@@ -2922,7 +2949,7 @@
 		height: var(--ui--icon-l);
 		width: var(--ui--icon-l);
 		border: var(--brd-type-1);
-		border-radius: 50%;
+		border-radius: var(--brd-rad-l);
 		text-align: center;
 		background-size: var(--ui--icon-m);
 		background-position: center;
@@ -2945,7 +2972,7 @@
 
 	/* Profile section header icons */
 	#column_center .header .icons {
-		padding-right: 0.3em;
+		padding-right: var(--padding-s);
 	}
 	#column_center .header .pollicon,
 	#column_center .header .diaryicon,
@@ -2963,7 +2990,7 @@
 	#column_center .header [href^='/showclubs.php']:before,
 	#column_center .header [href^='/showfavourites.php']:before {
 		content: '';
-		margin-right: 0.5em;
+		margin-right: var(--margin-m);
 	}
 	.pollicon,
 	.polllargeicon,
@@ -3254,10 +3281,9 @@
 	* > #column_center .infoicon {
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D'member-info'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20100%20100'%3E%3Cpath%20d%3D'M62.2%200c6.7%200%2010%204.6%2010%209.8%200%206.5-5.8%2012.5-13.4%2012.5-6.3%200-10-3.7-9.9-9.9C49%207.2%2053.4%200%2062.2%200zM41.5%20100c-5.2%200-9.1-3.3-5.4-17.6l6-25.5c1.1-4%201.3-5.7%200-5.7a40%2040%200%200%200-12.5%205.6L27%2052.4c12.9-11%2027.7-17.3%2034-17.3%205.3%200%206.2%206.3%203.5%2016.1l-7%2026.8c-1.2%204.7-.6%206.3.6%206.3%201.6%200%206.8-2%2011.9-6l3%204C60.5%2095.2%2046.8%20100%2041.5%20100z'%2F%3E%3C%2Fsvg%3E");
 	}
-	/**/
-	#qmenu_home img[src*='home.png'],
 	/* Home Icon */
-	* > #column_center .homeicon {
+	* > #column_center .homeicon,
+	#qmenu_home img[src*='home.png'] {
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D'nav-home'%20version%3D'1'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20546%20546'%3E%3Cpath%20d%3D'M500%20492V292c0-12-7-28-17-35L289%20123c-10-7-27-7-37%200L70%20249c-10%207-19%2023-19%2036v207c0%2012%2011%2025%2023%2025h406c13%200%2020-13%2020-25zm-221-29l-2%201c-105-42-145-140-99-182%2046-43%2099%2015%2099%2015s53-58%2099-15c47%2042%207%20139-97%20181z'%2F%3E%3Cpath%20d%3D'M536%20209L289%2040c-10-7-27-7-37%200L10%20211c-11%208-13%2022-6%2032l1%201c7%2010%2021%2012%2031%205L251%2097c10-7%2027-7%2037%200l222%20150c10%207%2024%204%2031-6l1-1c7-10%204-24-6-31zM425%20114c10%207%2018%203%2018-10V48c0-13-10-19-23-19h-37c-13%200-23%207-23%2019s8%2025%2018%2033l47%2033z'%2F%3E%3C%2Fsvg%3E");
 		display: block;
 	}
@@ -3360,7 +3386,7 @@
 	#column_center .list [class^='clubxxx'] a.clublink + span.smalltext:before {
 		display: inline-block;
 		content: '';
-		padding: 0.5rem;
+		padding: var(--padding-m);
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D'club-xxx'%20fill%3D'red'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20328.9%20328.9'%3E%3Cpath%20d%3D'M104%20220.4v-89.3H83.4v-22.8h49.1v112.1H104zM239.6%20137.2c0%209.8-5.3%2018.4-14.1%2023.2a30.7%2030.7%200%200%201%2020%2028.4c0%2020.1-18%2033-46%2033s-45.9-12.7-45.9-32.6c0-12.8%208.4-23.6%2021.3-28.8a28.2%2028.2%200%200%201-15.5-24c0-17.9%2015.7-29.2%2040-29.2%2024.6%200%2040.2%2011.6%2040.2%2030zm-59%2049.2c0%209.4%206.6%2014.7%2019%2014.7%2012.3%200%2019.2-5.1%2019.2-14.7%200-9.3-7-14.6-19.2-14.6-12.4%200-19%205.3-19%2014.6zm2.8-47.6c0%208%205.8%2012.5%2016.2%2012.5%2010.4%200%2016.1-4.5%2016.1-12.5%200-8.3-5.7-13-16.1-13-10.4%200-16.2%204.7-16.2%2013z'%2F%3E%3Cpath%20d%3D'M292.9%20121a135.7%20135.7%200%200%201-128.4%20179A135.7%20135.7%200%200%201%2028.8%20164.4%20135.7%20135.7%200%200%201%20207.9%2036V5.8A164.6%20164.6%200%200%200%200%20164.4C.1%20255.1%2073.9%20329%20164.5%20329a164.7%20164.7%200%200%200%20158.6-208H293z'%2F%3E%3Cpath%20d%3D'M284.7%2044.1V12.6H262v31.5h-31.4v22.7H262v31.5h22.7V66.8h31.5V44.1z'%2F%3E%3C%2Fsvg%3E%0D%0A");
 	}
 	/* Clubs on the profile page */
@@ -3407,11 +3433,6 @@
 	a[href*="/goldmember.php"] + .gallerylink {
 		cursor: not-allowed;
 	}
-	/* Favorites */
-	#column_left > p:nth-of-type(6),
-	#column_left > p:nth-of-type(6) * {
-		cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAG1BMVEVMaXH/AACBAAAAAAD////+cXGurq7/tLR3d3dDmC/VAAAAAXRSTlMAQObYZgAAAJxJREFUeNq9ktsOgCAMQweT6f9/sd0Auel4swmxaQ8Do8RMvvjgHQDCB0D4gBIuYIQPXP4EljIgqvAcPbMyFgWVxc1nRogJUTrPlBDDqzX/HGMhEpXZ7BuAEFFWb2MDuh7LBcI7EDxAcMmvvo7YAWXE2u+B5xIvRBw+2QaQSqx9I+qbtH4iDoljPxGq2Perpl/lCynbHUJ7n6B/dQNdygOMg9isxQAAAABJRU5ErkJggg=='), auto !important;
-	}
 }
 }
 
@@ -3419,7 +3440,7 @@
 /* Code 03
 	TEST AREA */
 @supports (display: grid) {
-	/* DUPLICATE of line 1858-1865
+	/* DUPLICATE of line 1858-1865*/
 	.homepageblock {
 		display: flex;
 		flex-flow: row wrap;
@@ -3427,12 +3448,43 @@
 	.homepageblock > .odd,
 	.homepageblock > .even {
 		flex: 1 1 50%;
-	}*/
+	}
+	#column_center .list [id^='divx'] > .insertmember + br,
+	#column_center .list [id^='divx'] > .insertmember + br + br[clear='all'] {
+		display: none;
+	}
+}
+}
+
+@-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/.*(favourite).*\.php.*"),regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(ignored\.php).*") {
+/* Code 04
+	favourites & ignored */
+@supports (display: grid) {
+	#column_center .odd,
+	#column_center .even {
+		display: flex !important;
+	}
+	#column_center .list > div > div:not(.insertmember) {
+		max-width: -moz-min-content;
+		max-width: -webkit-min-content;
+		max-width: min-content;
+	}
+	#column_center .list .insertmember .favouriteicon {
+		display: none;
+	}
+	#column_center .list > div:nth-child(3n) > .insertmember {
+		margin-right: auto;
+	}
+	#column_center .list > div:nth-child(3n) > div:not(.insertmember) {
+		min-width: -moz-max-content;
+		min-width: -webkit-max-content;
+		min-width: max-content;
+	}
 }
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(showmovies[_digged]*\.php).*") {
-/* Code 04
+/* Code 05
    showmovies.php & showmovies_digged.php */
 @supports (display: grid) {
 	/*** Hide stuff ***/
@@ -3460,10 +3512,10 @@
 
 	/** The Movies **/
 	div#scroller > div[style*='410px'] > *,
-	div[style*='414px'] > *:not(.listpagenumber):not(.listpagelinks) {
+	div[style*='414px'] > div:not(.listpagenumber):not(.listpagelinks) {
 		flex: 0 1 33%;
 	}
-	div[style*='414px'] > *:not(.listpagenumber) > div[style*='float'] {
+	div[style*='414px'] > div:not(.listpagenumber) > div[style*='float'] {
 		width: 100% !important
 	}
 	div[style*='414px'] > div:not(:empty),
@@ -3482,7 +3534,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(readmessage\.php).*") {
-/* Code 05
+/* Code 06
 	Read message */
 @supports (display: grid) {
 	form[name='messageform'],
@@ -3526,7 +3578,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(clubs|members|pics\/faceimages).*") {
-/* Code 06
+/* Code 07
 	Common styles for URL sections
 	https://www.qruiser.com/clubs/
 	https://www.qruiser.com/members/
@@ -3541,13 +3593,13 @@
 		-webkit-box-direction: normal;
 		    -ms-flex-flow: row wrap;
 		        flex-flow: row wrap;
-		margin-top: 1em;
+		margin-top: var(--margin-xl);
 	}
 }
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(clubs).*") {
-/* Code 07
+/* Code 08
 	CLUBS SECTION
 	https://www.qruiser.com/clubs/
 */
@@ -3556,25 +3608,19 @@
 	#column_center > p:first-of-type {
 		display: inline-block;
 		opacity: 0.5;
-		margin: 0.3em;
-	}
-	#column_center > p:first-of-type {
-		display: inline-block;
-		opacity: 0.5;
-		margin: 0.3em;
+		margin: var(--margin-s);
 	}
 	#column_center > p:first-of-type::before {
 		display: inline-block;
 		content: '♚';
-		cursor: url(data:image/x-icon;base64,AAACAAEAICAAAAAAAACoDAAAFgAAACgAAAAgAAAAQAAAAAEAGAAAAAAAgAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUFBQUFBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUFBQAAAAoKCgoKCgzMzMoKCgoKCgoKCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUFBQoKCgoKCgzMzMzMzMzMzMzMzMzMzMzMzMzMzMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzM/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoKCgoKCgzMzMzMzMzMzOZzMyZzMx4eHh4eHgzMzMoKCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoKCgzMzMzMzMzMzN4eHiZzMzM///M//+ZzMx4eHh4eHgAAAAAAAAAAAAAAAAAAAAAAAAzM/8AAAAAAAAAAAAzZv8AAAAAAAAAAAAAAAAzM/8AAAAAAAAAAAAAAAAUFBQoKCgzMzMzMzMzMzOZzMyZzMzM///M///M///M///M//8AAAAAAAAAAAAAAAAAAAAAAAAAAAAzZv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoKCgzMzMzMzN4eHh4eHiZzMyZzMyZzMzM///M///M///M//+ZzMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzmf8AAAAAAAAzZv8AAAAAAAAAAAAAAAAAAAAAAAAUFBQoKCgzMzN4eHh4eHh4eHjM///M///M///M///M///M///M//8AAAAAAAAAAAAAAAAAAAAAAAAAAAAzmf8AAAAAAAAAAAAzmf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAUFBQoKCgzMzN4eHh4eHiZzMyZzMyZzMzM///M///M///M//+ZzMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUFBQoKCgzMzMzMzOZzMyZzMzM//+ZzMzM///M//+ZzMx4eHgAAAAAAAAAAAAAAAAAAAAAAABQUFDIyMgzmf8AAAAzmf8AAAAzZv8AAAAzM/8AAAAAAAAAAAAAAAAAAAAUFBQzMzMzMzMzMzN4eHiZzMyZzMyZzMzM//94eHh4eHgAAAAAAAAAAAAAAAAAAAAAAABQUFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUFBQzMzMzMzMzMzMzMzN4eHh4eHh4eHh4eHgzMzMAAAAAAAAAAAAAAAAAAABQUFAAAAAAAAAAAAAzmf8AAAAAAAAzmf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUFBQUFBQzMzMoKCh4eHgzMzMzMzMoKCgoKCgAAAAAAAAAAAAAAAAAAAAAAABQUFAAAAAAAAAzZv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUFBQUFBQUFBQzMzMoKCgoKCgUFBQAAAAAAAAAAAAAAAAAAAAAAAAAAABQUFAAAAAAAAAAAAAAAAAAAAAAAAAzZv8AAAAAAAAzZv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUFBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQUFAAAAAAAAAzM/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAzM/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQUFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQUFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQUFAAAAAAAAAAAAAAAAAAAAAAAACZAACZAACZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQUFAAAAAAAAAAAAAAAAAAAAAAAACZAAD///////////+ZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQUFAAAAAAAAAAAAAAAAAAAACZAAD/////zJn/zMz//8z///+ZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQUFAAAAAAAAAAAAAAAAAAAABQUFBQUFAAAAAAAAAAAAAAAAAAAAAAAACZAAD/////mTP/mWb/zJn//8yZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQUFBQUFBQUFBQUFBQUFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACZAAD/ZgD/mTP/mTP/zJn///+ZAAAAAAAAAAAAAAAAAAD///////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACZAAD/ZgD/ZgD/mTP/zJn/zMyZAAAAAAAAAAD///8AAAD///////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACZAAD/ZgD/ZgD/mWaZAAAAAAAAAAAAAAD///////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACZAAD/ZgD/ZjP/ZgCZAAAAAAAAAAAAAAD///////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACZAAD/ZgD/ZgCZAAAAAAAAAAAAAAD///////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACZAAD/ZgCZAAAAAAAAAAAAAAAAAAD///////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACZAAD/ZgCZAAAAAAAAAAAAAAAAAAD///////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACZAAAAAAAAAAAAAAAAAAAAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8B///8AH//+AA///AAH/fwAB//4AAPd6AAD7/gAA/24AAP3eAAD//gAA+KoAAPf/AAHu3wAB7f+AA9+3wAfb+/Af3//4P7//+D+/H/7/fg/+/3wH/3z8B4+D/AQP//wED//+DAf//gwH//8MD///HB///xw///+8f///vP////w==), auto;
 		height: 1.5em;
 		width: 1.5em;
 		font-size: 1.5em;
 		line-height: 1.3em;
 		text-align: center;
 		vertical-align: baseline;
-		border: 1px solid transparent;
-		border-radius: 50%;
+		border: var(--brd-type-1) transparent;
+		border-radius: var(--brd-rad-l);
 		opacity: 0.5;
 		-webkit-transition: opacity, border, margin 0.4s linear;
 		-webkit-transition: opacity, border, margin 0.4s linear, -webkit-filter;
@@ -3584,7 +3630,7 @@
 	}
 	#column_center > p:first-of-type:hover::before {
 		opacity: 1;
-		margin-right: 0.3em;
+		margin-right: var(--margin-s);
 		border-color: currentcolor;
 		filter: drop-shadow(3px 3px 2px currentColor);
 	}
@@ -3598,7 +3644,7 @@
 		flex-flow: row wrap;
 	}
 	#column_center h2 + p[style="margin-top: 0.5em;"] + div > [id*='divx'],
-	#column_center > .list > *:not([class^='listpage']) {
+	#column_center > .list > div:not([class^='listpage']) {
 		flex: 1 50%;
 	}
 	#column_center [id*='divx'] > .clubscribble {
@@ -3638,7 +3684,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(members).*") {
-/* Code 08
+/* Code 09
 	MEMBERS SECTION
 	https://www.qruiser.com/members/
 */
@@ -3658,7 +3704,7 @@
 	[style*='color: #63300E;'] {
 		color: var(--txt-high-clr) !important;
 	}
-	#column_center .list > *:not([class^='listpage']) {
+	#column_center .list > div:not([class^='listpage']) {
 		-webkit-box-flex: 1;
 		    -ms-flex: 1 50%;
 		        flex: 1 50%;
@@ -3672,29 +3718,16 @@
 		width: auto;
 	}
 	#column_center .list .odd .memberinfo {
-		margin-right: 0.5em;
+		margin-right: var(--margin-m);
 	}
 	#column_center .list .listpagelinks {
-		margin-top: 1em;
+		margin-top: var(--margin-xl);
 	}
 	/* Remove the ugly dotted bkgrd img */
 	[style*='dottedline'] {
 		display: flow-root;
 		background-image: none !important;
-		/*background-color: inherit;
-		margin: var(--margin-l) var(--margin-z);
-		margin-bottom: var(--margin-xlr);
-		padding: 0 0 var(--padding-l) 0;
-		height: var(--lh-1);
-		line-height: var(--lh-1);
-		text-transform: uppercase;
-		border-bottom: var(--brd-type-1) var(--brd-clr-h);*/
 	}
-	/*[style*='dottedline'] a {
-		display: inline;
-		padding-right: var(--padding-s);
-		line-height: var(--lh-3);
-	}*/
 	/* Reset the search form */
 	input[type="checkbox"] {
 		margin-top: var(--radius-s);
@@ -3737,7 +3770,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(movies).*") {
-/* Code 09
+/* Code 10
 	Rules for the Movies section
 	https://www.qruiser.com/movies/
 */
@@ -3785,12 +3818,12 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(pics\/faceimages).*") {
-/* Code 10
+/* Code 11
 	PICTURES FACES SECTION
 	https://www.qruiser.com/pics/faceimages/
 */
 @supports (display: grid) {
-	#column_center .gallery > *:not([class^='listpage']) {
+	#column_center .gallery > div:not([class^='listpage']) {
 		-webkit-box-flex: 1;
 		    -ms-flex: 1 33%;
 		        flex: 1 33%;
@@ -3801,7 +3834,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(pics\/homepageimages).*") {
-/* Code 11
+/* Code 12
 	HOMEPAGE IMAGES SECTION
 */
 @supports (display: grid) {
@@ -3843,12 +3876,12 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(photoalbum_nav\.php).*") {
-/* Code 12 */
+/* Code 13 */
 @supports (display: grid) {
 	#bar {
-		font-size: 1em;
+		font-size: var(--font-1);
 		font-weight: 700;
-		margin-bottom: 0.5em;
+		margin-bottom: var(--margin-m);
 	}
 	#bar p {
 		width: auto;
@@ -3856,8 +3889,8 @@
 	}
 	.insertmember {
 		display: block !important;
-		margin-top: 0;
-		margin-left: 0.5em;
+		margin-top: var(--margin-z);
+		margin-left: var(--margin-m);
 		width: auto;
 	}
 	#linkimage,
@@ -3867,15 +3900,11 @@
 	.insertmember .mood {
 		display: none !important;
 	}
-	/*#navfooter {}*/
-	/*#thumbs {}*/
-	/*#thumbs_inner {}*/
-	/*#thumbs img {}*/
 }
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.(.[a-z]{1,4})\/(photo\.php).*") {
-/* Code 13 */
+/* Code 14 */
 @supports (display: grid) {
 	body {
 		height: 100% !important;
@@ -3884,19 +3913,15 @@
 		width: 100%;
 		height: 100%;
 	}
-	/*td {}*/
 	#currentmedia {
 		background-color: initial;
 		border: none;
 	}
-	/*#currentmedia img {}*/
-	/*td span.smalltext {}*/
-	/*div[style='position: absolute; left: 10px; top: 10px;'] {}*/
 }
 }
 
 @-moz-document regexp("http[s]*:\/\/blog\.qruiser\.[a-z]{1,4}.*") {
-/* Code 14
+/* Code 15
    blog.qruiser.com */
 @supports (display: grid) {
 	/*** Logos ***/
@@ -3951,14 +3976,13 @@
 		min-width: initial;
 		font-size: 100%;
 		line-height: var(--lh-n);
-		padding: 0;
+		padding: var(--padding-z);
 		margin: var(--margin-z);
 		overflow: initial;
 		color-adjust: economy;
 	}
 	/*------------------------------------------*/
-
-	/*body, */div,
+	div,
 	img, form {
 		font-size: inherit;
 		line-height: inherit;
@@ -3989,7 +4013,7 @@
 	/* Container */
 	.top > div > div {
 		display: flex;
-		margin: 0 auto !important;
+		margin: var(--margin-c) !important;
 	}
 	/* Container Items */
 	.top > div > div > div {
@@ -4027,7 +4051,6 @@
 		font-size: inherit !important;
 	}
 	/*------------------------------------------*/
-
 	/* The start page */
 	#start_column_left {
 		display: flex;
@@ -4040,7 +4063,7 @@
 	}
 	#start_column_left [style*='float:left;'] {
 		float: none !important;
-		margin: 0 auto auto !important;
+		margin: var(--margin-c) auto !important;
 	}
 	#start_column_left [style*='float:left;'][style*='/memberthumbnails/'] {
 		flex: 0 0 80px;
@@ -4053,8 +4076,6 @@
 	#whole {
 		display: grid !important;
 		width: 65.625em !important;
-		/*grid-template-rows: repeat(4, 1fr [main-col]);*/
-		/*grid-template-rows: [main-col] 1fr [main-col] 1fr [main-col] 1fr [main-col] 1fr;*/
 		grid-template-columns: [main-col] 1fr;
 		grid-auto-rows: min-content;
 		grid-auto-flow: row dense;
@@ -4065,7 +4086,6 @@
 	}
 	#blog_whole {
 		max-width: calc(100% - 7px);
-		/*filter: drop-shadow(2px 2px 5px #5d5d5d);*/
 		filter: drop-shadow(2px 2px 5px currentColor);
 		border-bottom-left-radius: 0.3rem;
 		border-bottom-right-radius: 0.3rem;
@@ -4093,7 +4113,6 @@
 		filter: drop-shadow(2px 5px 5px #000000);
 	}
 	#blog_whole {
-		/*grid-column-start: main-col 3;*/
 		font-size: 1rem !important;
 		display: grid !important;
 		grid-template-rows: [head] 0 [blog] 1fr [foot] 0;
@@ -4119,7 +4138,6 @@
 		width: auto;
 	}
 	/*------------------------------------------*/
-
 	#column_center,
 	#blog_column_left,
 	#column_center [id^='blogentry'] {
@@ -4129,7 +4147,6 @@
 	#blog_column_left {
 		padding: 0.5em;
 	}
-
 	/* The actual blog entry */
 	.headline {
 		font-size: 1.5em;
@@ -4157,9 +4174,6 @@
 	span[id^='diggersblogentry'] {}
 	div[id^='blogcomments'] {}
 	div[id^='commentbox'] {}
-	/*.bodyText div {
-		display: flow-root;
-	}*/
 	.imageNormal {
 		width: 100%;
 		height: auto;
@@ -4175,11 +4189,9 @@
 	}
 	/* Article divider */
 	hr.entryline {
-		margin-top: 1em;
+		margin-top: var(--margin-xl);
 		margin-bottom: 1.5em;
 	}
-	/*------------------------------------------*/
-
 	#blogads,
 	.centerbottomlink {
 		width: 100% !important;
@@ -4191,7 +4203,7 @@
 }
 
 @-moz-document regexp("http[s]*:\/\/[www.]*sentry\.[a-z]{1,4}.*") {
-/* CODE 15 */
+/* CODE 16 */
 @supports (display: grid) {
 	.iframed-content-wrapper {
 		max-width: 100%;
