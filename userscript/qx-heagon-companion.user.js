@@ -482,6 +482,18 @@
 			return this.nodeType == 3 && $.trim(this.nodeValue).length;
 		}).wrap('<span class="q-text" />');
 	}
+	function NeedsToBeDone() {
+		var hq_GetTitleText		= $('.small > a[onclick^="openEdit"], [class^="clubxxx"] a.clublink + .smalltext, .insertmember .mood');
+		var hq_logoLink			= $('#whole > #header > #home > a[href="/"]');
+		var hq_logoLinkTitle	= 'Qruiser - The Nordic Gay Lesbian & Queer Online Community';
+		// Get links text and set it as title for the link
+		hq_GetTitleText.attr('title', function() {
+			return $(this).text()
+		});
+		// Set the correct title for the logo link
+		hq_logoLink.attr('title', hq_logoLinkTitle);
+	};
+	NeedsToBeDone();
 	// NOTE Don't Look Back, Just Get it Done!
 	$(document).on("ready",HexaGon.init);
 })(window, document, jQuery);
