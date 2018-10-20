@@ -53,7 +53,7 @@
 		HexaGon.MakeButton		= $("[onclick^='toggleAbuse'], [class*=banner] .actions .action, .column-center #goldmemberbanner .actions .action, .column-center #profilewizard .actions .action, [type='reset'],[type='button'],[type='submit'],input[type='submit'],button[type='submit'],[href*='addscribble'],[href*='becomemember'],[href*='adddiscussion'],#column_center #zeroall,h3 [href^='/signup.php'],[href$='&show_admin_members=1'],[href*='/clubs/club_edit.php?clubid='],#column_center button,button.modal-close,div:not([class*='button']):not([class*='subnavbar-item']) > [href*='/createclub/'],#column_center .small + .list + p + div[style='float:right;'], form[name='sort'] + .list + div[style='margin-top:10px; float: right']:last-of-type");
 		HexaGon.MemberPres		= $(".homepage div[style='display: block; min-height:150px;']:first-of-type, .homepage #buff_block + div");
 		HexaGon.SubNavButtons	= $("#subnavbar .subnavbar-item ");
-		HexaGon.RemoveWhiteSpace = $('.column-content p + h2 + p');
+		HexaGon.RemoveWhiteSpace = $('.column-content p + h2 + p[style*="margin-top: 0.5em;"]');
 		HexaGon.WarningImg		= $('img[src$="warning_icon.png"].banner_icon');// NOTE HACK
 		// NOTE Search Member Forms
 		HexaGon.sMemUrlClose	= HexaGon.hrefLoc.indexOf("/members/close_to_you/");
