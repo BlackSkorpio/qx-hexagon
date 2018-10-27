@@ -14,11 +14,13 @@
 @-moz-document regexp("(^http|https):\/\/.*qruiser\.(.[a-z]{1,4}).*$") {
 /* General rules */
 #qruiser-panorama,
-#column_center .standardbanner,
+.signed-in-gold #ads,
+.signed-in-gold .external-ad,
+/*#column_center .standardbanner,*/
 /*#column_center .homepageblock:last-of-type,*/
 #goldmemberbanner.standardbanner.warningbanner,
 /* Adds & shit */
-hr.dotline, div#stripe, div#ads,#blogads,
+.external-ad,hr.dotline, div#stripe, div#ads,#blogads,
 div[style="margin:auto auto auto 1px;height:55px;width:1024px;border:0;overflow:hidden;"]
 {display: none !important;}
 }
