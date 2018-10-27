@@ -27,6 +27,64 @@
 	Ansiktsbilder 33&
 
 ***/
+@-moz-document domain("www.qruiser.com") {
+/*** LOGIN & INDEX ***/
+@supports (display: grid) {
+	:root {--ui--wrapper:65.625rem;--ui--aside:12.5rem}
+	:not(.signed-in) ul[style*="visible"],:not(.signed-in) #qmenu_home,:not(.signed-in) #search,:not(.signed-in) div[style*="height:55px;width:1024px;"]>div>div:last-child{display:none!important}
+	:not(.signed-in) #langnav{left:auto;right:0}
+	:not(.signed-in) [style*="width: 410px"],:not(.signed-in) #column_right>*{width:100%!important}
+	:not(.signed-in) div[style*="height:55px;width:1024px;"]>div{margin-top:0!important}
+	:not(.signed-in) img[src*='puff_qruiser.gif']{padding:6px 26.5px;background-color:var(--bkgrd-w1);background-position:center;vertical-align:text-bottom}
+	:not(.signed-in) div[style="margin:auto auto auto 1px;height:55px;width:1024px;border:0;overflow:hidden;"]{margin:var(--margin-s) auto 0!important;width:var(--ui--wrapper)!important;color:var(--txt-aside-clr);background-color: var(--bkgrd-b1);border: var(--brd-type-1) var(--brd-clr-h) !important;border-radius: var(--brd-rad-s);padding: var(--padding-s)}
+	:not(.signed-in) svg.qxh-sprite-icon.qxh-icon-logo{height:45px;width:150px}
+	:not(.signed-in) #column_left,:not(.signed-in) #column_right{color:var(--txt-aside-clr);background-color:var(--bkgrd-b1);background-image:none!important}
+	:not(.signed-in) #column_right div>b>a,:not(.signed-in) #column_right .qxh-text+a,:not(.signed-in) #column_right div>a{color:var(--txt-aside-clr)!important}
+	/*Layout*/
+	:not(.signed-in):not(.qxh-loading) #whole{display:grid!important}
+	:not(.signed-in) #whole,:not(.signed-in) #qmenu{display: grid}
+	:not(.signed-in) #whole{grid-template-rows:auto;grid-template-columns:[left] var(--ui--aside) [center] 1fr [right] var(--ui--aside);grid-template-areas:"top top top""menu menu menu""left content right";padding:0;width:var(--ui--wrapper);margin:0 auto;padding-bottom:var(--padding-xl)}
+	:not(.signed-in) #top{grid-area:top}
+	:not(.signed-in) #qmenu{grid-area:menu;grid-template-rows:auto;grid-template-columns:repeat(8, min-content [auto-cols]);grid-template-areas:"members clubs pics movies texts forums info .";width:auto;border:var(--brd-type-1) var(--brd-clr-h);border-bottom:none;border-radius:var(--brd-rad-top)}
+	:not(.signed-in) #column_left,:not(.signed-in) #column_right,:not(.signed-in) #column_center{width:auto!important}
+	:not(.signed-in) #column_left{grid-area:left}
+	:not(.signed-in) #column_right{grid-area:right}
+	:not(.signed-in) #column_center{grid-area:content;padding:0 var(--padding-s) var(--padding-l);border-radius:var(--brd-rad-top);border-bottom:var(--brd-type-1) var(--brd-clr-h)}
+	/*Top menu*/
+	:not(.signed-in) li#qmenu_members{grid-area:members}
+	:not(.signed-in) li#qmenu_clubs{grid-area:clubs}
+	:not(.signed-in) li#qmenu_pics{grid-area:pics}
+	:not(.signed-in) li#qmenu_movies{grid-area:movies}
+	:not(.signed-in) li#qmenu_texts{grid-area:texts}
+	:not(.signed-in) li#qmenu_forum{grid-area:forums}
+	:not(.signed-in) li#qmenu_info{grid-area:info}
+	/*Flex Containers*/
+	:not(.signed-in) #top,:not(.signed-in) #subnavbar,:not(.signed-in) div[style*="height:55px;width:1024px;"]>div{display:flex;flex-flow:row wrap;}
+	/*Flex Items*/
+	:not(.signed-in) #subnavbar>*{flex:1 1 auto}
+	:not(.signed-in) #topstatus{flex:0 1 100px}
+	:not(.signed-in) #top>*{flex:1 1 150px}
+	:not(.signed-in) div[style*="height:55px;width:1024px;"]>div>*{flex:1 1 180px}
+	:not(.signed-in) #top>a,:not(.signed-in) #langnav{-webkit-box-flex:0;-ms-flex-positive:0;flex-grow:0}
+	/*LOGIN*/
+	:not(.signed-in) #loginbox{top:2.5em;background-color:var(--bkgrd-b1);border:var(--brd-type-1) var(--brd-clr-h);border-radius: var(--brd-rad-s);width: 90%;margin: var(--margin-c);padding: var(--padding-s);}
+	:not(.signed-in) #loginbox h3{font-size:var(--font-1);text-align:center;text-transform:uppercase;margin:var(--margin-m) auto;padding-bottom: var(--padding-m);border-bottom: var(--brd-type-1) var(--brd-clr-h)}
+	:not(.signed-in) #loginbox h4{font-size:var(--font-4);text-indent:0.5em;padding-bottom:var(--padding-m)}
+	:not(.signed-in) #loginbox h3,:not(.signed-in) #loginbox h4 {color:var(--txt-high-clr)}
+	:not(.signed-in) #column_left #loginbox~p:nth-last-of-type(2){width:90%;margin:var(--margin-l) auto;text-align:center;font-weight: 700}
+	:not(.signed-in) #loginbox~h3{text-indent:1em}
+	/*TOP*/
+	:not(.signed-in) #top>a{display:inline-block;width:150px;height:45px}
+	:not(.signed-in) #topstatus a{color:var(--txt-aside-clr)}
+	:not(.signed-in) #topstatus br{display:none}
+	/*TOP NAVIGATION*/
+	:not(.signed-in) #qmenu,:not(.signed-in) #qmenu a,:not(.signed-in) #qmenu ul{background-color:var(--bkgrd-b1);font-size:var(--font-3r);color: var(--link-clr2);letter-spacing: var(--ls-s);padding: 3px 8px 4px}
+	:not(.signed-in) #qmenu a:hover,:not(.signed-in) #qmenu a.menu_selected{background-color:var(--bkgrd-w2);color:var(--link-clr2-h)}
+	:not(.signed-in) #qmenu,:not(.signed-in) #qmenu ul{height:auto;width:auto}
+	:not(.signed-in) #qmenu{top:0}
+}
+}
+
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*") {
 :root {
 	--ui-clr-disabled: rgb(188, 194, 191);
