@@ -17,6 +17,7 @@
 // @downloadURL	https://github.com/BlackSkorpio/qx-hexagon/raw/master/js/qx-hexagon-companion.user.js
 // @updateURL		https://github.com/BlackSkorpio/qx-hexagon/raw/master/js/qx-hexagon-companion.user.js
 // @include https://beta.qruiser.com/*
+// @include https://www.qruiser.com/*
 // @require https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js
 // ==/UserScript==
 
@@ -64,36 +65,24 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		// NOTE Selectors
 		HexaGon.HtmlBody		= $('html, body');
 		HexaGon.Body			= $(document.body);
-		HexaGon.topContent		= "#header";
-		HexaGon.mainContent		= ".main-content";
-		HexaGon.colRight		= $("#column_right.column-right");
-		HexaGon.TeaserDiv 		= $(".blog-teasers");
-		HexaGon.searchNodes		= $('[id^="column_"], .odd, .even, .container--favourites .notextdecoration');
 		HexaGon.formSearchGeo	= $('a[href^="javascript:selectgeo"], a[href^="javascript:reset"]');
-		HexaGon.inlineCleaning	= $('.movies-listing .even div, .movies-listing .odd div, .movies-listing > div:nth-of-type(3), .video-thumb img[src$="star.png"], .video-thumb span, .attachedicon, span.homelink, div[style*="font-size: 10px;"], .block[style*="font-size: 11px;"], .icons li, .line .header span, #search form, #largeediticon, a[style*="text-decoration"]:not([style*="bold"]):not([href*="javascript:dropContent"]), i.icon, .emptymembericon, .noticetext');
-		HexaGon.removeEmpty		= $('#column_center .even:empty, .thinlineup:empty, .homepageblock div[style="float:left;width:140px"]:first-child, .block img[src$="blank.gif"]:not([style*="/photothumbnails/"]), .homepageblock div[style="float:left;width:70px"], li div[style="width: 10px; height: 9px"]:empty,div[style="width: 10px; height: 10px"]:empty');
-		HexaGon.Sticky			= $("#whole #qmenu, #column_left.column-left .container:first-of-type, .container--chat-list, .container--personal, .container--your-search, .container.logged-in, .column-content p + h2 + p[style*='margin-top: 0.5em;']");
-		HexaGon.MakeList		= $('.movies-listing > div:nth-of-type(3), #column_center.column-center h2 + p[style="margin-top: 0.5em;"] + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"]), .column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"])');
-		HexaGon.MakeGrid		= $(".column-content > div:nth-of-type(2) > .list:nth-of-type(5) > .odd, .column-content > div:nth-of-type(2) > .list:nth-of-type(5) > .even, .column-content > div[class ^='club']:not([class*='hidden']) .list:nth-of-type(5) > .odd, .column-content > div[class ^='club']:not([class*='hidden']) .list:nth-of-type(5) > .even, .column-content form[name='sort'] + .list > .odd, .column-content form[name='sort'] + .list > .even");
-		HexaGon.MakeButton		= $("[onclick^='toggleAbuse'], [class*=banner] .actions .action, .column-center #goldmemberbanner .actions .action, .column-center #profilewizard .actions .action, [type='reset'],[type='button'],[type='submit'],input[type='submit'],button[type='submit'],[href*='addscribble'],[href*='becomemember'],[href*='adddiscussion'],#column_center #zeroall,h3 [href^='/signup.php'],[href$='&show_admin_members=1'],[href*='/clubs/club_edit.php?clubid='],#column_center button,button.modal-close,div:not([class*='button']):not([class*='subnavbar-item']) > [href*='/createclub/'],#column_center .small + .list + p + div[style='float:right;'], form[name='sort'] + .list + div[style='margin-top:10px; float: right']:last-of-type");
-		HexaGon.MemberPres		= $(".homepage div[style='display: block; min-height:150px;']:first-of-type, .homepage #buff_block + div");
-		HexaGon.SubNavButtons	= $("#subnavbar .subnavbar-item ");
+		HexaGon.MakeClubsGrid	= $(".column-content > div:nth-of-type(2) > .list:nth-of-type(5) > .odd, .column-content > div:nth-of-type(2) > .list:nth-of-type(5) > .even, .column-content > div[class ^='club']:not([class*='hidden']) .list:nth-of-type(5) > .odd, .column-content > div[class ^='club']:not([class*='hidden']) .list:nth-of-type(5) > .even, .column-content form[name='sort'] + .list > .odd, .column-content form[name='sort'] + .list > .even");
 		HexaGon.RemoveWhiteSpace = $('.column-content p + h2 + p[style*="margin-top: 0.5em;"]');
-		HexaGon.WarningImg		= $('img[src$="warning_icon.png"].banner_icon');// NOTE HACK
+		//HexaGon.WarningImg		= $('img[src$="warning_icon.png"].banner_icon');// NOTE HACK
 		// NOTE Search Member Forms
 		HexaGon.sMemUrlClose	= HexaGon.hrefLoc.indexOf("/members/close_to_you/");
 		HexaGon.sMemUrlTheRest	= HexaGon.hrefLoc.indexOf("/members/online/" || "/members/new/" || "/members/updated/" || "/members/birthday/" || "/members/all/");
 		HexaGon.sMembFormName	= 'form.clearfix[name="listform"]';
 		HexaGon.sMembForm		= $(HexaGon.sMembFormName);
 		HexaGon.sMemIClean		= $(HexaGon.sMembFormName+' [class="floatleft"]');
-		HexaGon.sMemCleanWrap	= '<span class="q-formtext" />';
+		HexaGon.sMemCleanWrap	= '<span class="qxh-formtext" />';
 		HexaGon.sMemLang		= $(HexaGon.sMembFormName+' p:first-of-type > a');
-		HexaGon.sMemFsOne		= $('select[name="sex"], input[name="lowerage"], input[name="lowerage"] + span.q-formtext, input[name="upperage"], input[name="upperage"] + span.q-formtext');
+		HexaGon.sMemFsOne		= $('select[name="sex"], input[name="lowerage"], input[name="lowerage"] + span.qxh-formtext, input[name="upperage"], input[name="upperage"] + span.qxh-formtext');
 		HexaGon.sMemFsTwo		= $('input[name="faceimage"][type="hidden"], input#faceimage, label[for="faceimage"], input[name="verified"][type="hidden"], input#verified, label[for="verified"], input[name="active"][type="hidden"], input#active, label[for="active"]');
 		HexaGon.sMemFsThree		= $('input#savesettings, label[for="savesettings"], label + a[href="/goldmember.php?gore=9"]');
 		//HexaGon.sMemFsOneCleanUp	= $(HexaGon.sMembFormName+' fieldset');
-		//HexaGon.sMemFsTwoCleanUp = $(HexaGon.sMembFormName+' fieldset.q-set--specify');
-		//HexaGon.sMemFsThreeCleanUp = $(HexaGon.sMembFormName+' fieldset.q-set--savesettings');
+		//HexaGon.sMemFsTwoCleanUp = $(HexaGon.sMembFormName+' fieldset.qxh-set--specify');
+		//HexaGon.sMemFsThreeCleanUp = $(HexaGon.sMembFormName+' fieldset.qxh-set--savesettings');
 		HexaGon.sMemObsoleteClean = $( HexaGon.sMembFormName+' .floatleft,'+HexaGon.sMembFormName+' .input-spacing');
 		// NOTE QX URLs */
 		HexaGon.bodyURL			= HexaGon.pathName.match(/^\/?(\w+)\b/);
@@ -132,10 +121,18 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.InfoStatistics	= HexaGon.hrefLoc.indexOf("/statistics/");
 		HexaGon.InfoAdvertise	= HexaGon.hrefLoc.indexOf("/ad/");
 		HexaGon.InfoGdpr		= HexaGon.hrefLoc.indexOf("/about_cookies/");
-		HexaGon.InfoFaq			= HexaGon.hrefLoc.indexOf("/faq/")
+		HexaGon.InfoFaq			= HexaGon.hrefLoc.indexOf("/faq/");
+		HexaGon.ClubMain		= HexaGon.hrefLoc.indexOf("club.php?id=");
+		HexaGon.ClubURL			= HexaGon.hrefLoc.indexOf("?club=");
+		HexaGon.ThredURL		= HexaGon.hrefLoc.indexOf("&view=");
+		HexaGon.ClubMembers		= HexaGon.hrefLoc.indexOf("clubmembers.php");
+		HexaGon.Thread_Id		= HexaGon.hrefLoc.split("&view=");
+		HexaGon.Club_Id			= HexaGon.hrefLoc.split("?club=");
+		HexaGon.ClubMain_Id		= HexaGon.hrefLoc.split("?id=");
 
 		// NOTE Fragments
-		HexaGon.ClassPrefix				= 'q-';
+		HexaGon.ClassPrefix			= 'qxh-';
+		HexaGon.IdPrefix			= 'qxh_';
 		HexaGon.Source				= HexaGon.ClassPrefix+'source-'
 		HexaGon.Template			= HexaGon.ClassPrefix+'template-';
 		HexaGon.FragmentSpan		= '<span class="'+HexaGon.ClassPrefix;
@@ -144,8 +141,6 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.FragmentFsetSubClass = HexaGon.FragmentFset+' '+HexaGon.ClassPrefix;
 		HexaGon.FragmentSuffix		= '" />';
 		// NOTE Stitch together the Elements
-		HexaGon.spanText		= HexaGon.FragmentSpan+'text'+HexaGon.FragmentSuffix;
-		HexaGon.subNavGrid		= HexaGon.FragmentDiv+'subnav-grid'+HexaGon.FragmentSuffix;
 		HexaGon.formText		= HexaGon.FragmentSpan+'formtext'+HexaGon.FragmentSuffix;
 		HexaGon.formRangeOne	= HexaGon.FragmentSpan+'range-1'+HexaGon.FragmentSuffix;
 		HexaGon.formRangeTwo	= HexaGon.FragmentSpan+'range-2'+HexaGon.FragmentSuffix;
@@ -157,16 +152,10 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.sMemFsThreeWrap	= HexaGon.FragmentFsetSubClass+'set--savesettings'+HexaGon.FragmentSuffix;
 
 		// NOTE HexaGon Classes
-		HexaGon.ClassMain			= 'hexagon';
-		HexaGon.ClassClean			= HexaGon.ClassPrefix+'clean';
-		HexaGon.ClassStickyWidget	= HexaGon.ClassPrefix+'widget--sticky';
-		HexaGon.ClassMakeList		= HexaGon.ClassPrefix+'list';
-		HexaGon.ClassMakeGrid		= HexaGon.ClassPrefix+'grid';
-		HexaGon.ClassButton			= HexaGon.ClassPrefix+'button';
+		HexaGon.ClassMakeClubsGrid	= HexaGon.ClassPrefix+'grid-container';
 		HexaGon.ClassForm			= HexaGon.ClassPrefix+'form';
 		HexaGon.ClassSearch			= HexaGon.ClassForm+'-search';
 		HexaGon.ClassMemSearchNear	= HexaGon.ClassSearch+'--near-by';
-		HexaGon.ClassMemIntro		= HexaGon.ClassPrefix+'member-presentation';
 		// NOTE Stitch together the Body Source & Template classes
 		HexaGon.ClassXXX			= HexaGon.Template+HexaGon.bodyURL[1]+'-xxx';
 		HexaGon.ClassActive			= HexaGon.Template+HexaGon.bodyURL[1]+'-active';
@@ -200,62 +189,26 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.ClassInfoAdvertise	= HexaGon.Template+HexaGon.bodyURL[1]+'-advertise';
 		HexaGon.ClassInfoGdpr		= HexaGon.Template+HexaGon.bodyURL[1]+'-about-cookies';
 		HexaGon.ClassInfoFaq		= HexaGon.Template+HexaGon.bodyURL[1]+'-faq';
+		HexaGon.ClassClubMembers	= HexaGon.Template+HexaGon.bodyURL[1]+'-members';
+		HexaGon.ClassClub			= HexaGon.ClassPrefix+'club-'+HexaGon.Club_Id[1];
+		HexaGon.ClassClubMain		= HexaGon.ClassPrefix+'club-'+HexaGon.ClubMain_Id[1];
+		HexaGon.ThreadId			= HexaGon.IdPrefix+"thread_"+HexaGon.Thread_Id[1];
+		HexaGon.ScribbleId			= HexaGon.IdPrefix+"club_"+HexaGon.Club_Id[1]+"_scribble"
 	};
-	// NOTE Hexagon Console message
-	//	 https://github.com/stml/welcomejs
-	/*HexaGon.consoleMSG = function() {
-		var i = 0;
-		if (!i) {
-			setTimeout(function () {
-				console.info("%cWelcome!", "font: 3em sans-serif; color: orange; ");
-				console.info("%cHello, and welcome to the Hexagon console. If this is your first time here, make yourself at home. (If not, disregard this message!)", "font: 1.5em sans-serif; color: white;");
-				console.info("%cThank you for choosing Hexagon as your prefered userstyle for your Qruiser experiense!", "font: 1.5em sans-serif; color: orange;");
-				console.info("%cWhat you can find down here is what lies underneath Qruiser and Hexagon: its code. You can read, write, rewrite, and manipulate this code to make the web your own.", "font: 1.5em sans-serif; color: black;");
-				console.info("%cYou can find out more about using the console from these sites:", "font: 1.25 sans-serif; color: black;");
-				console.info("%c - Firefox: https://developer.mozilla.org/en-US/docs/Tools/Web_Console", "font: 1.25 sans-serif; color: black;");
-				console.info("%c - Chrome: https://developers.google.com/web/tools/chrome-devtools/console/", "font: 1.25 sans-serif; color: black;");
-				console.info("%c - Safari: https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html", "font: 1.25 sans-serif; color: black;");
-				console.info("%c - Or just use any search engine to look up 'developer console'", "font: 1.25 sans-serif; color: black;");
-				console.info("%cFor help with learning to code, try https://www.codecademy.com/", "font: 1.25 sans-serif; color: black;");
-				console.info("%c[This text generated by Black_Skorpio https://qruiser.com/?id=469474]", "font: 1 sans-serif; color: grey;");
-				console.info("%c			o__ __o				o__ __o			 o				 o	 __o__		 o__ __o			o__ __o__/_	 o__ __o", "font: 1 sans-serif; color: red;");
-				console.info("%c		 /v		 v\\			<|		 v\\		 <|>			 <|>		|			/v		 v\\		<|		v			 <|		 v\\ ", "font: 1 sans-serif; color: red;");
-				console.info("%c		/>			 <\\		 / \\		 <\\		/ \\			 / \\	 / \\		/>			 <\\	 < >					 / \\		 <\\ ", "font: 1 sans-serif; color: orange;");
-				console.info("%c	o/					 \\o	 \\o/		 o/		\\o/			 \\o/	 \\o/	 _\\o____				 |						\\o/		 o/", "font: 1 sans-serif; color: yellow;");
-				console.info("%c <|						 |>	 |__	_<|			|				 |		 |				 \\_\\__o__	 o__/_				 |__	_<|", "font: 1 sans-serif; color: yellow;");
-				console.info("%c	\\\\					 //		|			 \\		< >			 < >	 < >							\\		|						 |			 \\ ", "font: 1 sans-serif; color: green;");
-				console.info("%c		\\			 \\o/		 <o>			 \\o	 \\				 /		 |		 \\				 /	 <o>					 <o>			 \\o ", "font: 1 sans-serif; color: blue;");
-				console.info("%c		 o			 |			 |				 v\\	 o			 o			o			o			 o		 |						 |				 v\\ ", "font: 1 sans-serif; color: blue;");
-				console.info("%c		 <\\__	 / \\		 / \\				 <\\	<\\__ __/>		__|>_		<\\__ __/>		/ \\	_\\o__/_	/ \\				 <\\ ", "font: 1 sans-serif; color: purple;");
-			}, 1);
-			i = 1;
-		};
-	},HexaGon.consoleMSG();*/
 	// NOTE SetUp the body with classes and ID's
 	HexaGon.setBody = function() {
-		// NOTE To make sure we are running Hexagon
-		HexaGon.HtmlBody.addClass(HexaGon.ClassMain);
 		// NOTE Set som uniqe body ID's and classes for clubs
 		HexaGon.SetClubs = function() {
-			var ClubMain		= window.location.href.indexOf("club.php?id=");
-			var ClubURL			= HexaGon.hrefLoc.indexOf("?club=");
-			var ThredURL		= HexaGon.hrefLoc.indexOf("&view=");
-			var Thread_Id		= HexaGon.hrefLoc.split("&view=");
-			var Club_Id			= HexaGon.hrefLoc.split("?club=");
-			var ClubMain_Id		= HexaGon.hrefLoc.split("?id=");
-			var ThreadId		= "q_thread_"+Thread_Id[1];
-			var ScribbleId		= "q_club_"+Club_Id[1]+"_scribble"
-			var ClubClass		= HexaGon.ClassPrefix+'club-'+Club_Id[1];
-			var ClubbClassMain	= HexaGon.ClassPrefix+'club-'+ClubMain_Id[1];
 			if ( HexaGon.Discussions || HexaGon.Scribble > -1 ) {
 				if ( HexaGon.Discussions > -1 ) {
-					if( ThredURL > -1 ) HexaGon.Body.attr( "id", ThreadId );
-					else if( ClubURL > -1 ) HexaGon.Body.addClass( ClubClass ), HexaGon.MakeGrid.addClass( HexaGon.ClassMakeGrid );
+					if( HexaGon.ThredURL > -1 ) HexaGon.Body.attr( "id", HexaGon.ThreadId );
+					else if( HexaGon.ClubURL > -1 ) HexaGon.Body.addClass( HexaGon.ClassClub ), HexaGon.MakeClubsGrid.addClass( HexaGon.ClassMakeClubsGrid );
 				}
-				if ( HexaGon.Scribble > -1 ) HexaGon.Body.attr( "id", ScribbleId );
+				if ( HexaGon.Scribble > -1 ) HexaGon.Body.attr( "id", HexaGon.ScribbleId );
 			}
-			if ( ClubMain > -1 ) {
-				HexaGon.Body.addClass( ClubbClassMain ), HexaGon.MakeGrid.addClass( HexaGon.ClassMakeGrid );
+			if ( HexaGon.ClubMain || HexaGon.ClubMembers > -1 ) {
+				if( HexaGon.ClubMain > -1 ) HexaGon.Body.addClass( HexaGon.ClassClubMain ), HexaGon.MakeClubsGrid.addClass( HexaGon.ClassMakeClubsGrid );
+				if ( HexaGon.ClubMembers > -1 ) HexaGon.Body.addClass( HexaGon.ClassClub );
 			};
 		};
 		HexaGon.SetClubs();
@@ -285,6 +238,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		if(HexaGon.OnLine 			> -1) HexaGon.Body.addClass(HexaGon.ClassOnLine);
 		if(HexaGon.Search 			> -1) HexaGon.Body.addClass(HexaGon.ClassSearch);
 		if(HexaGon.Scribble			> -1) HexaGon.Body.addClass(HexaGon.ClassScribble);
+		if(HexaGon.ClubMembers		> -1) HexaGon.Body.addClass(HexaGon.ClassClubMembers);
 		if(HexaGon.msgSent 			> -1) HexaGon.Body.addClass(HexaGon.ClassSendmsg);
 		if(HexaGon.Updated 			> -1) HexaGon.Body.addClass(HexaGon.ClassUpdated);
 		if(HexaGon.InfoPolicy		> -1) HexaGon.Body.addClass(HexaGon.ClassInfoPolicy);
@@ -294,70 +248,19 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		if(HexaGon.InfoAdvertise	> -1) HexaGon.Body.addClass(HexaGon.ClassInfoAdvertise);
 		if(HexaGon.InfoGdpr			> -1) HexaGon.Body.addClass(HexaGon.ClassInfoGdpr);
 		if(HexaGon.InfoFaq			> -1) HexaGon.Body.addClass(HexaGon.ClassInfoFaq);
-		// NOTE Some "utility" classes
-		HexaGon.HexagonClasses = function() {
-			HexaGon.Sticky.addClass(HexaGon.ClassStickyWidget),
-			HexaGon.MakeList.addClass(HexaGon.ClassMakeList),
-			HexaGon.MemberPres.addClass(HexaGon.ClassMemIntro),
-			HexaGon.MakeButton.addClass(HexaGon.ClassButton);
-		};
-		HexaGon.HexagonClasses();
 	};
 	// NOTE Clean out unwanted stuff
 	HexaGon.ClassCleanHTML = function() {
 		// NOTE HACK to fix the warning icon not displaying
-		if(HexaGon.msgOld > -1) {
+		/*if(HexaGon.msgOld > -1) {
 			var delay = 3000;
 			setTimeout(function() {
 			HexaGon.WarningImg
 				.removeAttr('hidden')
 				.removeAttr('style')
-				.addClass('q-warning');
+				.addClass('qxh-warning');
 			}, delay);
-		};
-		// NOTE Start cleaning of the QX code
-		HexaGon.tidyUp = function() {
-			// NOTE Delete empty nodes
-			HexaGon.removeEmpty.remove();
-			// NOTE Remove inline styles
-			HexaGon.inlineCleaning.removeAttr("style").addClass(HexaGon.ClassClean);
-		};
-		// NOTE Rearranger things in the body and make it predictable
-		HexaGon.reArangeBody = function() {
-			// NOTE Make sure that the right column realy is where it should be!
-			// TODO Remove ASAP
-			var wholeID = $('#whole');
-			if ( HexaGon.colRight.parent().is( wholeID ) ) {
-				HexaGon.colRight.appendTo( HexaGon.mainContent ),
-				console.log('#column_right.column-right was moved to '+HexaGon.mainContent);
-			} else {
-				console.info('#column_right.column-right is already in place');
-			}
-			// NOTE Move .blog-teasers to #header
-			if ( HexaGon.TeaserDiv.parent().not( HexaGon.topContent ) ) HexaGon.TeaserDiv.appendTo(HexaGon.topContent),
-				console.log('.blog-teasers was moved to '+HexaGon.topContent);
-		};
-		// NOTE Wrap elements
-		HexaGon.wrapper = function() {
-			// NOTE Wrap all divs so we can style there parent
-			HexaGon.SubNavButtons.wrapAll( HexaGon.subNavGrid );
-			// NOTE Wrap all text nodes inside a span.text
-			HexaGon.searchNodes.contents().filter(function() {
-				return this.nodeType == 3 && $.trim(this.nodeValue).length;
-			}).wrap(HexaGon.spanText);
-			// NOTE Clean up the search forms
-			//HexaGon.searchForms.contents().filter(function() {
-			//	return this.nodeType == 3 && $.trim(this.nodeValue).length;
-			//}).wrap(HexaGon.formText),
-			//	$('input[name="lowerage"], input[name="lowerage"] + .q-formtext').wrapAll(HexaGon.formRangeOne),
-			//	$('input[name="upperage"], input[name="upperage"] + .q-formtext').wrapAll(HexaGon.formRangeOne),
-			//	HexaGon.formSearchGeo.wrapAll(HexaGon.formRangeGeo),
-			//	$('.select-style.inline.floatleft.margin-right, .q-range-1, .q-range-2, .q-geo').wrapAll(HexaGon.formFieldSet);
-			// https://gist.github.com/chrisjhoughton/7890303#gistcomment-1840913
-			//$.when( '.q-formtext' ).then( ( self ) => {
-			//	console.log(self);
-			//});
-		};
+		};*/
 		// NOTE Deletes the whitespace text only nodes
 		// https://stackoverflow.com/a/11633703/6820262
 		HexaGon.DeleteWhiteSpace = function() {
@@ -366,10 +269,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			}).remove();
 		};
 		// NOTE Run the above
-		HexaGon.reArangeBody();
-		HexaGon.tidyUp();
 		HexaGon.DeleteWhiteSpace();
-		HexaGon.wrapper();
 	};
 	// NOTE Fix the search forms
 	HexaGon.SetUpMemberSearch = function() {
@@ -385,7 +285,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 				return WrapText;
 			};
 			var WrapFormFields = function() {
-				var sMemFsOne = $('select[name="sex"], input[name="lowerage"], input[name="lowerage"] + span.q-formtext, input[name="upperage"], input[name="upperage"] + span.q-formtext');
+				var sMemFsOne = $('select[name="sex"], input[name="lowerage"], input[name="lowerage"] + span.qxh-formtext, input[name="upperage"], input[name="upperage"] + span.qxh-formtext');
 				var WrapFields = $.Deferred();
 
 				HexaGon.sMemLang.wrapAll( HexaGon.sMemLangWrap ),
@@ -399,8 +299,8 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			};
 			var CleanUp = function() {
 				var qFieldSet = $('fieldset');
-				var sMemFsTwoCleanUp = $('fieldset.q-set--specify');
-				var sMemFsThreeCleanUp = $('fieldset.q-set--savesettings');
+				var sMemFsTwoCleanUp = $('fieldset.qxh-set--specify');
+				var sMemFsThreeCleanUp = $('fieldset.qxh-set--savesettings');
 				var TheBroom = $.Deferred;
 
 				if ( qFieldSet.parent().is('div') ) qFieldSet.unwrap();
@@ -435,7 +335,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 				return WrapText;
 			};
 			var WrapFormFields = function() {
-				var sMemFsOne = $('select[name="sex"], input[name="lowerage"], input[name="lowerage"] + span.q-formtext, input[name="upperage"], input[name="upperage"] + span.q-formtext');
+				var sMemFsOne = $('select[name="sex"], input[name="lowerage"], input[name="lowerage"] + span.qxh-formtext, input[name="upperage"], input[name="upperage"] + span.qxh-formtext');
 				var WrapFields = $.Deferred();
 
 				HexaGon.sMemLang.wrapAll( HexaGon.sMemLangWrap ),
@@ -448,8 +348,8 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			};
 			var CleanUp = function() {
 				var qFieldSet = $('fieldset');
-				var sMemFsTwoCleanUp = $('fieldset.q-set--specify');
-				var sMemFsThreeCleanUp = $('fieldset.q-set--savesettings');
+				var sMemFsTwoCleanUp = $('fieldset.qxh-set--specify');
+				var sMemFsThreeCleanUp = $('fieldset.qxh-set--savesettings');
 				var TheBroom = $.Deferred;
 
 				if ( qFieldSet.parent().is('div') ) qFieldSet.unwrap();
@@ -765,12 +665,41 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		});
 		// Get links text and set it as title for the link
 		hq_GetTitleText.attr('title', function() {
-			return $(this).text()
+			var hq_this = $(this);
+			return hq_this.text()
 		});
 		// Set the correct title for the logo link
-		hq_logoLink.attr('title', hq_logoLinkTitle);
+		hq_logoLink.attr('title', hq_logoLinkTitle),
+		hq_seFlag.attr('title', hq_seFlagTitle),
+		hq_noFlag.attr('title', hq_noFlagTitle),
+		hq_dkFlag.attr('title', hq_dkFlagTitle),
+		hq_fiFlag.attr('title', hq_fiFlagTitle),
+		hq_ukFlag.attr('title', hq_ukFlagTitle),
+		hq_deFlag.attr('title', hq_deFlagTitle);
+
+		// TEMP Dirty HACK to be able to keep functionality on member profiles!
+		if( hq_MemberProfileLink > -1) {
+			console.info("Qruiser: We have a renegade template"),
+			hq_DocBody.addClass( hq_ClassMemberBody ).attr("id", hq_IdMemberBody),
+			hq_MemberPres.addClass( hq_ClassMemIntro ),
+			hq_starSign.wrap( hq_SpanStarSign ),
+			hq_HomePageStats.addClass( hq_ClassHpStats ),
+			hq_HomePagePresentation.addClass( hq_ClassHpPresentation ),
+			hq_HomePageLookingFor.addClass( hq_ClassHpLookingFor ),
+			hq_HomePageFlex.not( ( hq_NoHomePageList ) ).addClass( hq_ClassFlexContainer ),
+			hq_MakeFlexItem.addClass( hq_ClassFlexItem ).removeClass('odd even');
+		}
+		if ( hq_diggedMovies > -1 ) {
+			hq_searchXxxNodes.contents().filter(function() {
+				return this.nodeType == 3 && $.trim(this.nodeValue).length;
+			}).wrap( hq_SpanXxx );
+			// TEMP FIXME
+			hq_searchXxxNodes.append( '<svg class="qxh-sprite-icon qxh-icon-clubxxx"><use xlink:href="#club-xxx" /></svg>' );
+		}
+		//hq_MakeFlexItem.addClass( hq_ClassFlexItem ).removeClass('odd even');
 	};
 	NeedsToBeDone();
+	addSprite();
 	// NOTE Don't Look Back, Just Get it Done!
 	$(document).on("ready",HexaGon.init);
 })(window, document, jQuery);
