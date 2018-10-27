@@ -85,7 +85,7 @@
 }
 }
 
-@-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*") {
+@-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** Colors, sizes & such ***/
 :root {
 	--ui-clr-disabled: rgb(188, 194, 191);
@@ -3009,7 +3009,7 @@
 }
 }
 
-@-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*") {
+@-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** TEST AREA ***/
 @supports (display: grid) {
 	.qxh-template-pics-faces .gallery > .qxh-flex-item:not(:only-child),
