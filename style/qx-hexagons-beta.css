@@ -362,6 +362,8 @@
 	.clubxxx2hidden > span > b,
 	.clubxxx3hidden > span > b,
 	.clubxxx4hidden > span > b,
+	.homepage .ignoredicon span,
+	.insertmember .ignoredicon span,
 	.insertmember .favouriteicon span,
 	.rightcolumn-club.clubxxx1hidden h4,
 	.rightcolumn-club.clubxxx2hidden h4,
@@ -1350,6 +1352,9 @@
 	span.smalltext .q-sprite-icon.q-icon-clubxxx,
 	[class$="hidden"] .q-sprite-icon.q-icon-clubxxx,
 	#qmenu_home > a[href="javascript:home();"] .q-sprite-icon.q-icon-home {
+	.insertmember svg.qxh-icon-ignored,
+	svg.qxh-sprite-icon.qxh-icon-ignored,
+	.qxh-member-intro svg.qxh-icon-ignored,
 		font-size: var(--ui-icon-m);
 	}
 	svg.q-sprite-icon {
@@ -1366,6 +1371,8 @@
 	.video-icon .q-sprite-icon.q-icon-movie,
 	#column_center .insertmember svg.q-icon-favorite,
 	#column_center .icon[class*="icon-flag-"].q-clean {
+	#column_center .insertmember svg.qxh-icon-ignored,
+	.column-content svg.qxh-sprite-icon.qxh-icon-ignored,
 		vertical-align: top;
 	}
 	[id^="column_"]:not([id$="center"]) .q-sprite-icon {
@@ -1374,6 +1381,7 @@
 	.q-sprite-icon.q-icon-dropup,
 	.q-sprite-icon.q-icon-dropdown,
 	.insertmember svg.q-icon-favorite {
+	.insertmember svg.qxh-icon-ignored,
 		width: var(--ui-svg-mini);
 		height: var(--ui-svg-mini);
 	}
@@ -1443,6 +1451,7 @@
 	.clubxxx3hidden svg.q-icon-noclubicon,
 	.clubxxx4hidden svg.q-icon-noclubicon {
 		color: var(--ui-clr-red); /* QX red */
+	.ignoredicon svg.qxh-icon-ignored,
 		fill-opacity: 0.8;
 	}
 	.q-sprite-icon.q-icon-flower {
