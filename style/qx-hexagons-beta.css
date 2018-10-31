@@ -200,17 +200,26 @@
 	.block,
 	.memberinfo,
 	#homepageinfo,
+	.insertmember a,
 	.list .memberinfo,
 	.insertmember .link,
 	.insertmember .mood,
 	.insertmember .icons,
 	.gallery .memberinfo,
+	.standardbanner .close,
 	.insertmember .membericon,
 	.insertmember .description,
+	.gallery .insertmember .link,
+	.standardbanner .banner_icon,
+	.standardbanner .banner_image,
+	.gallery .insertmember .icons,
+	.insertmember .memberlargeicon,
 	.insertmember .emptymembericon,
 	.emptymemberlargeicon,
+	.gallery .insertmember .description,
 	.gallery .insertmember .emptymemberlargeicon {
 		position: relative;
+		width: auto;
 		height: auto;
 		top: auto;
 		left: auto;
@@ -219,6 +228,7 @@
 		padding: 0;
 		line-height: normal;
 		font-size: inherit;
+		text-indent: initial;
 	}
 	.container,
 	.column-right .container {
