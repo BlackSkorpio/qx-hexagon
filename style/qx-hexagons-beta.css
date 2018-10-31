@@ -1102,17 +1102,17 @@
 	/*----------------------------*/
 
 	/** Every third row in lists **/
-	:not(.infoblock):not(.homepageblock):not(movies-listing) >
+	/*:not(.infoblock):not(.homepageblock):not(movies-listing) >
 	.list > div:not(:only-child):not(.qxh-grid-container):nth-of-type(3n+4),
 	.gallery.gallery-scroll > div:not(:only-child):nth-of-type(3n),
 	.qxh-template-clubs-scribble #column_center.column-center h2 + p[style="margin-top: 0.5em;"] + div
 	.gallery:not(.gallery-scroll) > div:not(:only-child):nth-of-type(4n+5) {
 		flex-basis: 100%;
-	}
+	}*/
 	/* Make every child after the third have a border right */
-	#column_center .list > .qxh-flex-item:nth-of-type(3n+5):not(.qxh-grid-container):not(:only-child):not(:last-of-type){
+	/*#column_center .list > .qxh-flex-item:nth-of-type(3n+5):not(.qxh-grid-container):not(:only-child):not(:last-of-type){
 		border-right: var(--brd-type-2) var(--ui-clr-disabled);
-	}
+	}*/
 	/* Remove any custom bkrd clr */
 	/*#column_center > .list > .odd:nth-child(3n) > div,
 	#column_center > .list > .even:nth-child(3n) > div,
@@ -1124,7 +1124,7 @@
 
 	/** Every third row in lists
 	    Making sure that the memberinfo text is visible **/
-	#column_center .list > div:nth-child(3n) a,
+	/*#column_center .list > div:nth-child(3n) a,
 	#column_center .list > div:nth-child(3n) .datetime,
 	#column_center .list > div:nth-child(3n) .memberinfo,
 	#column_center .list > div:nth-child(3n) .insertmember .link,
@@ -1163,7 +1163,7 @@
 	.container--chat-list.qxh-widget--sticky {
 		top: 12.2em;
 		z-index: 2;
-	}
+	}*/
 	.container--personal.qxh-widget--sticky {
 		top:20.5em;
 		z-index: 1;
@@ -1454,12 +1454,12 @@
 		width: var(--ui-svg-l);
 		height: 1.1em;
 	}
-	.block-icons svg.qxh-sprite-icon,
+	/*.block-icons svg.qxh-sprite-icon,
 	.header .icons svg.qxh-sprite-icon,
 	.qxh-sprite-icon.qxh-header,
 	[id$="droparrow"] ~ svg.qxh-sprite-icon {
 		color: var(--bkgrd-b1);
-	}
+	}*/
 	.line:hover .qxh-sprite-icon,
 	.icons li:hover svg.qxh-sprite-icon,
 	.line:hover .icons svg.qxh-sprite-icon,
@@ -2278,10 +2278,10 @@
 	.gallery.gallery-scroll > div:not(:only-child):nth-of-type(3n),
 	.qxh-template-clubs-scribble #column_center.column-center h2 + p[style="margin-top: 0.5em;"] + div
 	.gallery:not(.gallery-scroll) > div:not(:only-child):nth-of-type(4n+5),
-	.qxh-template-pics-faces .gallery > div:not([class^="listpage"]):nth-of-type(5n+5),
-	.qxh-template-pics-faces .gallery > div:not([class^="listpage"]):nth-of-type(5n+6),
-	.qxh-template-members-near-by .gallery > div:not([class^="listpage"]):nth-of-type(5n+5),
-	.qxh-template-members-near-by .gallery > div:not([class^="listpage"]):nth-of-type(5n+6) {
+	.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+5),
+	.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+6),
+	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+5),
+	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+6) {
 		background: linear-gradient(to bottom, rgb(238, 242, 243), rgba(238, 242, 243, 0.5), rgba(142, 158, 171, 0.5), rgba(142, 158, 171, 0.8));
 		background-color: transparent !important;
 		border-top: var(--brd-type-1);
@@ -2666,7 +2666,7 @@
 	[id^="hqx_thread_"].qxh-template-clubs-discussions .list.qxh-flex-container {
 		flex-flow: column;
 	}
-	.qxh-template-clubs-scribble #column_center .qxh-list.qxh-flex-container > .qxh-flex-item:nth-of-type(3n+5),
+	/*.qxh-template-clubs-scribble #column_center .qxh-list.qxh-flex-container > .qxh-flex-item:nth-of-type(3n+5),
 	[id^="hqx_thread_"].qxh-template-clubs-discussions #column_center .list.qxh-flex-container > .qxh-flex-item:nth-of-type(3n+5) {
 		border-right: none;
 	}
@@ -2725,30 +2725,30 @@
 		max-width: calc(var(--ui-aside) + var(--ui-icon-l));
 	}
 
-	.qxh-template-pics-faces .gallery > div:not([class^="listpage"]):nth-of-type(5n+5),
-	.qxh-template-pics-faces .gallery > div:not([class^="listpage"]):nth-of-type(5n+6),
-	.qxh-template-members-near-by .gallery > div:not([class^="listpage"]):nth-of-type(5n+5),
-	.qxh-template-members-near-by .gallery > div:not([class^="listpage"]):nth-of-type(5n+6) {
+	/*.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+5),
+	.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+6),
+	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+5),
+	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+6) {
 		flex-basis: 50%;
 		margin: var(--margin-m) 0;
-	}
-	.qxh-template-pics-faces .gallery > div:not([class^="listpage"]):nth-of-type(5n+5),
-	.qxh-template-members-near-by .gallery > div:not([class^="listpage"]):nth-of-type(5n+5) {
+	}*/
+	/*.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+5),
+	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+5) {
 		border-right-color: transparent;
 		border-bottom-right-radius: 0;
 	}
-	.qxh-template-pics-faces .gallery > div:not([class^="listpage"]):nth-of-type(5n+6),
-	.qxh-template-members-near-by .gallery > div:not([class^="listpage"]):nth-of-type(5n+6) {
+	.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+6),
+	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+6) {
 		border-left-color: transparent;
 		border-bottom-left-radius: 0;
-	}
-	.qxh-template-pics-faces .gallery > div:not([class^="listpage"]):nth-of-type(5n+5) > div,
-	.qxh-template-pics-faces .gallery > div:not([class^="listpage"]):nth-of-type(5n+6) > div,
-	.qxh-template-members-near-by .gallery > div:not([class^="listpage"]):nth-of-type(5n+5) > div,
-	.qxh-template-members-near-by .gallery > div:not([class^="listpage"]):nth-of-type(5n+6) > div {
+	}*/
+	/*.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+5) > div,
+	.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+6) > div,
+	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+5) > div,
+	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+6) > div {
 		max-width: calc(var(--ui-aside) - var(--ui-size-l));
 		margin: 0 auto;
-	}
+	}*/
 	.qxh-template-pics-homepage .images-homepage-image,
 	.qxh-template-pics-homepage .images-homepage .image {
 		display: flex;
@@ -2976,15 +2976,16 @@
 	.column-center * a:hover:not([href*="support"]):not([href*="Arrow"]):not([class*="banner"]):not([class*="button"]) {
 		border-bottom: var(--brd-type-2) currentColor;
 	}*/
+	/*.qxh-template-pics-faces .gallery > .qxh-flex-item:not(:only-child),
 	.qxh-template-members-near-by .gallery > .qxh-flex-item:not(:only-child) {
 		max-width: 33%;
-	}
-	.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+5),
+	}*/
+	/*.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+5),
 	.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+6),
 	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+5),
 	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+6) {
 	  max-width: 50%;
-	}
+	}*/
 	/*----------------------------*/
 	#qxh_loading > span.qxh-loading-text {
 		position: fixed;
