@@ -424,6 +424,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		var hq_OnlineAct1		= $('.icon-online-1');
 		var hq_OnlineAct2		= $('.icon-online-2, .icon-online-3');
 		var hq_onlineWap		= $('.icon-online-4');
+		var hq_onlineWapOld		= $('img[src$="online_wap.gif"]');
 		var hq_Quarantined		= $('.icon-quarantined');
 		var hq_iconClose		= $('.icon-close, .standardbanner .close');
 		var hq_Exclamation		= $('.exclamation, .icon-exclamation, img[src$="warning_icon.png"]');
@@ -527,6 +528,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			hq_OnlineAct2.append( hq_OnlineAct2SVG );
 			hq_Quarantined.append( hq_QuarantinedSVG );
 			hq_onlineWap.append( hq_onlineWapSVG );
+			hq_onlineWapOld.after( hq_onlineWapSVG );
 			hq_iconClose.append( hq_iconCloseSVG );
 			hq_Exclamation.after( hq_ExclamationSVG );
 			hq_PresFlower.after( hq_FlowerSVG );
