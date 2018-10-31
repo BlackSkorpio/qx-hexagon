@@ -444,6 +444,7 @@
 	/* NOTE Get rid of the text and/or text only nodes */
 	#qmenu_home > a[href="javascript:home();"] {
 		letter-spacing: 0;
+		background-color: none;
 	}
 	span.qxh-xxx,
 	body::before,
@@ -498,11 +499,11 @@
 	body[onload="handleImageXxxSetting();"] #closing_link,
 	#column_center .small + .list + p + div[style="float:right;"],
 	.clubscribble .datetime + .list > .qxh-flex-item > .insertmember + b,
-	.qxh-source-clubs[class*="q-club-"] .list .qxh-grid-container > span.qxh-text,
+	.qxh-source-clubs[class*="qxh-club-"] .list .qxh-grid-container > span.qxh-text,
 	.qxh-field-set .qxh-formtext, .qxh-geo a[href^="javascript:selectgeo"],
 	.qxh-source-clubs #column_center.column-center .line:last-of-type + p,
 	.qxh-source-clubs #column_center.column-center .line:last-of-type + p + p,
-	:not([id^="q_thread_"]).qxh-template-clubs-discussions .qxh-grid-container > span.qxh-text,
+	[id^="qxh_category_"].qxh-template-clubs-discussions .qxh-grid-container > span.qxh-text,
 	.qxh-source-showclubs #column_center.column-center .column-content > .small[style="float:right;margin-bottom:10px;"] {
 		font-size: var(--font-2);
 	}
@@ -558,6 +559,7 @@
 	.insertmember.qxh-w100,
 	.column-content.qxh-w100,
 	.list .insertmember .description.qxh-w100,
+	.gallery .insertmember .description.qxh-w100,
 	.hexagon #videoblock [id^="videocontainer_"]::after,
 	.hexagon #videoblock [id^="videocontainer_"]::before,
 	.hexagon .video-js[class*="video_"][class*="-dimensions"] {
@@ -610,6 +612,7 @@
 	#largeunfavouriteicon,
 	.icon-gold.icon-small,
 	.emptymemberlargeicon,
+	.standardbanner .close,
 	[class*="icon-online-"],
 	.blog-teasers .gaymap h3,
 	.column-center .lockicon,
@@ -630,6 +633,7 @@
 	/*** Modal ***/
 	body.popup {
 		max-width: 540px;
+		width: 100%;
 		margin: auto !important;
 		padding: 0 !important;
 		overflow-x: hidden;
@@ -650,6 +654,7 @@
 		background-color: var(--bkgrd-w2) !important;
 		border: var(--brd-type-1) var(--brd-clr-h) !important;
 		border-radius: var(--brd-rad-s);
+		padding: 0 var(--padding-s);
 	}
 	#documentspecs,
 	body.popup p[style*="width: 230px;"] {
@@ -1055,6 +1060,7 @@
 		display: flex;
 		flex-flow: row wrap;
 		width: 100%;
+		background-color: inherit;
 	}
 	#homepageinfo.block[style*="block"],
 	.homepageblock [id^="album_"][id$="_info"].block[style*="block"] {
@@ -1113,6 +1119,10 @@
 		text-align: center;
 	}
 	/*----------------------------*/
+	.homepageblock .qxh-flex-item:only-child {
+		flex-basis: 100%
+	}
+	/*----------------------------*/
 
 	/** Every third row in lists **/
 	/*:not(.infoblock):not(.homepageblock):not(movies-listing) >
@@ -1153,7 +1163,7 @@
 		color: inherit;
 		margin-top: var(--margin-c);
 		font-weight: 700;
-	}
+	}*/
 
 	/*** Sticky ***/
 	.qxh-widget--sticky,
@@ -1176,7 +1186,7 @@
 	.container--chat-list.qxh-widget--sticky {
 		top: 12.2em;
 		z-index: 2;
-	}*/
+	}
 	.container--personal.qxh-widget--sticky {
 		top:20.5em;
 		z-index: 1;
@@ -1230,7 +1240,7 @@
 	.icons {
 		height: auto;
 	}
-	.icon, .icon-admin {
+	.icon:not([class*="icon-arrow"]), .icon-admin {
 		height: auto;
 		width: auto;
 	}
@@ -1241,6 +1251,7 @@
 	.lockicons li,
 	.icon-quarantined,
 	.icons li, .icon-zero,
+	.icon-gold.icon-large,
 	.icon-gold, .icon-lock,
 	.video-icon, .dropupicon,
 	.icon-reload, .dropdownicon,
@@ -1328,7 +1339,8 @@
 	.emptymembericon > a {
 		line-height: 0;
 	}
-	.homebuttons + span {
+	.homebuttons + span,
+	.hideself_ .icon-gold.icon-large + b {
 		margin-left: var(--margin-m);
 	}
 	.homebuttons + span + br[clear="all"] + .hideself_ {
@@ -1358,6 +1370,9 @@
 	.header img[src*="dropdown_"] ~ .qxh-icon-dropdown,
 	#buff_block img[src*="dropdown_"] ~ .qxh-icon-dropdown {
 		display: inline-block;
+	}
+	#show_buffs.block {
+		margin: var(--margin-l);
 	}
 	li.dropdownicon, li.dropupicon {
 		margin-top: var(--margin-z);
@@ -1481,6 +1496,7 @@
 	.homebuttons li:hover svg.qxh-sprite-icon,
 	.line:hover .qxh-sprite-icon.qxh-icon-clubs--header {
 		color: var(--txt-high-clr);
+		transform: scale(1.2);
 	}
 	.line:hover [href$="&xxx=1"] .qxh-sprite-icon.qxh-icon-clubs--header{
 		filter: hue-rotate(180deg) sepia(100%);
@@ -1549,7 +1565,8 @@
 		-webkit-transition: all var(--ui-time-m) linear;
 		        transition: all var(--ui-time-m) linear;
 	}
-	.qxh-sprite-icon.qxh-icon-flower:hover {
+	.qxh-sprite-icon.qxh-icon-flower:hover,
+	.hideself_ [href^="javascript:buygold"]:hover .qxh-sprite-icon.qxh-icon-flower {
 		-webkit-filter: var(--filter-flower-h);
 		        filter: var(--filter-flower-h);
 		transform: scale(1.5);
@@ -1573,6 +1590,15 @@
 	[id^="column_"] a,
 	.insertmember .link a {
 		text-decoration: none;
+	}
+	.qxh-flex-item a[target="_blank"] {
+		border-bottom: var(--brd-type-2);
+	}
+	.qxh-flex-item a[target="_blank"]::after {
+		content: "*";
+		display: inline;
+		  -moz-padding-start: 0.2em;
+		padding-inline-start: 0.2em;
 	}
 
 	/** Banners **/
@@ -1614,7 +1640,7 @@
 	.standardbanner .banner_icon,
 	.standardbanner .banner_image {
 		grid-area: aside;
-		padding: var(--ui-icon-l) var(--ui-icon-m);
+		max-width: 5em;
 	}
 	.standardbanner .message {
 		grid-area: message;
@@ -1627,6 +1653,9 @@
 		grid-area: actions;
 		width: auto;
 		padding: 0 var(--padding-s);
+	}
+	.standardbanner .close {
+		grid-area: right_side;
 	}
 	.warningbanner .actions,
 	.column-center #profilewizard .actions,
@@ -1710,7 +1739,8 @@
 	}
 	.insertmember .mood,
 	.insertmember .link a {
-		color: var(--txt-high-clr);
+		/*color: var(--txt-high-clr);*/
+		color: currentColor;
 	}
 	.insertmember .mood {
 		padding: 0 var(--padding-s);
@@ -1920,7 +1950,7 @@
 		cursor: not-allowed;
 		color: var(--ui-clr-disabled) !important;
 		border-color: var(--ui-clr-disabled);
-		background: none;
+		background: var(--qx-disabled) !important;
 		text-shadow: initial;
 		box-shadow: none;
 		transform: none;
@@ -2149,6 +2179,7 @@
 	#column_left.column-left .counter,
 	.container--favourites .notextdecoration > .qxh-text,
 	#column_left.column-left [href^="/show"] + b,
+	#column_left.column-left [href^="/your"] + b,
 	#column_left.column-left b a[href$="?updated=1"] {
 		color: var(--txt-high-clr);
 		font-weight: 700;
@@ -2157,8 +2188,8 @@
 		        transition: var(--ui-time-s);
 	}
 	#column_left.column-left a:hover + .counter,
-	#column_left.column-left .container-inner > div:hover b,
-	#column_left.column-left .container-inner > div:hover b > .qxh-clean,
+	#column_left.column-left .container-inner > div a:hover + b,
+	#column_left.column-left .container-inner > div a:hover + b > .qxh-clean,
 	.container--favourites .notextdecoration:hover > .qxh-text{
 		animation-play-state: paused !important;
 	}
@@ -2230,6 +2261,9 @@
 	/*** Column Center ***/
 
 	/** Dividers **/
+	.column-content > div:not(.goldbanner):not(#error_texts):not([class*="button"]) {
+		background-color: inherit;
+	}
 	.divider span {
 		top: auto;
 		padding: 0;
@@ -2242,7 +2276,7 @@
 		display: flow-root;
 		font-family: "Roboto Slab", serif;
 		text-transform: uppercase;
-		color: var(--txt-high-clr);
+		/*color: var(--txt-high-clr);*/
 		font-weight: 700;
 		line-height: var(--lh-n);
 		height: var(--lh-1);
@@ -2250,7 +2284,7 @@
 		white-space: normal;
 		margin: var(--margin-l) var(--margin-z);
 		vertical-align: initial;
-		border-bottom: var(--brd-type-1) var(--brd-clr-h);
+		border-bottom: var(--brd-type-1)/* var(--brd-clr-h)*/;
 	}
 	.line,
 	.divider,
@@ -2258,20 +2292,26 @@
 	#column_center.column-center .line {
 		background: inherit !important;
 	}
+	.line,
+	.divider,
+	.divider > span,
 	#column_center.column-center .line {
 		margin-bottom: var(--margin-xlr);
 		height: var(--lh-1);
 		line-height: var(--lh-1);
 	}
+	.divider a,
 	.line > .header,
 	.line > .header_red {
 		position: initial;
 		display: inline;
 		padding-right: var(--padding-s);
 		line-height: var(--lh-3);
-		color: var(--txt-high-clr);
+		/*color: var(--txt-high-clr);
+		background-color: inherit;*/
 	}
 	.line a,
+	.divider a,
 	.line > .header a,
 	.line > .header_red a,
 	#column_center.column-center .line a {
@@ -2331,7 +2371,6 @@
 	.homepageblock > .qxh-flex-item {
 		width: auto;
 	}
-	.homepageblock > .qxh-flex-item > div,
 	.homepageblock > .qxh-flex-item > div {
 		height: 100%
 	}
@@ -2368,6 +2407,7 @@
 		margin-bottom: var(--margin-m);
 	}
 	#showpageas[style*="block"],
+	#show_buffs[style*="block"],
 	#verifiedinfo[style*="block"],
 	div[id$="_text"][style*="block"],
 	span[id$="_text"][style*="block"] {
@@ -2376,6 +2416,14 @@
 		border: var(--brd-info);
 		border-radius: var(--brd-rad-info);
 		box-shadow: var(--shadow-size-2) var(--shadow-gray);
+	}
+	#show_buffs[style*="block"],
+	#verifiedinfo[style*="block"] {
+		border: var(--brd-type-1);
+		box-shadow: var(--shadow-size-1);
+	}
+	#show_buffs[style*="block"] img {
+		margin: var(--margin-s) !important;
 	}
 	#verifiedinfo[style*="block"] {
 		margin: var(--margin-s) var(--margin-s) var(--margin-l) var(--margin-xlr);
@@ -2580,36 +2628,41 @@
 	/*----------------------------*/
 
 	/*** NOTE Effect "Lift up" the div we hare hovering ***/
-	.qxh-list > .qxh-flex-item,
 	#homepageinfo .infoblock,
 	#verifiedinfo .qxh-flex-item,
+	.homepageblock div > [class=""],/* HACK Since the latest discussions displayed is not getting a class! */
 	.homepage .qxh-list > .qxh-flex-item,
 	.scribbleboard-holder > .qxh-flex-item,
+	.column-content > .qxh-list > .qxh-flex-item,
 	.column-content > .qxh-flex-container > .qxh-flex-item,
+	.column-content > .list.qxh-flex-container > .qxh-flex-item,
 	.homepage .homepageblock.qxh-flex-container > .qxh-flex-item,
 	.homepage [id^="album_"][id$="_info"].block > a.qxh-flex-item,
-	.column-content .qxh-list > .qxh-flex-container > .qxh-flex-item,
 	.homepage .homepageblock > .qxh-flex-container > .qxh-flex-item,
-	.column-content > [class^='clubxxx'] > .qxh-flex-container > .qxh-flex-item {
+	/*.column-content .qxh-list > .qxh-flex-container > .qxh-flex-item,*/
+	.column-content > [class^="clubxxx"] > .qxh-flex-container > .qxh-flex-item {
 		padding: var(--padding-s);
 		background-color: inherit;
 		-webkit-transition: var(--ui-time-f) ease-in-out;
 		        transition: var(--ui-time-f) ease-in-out;
 		will-change: transform, box-shadow;
 	}
-	.qxh-list > .qxh-flex-item:hover,
 	#homepageinfo .infoblock:hover,
 	#verifiedinfo .qxh-flex-item:hover,
+	.homepageblock div > [class=""]:hover,/* HACK Since the latest discussions displayed is not getting a class! */
 	.homepage .qxh-list > .qxh-flex-item:hover,
 	.scribbleboard-holder > .qxh-flex-item:hover,
+	.column-content > .qxh-list > .qxh-flex-item:hover,
 	.column-content > .qxh-flex-container > .qxh-flex-item:hover,
+	.column-content > .list.qxh-flex-container > .qxh-flex-item:hover,
 	.homepage .homepageblock.qxh-flex-container > .qxh-flex-item:hover,
 	.homepage [id^="album_"][id$="_info"].block > a.qxh-flex-item:hover,
-	.column-content .qxh-list > .qxh-flex-container > .qxh-flex-item:hover,
 	.homepage .homepageblock > .qxh-flex-container > .qxh-flex-item:hover,
-	.column-content > [class^='clubxxx'] > .qxh-flex-container > .qxh-flex-item:hover {
+	/*.column-content .qxh-list > .qxh-flex-container > .qxh-flex-item:hover,*/
+	.column-content > [class^="clubxxx"] > .qxh-flex-container > .qxh-flex-item:hover {
 		border-radius: var(--brd-rad-s);
 		box-shadow: 0 0 1.5em currentColor;
+		box-shadow: inset 0 0 0 99999px rgba(255,255,255,0.2);
 		transform: translateY(0.1875em);
 		z-index: 1;
 	}
@@ -2625,11 +2678,20 @@
 		margin: 0 var(--margin-s);
 	}
 
-	.qxh-source-clubs[class*="q-club-"] .list > .odd.qxh-grid-container,
-	.qxh-source-clubs[class*="q-club-"] .list > .even.qxh-grid-container,
-	:not([id^="q_thread_"]).qxh-template-clubs-discussions .list > .odd.qxh-grid-container,
-	:not([id^="q_thread_"]).qxh-template-clubs-discussions .list > .even.qxh-grid-container,
-	:not([id^="q_thread_"]).qxh-template-forum-discussions .list.qxh-flex-container > .qxh-flex-item {
+	.qxh-source-clubs[class*="qxh-club-"] .list > .odd.qxh-grid-container,
+	.qxh-source-clubs[class*="qxh-club-"] .list > .even.qxh-grid-container,
+	.qxh-source-clubs[class*="qxh-club-"] .list > .qxh-flex-item.qxh-grid-container,
+	/*:not([id^="qxh_thread_"]).qxh-template-clubs-discussions .list > .odd.qxh-grid-container,
+	:not([id^="qxh_thread_"]).qxh-template-clubs-discussions .list > .even.qxh-grid-container,
+	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .list.qxh-flex-container > .qxh-flex-item {*/
+	[id^="qxh_category_"].qxh-template-clubs-discussions .list > .odd.qxh-grid-container,
+	[id^="qxh_category_"].qxh-template-clubs-discussions .list > .even.qxh-grid-container,/* QUESTION Obsolete? */
+	[id^="qxh_category_"].qxh-template-forum-discussions .list.qxh-flex-container > .qxh-flex-item,
+
+
+	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .column-content > div.list.qxh-flex-container.qxh-w100:nth-of-type(2) > .qxh-flex-item,
+	/* FIXME Raden ovan ersätter denna rad!!!!! ( Kanske... )*/
+	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .list.qxh-flex-container > .qxh-flex-item {
 		display: grid;
 		grid-template-rows: [heading] min-content [date] min-content [member] min-content;
 		grid-template-columns: [title] 1fr [number] auto [status] auto;
@@ -2639,40 +2701,41 @@
 		"member member member";
 		grid-gap: 0.3em;
 	}
-	:not([id^="q_thread_"]).qxh-template-forum-discussions .qxh-flex-item > br,
-	:not([id^="q_thread_"]).qxh-template-clubs-discussions .list > .qxh-grid-container br {
+	.qxh-template-forum-discussions .qxh-flex-item > br,
+	[id^="qxh_category_"].qxh-template-clubs-discussions .list > .qxh-grid-container br {
 		display: none;
 	}
-	.qxh-source-clubs[class*="q-club-"] .list .qxh-grid-container > div[style*="right"],
-	:not([id^="q_thread_"]).qxh-template-forum-discussions .qxh-flex-item > div[style='float:right'],
-	:not([id^="q_thread_"]).qxh-template-clubs-discussions .qxh-grid-container > div[style="float:right"] {
+	.qxh-source-clubs[class*="qxh-club-"] .list .qxh-grid-container > div[style*="right"],
+	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .qxh-flex-item > div[style="float:right"],
+	[id^="qxh_category_"].qxh-template-clubs-discussions .qxh-grid-container > div[style="float:right"] {
 		grid-area: member;
 	}
-	:not([id^="q_thread_"]).qxh-template-clubs-discussions #column_center div[style="float:right"] .insertmember .icons li {
+	[id^="qxh_category_"].qxh-template-clubs-discussions #column_center div[style="float:right"] .insertmember .icons li {
 		mix-blend-mode: overlay;
 	}
-	.qxh-template-clubs-scribble #column_center .insertmember .link a {
+	/*.qxh-template-clubs-scribble #column_center .insertmember .link a {
 		filter: drop-shadow(0.0625em 0.0625em currentColor);
 		mix-blend-mode: difference;
-	}
-	:not([id^="q_thread_"]).qxh-template-forum-discussions .qxh-flex-item > a.qxh-flex-item,
-	.qxh-source-clubs[class*="q-club-"] .list .qxh-grid-container > a[href*="clubdiscuss.php?club="],
-	:not([id^="q_thread_"]).qxh-template-clubs-discussions .qxh-grid-container > a[href^="/clubs/clubdiscuss.php?club="] {
+	}*/
+	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .qxh-flex-item > a.qxh-flex-item,
+	.qxh-source-clubs[class*="qxh-club-"] .list .qxh-grid-container > a[href*="clubdiscuss.php?club="],
+	[id^="qxh_category_"].qxh-template-clubs-discussions .qxh-grid-container > a[href^="/clubs/clubdiscuss.php?club="] {
 		grid-area: title;
 	}
-	.qxh-source-clubs[class*="q-club-"] .list .qxh-grid-container > span.qxh-text,
-	:not([id^="q_thread_"]).qxh-template-forum-discussions .qxh-flex-item > span.qxh-text,
-	:not([id^="q_thread_"]).qxh-template-clubs-discussions .qxh-grid-container > span.qxh-text {
+	.qxh-source-clubs[class*="qxh-club-"] .list .qxh-grid-container > span.qxh-text,
+	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .qxh-flex-item > span.qxh-text,
+	[id^="qxh_category_"].qxh-template-clubs-discussions .qxh-grid-container > span.qxh-text {
 		grid-area: number;
 	}
-	.qxh-source-clubs[class*="q-club-"] .list .qxh-grid-container > span.smalltext,
-	:not([id^="q_thread_"]).qxh-template-clubs-discussions .qxh-grid-container > span.smalltext,
-	:not([id^="q_thread_"]).qxh-template-forum-discussions .qxh-flex-item > .smalltext.qxh-flex-item {
+	.qxh-source-clubs[class*="qxh-club-"] .list .qxh-grid-container > span.smalltext,
+	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .qxh-flex-item > .smalltext,
+	[id^="qxh_category_"].qxh-template-clubs-discussions .qxh-grid-container > span.smalltext,
+	[id^="qxh_category_"].qxh-template-forum-discussions .qxh-flex-item > .smalltext.qxh-flex-item {
 		grid-area: status;
 	}
-	.qxh-source-clubs[class*="q-club-"] .list .qxh-grid-container > span.datetime,
-	:not([id^="q_thread_"]).qxh-template-forum-discussions .qxh-flex-item > .datetime,
-	:not([id^="q_thread_"]).qxh-template-clubs-discussions .qxh-grid-container > span.datetime {
+	.qxh-source-clubs[class*="qxh-club-"] .list .qxh-grid-container > span.datetime,
+	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .qxh-flex-item > .datetime,
+	[id^="qxh_category_"].qxh-template-clubs-discussions .qxh-grid-container > span.datetime {
 		grid-area: date;
 	}
 	.qxh-template-clubs-scribble .qxh-list.qxh-flex-container,
@@ -2682,10 +2745,10 @@
 	/*.qxh-template-clubs-scribble #column_center .qxh-list.qxh-flex-container > .qxh-flex-item:nth-of-type(3n+5),
 	[id^="hqx_thread_"].qxh-template-clubs-discussions #column_center .list.qxh-flex-container > .qxh-flex-item:nth-of-type(3n+5) {
 		border-right: none;
-	}
+	}*/
 
 	/* HACK to get the Add Scribble button on it's own row */
-	[id^="q_club_"].qxh-template-clubs-scribble .column-content > div > br + p:last-of-type {
+	[id^="qxh_club_"].qxh-template-clubs-scribble .column-content > div > br + p:last-of-type {
 		display: flow-root;
 	}
 	/* HACK to make the club title display directly under insertmember */
@@ -2699,7 +2762,7 @@
 		display: inline-block;
 		font-style: italic;
 	}
-	.qxh-template-clubs-scribble .qxh-list > q-flex--item {
+	.qxh-template-clubs-scribble .qxh-list > qxh-flex--item {
 		flex: 1 1 50%;
 	}
 
@@ -2780,6 +2843,15 @@
 		flex: 0 1 5em;
 	}
 
+	.qxh-template-members-near-by .column-content .insertmember {
+		grid-template-columns: auto;
+		grid-template-areas:
+			"avatar"
+			"link"
+			"description"
+			"icons"
+			"mood";
+	}
 	/* NOTE No need to display the friend heart here */
 	.container--last-logged-in .favouriteicon,
 	.qxh-source-showfavourites #column_center .link .favouriteicon,
@@ -2974,7 +3046,15 @@
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** TEST AREA ***/
 @supports (display: grid) {
-	.qxh-template-pics-faces .gallery > .qxh-flex-item:not(:only-child),
+	i i,
+	i em,
+	em em,
+	em i {
+		font-weight: 800;
+	}
+	.clubscribble .icons li {
+		filter: hue-rotate(180deg);
+	}
 	/* NOTE Msg from qruiser */
 	.list.qxh-flex-container .qxh-flex-item.qxh-alert {
 		flex-basis: 100%;
@@ -2989,6 +3069,35 @@
 	.column-center * a:hover:not([href*="support"]):not([href*="Arrow"]):not([class*="banner"]):not([class*="button"]) {
 		border-bottom: var(--brd-type-2) currentColor;
 	}*/
+	.scribbleboard-holder.qxh-flex-container,
+	.column-content .odd h3 + .list.qxh-flex-container,
+	[class*="discussions"] .odd > .list.qxh-flex-container,
+	[class*="discussions"] .odd + .list.qxh-flex-container.qxh-w100 {
+		flex-flow: column;
+	}
+	/* HACK för att unvika att det blir grid containers ( FIXME Rad 2649 )*/
+	[class*="discussions"] .odd + .list.qxh-flex-container.qxh-w100 > .qxh-flex-item {
+		display: block;
+	}
+	.qxh-flex-item div[style*="background-color:"] {
+		height:100%;
+	}
+	/*----------------------------*/
+	/* NOTE Experimental */
+	.qxh-flex-item div[style*="background-color:"] {
+		display: flex;
+		flex-flow: column;
+		-web-kit-block-size: 100%;
+		         block-size: 100%;
+	}
+	.qxh-flex-item div[style*="background-color:"] > div:nth-child(3) {
+		flex: 1 1 100%;
+	}
+	.qxh-flex-item div[style*="background-color:"] > .insertmember {
+		-web-kit-min-block-size: initial;
+		         min-block-size: initial;
+	}
+	/*----------------------------*/
 	/*.qxh-template-pics-faces .gallery > .qxh-flex-item:not(:only-child),
 	.qxh-template-members-near-by .gallery > .qxh-flex-item:not(:only-child) {
 		max-width: 33%;
