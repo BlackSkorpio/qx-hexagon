@@ -719,11 +719,16 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		};
 		// TEMP Dirty HACK to be able to keep functionality on member profiles!
 		if( hq_MemberProfileLink > -1) {
+			var hq_BuyGoldToFlower	= $('.hideself_ > a:first-of-type[href^="javascript:buygold"]');
+			var hq_BuyGoldToName	= $('.hideself_ > a:last-of-type[href^="javascript:buygold"] > b');
+			var hq_BuyGoldCleanUp	= $('.hideself_ > a:last-of-type[href^="javascript:buygold"]');
+
 			console.info("Qruiser: We have a renegade template"),
 			hq_DocBody.addClass( hq_ClassMemberBody ).attr("id", hq_IdMemberBody),
 			hq_MemberPres.addClass( hq_ClassMemIntro ),
 			hq_starSign.wrap( hq_SpanStarSign ),
 			hq_HomePageStats.addClass( hq_ClassHpStats ),
+			hq_BuyGoldToName.appendTo( hq_BuyGoldToFlower ), hq_BuyGoldCleanUp.remove(),// NOTE Merge the two buy gold links to one
 			hq_HomePagePresentation.addClass( hq_ClassHpPresentation ),
 			hq_HomePageLookingFor.addClass( hq_ClassHpLookingFor ),
 			hq_HomePageFlex.not( ( hq_NoHomePageList ) ).addClass( hq_ClassFlexContainer ),
