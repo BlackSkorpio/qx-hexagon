@@ -554,6 +554,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_MemberProfileId		= window.location.href.split("?id=");
 			var hq_DocBody				= $(document.body);
 			var hq_HtmlBody				= $('html, body');
+			var hq_Width100				= $('.column-content textarea, .video-js[class*="video_"][class*="-dimensions"], .list .messages, #clubinfo_text + p + div.small[style*="float:right;"], .listpagelinks, .listpagenumber, form, [data-user-input], #homepageinfo, .homepageblock .relative, .column-center .column-content, .homepage, .line, img.background-image, .column-content div[style*="width:"]:not([style*="16px"]), #column_right.column-right, .container.gaymap-today .container-header, .container-columns, .clubxxx1,.clubxxx2,.clubxxx3,.clubxxx4, .container-column img, .insertmember, .insertmember .link, .insertmember .description, .insertmember .icons, .blog-teasers, .teaser-image, #qmenu li a, #changemood');
 			var hq_removeEmpty			= $('#column_center .even:empty, .thinlineup:empty, .homepageblock div[style="float:left;width:140px"]:first-child, .block img[src$="blank.gif"]:not([style*="/photothumbnails/"]), .homepageblock div[style="float:left;width:70px"], li div[style="width: 10px; height: 9px"]:empty,div[style="width: 10px; height: 10px"]:empty');
 			var hq_inlineCleaning		= $('.movies-listing .even div, .movies-listing .odd div, .movies-listing > div:nth-of-type(3), .video-thumb img[src$="star.png"], .video-thumb span, .attachedicon, span.homelink, div[style*="font-size: 10px;"], .block[style*="font-size: 11px;"], .icons li, .line .header span, #search form, #largeediticon, a[style*="text-decoration"]:not([style*="bold"]):not([href*="javascript:dropContent"]), i.icon, .emptymembericon, .noticetext');
 			var hq_searchNodes			= $('[id^="column_"], .odd, .even, .container--favourites .notextdecoration');
@@ -596,6 +597,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_mainContent			= ".main-content";
 			var hq_ClassOddEven			= '.odd, .even';
 			var hq_ClassAlert			= hq_ClassPrefix+'alert';
+			var hq_ClassW100			= hq_ClassPrefix+'w100';
 			var hq_ClassMemberBody		= hq_ClassPrefix+'source-profile '+hq_ClassPrefix+'template-profile-member'+hq_MemberProfileId[1];
 			var hq_ClassMemIntro		= hq_ClassPrefix+'member-intro';
 			var hq_ClassHpStats			= hq_ClassPrefix+'member-stats';
@@ -646,6 +648,8 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		hq_ScribbleImages.removeAttr("style").addClass( hq_ClassScribbleImg );
 		// NOTE Delete empty nodes
 		hq_removeEmpty.remove();
+		// NOTE Remove any hard coded withs and add the class .qxh-w100
+		hq_Width100.css("width","").addClass( hq_ClassW100 );
 		// NOTE Wrap all text nodes inside a span.text
 		hq_searchNodes.contents().filter(function() {
 			return this.nodeType == 3 && $.trim(this.nodeValue).length;
