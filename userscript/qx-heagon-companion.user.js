@@ -685,6 +685,34 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		hq_ukFlag.attr('title', hq_ukFlagTitle),
 		hq_deFlag.attr('title', hq_deFlagTitle);
 
+		// HACK for the old not logged in index
+		if ( !$(document.body).hasClass("signed-in") ) {
+			var hq_ClassDot			= '.';
+			var hq_ClassFrontCols	= hq_ClassPrefix+'front-columns';
+			var hq_ClassFrontImg	= hq_ClassPrefix+'front-image';
+			var hq_ClassFrontText	= hq_ClassPrefix+'front-text';
+			var hq_frontImgDiv		= 'div[style*="width:80px;"]';
+			var hq_frontTextDiv		= 'div[style*="width:105px;"]';
+			var hq_frontCssArray	= {"float" : "","margin-top" : "","margin-right" : "","margin-bottom" : "","overflow" : ""};
+
+			var hq_frontImg			= $( hq_frontImgDiv ).addClass( hq_ClassFrontImg );
+			var hq_frontText		= $( hq_frontTextDiv ).addClass( hq_ClassFrontText );
+			var hq_flexItem			= hq_ClassDot+hq_ClassFlexItem;
+
+			var hq_divTargets		= $(hq_frontImgDiv + ',' + hq_frontTextDiv);
+			var hq_frontGroups		= hq_divTargets.length;
+			var hq_frontMainWrap	= '<div class="'+hq_ClassFlexContainer+'" />';
+			var hq_frontGroupDiv	= '<div class="'+hq_ClassFrontCols+' '+hq_ClassFlexItem+'" />';
+			// https://stackoverflow.com/questions/13489450/wrap-every-2-divs-in-a-new-div
+			for ( var i = 0;i < hq_frontGroups;i+=2 ){
+				hq_divTargets.filter( ':eq('+i+'),:eq('+(i+1)+')' ).wrapAll( hq_frontGroupDiv );
+			};
+
+			hq_frontImg.css( hq_frontCssArray );
+			hq_frontText.removeAttr("style");
+			$( '#column_center > .qxh-flex-item' ).wrapAll( hq_frontMainWrap );
+			console.log('Frontpage done');
+		}
 		//
 		if( hq_msgOld > -1 ) {
 			hq_AdminUser.parents( '.'+hq_ClassFlexItem ).addClass( hq_ClassAlert );
