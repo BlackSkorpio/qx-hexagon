@@ -126,8 +126,10 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.ClubMain		= HexaGon.hrefLoc.indexOf("club.php?id=");
 		HexaGon.ClubURL			= HexaGon.hrefLoc.indexOf("?club=");
 		HexaGon.ThredURL		= HexaGon.hrefLoc.indexOf("&view=");
+		HexaGon.CatURL			= HexaGon.hrefLoc.indexOf("/?category=");
 		HexaGon.ClubMembers		= HexaGon.hrefLoc.indexOf("clubmembers.php");
 		HexaGon.Thread_Id		= HexaGon.hrefLoc.split("&view=");
+		HexaGon.Categori_Id		= HexaGon.hrefLoc.split("?category=");
 		HexaGon.Club_Id			= HexaGon.hrefLoc.split("?club=");
 		HexaGon.ClubMain_Id		= HexaGon.hrefLoc.split("?id=");
 
@@ -194,6 +196,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.ClassClub			= HexaGon.ClassPrefix+'club-'+HexaGon.Club_Id[1];
 		HexaGon.ClassClubMain		= HexaGon.ClassPrefix+'club-'+HexaGon.ClubMain_Id[1];
 		HexaGon.ThreadId			= HexaGon.IdPrefix+"thread_"+HexaGon.Thread_Id[1];
+		HexaGon.CatId				= HexaGon.IdPrefix+"category_"+HexaGon.Categori_Id[1];
 		HexaGon.ScribbleId			= HexaGon.IdPrefix+"club_"+HexaGon.Club_Id[1]+"_scribble"
 	};
 	// NOTE SetUp the body with classes and ID's
@@ -203,6 +206,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			if ( HexaGon.Discussions || HexaGon.Scribble > -1 ) {
 				if ( HexaGon.Discussions > -1 ) {
 					if( HexaGon.ThredURL > -1 ) HexaGon.Body.attr( "id", HexaGon.ThreadId );
+					if( HexaGon.CatURL > -1 ) HexaGon.Body.attr( "id", HexaGon.CatId );
 					else if( HexaGon.ClubURL > -1 ) HexaGon.Body.addClass( HexaGon.ClassClub ), HexaGon.MakeClubsGrid.addClass( HexaGon.ClassMakeClubsGrid );
 				}
 				if ( HexaGon.Scribble > -1 ) HexaGon.Body.attr( "id", HexaGon.ScribbleId );
