@@ -66,7 +66,8 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.HtmlBody		= $('html, body');
 		HexaGon.Body			= $(document.body);
 		HexaGon.formSearchGeo	= $('a[href^="javascript:selectgeo"], a[href^="javascript:reset"]');
-		HexaGon.MakeClubsGrid	= $(".column-content > div:nth-of-type(2) > .list:nth-of-type(5) > .odd, .column-content > div:nth-of-type(2) > .list:nth-of-type(5) > .even, .column-content > div[class ^='club']:not([class*='hidden']) .list:nth-of-type(5) > .odd, .column-content > div[class ^='club']:not([class*='hidden']) .list:nth-of-type(5) > .even, .column-content form[name='sort'] + .list > .odd, .column-content form[name='sort'] + .list > .even");
+		HexaGon.MakeClubsGrid	= $(".column-content > div:nth-of-type(2) > .list:nth-of-type(4) > .qxh-flex-item, .column-content > div[class ^='club']:not([class*='hidden']) .list:nth-of-type(4) > .qxh-flex-item, .column-content form[name='sort'] + .list > .qxh-flex-item");
+		//HexaGon.MakeClubsGrid	= $(".column-content > div:nth-of-type(2) > .list:nth-of-type(5) > .odd, .column-content > div:nth-of-type(2) > .list:nth-of-type(5) > .even, .column-content > div[class ^='club']:not([class*='hidden']) .list:nth-of-type(5) > .odd, .column-content > div[class ^='club']:not([class*='hidden']) .list:nth-of-type(5) > .even, .column-content form[name='sort'] + .list > .odd, .column-content form[name='sort'] + .list > .even");
 		HexaGon.RemoveWhiteSpace = $('.column-content p + h2 + p[style*="margin-top: 0.5em;"]');
 		//HexaGon.WarningImg		= $('img[src$="warning_icon.png"].banner_icon');// NOTE HACK
 		// NOTE Search Member Forms
