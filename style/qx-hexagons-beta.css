@@ -245,6 +245,9 @@
 }
 /*** General Stuff ***/
 @supports (display: grid) {
+	[style*="height:120px;"],[style*="height: 120px;"] {
+		height: auto !important;
+	}
 	[style*="border: 1pt"] {
 		border-color: var(--brd-clr-h) !important;
 	}
