@@ -188,9 +188,9 @@
 	#column_center a.clublink > img[src$="blank.gif"],
 	[id$="_text"] + p:empty + p[style="padding-top:10px;"]:empty,
 	[class*="sticky"] + [class*="hidden"] > svg.qxh-icon-noclubicon,
-	[class^='clubxxx'][class$='hidden'] > div[style*='height: 110px;']:first-child,
+	[class^="clubxxx"][class$="hidden"] > div[style*="height: 110px;"]:first-child,
 	[class$="hidden"] > img.xxx1, [class$="hidden"] > img.xxx3, [class$="hidden"] > img.xxx4,
-	div:empty:not(.divider):not(.orangeline):not(.filldot):not(.jwpreview):not(.jwicon):not(.teaser-image):not(.memberlargeicon):not(#thumb) {
+	div:not(#error_texts):empty:not(.divider):not(.orangeline):not(.filldot):not(.jwpreview):not(.jwicon):not(.teaser-image):not(.memberlargeicon):not(#thumb):not(#colorpicker):not(#documentspecs):not([data-qruiser-chat]) {
 		display: none !important;
 	}
 	.qxh-hidden {
