@@ -96,6 +96,7 @@
 	--ui-clr-gray1: rgb(63, 63, 63);
 	--ui-clr-gray2: rgba(159, 159, 159, 0.92);
 	--ui-clr-red: rgb(188, 21, 42); /* QX red */ /*rgb(178, 27, 27);*/
+	--ui-clr-alert: rgba(188, 21, 42, 0.64);
 	--ui-clr-t: transparent;
 	--ui-wrapper: 65.625rem;
 	--ui-aside: 12.5rem;
@@ -3013,6 +3014,12 @@
 /*** TEST AREA ***/
 @supports (display: grid) {
 	.qxh-template-pics-faces .gallery > .qxh-flex-item:not(:only-child),
+	/* NOTE Msg from qruiser */
+	.list.qxh-flex-container .qxh-flex-item.qxh-alert {
+		flex-basis: 100%;
+		background-color: var(--ui-clr-alert);
+		border-radius: var(--brd-rad-s);
+		box-shadow: var(--shadow-size-1) var(--shadow-light);
 	.qxh-template-members-near-by .gallery > .qxh-flex-item:not(:only-child) {
 		max-width: 33%;
 	}

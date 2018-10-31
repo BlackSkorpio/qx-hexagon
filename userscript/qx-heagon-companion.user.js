@@ -550,6 +550,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		{
 			var hq_diggedMovies			= window.location.href.indexOf('/showmovies_digged.php');
 			var hq_MemberProfileLink	= window.location.href.indexOf("/?id=");
+			var hq_msgOld				= window.location.href.indexOf('/messages.php');// NOTE HACK
 			var hq_MemberProfileId		= window.location.href.split("?id=");
 			var hq_DocBody				= $(document.body);
 			var hq_HtmlBody				= $('html, body');
@@ -583,6 +584,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_TeaserDiv	 		= $(".blog-teasers");
 			var hq_wholeID				= $('#whole');
 			var hq_MemberPres			= $(".homepage div[style='display: block; min-height:150px;']:first-of-type, .homepage #buff_block + div");
+			var hq_AdminUser			= $('.insertmember > a[href="/support.php"]');
 		}
 		{
 			var hq_ClassPrefix			= 'qxh-';
@@ -593,6 +595,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_FragmentSuffix		= '" />';
 			var hq_mainContent			= ".main-content";
 			var hq_ClassOddEven			= '.odd, .even';
+			var hq_ClassAlert			= hq_ClassPrefix+'alert';
 			var hq_ClassMemberBody		= hq_ClassPrefix+'source-profile '+hq_ClassPrefix+'template-profile-member'+hq_MemberProfileId[1];
 			var hq_ClassMemIntro		= hq_ClassPrefix+'member-intro';
 			var hq_ClassHpStats			= hq_ClassPrefix+'member-stats';
@@ -682,6 +685,10 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		hq_ukFlag.attr('title', hq_ukFlagTitle),
 		hq_deFlag.attr('title', hq_deFlagTitle);
 
+		//
+		if( hq_msgOld > -1 ) {
+			hq_AdminUser.parents( '.'+hq_ClassFlexItem ).addClass( hq_ClassAlert );
+		};
 		// TEMP Dirty HACK to be able to keep functionality on member profiles!
 		if( hq_MemberProfileLink > -1) {
 			console.info("Qruiser: We have a renegade template"),
