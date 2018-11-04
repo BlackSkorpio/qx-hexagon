@@ -294,7 +294,7 @@
 	.homepage > div[style="border: 1px solid #B21B1B; color: #B21B1B; width: auto; padding: 8px; font-size: 12px; line-height: 18px; font-weight: bold; background-color: #FEFCF3; margin-bottom:10px;"]:first-child {
 		min-height: 2.5em;
 	}
-	/*----------------------------*/
+	/*-------------*/
 	html {
 		-webkit-box-sizing: border-box;
 		        box-sizing: border-box;
@@ -334,7 +334,7 @@
 		-ms-flex-direction: column;
 		    flex-direction: column;
 	}
-	/*----------------------------*/
+	/*-------------*/
 	body.qxh-loading {
 		overflow: hidden !important;
 	}
@@ -388,7 +388,7 @@
 		visibility: hidden;
 		display: none !important;
 	}
-	/*----------------------------*/
+	/*-------------*/
 	#whole,
 	#column_left,
 	#column_right,
@@ -548,7 +548,7 @@
 	.gallery .insertmember .emptymemberlargeicon {
 		font-size: var(--font-0);
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/*** Width 100% ***/
 	.qxh-w100,
@@ -584,7 +584,7 @@
 		max-width: 100% !important;
 		height: auto !important;
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/*** Hide Background images ***/
 	.lockicon,
@@ -628,7 +628,7 @@
 	.column-center .block-icons .icon-edit {
 		background-image: none !important;
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/*** Modal ***/
 	body.popup {
@@ -718,7 +718,7 @@
 		border-radius: var(--brd-rad-l);
 		background-color: var(--bkgrd-t);
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/*** THE LOGO SECTION ***/
 	svg.qxh-sprite-icon.qxh-icon-logo {
@@ -777,9 +777,9 @@
 		grid-template-columns: [avatar] auto [text] 1fr [edit] 1.5em;
 		grid-template-rows: [name] min-content [presentation] min-content [contact] min-content;
 		grid-template-areas:
-			"avatar name flower"
-			"avatar presentation ."
-			"contact contact edit";
+			"avatar  name         flower"
+			"avatar  presentation ."
+			"contact contact      edit";
 		grid-gap: 0.3em;
 		margin-bottom: var(--margin-xl);
 	}
@@ -789,14 +789,14 @@
 		grid-template-areas: "q_iconmovie q_time q_quality . q_iconstar q_likes";
 		grid-gap: 0.3em;
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/*** Grid Items ***/
 	.page-container #whole {
 		grid-template-rows: auto;
 		grid-template-columns: [left] var(--ui-aside) [main] 1fr;
 		grid-template-areas:
-			"top top"
+			"top  top"
 			"menu menu"
 			"left subnav"
 			"left content";
@@ -811,8 +811,8 @@
 		grid-template-rows: auto;
 		grid-template-columns: [home] 15.625em [center] 10em [right] 1fr;
 		grid-template-areas:
-			"logo . right"
-			"icons . right"
+			"logo     .    right"
+			"icons    .    right"
 			"search search right";
 		grid-gap: 0.3em;
 	}
@@ -910,7 +910,7 @@
 			"avatar link"
 			"avatar description"
 			"avatar icons"
-			"mood mood";
+			"mood   mood";
 		grid-gap: 0.2em 0.3em;
 		align-items: start;
 		padding: 0;
@@ -1025,7 +1025,7 @@
 		border-radius: var(--brd-rad-l);
 		border: var(--brd-type-2);
 	}
-	/*----------------------------*/
+	/*-------------*/
 	/* Img gallery */
 	.block > a[href^="javascript:openPhotoPopup"] > img {
 		width: 100% !important;
@@ -1048,7 +1048,7 @@
 	.video-thumb > :nth-child(6) {
 		grid-area: q_quality;
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/*** Flex Containers ***/
 	.gallery {
@@ -1069,14 +1069,14 @@
 		width: 100% !important;
 		height: auto !important;
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/** Flex items **/
 	/* flex-basis: 25% */
 	.hexagon #header .blog-teasers > .teaser {
 		flex: 1 1 25%;
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/* flex-basis: 33% */
 	.gallery:not(.gallery-scroll) > .qxh-flex-item,
@@ -1096,7 +1096,7 @@
 	.homepageblock > [id^="album_"][id$="_info"].block > a[href^="javascript:openPhotoPopup"].qxh-flex-item {
 		flex: 0 1 33%;
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/* flex-basis: 50% */
 	.qxh-list > .qxh-flex-item,
@@ -1107,7 +1107,7 @@
 	.scribbleboard-holder > .qxh-flex-item:not(:only-child) {
 		flex: 1 1 50%;
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/* flex-basis: auto */
 	.icons li,
@@ -1118,11 +1118,11 @@
 		flex: 1 1 auto;
 		text-align: center;
 	}
-	/*----------------------------*/
+	/*-------------*/
 	.homepageblock .qxh-flex-item:only-child {
 		flex-basis: 100%
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/** Every third row in lists **/
 	/*:not(.infoblock):not(.homepageblock):not(movies-listing) >
@@ -1143,7 +1143,7 @@
 	#column_center h2 + p[style="margin-top: 0.5em;"] + div > .even:nth-child(3n) > div {
 		background-color: transparent !important;
 	}*/
-	/*----------------------------*/
+	/*-------------*/
 
 	/** Every third row in lists
 	    Making sure that the memberinfo text is visible **/
@@ -1218,7 +1218,7 @@
 		border-top-color: transparent;
 		border-top: none !important;
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/*** Common Stuff ***/
 
@@ -1325,7 +1325,7 @@
 	.icon-exclamation {
 		background-image: var(--qx-exclamation) !important;
 	}*/
-	/*----------------------------*/
+	/*-------------*/
 
 	/* Misc SVG related adjustments */
 	.emptymembericon,
@@ -1356,7 +1356,7 @@
 	.homepageblock > div[style="margin: 5px 0px 5px 0px"] > * {
 		flex: 0 auto;
 	}
-	/*----------------------------*/
+	/*-------------*/
 	.header .qxh-icon-dropup,
 	.header .qxh-icon-dropdown,
 	#buff_block .qxh-icon-dropup,
@@ -1388,7 +1388,7 @@
 	i[id^="unreadbtn"] {
 		margin: 0;
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/** SVG styling **/
 	/* HACK to get back the icon size since we have set the text-size: 0; on the parent */
@@ -1523,7 +1523,7 @@
 	.qxh-sprite-icon.qxh-header {
 		margin-right: var(--margin-s)
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/* For the on :hover display of the profile picture */
 	#thumb[name="thumb"][style*="display: none;"] {
@@ -1543,7 +1543,7 @@
 	[id^="column_"] img[src*="/membericons/"]{
 		border-radius: var(--brd-rad-s) !important;
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/*** Filters ***/
 	body.popup .icons li,
@@ -1583,7 +1583,7 @@
 	div#satellite a[href*="favourites.php"]::before {
 		filter: none;
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/** Links **/
 	a.qxh-clean,
@@ -1608,9 +1608,9 @@
 		grid-template-columns: [aside] auto [message] 1fr [right_side] auto;
 		grid-template-rows: [header] min-content [text_content] min-content [actions] min-content;
 		grid-template-areas:
-			"aside . right_side"
-			"aside message message"
-			"actions actions actions";
+			"aside   .        right_side"
+			"aside   message  message"
+			"actions actions  actions";
 		padding: var(--padding-m);
 		margin: var(--margin-m) auto var(--margin-xl);
 		border-radius: var(--brd-rad-s);
@@ -1672,7 +1672,7 @@
 		margin: 0 0 var(--margin-m);
 		text-shadow: 1px 1px 3px var(--ui-clr-red);
 	}
-	/*----------------------------*/
+	/*-------------*/
 	#home,
 	#qmenu,
 	.container,
@@ -1757,7 +1757,7 @@
 	.gallery .memberinfo {
 		display: flow-root;
 	}
-	/*----------------------------*/
+	/*-------------*/
 	.smalltext {
 		line-height: normal;
 	}
@@ -2072,9 +2072,9 @@
 		grid-gap: 0.3em 0;
 		grid-template-areas:
 			"language language language"
-			"range range ."
+			"range    range    ."
 			"checkbox checkbox ."
-			"save . button";
+			"save     .        button";
 	}
 	.qxh-form-search--near-by fieldset.qxh-set--language {
 		display: flex;
@@ -2155,7 +2155,7 @@
 		opacity: 1;
 		transform: scale3d(1, 1, 1);
 	}
-	/*----------------------------*/
+	/*-------------*/
 	.container-header {
 		line-height: normal;
 	}
@@ -2323,7 +2323,7 @@
 		line-height: inherit;
 		background-color: inherit;
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/** Every X row background **/
 	/*:not(.infoblock):not(.homepageblock):not(.movies-listing) >
@@ -2344,7 +2344,7 @@
 		color: initial;
 		margin-bottom: var(--margin-s);
 	}*/
-	/*----------------------------*/
+	/*-------------*/
 	#column_center.column-center .column-content {
 		margin: 0 auto var(--margin-xl);
 	}
@@ -2625,7 +2625,7 @@
 	.rightcolumn-club.clubxxx2hidden,
 	.rightcolumn-club.clubxxx3hidden,
 	.rightcolumn-club.clubxxx4hidden {}
-	/*----------------------------*/
+	/*-------------*/
 
 	/*** NOTE Effect "Lift up" the div we hare hovering ***/
 	#homepageinfo .infoblock,
@@ -2666,7 +2666,7 @@
 		transform: translateY(0.1875em);
 		z-index: 1;
 	}
-	/*----------------------------*/
+	/*-------------*/
 
 	/*** Templates ***/
 	/* Club info */
@@ -2696,8 +2696,8 @@
 		grid-template-rows: [heading] min-content [date] min-content [member] min-content;
 		grid-template-columns: [title] 1fr [number] auto [status] auto;
 		grid-template-areas:
-		"title number status"
-		"date date date"
+		"title  number status"
+		"date   date   date"
 		"member member member";
 		grid-gap: 0.3em;
 	}
@@ -3046,15 +3046,18 @@
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** TEST AREA ***/
 @supports (display: grid) {
+	/*-------------*/
 	i i,
 	i em,
 	em em,
 	em i {
 		font-weight: 800;
 	}
+	/*-------------*/
 	.clubscribble .icons li {
 		filter: hue-rotate(180deg);
 	}
+	/*-------------*/
 	/* NOTE Msg from qruiser */
 	.list.qxh-flex-container .qxh-flex-item.qxh-alert {
 		flex-basis: 100%;
@@ -3062,6 +3065,7 @@
 		border-radius: var(--brd-rad-s);
 		box-shadow: var(--shadow-size-1) var(--shadow-light);
 	}
+	/*-------------*/
 	/*.column-center * a {
 		text-shadow: 0.083em 0 0;
 		border-bottom: var(--brd-type-2) transparent;
@@ -3069,20 +3073,23 @@
 	.column-center * a:hover:not([href*="support"]):not([href*="Arrow"]):not([class*="banner"]):not([class*="button"]) {
 		border-bottom: var(--brd-type-2) currentColor;
 	}*/
+	/*-------------*/
 	.scribbleboard-holder.qxh-flex-container,
 	.column-content .odd h3 + .list.qxh-flex-container,
 	[class*="discussions"] .odd > .list.qxh-flex-container,
 	[class*="discussions"] .odd + .list.qxh-flex-container.qxh-w100 {
 		flex-flow: column;
 	}
+	/*-------------*/
 	/* HACK för att unvika att det blir grid containers ( FIXME Rad 2649 )*/
 	[class*="discussions"] .odd + .list.qxh-flex-container.qxh-w100 > .qxh-flex-item {
 		display: block;
 	}
+	/*-------------*/
 	.qxh-flex-item div[style*="background-color:"] {
 		height:100%;
 	}
-	/*----------------------------*/
+	/*-------------*/
 	/* NOTE Experimental */
 	.qxh-flex-item div[style*="background-color:"] {
 		display: flex;
@@ -3097,7 +3104,7 @@
 		-web-kit-min-block-size: initial;
 		         min-block-size: initial;
 	}
-	/*----------------------------*/
+	/*-------------*/
 	/*.qxh-template-pics-faces .gallery > .qxh-flex-item:not(:only-child),
 	.qxh-template-members-near-by .gallery > .qxh-flex-item:not(:only-child) {
 		max-width: 33%;
@@ -3108,13 +3115,13 @@
 	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+6) {
 	  max-width: 50%;
 	}*/
-	/*----------------------------*/
+	/*-------------*/
 	#qxh_loading > span.qxh-loading-text {
 		position: fixed;
 		text-align: center;
 		color: var(--text-aside-clr);
 	}
-	/*----------------------------*/
+	/*-------------*/
 }
 }
 
