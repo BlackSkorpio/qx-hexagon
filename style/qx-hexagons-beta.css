@@ -2240,6 +2240,9 @@
 	#column_right.column-right .container {
 		margin: 0;
 	}
+	#column_right .collage-items {
+		border-left: var(--brd-type-1) var(--bkgrd-b1);
+	}
 	.collage-link.active{
 		color: var(--txt-base-clr);
 	}
