@@ -3067,6 +3067,21 @@
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** TEST AREA ***/
 @supports (display: grid) {
+	.homepageblock > .gallery.gallery-scroll.qxh-flex-container > .qxh-flex-item {
+		flex: 1 1 33%;
+	}
+	.homepageblock .gallery.gallery-scroll .insertmember {
+		grid-template-columns: auto;
+		grid-template-areas: "avatar" "link" "description" "icons" "mood";
+		margin: auto;
+	}
+	.homepageblock .gallery.gallery-scroll .emptymemberlargeicon {
+		height: 218px
+	}
+	.homepageblock .gallery.gallery-scroll .emptymemberlargeicon svg {
+		height: 100%;
+		width: 100%;
+	}
 	/*-------------*/
 	i i,
 	i em,
