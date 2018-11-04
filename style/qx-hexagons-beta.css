@@ -3081,6 +3081,13 @@
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** TEST AREA ***/
 @supports (display: grid) {
+	/* Needed when we merge favorites and latest logged in favorite */
+	.container--favourites .container-inner > div:first-child:not(:only-child) {
+		padding-bottom: var(--padding-l);
+		margin-bottom: var(--margin-l);
+	}
+	/*-------------*/
+
 	.homepageblock.qxh-member-heroimage .background-image,
 	.qxh-source-clubs img[style*="/clubimages/"].background-image,
 	.qxh-source-clubs h2 + img[style*="/discussionsimages/"].background-image {
