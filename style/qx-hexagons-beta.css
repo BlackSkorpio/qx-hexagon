@@ -1777,13 +1777,16 @@
 	.smalltext {
 		line-height: normal;
 	}
-	.homepage img.background-image {
+	.homepage img.background-image,
+	.qxh-source-clubs img[style*="/clubimages/"].background-image,
+	.qxh-source-clubs h2 + img[style*="/discussionsimages/"].background-image {
 		border-radius: var(--brd-rad-m);
 	}
 	.qxh-flex-item img.background-image {
 		border-radius: var(--brd-rad-s);
 	}
-	.qxh-flex-item img[style*="/scribbleimages/"].background-image {
+	.qxh-flex-item img[style*="/scribbleimages/"].background-image,
+	.qxh-flex-item img[style*="/discussionsimages/"].background-image {
 		height: auto !important;
 		background-size: contain;
 	}
@@ -3067,6 +3070,22 @@
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** TEST AREA ***/
 @supports (display: grid) {
+	.homepageblock.qxh-member-heroimage .background-image,
+	.qxh-source-clubs img[style*="/clubimages/"].background-image,
+	.qxh-source-clubs h2 + img[style*="/discussionsimages/"].background-image {
+		-webkit-transition: var(--ui-time-f) ease-in-out;
+		        transition: var(--ui-time-f) ease-in-out;
+		will-change: transform, box-shadow;
+	}
+	.homepageblock.qxh-member-heroimage:hover .background-image,
+	.qxh-source-clubs img[style*="/clubimages/"].background-image:hover,
+	.qxh-source-clubs h2 + img[style*="/discussionsimages/"].background-image:hover {
+		border: var(--brd-type-1) var(--brd-clr-h);
+		box-shadow: 0 0 var(--ui-svg-l) currentColor;
+		transform: scale(1.3);
+		z-index: 2;
+	}
+	/*-------------*/
 	.homepageblock > .gallery.gallery-scroll.qxh-flex-container > .qxh-flex-item {
 		flex: 1 1 33%;
 	}
