@@ -3088,6 +3088,15 @@
 	}
 	/*-------------*/
 
+	/* Restrict Aside headers */
+	#column_left .container:not(.container--your-search) .container-header {
+		width: 100%;
+	}
+	/*.container:not(.container--your-search) .container-header {
+		text-overflow: ellipsis;
+	}*/
+	/*-------------*/
+
 	.homepageblock.qxh-member-heroimage .background-image,
 	.qxh-source-clubs img[style*="/clubimages/"].background-image,
 	.qxh-source-clubs h2 + img[style*="/discussionsimages/"].background-image {
