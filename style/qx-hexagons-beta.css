@@ -2133,14 +2133,16 @@
 		border-bottom: var(--brd-type-1);
 		margin: var(--margin-m) 0;
 		text-transform: uppercase;
-		white-space: normal;
-		overflow: initial;
+		text-overflow: ellipsis;
+		/*white-space: normal;
+		overflow: initial;*/
 	}
 	/* NOTE TEST Evaluate */
 	.container-header::after {
 		content: "";
 		position: absolute;
 		top: 45%;
+		width: 100%;
 		height: var(--ui-size-s);
 		opacity: 0;
 		transform: scale3d(0, 1, 1);
