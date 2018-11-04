@@ -1197,18 +1197,28 @@
 	}
 	.container.qxh-widget--sticky:first-of-type {
 		top: 3em;
-		z-index: 3;/* NOTE Make sure it"s on top so we can hide the headers of the children */
+		z-index: 4;/* NOTE Make sure it"s on top so we can hide the headers of the children */
 	}
 	.container--chat-list.qxh-widget--sticky {
-		top: 12.2em;
+		top: 13.5em;
+		z-index: 3;
+	}
+	.container--favourites.qxh-widget--sticky {
+		top: 20.8em;
+		min-height: 10em;
+		min-block-size: 10em;
 		z-index: 2;
 	}
+	.container--favourites.qxh-widget--sticky .insertmember {
+		max-height: 5.7em;
+		max-block-size: 5.7em;
+	}
 	.container--personal.qxh-widget--sticky {
-		top:20.5em;
+		top:30.8em;
 		z-index: 1;
 	}
 	.container--your-search.qxh-widget--sticky {
-		top: 38.8em;
+		top: 48.6em;
 		z-index: auto;
 	}
 	.container.logged-in.qxh-widget--sticky {
@@ -1216,7 +1226,8 @@
 	}
 	/* NOTE TEST Evaluate */
 	.container--personal.qxh-widget--sticky,
-	.container.qxh-widget--sticky:first-of-type {
+	.container.qxh-widget--sticky:first-of-type,
+	.container--favourites .container-inner > div:first-child:not(:only-child) {
 		border-bottom: var(--brd-type-1);
 		border-image: var(--brd-img-left);
 	}
