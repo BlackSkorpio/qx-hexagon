@@ -167,6 +167,7 @@
 	#subnavbar .clear,
 	[id$="droparrow"],
 	#qmenu_home a span,
+	div.errorPart + br,
 	#scrvideo_text + br,
 	img[src$="star.png"],
 	#largeicons li > div,
@@ -239,12 +240,16 @@
 	.column-content .floatright {
 		float: none;
 	}
+	div.errorText input[type="button"] {
+		float: none !important;
+	}
 	#scroller {
 		overflow-x: auto !important;
 	}
 }
 /*** General Stuff ***/
 @supports (display: grid) {
+	div.errorContainer,
 	[style*="height:120px;"],[style*="height: 120px;"] {
 		height: auto !important;
 	}
@@ -260,13 +265,17 @@
 	[style*="border: 1pt solid #63300e;"] {
 		border: var(--brd-type-1) var(--brd-clr-h) !important;
 	}
-	[style*="border: 1px solid #B21B1B;"] {
+	[style*="border: 1px solid #B21B1B;"],[style*="border:1px solid #B21B1B;"],
+	[style*="border: 1px solid rgb(178, 27, 27);"],[style*="border:1px solid rgb(178, 27, 27);"] {
 		border: var(--brd-error) !important;
 	}
-	[style*="background-color: #FEFCF3;"],[style*="background-color:#FEFCF3;"] {
+	[style*="background-color: #FEFCF3;"],[style*="background-color:#FEFCF3;"],
+	[style*="background-color: rgb(254, 252, 243);"],[style*="background-color:rgb(254, 252, 243);"] {
 		background-color: var(--bkgrd-w2) !important;
 	}
-	[style*="color: #B21B1B;"],[style*="color:#B21B1B;"] {
+	[style*="color: #b21b1b"],[style*="color:#b21b1b"],
+	[style*="color: #B21B1B;"],[style*="color:#B21B1B;"],
+	[style*="color: rgb(178, 27, 27);"],[style*="color:rgb(178, 27, 27);"] {
 		color: var(--txt-error-clr) !important;
 	}
 	[style*="border: 1px solid rgb(0, 0, 0);"] {
@@ -607,6 +616,7 @@
 	.icon-quarantined,
 	.mailansweredicon,
 	[id$="droparrow"],
+	div.errorContainer,
 	* > .mailunreadicon,
 	* > .mailansweredicon,
 	#largeunfavouriteicon,
@@ -717,6 +727,12 @@
 		height: var(--ui-icon-l);
 		border-radius: var(--brd-rad-l);
 		background-color: var(--bkgrd-t);
+	}
+	div.errorText {
+		padding: var(--padding-m);
+		border: var(--brd-error);
+		border-radius: var(--brd-rad-s);
+		box-shadow: var(--shadow-size-1) var(--shadow-light);
 	}
 	/*-------------*/
 
@@ -2261,7 +2277,7 @@
 	/*** Column Center ***/
 
 	/** Dividers **/
-	.column-content > div:not(.goldbanner):not(#error_texts):not([class*="button"]) {
+	.column-content > div:not(.standardbanner):not(.goldbanner):not(#error_texts):not([class*="button"]) {
 		background-color: inherit;
 	}
 	.divider span {
