@@ -45,10 +45,10 @@
 	--ui-aside: 12.5rem;
 	--ui-aside-r: 18.75rem;
 	--ui-size-1: 0.0625rem;
-	--ui-size-2: 0.125rem;
-	--ui-size-3: 0.1875rem;
-	--ui-size-4: 0.25rem;
-	--ui-size-5: 0.3125rem;
+	--ui-size-2: 0.125em;
+	--ui-size-3: 0.1875em;
+	--ui-size-4: 0.25em;
+	--ui-size-5: 0.3125em;
 	--ui-size-xs: 0.1rem;
 	--ui-size-s: 0.3em;
 	--ui-size-m: 0.5em;
