@@ -3105,6 +3105,15 @@
 		box-shadow: calc(-1 * var(--ui-size-1)) var(--ui-size-2) var(--ui-size-5) var(--ui-clr-gray2);
 	}*/
 	/*-------------*/
+	.container-column h4,
+	.rightcolumn-scribble-content b,
+	#column_left.column-left .insertmember .link,
+	#column_left.column-left .insertmember .mood,
+	#column_right.column-right .insertmember .link,
+	#column_right.column-right .insertmember .mood {
+		color: var(--txt-high-clr);
+	}
+	/*-------------*/
 	.homepageblock.qxh-member-heroimage .background-image,
 	.qxh-source-clubs img[style*="/clubimages/"].background-image,
 	.qxh-source-clubs h2 + img[style*="/discussionsimages/"].background-image {
