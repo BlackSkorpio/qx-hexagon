@@ -3097,6 +3097,14 @@
 	}*/
 	/*-------------*/
 
+	.qxh-shadow {
+		box-shadow: calc(-1 * var(--ui-size-1)) var(--ui-size-2) var(--ui-size-5) var(--ui-clr-black);
+	}
+	/*#column_right .qxh-shadow {
+		border-radius: var(--brd-rad-btm);
+		box-shadow: calc(-1 * var(--ui-size-1)) var(--ui-size-2) var(--ui-size-5) var(--ui-clr-gray2);
+	}*/
+	/*-------------*/
 	.homepageblock.qxh-member-heroimage .background-image,
 	.qxh-source-clubs img[style*="/clubimages/"].background-image,
 	.qxh-source-clubs h2 + img[style*="/discussionsimages/"].background-image {
