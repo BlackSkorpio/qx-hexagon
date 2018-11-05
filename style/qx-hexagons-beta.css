@@ -3097,6 +3097,20 @@
 	}*/
 	/*-------------*/
 
+	/* Movie titles */
+	.qxh-title-wrapper {
+		display: flex;
+		font-weight: 700;
+	}
+	.qxh-title-wrapper > a.qxh-movie-title {
+		min-width: 100%;
+		max-width: 0;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		padding: 0 var(--padding-s);
+	}
+	/*-------------*/
 	.qxh-shadow {
 		box-shadow: calc(-1 * var(--ui-size-1)) var(--ui-size-2) var(--ui-size-5) var(--ui-clr-black);
 	}
