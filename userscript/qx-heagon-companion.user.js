@@ -445,6 +445,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		var hq_clubHeaderX		= $('#column_center .header [href^="/showclubs.php"][href$="&xxx=1"]');
 		var hq_MemberSearching	= $('.homepage > a[name="looking_for"] + .homepageblock .line .header');
 		var hq_MemPosition		= $('.homepageblock.'+hq_ClassPrefix+'member-position .line .header');
+		var hq_MemberVisitors	= $('.homepageblock.'+hq_ClassPrefix+'members:first .line .header a');
 		var hq_QruiserLogoSVG	= hq_svgFragment+'-logo" alt="Qruiser - The Nordic Gay Lesbian & Queer Online Community'+hq_svgFragmentUse+'#qruiser-logo'+hq_svgFragmentSuffix;
 		var hq_qxLogoSVG		= hq_svgFragment+'-qx-logo'+hq_svgFragmentUse+'#qx-logo'+hq_svgFragmentSuffix;
 		var hq_logoutSVG		= hq_svgFragment+'-logout'+hq_svgFragmentUse+'#action-logout'+hq_svgFragmentSuffix;
@@ -460,6 +461,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		var hq_padLockSVG		= hq_svgFragment+'-padlock'+hq_svgFragmentUse+'#member-padlock'+hq_svgFragmentSuffix;
 		var hq_MemberSearchingSVG = hq_svgFragment+'-lookingfor '+hq_ClassPrefix+'header'+hq_svgFragmentUse+'#member-searching'+hq_svgFragmentSuffix;
 		var hq_MemPositionSVG 	= hq_svgFragment+'-position '+hq_ClassPrefix+'header'+hq_svgFragmentUse+'#member-position'+hq_svgFragmentSuffix;
+		var hq_MemberVisitorsSVG = hq_svgFragment+'-visitors '+hq_ClassPrefix+'header'+hq_svgFragmentUse+'#member-visitors'+hq_svgFragmentSuffix;
 		var hq_clearSVG			= hq_svgFragment+'-clear'+hq_svgFragmentUse+'#action-zero'+hq_svgFragmentSuffix;
 		var hq_abuseSVG			= hq_svgFragment+'-abuse'+hq_svgFragmentUse+'#action-abuse'+hq_svgFragmentSuffix;
 		var hq_heartIconSVG		= hq_svgFragment+'-favorite'+hq_svgFragmentUse+'#nav-favorites'+hq_svgFragmentSuffix;
@@ -549,6 +551,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			hq_clubXXX.append( hq_clubXXXSVG );
 			hq_MemberSearching.prepend( hq_MemberSearchingSVG );
 			hq_MemPosition.prepend( hq_MemPositionSVG );
+			hq_MemberVisitors.prepend( hq_MemberVisitorsSVG );
 			hq_clubPublic.append( hq_clubPublicSVG );
 			hq_clubHidden.append( hq_clubHiddenSVG );
 			hq_clubHeader.prepend( hq_clubHeaderSVG );
