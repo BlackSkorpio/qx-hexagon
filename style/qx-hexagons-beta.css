@@ -2696,8 +2696,8 @@
 	/*.column-content .qxh-list > .qxh-flex-container > .qxh-flex-item:hover,*/
 	.column-content > [class^="clubxxx"] > .qxh-flex-container > .qxh-flex-item:hover {
 		border-radius: var(--brd-rad-s);
-		box-shadow: 0 0 1.5em currentColor;
-		box-shadow: inset 0 0 0 99999px rgba(255,255,255,0.2);
+		box-shadow: 0 0 var(--ui-svg-l) currentColor;
+		/*box-shadow: inset 0 0 0 99999px rgba(255,255,255,0.2);*/
 		transform: translateY(0.1875em);
 		z-index: 1;
 	}
