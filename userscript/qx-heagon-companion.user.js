@@ -606,6 +606,8 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_wholeID				= $('#whole');
 			var hq_MemberPres			= $('.homepage div[style="display: block; min-height:150px;"]:first-of-type, .homepage #buff_block + div');
 			var hq_AdminUser			= $('.insertmember > a[href="/support.php"]');
+			var hq_MovieTitle			= $('div:not(.video-thumb-holder) > a[href^="/showmovies.php"], .homepage div[style="font-weight: bold; line-height: 14px;"] > a[href^="/showmovies.php"]');
+			var hq_TitleWrapper			= $('.movies-listing > div:nth-of-type(3) > div:not(.listpagenumber) > div > div:nth-of-type(3) > div[class^="clubxxx"]:not([class$="hidden"]), .movies-listing .video-thumb-holder + div, .homepage div[style="font-weight: bold; line-height: 14px;"]');
 		}
 		{
 			var hq_ClassPrefix			= 'qxh-';
@@ -633,6 +635,8 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_ClassButton			= hq_ClassPrefix+'button';
 			var hq_ClassScribbleImg		= hq_ClassPrefix+'scribble-image';
 			var hq_ClassClean			= hq_ClassPrefix+'clean';
+			var hq_ClassMovieTitle		= hq_ClassPrefix+'movie-title';
+			var hqClassTitleWrapper		= hq_ClassPrefix+'title-wrapper';
 			var hq_ClassFirstWord		= hq_ClassPrefix+'firstWord';
 			var hq_ClassSubNavGrid		= 'subnav-grid';
 			var hq_ClassStarSign		= 'starsign';
@@ -690,6 +694,8 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		// NOTE Wrap all divs so we can style there parent
 		hq_SubNavButtons.wrapAll( hq_subNavGrid );
 		hq_MakeButton.addClass( hq_ClassButton );
+		hq_MovieTitle.addClass( hq_ClassMovieTitle );
+		hq_TitleWrapper.addClass( hqClassTitleWrapper ).removeAttr('style');
 		hq_MakeGridContainer.addClass( hq_ClassGridContainer ),
 		//hq_MakeFlexContainer.addClass( hq_ClassFlexContainer );
 		hq_MakeList.addClass( hq_ClassMakeList ),
