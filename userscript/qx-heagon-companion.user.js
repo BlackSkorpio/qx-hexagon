@@ -608,6 +608,10 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_AdminUser			= $('.insertmember > a[href="/support.php"]');
 			var hq_MovieTitle			= $('div:not(.video-thumb-holder) > a[href^="/showmovies.php"], .homepage div[style="font-weight: bold; line-height: 14px;"] > a[href^="/showmovies.php"]');
 			var hq_TitleWrapper			= $('.movies-listing > div:nth-of-type(3) > div:not(.listpagenumber) > div > div:nth-of-type(3) > div[class^="clubxxx"]:not([class$="hidden"]), .movies-listing .video-thumb-holder + div, .homepage div[style="font-weight: bold; line-height: 14px;"]');
+			var hq_ChatHeaderText		= $('.container--chat-list .container-header a');
+			var hq_LatestFavMember		= $('.container.container--last-logged-in > .container-inner > .insertmember');
+			var hq_LatestFavDiv			= $('.container.container--last-logged-in');
+			var hq_FavoritesDiv			= $('.container.container--favourites');
 		}
 		{
 			var hq_ClassPrefix			= 'qxh-';
@@ -655,6 +659,8 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_deFlagTitle			= 'Deutsch / German';
 			var hq_NoHomePageList		= ':has([class*="list"],.homepageblock > .smalltext, .gallery, #map_canvas, #homepageinfo, .block)';
 			var hq_topContent			= "#header";
+			var hq_Favorites			= '.container.container--favourites > .container-inner';
+			var hq_MailBox				= '.container.container--mailbox';
 		}
 
 		hq_HtmlBody.addClass( hq_ClassMain );
@@ -741,6 +747,11 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		//	var last = text.pop();
 		//	return text.join(" ") + (text.length > 0 ? ' <span class="qxh-lastWord">'+last+'</span>' : last);
 		//});
+
+		// NOTE Move Latest logged in favorites to the Favorites widget
+		hq_LatestFavMember.appendTo( hq_Favorites ),hq_LatestFavDiv.remove();
+		// NOTE Move the Favorites widget above the Mail/Message Widget
+		hq_FavoritesDiv.insertBefore( hq_MailBox );
 
 		// HACK for the old not logged in index
 		if ( !$(document.body).hasClass("signed-in") ) {
