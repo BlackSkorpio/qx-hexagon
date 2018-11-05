@@ -142,10 +142,8 @@
 	--shadow-gray: var(--ui-clr-disabled);
 	--shadow-size-1: var(--ui-size-1) var(--ui-size-3) var(--ui-size-3) 0;
 	--shadow-size-2: var(--ui-size-4) var(--ui-size-5) var(--ui-size-3);
-	/*--filter-sat-1: saturate(50%);*/
 	--filter-flower: drop-shadow(var(--ui-size-1) var(--ui-size-1) 0 rgba(62, 62, 62, 0.5));
 	--filter-flower-h: drop-shadow(var(--ui-size-3) var(--ui-size-3) 0 rgba(62, 62, 62, 0.9));
-	/*--filter-heart: sepia(100%) saturate(10000%) hue-rotate(90deg) invert(76%);*/
 	--filter-dropshadow: drop-shadow(var(--ui-size-2) var(--ui-size-2) var(--shadow-gray));
 	--gray: rgb(14, 19, 25);
 	--gray--t: var(--ui-clr-t);
@@ -404,8 +402,6 @@
 	#whole,
 	#column_left,
 	#column_right,
-	/** > .list .odd,
-	* > .list .even,*/
 	#column_center,
 	.column-center .column-content {
 		overflow: initial !important;
@@ -1142,47 +1138,7 @@
 		flex-basis: 100%
 	}
 	/*-------------*/
-
-	/** Every third row in lists **/
-	/*:not(.infoblock):not(.homepageblock):not(movies-listing) >
-	.list > div:not(:only-child):not(.qxh-grid-container):nth-of-type(3n+4),
-	.gallery.gallery-scroll > div:not(:only-child):nth-of-type(3n),
-	.qxh-template-clubs-scribble #column_center.column-center h2 + p[style="margin-top: 0.5em;"] + div
-	.gallery:not(.gallery-scroll) > div:not(:only-child):nth-of-type(4n+5) {
-		flex-basis: 100%;
-	}*/
-	/* Make every child after the third have a border right */
-	/*#column_center .list > .qxh-flex-item:nth-of-type(3n+5):not(.qxh-grid-container):not(:only-child):not(:last-of-type){
-		border-right: var(--brd-type-2) var(--ui-clr-disabled);
-	}*/
-	/* Remove any custom bkrd clr */
-	/*#column_center > .list > .odd:nth-child(3n) > div,
-	#column_center > .list > .even:nth-child(3n) > div,
-	#column_center h2 + p[style="margin-top: 0.5em;"] + div > .odd:nth-child(3n) > div,
-	#column_center h2 + p[style="margin-top: 0.5em;"] + div > .even:nth-child(3n) > div {
-		background-color: transparent !important;
-	}*/
 	/*-------------*/
-
-	/** Every third row in lists
-	    Making sure that the memberinfo text is visible **/
-	/*#column_center .list > div:nth-child(3n) a,
-	#column_center .list > div:nth-child(3n) .datetime,
-	#column_center .list > div:nth-child(3n) .memberinfo,
-	#column_center .list > div:nth-child(3n) .insertmember .link,
-	#column_center .list > div:nth-child(3n) .insertmember .mood,
-	#column_center .list > div:nth-child(3n) .insertmember .description {
-		color: initial;
-	}
-	#column_center .list > div:nth-child(3n) .emptymembericon {
-		border-color: currentColor;
-	}
-	#column_center .list > div:nth-child(3n) a[name^="post"],
-	#column_center .list > div:nth-child(3n) a[name^="post"] h3 {
-		color: inherit;
-		margin-top: var(--margin-c);
-		font-weight: 700;
-	}*/
 
 	/*** Sticky ***/
 	.qxh-widget--sticky,
@@ -1298,13 +1254,6 @@
 		width: auto;
 		color: inherit;
 	}
-	/*.exclamation,
-	.icon-exclamation,
-	img[src*="status_"],
-	img[src*="exclamation.gif"] {
-		width: 0;
-		height: 0;
-	}*/
 	img[src*="status_"] {
 		width: 0;
 		height: 0;
@@ -1314,9 +1263,6 @@
 		border-radius: var(--brd-rad-l);
 		background-color: currentColor;
 	}
-	/*img[src*="status_"] {
-		vertical-align: text-top;
-	}*/
 	img[src$="status_0.gif"] {
 		color: green;
 	}
@@ -1329,11 +1275,6 @@
 	img[src$="status_3.gif"] {
 		color: gray;
 	}
-	/*.exclamation,
-	.icon-exclamation,
-	img[src*="exclamation.gif"] {
-		padding: var(--padding-l) var(--padding-m);
-	}*/
 	button.modal-close .icon-close {
 		background-image: var(--qx-close);
 	}
@@ -1346,16 +1287,6 @@
 		top: var(--ui-size-l);
 		right: var(--ui-size-m);
 	}
-	/* Exclamation Icon */
-	/*.exclamation,
-	#column_center .icon-exclamation,
-	img[src*="exclamation.gif"] {
-		display: none;
-	}
-	.icon-exclamation {
-		background-image: var(--qx-exclamation) !important;
-	}*/
-	/*-------------*/
 
 	/* Misc SVG related adjustments */
 	.emptymembericon,
@@ -1512,12 +1443,6 @@
 		width: var(--ui-svg-l);
 		height: 1.1em;
 	}
-	/*.block-icons svg.qxh-sprite-icon,
-	.header .icons svg.qxh-sprite-icon,
-	.qxh-sprite-icon.qxh-header,
-	[id$="droparrow"] ~ svg.qxh-sprite-icon {
-		color: var(--bkgrd-b1);
-	}*/
 	.line:hover .qxh-sprite-icon,
 	.icons li:hover svg.qxh-sprite-icon,
 	.line:hover .icons svg.qxh-sprite-icon,
@@ -1653,19 +1578,6 @@
 	.warningbanner {
 		background-image: none;
 	}
-	/* HACK TODO REMOVED */
-	/*.qxh-source-messages .standardbanner.warningbanner .banner_icon.qxh-warning {
-		position: relative;
-		display: block !important;
-		top: auto;
-		left: auto;
-		width: 0;
-		height: 0;
-		padding: var(--ui-icon-l) var(--ui-icon-m);
-		background-image: var(--qx-exclamation);
-		background-size: contain;
-		background-repeat: no-repeat;
-	}*/
 	.standardbanner svg.qxh-icon-icon-exclamation {
 		grid-area: aside;
 		height: 2.4em;
@@ -1721,10 +1633,6 @@
 	.list .qxh-flex-item {
 		padding: var(--margin-m) var(--margin-s);
 	}
-	/* Post numbers in forums and scribbles */
-	/*.list .qxh-flex-item a[name^="post"] > h3 {
-		filter: drop-shadow(0.0625em 0.0625em 0.125em currentColor);
-	}*/
 	/* Member Widget */
 	.insertmember .stretch,
 	.insertmember::after {
@@ -2369,26 +2277,6 @@
 	}
 	/*-------------*/
 
-	/** Every X row background **/
-	/*:not(.infoblock):not(.homepageblock):not(.movies-listing) >
-	.list > div:not(:only-child):not(.qxh-grid-container):nth-of-type(3n+4),
-	.gallery.gallery-scroll > div:not(:only-child):nth-of-type(3n),
-	.qxh-template-clubs-scribble #column_center.column-center h2 + p[style="margin-top: 0.5em;"] + div
-	.gallery:not(.gallery-scroll) > div:not(:only-child):nth-of-type(4n+5),
-	.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+5),
-	.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+6),
-	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+5),
-	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+6) {
-		background: linear-gradient(to bottom, rgb(238, 242, 243), rgba(238, 242, 243, 0.5), rgba(142, 158, 171, 0.5), rgba(142, 158, 171, 0.8));
-		background-color: transparent !important;
-		border-top: var(--brd-type-1);
-		border-bottom: var(--brd-type-1);
-		border-color: rgb(238, 242, 243) transparent rgb(142, 158, 171);
-		border-radius: 0.4em;
-		color: initial;
-		margin-bottom: var(--margin-s);
-	}*/
-	/*-------------*/
 	#column_center.column-center .column-content {
 		margin: 0 auto var(--margin-xl);
 	}
@@ -2425,12 +2313,6 @@
 	.homepageblock .qxh-list > span[style="font-weight:normal;"]:first-of-type{
 		display: contents;
 	}
-	/*.homepageblock .qxh-list > div:not(:last-child):nth-of-type(even) {
-		padding: 0 var(--padding-s);
-	}
-	.homepageblock .qxh-list > div:last-child:nth-of-type(even) {
-		padding: 0 0 0 var(--padding-s);
-	}*/
 	#homepageinfo .infoblock {
 		margin-bottom: var(--margin-m);
 	}
@@ -2674,7 +2556,6 @@
 	/*** NOTE Effect "Lift up" the div we hare hovering ***/
 	#homepageinfo .infoblock,
 	#verifiedinfo .qxh-flex-item,
-	.homepageblock div > [class=""],/* HACK Since the latest discussions displayed is not getting a class! */
 	.homepage .qxh-list > .qxh-flex-item,
 	.scribbleboard-holder > .qxh-flex-item,
 	.movies-listing .qxh-list > .qxh-flex-item,
@@ -2684,7 +2565,6 @@
 	.homepage .homepageblock.qxh-flex-container > .qxh-flex-item,
 	.homepage [id^="album_"][id$="_info"].block > a.qxh-flex-item,
 	.homepage .homepageblock > .qxh-flex-container > .qxh-flex-item,
-	/*.column-content .qxh-list > .qxh-flex-container > .qxh-flex-item,*/
 	.column-content > [class^="clubxxx"] > .qxh-flex-container > .qxh-flex-item {
 		padding: var(--padding-s);
 		background-color: inherit;
@@ -2694,7 +2574,6 @@
 	}
 	#homepageinfo .infoblock:hover,
 	#verifiedinfo .qxh-flex-item:hover,
-	.homepageblock div > [class=""]:hover,/* HACK Since the latest discussions displayed is not getting a class! */
 	.homepage .qxh-list > .qxh-flex-item:hover,
 	.scribbleboard-holder > .qxh-flex-item:hover,
 	.movies-listing .qxh-list > .qxh-flex-item:hover,
@@ -2704,7 +2583,6 @@
 	.homepage .homepageblock.qxh-flex-container > .qxh-flex-item:hover,
 	.homepage [id^="album_"][id$="_info"].block > a.qxh-flex-item:hover,
 	.homepage .homepageblock > .qxh-flex-container > .qxh-flex-item:hover,
-	/*.column-content .qxh-list > .qxh-flex-container > .qxh-flex-item:hover,*/
 	.column-content > [class^="clubxxx"] > .qxh-flex-container > .qxh-flex-item:hover {
 		border-radius: var(--brd-rad-s);
 		box-shadow: 0 0 var(--ui-svg-l) currentColor;
@@ -2727,9 +2605,6 @@
 	.qxh-source-clubs[class*="qxh-club-"] .list > .odd.qxh-grid-container,
 	.qxh-source-clubs[class*="qxh-club-"] .list > .even.qxh-grid-container,
 	.qxh-source-clubs[class*="qxh-club-"] .list > .qxh-flex-item.qxh-grid-container,
-	/*:not([id^="qxh_thread_"]).qxh-template-clubs-discussions .list > .odd.qxh-grid-container,
-	:not([id^="qxh_thread_"]).qxh-template-clubs-discussions .list > .even.qxh-grid-container,
-	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .list.qxh-flex-container > .qxh-flex-item {*/
 	[id^="qxh_category_"].qxh-template-clubs-discussions .list > .odd.qxh-grid-container,
 	[id^="qxh_category_"].qxh-template-clubs-discussions .list > .even.qxh-grid-container,/* QUESTION Obsolete? */
 	[id^="qxh_category_"].qxh-template-forum-discussions .list.qxh-flex-container > .qxh-flex-item,
@@ -2759,10 +2634,6 @@
 	[id^="qxh_category_"].qxh-template-clubs-discussions #column_center div[style="float:right"] .insertmember .icons li {
 		mix-blend-mode: overlay;
 	}
-	/*.qxh-template-clubs-scribble #column_center .insertmember .link a {
-		filter: drop-shadow(0.0625em 0.0625em currentColor);
-		mix-blend-mode: difference;
-	}*/
 	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .qxh-flex-item > a.qxh-flex-item,
 	.qxh-source-clubs[class*="qxh-club-"] .list .qxh-grid-container > a[href*="clubdiscuss.php?club="],
 	[id^="qxh_category_"].qxh-template-clubs-discussions .qxh-grid-container > a[href^="/clubs/clubdiscuss.php?club="] {
@@ -2788,10 +2659,6 @@
 	[id^="hqx_thread_"].qxh-template-clubs-discussions .list.qxh-flex-container {
 		flex-flow: column;
 	}
-	/*.qxh-template-clubs-scribble #column_center .qxh-list.qxh-flex-container > .qxh-flex-item:nth-of-type(3n+5),
-	[id^="hqx_thread_"].qxh-template-clubs-discussions #column_center .list.qxh-flex-container > .qxh-flex-item:nth-of-type(3n+5) {
-		border-right: none;
-	}*/
 
 	/* HACK to get the Add Scribble button on it's own row */
 	[id^="qxh_club_"].qxh-template-clubs-scribble .column-content > div > br + p:last-of-type {
@@ -2847,30 +2714,6 @@
 		max-width: calc(var(--ui-aside) + var(--ui-icon-l));
 	}
 
-	/*.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+5),
-	.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+6),
-	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+5),
-	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+6) {
-		flex-basis: 50%;
-		margin: var(--margin-m) 0;
-	}*/
-	/*.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+5),
-	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+5) {
-		border-right-color: transparent;
-		border-bottom-right-radius: 0;
-	}
-	.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+6),
-	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+6) {
-		border-left-color: transparent;
-		border-bottom-left-radius: 0;
-	}*/
-	/*.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+5) > div,
-	.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+6) > div,
-	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+5) > div,
-	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+6) > div {
-		max-width: calc(var(--ui-aside) - var(--ui-size-l));
-		margin: 0 auto;
-	}*/
 	.qxh-template-pics-homepage .images-homepage-image,
 	.qxh-template-pics-homepage .images-homepage .image {
 		display: flex;
@@ -3125,11 +2968,6 @@
 	.qxh-shadow {
 		box-shadow: calc(-1 * var(--ui-size-1)) var(--ui-size-2) var(--ui-size-5) var(--ui-clr-black);
 	}
-	/*#column_right .qxh-shadow {
-		border-radius: var(--brd-rad-btm);
-		box-shadow: calc(-1 * var(--ui-size-1)) var(--ui-size-2) var(--ui-size-5) var(--ui-clr-gray2);
-	}*/
-	/*-------------*/
 	.container-column h4,
 	.rightcolumn-scribble-content b,
 	#column_left.column-left .insertmember .link,
@@ -3229,17 +3067,7 @@
 		         min-block-size: initial;
 	}
 	/*-------------*/
-	/*.qxh-template-pics-faces .gallery > .qxh-flex-item:not(:only-child),
-	.qxh-template-members-near-by .gallery > .qxh-flex-item:not(:only-child) {
-		max-width: 33%;
-	}*/
-	/*.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+5),
-	.qxh-template-pics-faces .gallery > .qxh-flex-item:nth-of-type(5n+6),
-	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+5),
-	.qxh-template-members-near-by .gallery > .qxh-flex-item:nth-of-type(5n+6) {
-	  max-width: 50%;
-	}*/
-	/*-------------*/
+
 	#qxh_loading > span.qxh-loading-text {
 		position: fixed;
 		text-align: center;
