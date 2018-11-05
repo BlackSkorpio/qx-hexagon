@@ -569,7 +569,9 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_msgOld				= window.location.href.indexOf('/messages.php');// NOTE HACK
 			var hq_MemberProfileId		= window.location.href.split('?id=');
 			var hq_DocBody				= $(document.body);
+			var hq_Window				= $(window);
 			var hq_HtmlBody				= $('html, body');
+			var hq_TopMenu				= $('#qmenu');
 			var hq_Width100				= $('.column-content textarea, .video-js[class*="video_"][class*="-dimensions"], .list .messages, #clubinfo_text + p + div.small[style*="float:right;"], .listpagelinks, .listpagenumber, form, [data-user-input], #homepageinfo, .homepageblock .relative, .column-center .column-content, .homepage, .line, img.background-image, .column-content div[style*="width:"]:not([style*="16px"]), #column_right.column-right, .container.gaymap-today .container-header, .container-columns, .clubxxx1,.clubxxx2,.clubxxx3,.clubxxx4, .container-column img, .insertmember, .insertmember .link, .insertmember .description, .insertmember .icons, .blog-teasers, .teaser-image, #qmenu li a, #changemood');
 			var hq_hideStuff			= $('#qmenu_edit > a > img[src$="editblock.png"], .list + br, img#logo_qruiser, #subnavbar .clear, [id$="droparrow"], #qmenu_home a span, #scrvideo_text + br, img[src$="star.png"], #largeicons li > div, img[src$="abuse.gif"], .homebuttons li > div, img[src$="heart4.gif"], [id$="_text"] + p:empty, img[src$="xxxclub.gif"], img.homepage_goldflower, .signed-in-gold .external-ad, .rightcolumn-club-icon-empty, .hqx-flex-item > br:last-child, .errorText ~ div[style*="/shadow/"], a[href*="javascript:openEdit(\'sms\')"], br[clear="all"], br[clear="all"] + br, .emptymembericon img[src$="blank.gif"], #column_center a.clublink > img[src$="blank.gif"], [id$="_text"] + p:empty + p[style="padding-top:10px;"]:empty, [class^="clubxxx"][class$="hidden"] > div[style*="height: 110px;"]:first-child, [class$="hidden"] > img.xxx1, [class$="hidden"] > img.xxx3, [class$="hidden"] > img.xxx4');
 			var hq_removeEmpty			= $('#column_center .even:empty, .thinlineup:empty, .homepageblock div[style="float:left;width:140px"]:first-child, .block img[src$="blank.gif"]:not([style*="/photothumbnails/"]), .homepageblock div[style="float:left;width:70px"], li div[style="width: 10px; height: 9px"]:empty,div[style="width: 10px; height: 10px"]:empty');
@@ -650,6 +652,14 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		}
 
 		hq_HtmlBody.addClass( hq_ClassMain );
+		// NOTE Add a bottom shadow to the #qmenu when we scroll down
+		hq_Window.scroll(function() {
+			if (hq_Window.scrollTop() > 192) {
+				hq_TopMenu.addClass( hq_ClassShadow );
+			} else {
+				hq_TopMenu.removeClass( hq_ClassShadow );
+			}
+		});
 		// NOTE Make sure that the right column realy is where it should be!
 		// TODO Remove ASAP
 		if ( hq_colRight.parent().is( hq_wholeID ) ) {
