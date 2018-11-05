@@ -157,6 +157,12 @@
 	--qx-video-right: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAF8CAIAAACFSZZIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDUxQzBDMzEyQjQzMTFFN0JEMjNBNUE2MzcwMUEwNjMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDUxQzBDMzIyQjQzMTFFN0JEMjNBNUE2MzcwMUEwNjMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpENTFDMEMyRjJCNDMxMUU3QkQyM0E1QTYzNzAxQTA2MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpENTFDMEMzMDJCNDMxMUU3QkQyM0E1QTYzNzAxQTA2MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pna0ywEAAAGBSURBVHjatFdtEoQgCNWanS7RdJnuf6RqNdlliY8wXX/sEIo+4IFuWJZlmqZ1XeM8z69zDGkcxzGO4xBjTFJWhBDSR/rNU+EcWVc+8jppFqQyRXW3EuxMdHAG6pTTmG1SMFsbn9cPe500201CLw3fJKSefOS0F4u0usk320KZNXwjFkDQ/DUM27aBLegQvRQhiWG3EYfi2Pcd6gMQPOIB8ZJi9nKtngftEuXGFSmLfYdzn3rOsCA3Sup+1pUtKGapZsoW0rl4GuryfnWV10+q68U0VornjZ1Q44a9X2M/dd0kdd3Wy3GNEXbEJU7as+11SZHq9ypiwTrCHGnVc8201jGfSrZHLOLgxzWXRo4e9Vgp0y705AZr6e0SNzq8zZQKZdxgr8P/dK4/VTzr9/Ez3NVNIlSJ6hoDrGmNkwSpUo3QN5SXNJxBbklX9u23lP368mbGa2HEmdzdEsNwZ2Md+TdBIs7w2Vhc8WupBUR6myOv5IqQ17biReH6p/mV3gIMAEyFlqk79XfPAAAAAElFTkSuQmCC');
 	--qx-close: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20id%3D'action-delete'%20version%3D'1'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2062%2062'%3E%3Ccircle%20fill%3D'red'%20stroke%3D'red'%20stroke-width%3D'2'%20stroke-opacity%3D'.5'%20cx%3D'31'%20cy%3D'31'%20r%3D'25.8'%2F%3E%3Cg%20fill%3D'%23fff'%3E%3Cpath%20transform%3D'rotate(-45)'%20d%3D'M-17.6%2040.2h35.3v7.2h-35.3z'%2F%3E%3Cpath%20transform%3D'rotate(-45)'%20d%3D'M-3.6%2026.1h7.2v35.4h-7.2z'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
 }
+:root {
+	scrollbar-width: thin;
+	scrollbar-face-color: var(--ui-clr-highlight);
+	scrollbar-track-color: var(--ui-clr-black);
+	scroll-behavior: smooth;
+}
 /*** HIDE SHIT ***/
 @supports (display: grid) {
 	.list + br,
@@ -3078,6 +3084,9 @@
 	}
 	/*-------------*/
 	/* NOTE Experimental */
+	textarea {
+		scrollbar-width: thin;
+	}
 	.qxh-flex-item div[style*="background-color:"] {
 		display: flex;
 		flex-flow: column;
