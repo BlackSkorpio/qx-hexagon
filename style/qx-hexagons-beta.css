@@ -2112,8 +2112,8 @@
 		margin: var(--margin-m) 0;
 		text-transform: uppercase;
 		text-overflow: ellipsis;
-		/*white-space: normal;
-		overflow: initial;*/
+		/*white-space: normal;*/
+		overflow: initial;
 	}
 	/* NOTE TEST Evaluate */
 	.container-header::after {
