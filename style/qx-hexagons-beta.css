@@ -1944,6 +1944,7 @@
 
 	.qxh-button,
 	input[type="submit"],
+	input[type="button"],
 	button[type="submit"],
 	body[onload="timer()"] > p > a,
 	body[onload="handleImageXxxSetting();"] #closing_link {
@@ -1965,6 +1966,7 @@
 	}
 	.qxh-button:hover,
 	input[type="submit"]:hover,
+	input[type="button"]:hover,
 	button[type="submit"]:hover,
 	body[onload="handleImageXxxSetting();"] #closing_link:hover {
 		background: var(--bkgrd-h1);
