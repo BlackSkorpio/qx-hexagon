@@ -421,6 +421,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		var hq_videoStar		= $('img[src$="star.png"]');
 		var hq_moviesLiked		= $('#column_center .header a[href^="/showmovies_digged.php?id="]');
 		var hq_edit				= $('.icon-edit, #largeediticon');
+		var hq_edit_menu		= $('#qmenu_edit > a > img[src$="editblock.png"]');
 		var hq_OnlineAct1		= $('.icon-online-1');
 		var hq_OnlineAct2		= $('.icon-online-2, .icon-online-3');
 		var hq_onlineWap		= $('.icon-online-4');
@@ -521,6 +522,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			hq_video.append( hq_videoSVG );
 			hq_videoStar.after( hq_videoStarSVG );
 			hq_edit.append( hq_editSVG );
+			hq_edit_menu.after( hq_editSVG );
 			hq_clear.append( hq_clearSVG );
 			hq_abuse.after( hq_abuseSVG );
 			hq_heartIcon.append( hq_heartIconSVG );
