@@ -1368,6 +1368,9 @@
 	#buff_block img[src*="dropdown_"] ~ .qxh-icon-dropdown {
 		display: inline-block;
 	}
+	.qxh-icon-other-visitors {
+		animation: qxh_globe 10s infinite linear;
+	}
 	#show_buffs.block {
 		margin: var(--margin-l);
 	}
