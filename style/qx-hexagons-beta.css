@@ -2402,6 +2402,21 @@
 	#column_center p + h2 + p + .qxh-flex-item > .list {
 		display: block;
 	}
+	/* Movie titles */
+	.qxh-title-wrapper {
+		display: flex;
+		font-weight: 700;
+	}
+	.qxh-title-wrapper > a.qxh-movie-title {
+		min-width: 100%;
+		max-width: 0;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		padding: 0 var(--padding-s);
+	}
+	/*-------------*/
+
 	/* Hexagon Videoplayer */
 	#scroller > div > .qxh-flex-item:not(:only-child):not(:last-child) {
 		padding-right: var(--padding-s);
