@@ -2103,6 +2103,13 @@
 	#column_right.column-right .insertmember .mood {
 		color: var(--txt-high-clr);
 	}
+	.container-heading {
+		width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	/*-------------*/
 	#column_left.column-left,
 	#column_right.column-right {
 		border: var(--brd-type-1) var(--brd-clr-h);
