@@ -746,18 +746,37 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_BuyGoldToFlower	= $('.hideself_ > a:first-of-type[href^="javascript:buygold"]');
 			var hq_BuyGoldToName	= $('.hideself_ > a:last-of-type[href^="javascript:buygold"] > b');
 			var hq_BuyGoldCleanUp	= $('.hideself_ > a:last-of-type[href^="javascript:buygold"]');
+			var hq_ProfileFacePic	= $('img[src^="/thumbcorners.php"][style*="/memberthumbnails/"]');
+			var hq_ProfileHeroImg	= $('.homepage > div[style="padding-top: 10px"]');
+			var hq_MemberPosition	= $('.homepageblock #map_canvas');
+			var hq_HomeMembers		= $('.homepageblock > .gallery.gallery-scroll');
+			var hq_ClassMemberFace	= hq_ClassPrefix+'member-faceimage';
+			var hq_ClassMemHeroImg	= hq_ClassPrefix+'member-heroimage';
+			var hq_ClassMemPosition	= hq_ClassPrefix+'member-position';
+			var hq_ClassMembers		= hq_ClassPrefix+'members';
+			var hq_ClassVisitors	= hq_ClassPrefix+'member-visitors';
+			var hq_ClassOther		= hq_ClassPrefix+'other-members';
 
 			console.info("Qruiser: We have a renegade template"),
 			hq_DocBody.addClass( hq_ClassMemberBody ).attr("id", hq_IdMemberBody),
 			hq_MemberPres.addClass( hq_ClassMemIntro ),
+			hq_ProfileFacePic.addClass( hq_ClassMemberFace ).css('margin-right',''),
+			hq_ProfileHeroImg.addClass( 'homepageblock '+hq_ClassMemHeroImg ).removeAttr('style'),
 			hq_starSign.wrap( hq_SpanStarSign ),
 			hq_HomePageStats.addClass( hq_ClassHpStats ),
 			hq_BuyGoldToName.appendTo( hq_BuyGoldToFlower ), hq_BuyGoldCleanUp.remove(),// NOTE Merge the two buy gold links to one
-			hq_HomePagePresentation.addClass( hq_ClassHpPresentation ),
+			hq_HomePagePresentation.addClass( 'homepageblock '+hq_ClassHpPresentation ),
 			hq_HomePageLookingFor.addClass( hq_ClassHpLookingFor ),
 			hq_MemberPosition.parent().addClass( hq_ClassMemPosition ),
 			hq_HomePageFlex.not( ( hq_NoHomePageList ) ).addClass( hq_ClassFlexContainer ),
 			hq_MakeFlexItem.addClass( hq_ClassFlexItem ).removeClass('odd even');
+			hq_HomeMembers.parent().addClass( hq_ClassMembers ),
+			$('.'+hq_ClassMembers+':first').addClass( hq_ClassVisitors ),
+			$('.'+hq_ClassMembers+':first > .line > .header').replaceWith(function() {
+				return '<span class="header"><a href="/visitors.php">' + this.innerHTML + '</a></span>';
+			});
+			$('.'+hq_ClassMembers+':last').addClass( hq_ClassOther );
+
 		}
 		if ( hq_diggedMovies > -1 ) {
 			hq_searchXxxNodes.contents().filter(function() {
