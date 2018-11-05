@@ -2746,6 +2746,10 @@
 		display: none;
 	}
 	/* NOTE Polls */
+	.poll-fill {
+		background-color: var(--bkgrd-h1);
+		height: var(--ui-size-m);
+	}
 	.poll_outer + div[id^="pollvoters"] + .list {
 		display: flow-root;
 	}
