@@ -1513,7 +1513,9 @@
 		fill: var(--ui-clr-red);
 		transform: scale(1.5) rotate(1turn);
 	}
-	.qxh-sprite-icon.qxh-header {
+	.qxh-sprite-icon.qxh-header,
+	.header .qxh-sprite-icon.qxh-icon-dropup,
+	.header .qxh-sprite-icon.qxh-icon-dropdown {
 		margin-right: var(--margin-s)
 	}
 	/*-------------*/
