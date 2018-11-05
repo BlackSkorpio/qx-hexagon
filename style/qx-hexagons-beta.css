@@ -186,6 +186,7 @@
 	a[href*="javascript:openEdit('sms')"], /* Outdated */
 	br[clear="all"], br[clear="all"] + br,
 	.emptymembericon img[src$="blank.gif"],
+	#qmenu_edit > a > img[src$="editblock.png"],
 	#column_center a.clublink > img[src$="blank.gif"],
 	[id$="_text"] + p:empty + p[style="padding-top:10px;"]:empty,
 	[class*="sticky"] + [class*="hidden"] > svg.qxh-icon-noclubicon,
