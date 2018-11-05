@@ -2969,57 +2969,8 @@
 		border: var(--brd-type-1) var(--brd-clr-h);
 		box-shadow: 0 0 var(--ui-svg-l) currentColor;
 		transform: scale(1.3);
+		animation-delay: 0.9s;
 		z-index: 2;
-	}
-	/*-------------*/
-	.homepageblock > .gallery.gallery-scroll.qxh-flex-container > .qxh-flex-item {
-		flex: 1 1 33%;
-	}
-	.homepageblock .gallery.gallery-scroll .insertmember {
-		grid-template-columns: auto;
-		grid-template-areas: "avatar" "link" "description" "icons" "mood";
-		margin: auto;
-	}
-	.homepageblock .gallery.gallery-scroll .emptymemberlargeicon {
-		height: 218px
-	}
-	.homepageblock .gallery.gallery-scroll .emptymemberlargeicon svg {
-		height: 100%;
-		width: 100%;
-	}
-	/*-------------*/
-	i i,
-	i em,
-	em em,
-	em i {
-		font-weight: 800;
-	}
-	/*-------------*/
-	.clubscribble .icons li {
-		filter: hue-rotate(180deg);
-	}
-	/*-------------*/
-	/* NOTE Msg from qruiser */
-	.list.qxh-flex-container .qxh-flex-item.qxh-alert {
-		flex-basis: 100%;
-		background-color: var(--ui-clr-alert);
-		border-radius: var(--brd-rad-s);
-		box-shadow: var(--shadow-size-1) var(--shadow-light);
-	}
-	/*-------------*/
-	/*.column-center * a {
-		text-shadow: 0.083em 0 0;
-		border-bottom: var(--brd-type-2) transparent;
-	}
-	.column-center * a:hover:not([href*="support"]):not([href*="Arrow"]):not([class*="banner"]):not([class*="button"]) {
-		border-bottom: var(--brd-type-2) currentColor;
-	}*/
-	/*-------------*/
-	.scribbleboard-holder.qxh-flex-container,
-	.column-content .odd h3 + .list.qxh-flex-container,
-	[class*="discussions"] .odd > .list.qxh-flex-container,
-	[class*="discussions"] .odd + .list.qxh-flex-container.qxh-w100 {
-		flex-flow: column;
 	}
 	/*-------------*/
 	/* HACK för att unvika att det blir grid containers ( FIXME Rad 2649 )*/
