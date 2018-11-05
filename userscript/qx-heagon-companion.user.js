@@ -633,6 +633,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_ClassButton			= hq_ClassPrefix+'button';
 			var hq_ClassScribbleImg		= hq_ClassPrefix+'scribble-image';
 			var hq_ClassClean			= hq_ClassPrefix+'clean';
+			var hq_ClassFirstWord		= hq_ClassPrefix+'firstWord';
 			var hq_ClassSubNavGrid		= 'subnav-grid';
 			var hq_ClassStarSign		= 'starsign';
 			var hq_ClassXxx				= 'xxx';
@@ -719,6 +720,21 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		hq_fiFlag.attr('title', hq_fiFlagTitle),
 		hq_ukFlag.attr('title', hq_ukFlagTitle),
 		hq_deFlag.attr('title', hq_deFlagTitle);
+
+		// NOTE First word in title
+		// Function from: https://www.jaredatchison.com/code/use-jquery-manipulate-first-last-word-element/
+		hq_ChatHeaderText.html(function(){
+			var text = $(this).text().split(' ');
+			var first = text.shift();
+			return (text.length > 0 ? hq_FragmentSpan+'hidden '+hq_ClassFirstWord+'">'+first+'</span> ' : first) + text.join(" ");
+			//return (text.length > 0 ? '<span class="qxh-hidden qxh-firstWord">'+first+'</span> ' : first) + text.join(" ");
+		});
+		// NOTE Last word in title
+		//$('.sidebar-primary .widget-title').html(function(){
+		//	var text = $(this).text().split(' ');
+		//	var last = text.pop();
+		//	return text.join(" ") + (text.length > 0 ? ' <span class="qxh-lastWord">'+last+'</span>' : last);
+		//});
 
 		// HACK for the old not logged in index
 		if ( !$(document.body).hasClass("signed-in") ) {
