@@ -810,6 +810,10 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			});
 			$('.'+hq_ClassMembers+':last').addClass( hq_ClassOther );
 
+			// NOTE Replace <div> with <section> https://stackoverflow.com/a/11707394/6820262
+			//$(".homepage > div.homepageblock").replaceWith(function() {
+			//	return "<section class='homepageblock'>" + this.innerHTML + "</section>";
+			//});
 		}
 		if ( hq_diggedMovies > -1 ) {
 			hq_searchXxxNodes.contents().filter(function() {
