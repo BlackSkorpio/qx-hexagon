@@ -304,6 +304,9 @@
 		min-height: 2.5em;
 	}
 	/*-------------*/
+	svg:not(:root) {
+		overflow: hidden;
+	}
 	html {
 		-webkit-box-sizing: border-box;
 		        box-sizing: border-box;
