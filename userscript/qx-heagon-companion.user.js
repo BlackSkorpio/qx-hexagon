@@ -641,6 +641,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_ClassClean			= hq_ClassPrefix+'clean';
 			var hq_ClassMovieTitle		= hq_ClassPrefix+'movie-title';
 			var hqClassTitleWrapper		= hq_ClassPrefix+'title-wrapper';
+			var hq_ClassShadow			= hq_ClassPrefix+'shadow';
 			var hq_ClassFirstWord		= hq_ClassPrefix+'firstWord';
 			var hq_ClassSubNavGrid		= 'subnav-grid';
 			var hq_ClassStarSign		= 'starsign';
