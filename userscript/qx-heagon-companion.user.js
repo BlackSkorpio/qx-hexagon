@@ -600,6 +600,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_fiFlag				= $('.icon-flag-FI');
 			var hq_ukFlag				= $('.icon-flag-UK');
 			var hq_deFlag				= $('.icon-flag-DE');
+			//var hq_HomeMovieTitle		= $('.homepageblock > div:nth-of-type(3) > div > video-thumb-holder + div > a[href^="/showmovies.php"]');
 			var hq_colRight				= $('#column_right.column-right');
 			var hq_TeaserDiv	 		= $('.blog-teasers');
 			var hq_wholeID				= $('#whole');
