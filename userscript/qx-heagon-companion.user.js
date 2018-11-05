@@ -445,6 +445,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		var hq_clubHeaderX		= $('#column_center .header [href^="/showclubs.php"][href$="&xxx=1"]');
 		var hq_BlogHeader		= $('.homepageblock > .line > .header > a[href^="https://blog.qruiser."]');
 		var hq_FavHeader		= $('.homepageblock > .line > .header > a[href^="/showfavourites.php"]');
+		var hq_InfoHeader		= $('.homepageblock .line .header a[href^="javascript:dropUpDownHome"]:not([href*="album"]):first-of-type');
 		var hq_MemberSearching	= $('.homepage > a[name="looking_for"] + .homepageblock .line .header');
 		var hq_MemPosition		= $('.homepageblock.'+hq_ClassPrefix+'member-position .line .header');
 		var hq_MemberVisitors	= $('.homepageblock.'+hq_ClassPrefix+'members:first .line .header a');
@@ -503,6 +504,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		var hq_clubHeaderXSVG	= hq_svgFragment+'-clubs--header '+hq_ClassPrefix+'header'+hq_svgFragmentUse+'#clubs-header-xxx'+hq_svgFragmentSuffix;
 		var hq_BlogHeaderSVG	= hq_svgFragment+'-blog--header '+hq_ClassPrefix+'header'+hq_svgFragmentUse+'#member-blog'+hq_svgFragmentSuffix;
 		var hq_FavHeaderSVG		= hq_svgFragment+'-favorite--header '+hq_ClassPrefix+'header'+hq_svgFragmentUse+'#nav-favorites'+hq_svgFragmentSuffix;
+		var hq_InfoHeaderSVG		= hq_svgFragment+'-info--header '+hq_ClassPrefix+'header'+hq_svgFragmentUse+'#member-info'+hq_svgFragmentSuffix;
 
 		hq_Body.append( hq_SVGsprite );
 		var pngBeGone = function() {
@@ -561,6 +563,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			hq_MemberOther.prepend( hq_MemberOtherSVG );
 			hq_clubPublic.append( hq_clubPublicSVG );
 			hq_clubHidden.append( hq_clubHiddenSVG );
+			hq_InfoHeader.prepend( hq_InfoHeaderSVG );
 			hq_clubHeader.prepend( hq_clubHeaderSVG );
 			hq_clubHeaderX.prepend( hq_clubHeaderXSVG );
 			hq_BlogHeader.prepend( hq_BlogHeaderSVG );
