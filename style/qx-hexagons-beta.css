@@ -3067,7 +3067,7 @@
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** TEST AREA ***/
 @supports (display: grid) {
-	.homepageblock.qxh-member-heroimage .background-image,
+	/*.homepageblock.qxh-member-heroimage .background-image,
 	.qxh-source-clubs img[style*="/clubimages/"].background-image,
 	.qxh-source-clubs h2 + img[style*="/discussionsimages/"].background-image {
 		-webkit-transition: var(--ui-time-f) ease-in-out;
@@ -3082,7 +3082,7 @@
 		transform: scale(1.3);
 		animation-delay: 0.9s;
 		z-index: 2;
-	}
+	}*/
 	/*-------------*/
 	/* HACK för att unvika att det blir grid containers ( FIXME Rad 2649 )*/
 	[class*="discussions"] .odd + .list.qxh-flex-container.qxh-w100 > .qxh-flex-item {
