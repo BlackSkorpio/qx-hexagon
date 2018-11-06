@@ -81,6 +81,22 @@
 		<path d="M434 0H100C78 0 59 18 58 41h40a56 56 0 1 1 0 90H58v70h40a56 56 0 0 1 89 45 56 56 0 0 1-89 45H58v71h40a56 56 0 1 1 0 90H58c1 22 20 40 42 40h222v-94c0-33 26-59 59-59h95V42c0-23-19-42-42-42z"/>
 		<path d="M37 106h71c5 6 14 11 23 11a31 31 0 1 0-23-51H37a20 20 0 0 0 0 40zm0 160h71a31 31 0 0 0 54-20 31 31 0 0 0-54-20H37a20 20 0 0 0 0 40zm94 172a31 31 0 1 0-23-51H37a20 20 0 0 0 0 40h71c5 6 14 11 23 11z"/>
 	</symbol>
+	<symbol id="member-discussions" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+		<g id="bubbles" stroke="rgb(18, 21, 22)">
+			<path d="M35.71,42.13V47a2,2,0,0,1-2,2h-19v6l-6-6h-3a2,2,0,0,1-2-2V27a2,2,0,0,1,2-2H17.59"/>
+			<path fill="rgb(188, 21, 42)" fill-opacity="0.2" d="M56.71,34a2,2,0,0,0,2-2V12a2,2,0,0,0-2-2h-32a2,2,0,0,0-2,2V32a2,2,0,0,0,2,2h23v6l6-6Z"/>
+			<path d="M56.71,34a2,2,0,0,0,2-2V12a2,2,0,0,0-2-2h-32a2,2,0,0,0-2,2V32a2,2,0,0,0,2,2h23v6l6-6Z"/>
+		</g>
+		<g id="text_left" stroke="rgb(188, 21, 42)">
+			<line x1="7.71" y1="34" x2="16.75" y2="34"/>
+			<line x1="7.71" y1="39" x2="25.71" y2="39"/>
+			<line x1="7.71" y1="44" x2="25.71" y2="44"/>
+		</g>
+		<g id="text_right" stroke="rgb(170, 139, 89)">
+			<line x1="34.71" y1="23" x2="52.71" y2="23"/>
+			<line x1="34.71" y1="28" x2="52.71" y2="28"/>
+		</g>
+	</symbol>
 	<symbol id="member-guestbook" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510" xml:space="preserve">
 		<path d="M315 198l-3-2a9 9 0 0 1-1-4v-4l-18 17h3a39 39 0 0 0 24-4 48 48 0 0 1-5-3z"/>
 		<path d="M391 202a114 114 0 0 1-36 6 92 92 0 0 1-12-1l-2 2a57 57 0 0 1-39 15h-8l-23-3a9 9 0 0 1-5-16l46-43 1-1a194 194 0 0 1 26-65 755 755 0 0 0-116 15v316a982 982 0 0 1 168-17V202z"/>

@@ -1,0 +1,16 @@
+<svg id="member-discussions" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+	<g id="bubbles" stroke="rgb(18, 21, 22)">
+		<path d="M35.71,42.13V47a2,2,0,0,1-2,2h-19v6l-6-6h-3a2,2,0,0,1-2-2V27a2,2,0,0,1,2-2H17.59"/>
+		<path fill="rgb(188, 21, 42)" fill-opacity="0.2" d="M56.71,34a2,2,0,0,0,2-2V12a2,2,0,0,0-2-2h-32a2,2,0,0,0-2,2V32a2,2,0,0,0,2,2h23v6l6-6Z"/>
+		<path d="M56.71,34a2,2,0,0,0,2-2V12a2,2,0,0,0-2-2h-32a2,2,0,0,0-2,2V32a2,2,0,0,0,2,2h23v6l6-6Z"/>
+	</g>
+	<g id="text_left" stroke="rgb(188, 21, 42)">
+		<line x1="7.71" y1="34" x2="16.75" y2="34"/>
+		<line x1="7.71" y1="39" x2="25.71" y2="39"/>
+		<line x1="7.71" y1="44" x2="25.71" y2="44"/>
+	</g>
+	<g id="text_right" stroke="rgb(170, 139, 89)">
+		<line x1="34.71" y1="23" x2="52.71" y2="23"/>
+		<line x1="34.71" y1="28" x2="52.71" y2="28"/>
+	</g>
+</svg>
