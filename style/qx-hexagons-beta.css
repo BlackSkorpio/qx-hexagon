@@ -2189,10 +2189,11 @@
 	}
 	/* Counters */
 	#column_left.column-left .counter,
-	.container--favourites .notextdecoration > .qxh-text,
 	#column_left.column-left [href^="/show"] + b,
 	#column_left.column-left [href^="/your"] + b,
-	#column_left.column-left b a[href$="?updated=1"] {
+	#column_left.column-left b a[href$="?updated=1"],
+	.container--favourites .notextdecoration > .qxh-text,
+	#column_left.column-left [href="/blog_overview.php"] + b {
 		color: var(--txt-high-clr);
 		font-weight: 700;
 		animation: qxh_view_notice 6s infinite;
@@ -2200,9 +2201,9 @@
 		        transition: var(--ui-time-s);
 	}
 	#column_left.column-left a:hover + .counter,
+	.container--favourites .notextdecoration:hover > .qxh-text,
 	#column_left.column-left .container-inner > div a:hover + b,
-	#column_left.column-left .container-inner > div a:hover + b > .qxh-clean,
-	.container--favourites .notextdecoration:hover > .qxh-text{
+	#column_left.column-left .container-inner > div a:hover + b > .qxh-clean {
 		animation-play-state: paused !important;
 	}
 	/* HACK Fixing the odd aperence of full width widgets headers */
