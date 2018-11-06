@@ -570,7 +570,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			hq_clubXXX.append( hq_clubXXXSVG );
 			hq_MemberSearching.prepend( hq_MemberSearchingSVG );
 			hq_MemPosition.prepend( hq_MemPositionSVG );
-			hq_MemberVisitors.prepend( hq_MemberVisitorsSVG );
+			hq_MemberVisitors.prepend( hq_MemberVisitorsSVG );// FIXME Adds it self to the favorites widget
 			hq_MemberOther.prepend( hq_MemberOtherSVG );
 			hq_clubPublic.append( hq_clubPublicSVG );
 			hq_clubHidden.append( hq_clubHiddenSVG );
@@ -815,7 +815,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_ProfileFacePic	= $('img[src^="/thumbcorners.php"][style*="/memberthumbnails/"]');
 			var hq_ProfileHeroImg	= $('.homepage > div[style="padding-top: 10px"]');
 			var hq_MemberPosition	= $('.homepageblock #map_canvas');
-			var hq_HomeMembers		= $('.homepageblock > .gallery.gallery-scroll');
+			var hq_HomeMembers		= $('.homepageblock > .gallery.gallery-scroll');// FIXME Adds it self to the favorites widget
 			var hq_ClassMemberFace	= hq_ClassPrefix+'member-faceimage';
 			var hq_ClassMemHeroImg	= hq_ClassPrefix+'member-heroimage';
 			var hq_ClassMemPosition	= hq_ClassPrefix+'member-position';
