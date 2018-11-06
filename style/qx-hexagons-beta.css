@@ -921,6 +921,19 @@
 	li#feedback {
 		grid-area: feedback;
 	}
+	/* NOTE Submenus */
+	#qmenu li ul {
+		overflow: hidden;
+	}
+	#qmenu li ul li a {
+		opacity: 0.5;
+		-webkit-transition: var(--ui-time-f) linear;
+		transition: var(--ui-time-f) linear;
+	}
+	#qmenu li ul li a:hover {
+		opacity: 1;
+		transform: translate3d(var(--ui-size-s), 0, 0);
+	}
 	/* Left Column */
 	#column_left.column-left {
 		grid-area: left;
