@@ -2659,6 +2659,7 @@
 
 	/*** NOTE Effect "Lift up" the div we hare hovering ***/
 	#homepageinfo .infoblock,
+	.homepageblock div[class=""],
 	#verifiedinfo .qxh-flex-item,
 	.homepage .qxh-list > .qxh-flex-item,
 	.scribbleboard-holder > .qxh-flex-item,
@@ -2677,6 +2678,7 @@
 		will-change: transform, box-shadow;
 	}
 	#homepageinfo .infoblock:hover,
+	.homepageblock div[class=""]:hover,
 	#verifiedinfo .qxh-flex-item:hover,
 	.homepage .qxh-list > .qxh-flex-item:hover,
 	.scribbleboard-holder > .qxh-flex-item:hover,
