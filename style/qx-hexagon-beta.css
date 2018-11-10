@@ -3095,6 +3095,19 @@
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** TEST AREA ***/
 @supports (display: grid) {
+	.qxh-ellipse {}
+	.qxh-template-pics-faces .memberlargeicon {
+		border: var(--brd-type-1) transparent;
+		border-radius: 0.3em !important;
+		-webkit-transition: all 0.3s linear 0.3s !important;
+		transition: all 0.3s linear 0.3s !important;
+		z-index: 1;
+	}
+	.qxh-template-pics-faces .memberlargeicon:hover {
+		border-color: var(--brd-clr-h);
+		transform: scale(4) translateX(0.8em);
+		box-shadow: var(--shadow-size-1);
+	}
 	/*.homepageblock.qxh-member-heroimage .background-image,
 	.qxh-source-clubs img[style*="/clubimages/"].background-image,
 	.qxh-source-clubs h2 + img[style*="/discussionsimages/"].background-image {
