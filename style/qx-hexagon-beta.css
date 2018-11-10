@@ -185,6 +185,7 @@
 	.signed-in-gold .external-ad,
 	.rightcolumn-club-icon-empty,
 	.qxh-flex-item > br:last-child,
+	.column-center #goldmemberbanner,
 	.errorText ~ div[style*="/shadow/"],
 	a[href*="javascript:openEdit('sms')"], /* Outdated */
 	br[clear="all"], br[clear="all"] + br,
