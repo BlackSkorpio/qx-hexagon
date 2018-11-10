@@ -932,7 +932,7 @@
 	#qmenu li ul li a {
 		opacity: 0.5;
 		-webkit-transition: var(--ui-time-f) linear;
-		transition: var(--ui-time-f) linear;
+		        transition: var(--ui-time-f) linear;
 	}
 	#qmenu li ul li a:hover {
 		opacity: 1;
