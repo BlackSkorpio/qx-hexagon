@@ -532,8 +532,9 @@
 	}
 	.video-thumb,
 	.movies-listing .video-thumb .time,
-	.movies-listing .qxh-list .video-thumb,
+	/*.movies-listing .qxh-list .video-thumb,*/
 	.movies-listing .video-thumb .quality,
+	.movies-listing .qxh-flex-container .video-thumb,
 	.movies-listing .qxh-flex-item > .qxh-clean > .qxh-clean > div[class^="hq_heartIcon"].qxh-clean {
 		font-size: var(--font-3);
 	}
@@ -597,9 +598,11 @@
 	.clubxxx3hidden > div + svg.qxh-icon-noclubicon,
 	.clubxxx4hidden > div + svg.qxh-icon-noclubicon,
 	/*form div[style*="height: 16px; width: 16px"] > a,*/
-	.movies-listing .qxh-list .video-thumb-holder.qxh-clean,
+	/*.movies-listing .qxh-list .video-thumb-holder.qxh-clean,*/
 	.video-thumb-holder img[style*="https://video.qruiser.com"],
-	.movies-listing > .qxh-list .video-thumb-holder .video-thumb-img {
+	/*.movies-listing > .qxh-list .video-thumb-holder .video-thumb-img,*/
+	.movies-listing .qxh-flex-container .video-thumb-holder.qxh-clean,
+	.movies-listing > .qxh-flex-container .video-thumb-holder .video-thumb-img {
 		Width: 100% !important;
 	}
 	img[src*="/scribbleimages/"] {
@@ -1149,8 +1152,9 @@
 	}
 	#homepageinfo .infoblock,
 	/* Hexagon Videoplayer */
-	.movies-listing .qxh-list > .qxh-flex-item,
+	/*.movies-listing .qxh-list > .qxh-flex-item,*/
 	#scroller .qxh-flex-container > .qxh-flex-item,
+	.movies-listing .qxh-flex-container > .qxh-flex-item,
 	.homepageblock > .block > a[href^="javascript:openPhotoPopup"].qxh-flex-item,
 	.homepageblock > [id^="album_"][id$="_info"].block > a[href^="javascript:openPhotoPopup"].qxh-flex-item {
 		flex: 0 1 33%;
@@ -2589,19 +2593,22 @@
 	}
 
 	/* Movies New */
-	.movies-listing .qxh-list > .qxh-flex-item {
+	/*.movies-listing .qxh-list > .qxh-flex-item,*/
+	.movies-listing .qxh-flex-container > .qxh-flex-item {
 		padding: 0;
 		margin: 0 auto;
 		max-width: 33%;
 	}
-	.movies-listing .qxh-list .video-thumb-holder.qxh-clean {
+	/*.movies-listing .qxh-list .video-thumb-holder.qxh-clean,*/
+	.movies-listing .qxh-flex-container .video-thumb-holder.qxh-clean {
 		height: auto;
 	}
 	.video-thumb-holder,
 	.video-thumb-holder a.qxh-clean {
 		line-height: 0;
 	}
-	.movies-listing .qxh-list .video-thumb-holder + div.qxh-clean,
+	/*.movies-listing .qxh-list .video-thumb-holder + div.qxh-clean,*/
+	.movies-listing .qxh-flex-container .video-thumb-holder + div.qxh-clean,
 	.movies-listing .qxh-flex-item > .qxh-clean > .qxh-clean > div[class^="hq_heartIcon"].qxh-clean {
 		overflow: hidden;
 		white-space: nowrap;
@@ -2611,7 +2618,8 @@
 		text-align: center;
 	}
 	.video-thumb-holder img[style*="https://video.qruiser.com"],
-	.movies-listing > .qxh-list .video-thumb-holder .video-thumb-img {
+	/*.movies-listing > .qxh-list .video-thumb-holder .video-thumb-img,*/
+	.movies-listing > .qxh-flex-container .video-thumb-holder .video-thumb-img {
 		border-radius: var(--brd-rad-top);
 		background-position: center !important;
 		background-color: var(--bkgrd-b1) !important;
@@ -2625,7 +2633,8 @@
 		margin: auto;
 	}
 	.video-thumb,
-	.movies-listing .qxh-list .video-thumb {
+	/*.movies-listing .qxh-list .video-thumb,*/
+	.movies-listing .qxh-flex-container .video-thumb {
 		background-color: var(--bkgrd-h1);
 		border-radius: var(--brd-rad-btm);
 		line-height: var(--lh-n);
@@ -2678,8 +2687,9 @@
 	#verifiedinfo .qxh-flex-item,
 	.homepage .qxh-list > .qxh-flex-item,
 	.scribbleboard-holder > .qxh-flex-item,
-	.movies-listing .qxh-list > .qxh-flex-item,
+	/*.movies-listing .qxh-list > .qxh-flex-item,*/
 	.column-content > .qxh-list > .qxh-flex-item,
+	.movies-listing .qxh-flex-container > .qxh-flex-item,
 	.column-content > .qxh-flex-container > .qxh-flex-item,
 	.column-content > .list.qxh-flex-container > .qxh-flex-item,
 	.homepage .homepageblock.qxh-flex-container > .qxh-flex-item,
@@ -2697,8 +2707,9 @@
 	#verifiedinfo .qxh-flex-item:hover,
 	.homepage .qxh-list > .qxh-flex-item:hover,
 	.scribbleboard-holder > .qxh-flex-item:hover,
-	.movies-listing .qxh-list > .qxh-flex-item:hover,
+	/*.movies-listing .qxh-list > .qxh-flex-item:hover,*/
 	.column-content > .qxh-list > .qxh-flex-item:hover,
+	.movies-listing .qxh-flex-container > .qxh-flex-item:hover,
 	.column-content > .qxh-flex-container > .qxh-flex-item:hover,
 	.column-content > .list.qxh-flex-container > .qxh-flex-item:hover,
 	.homepage .homepageblock.qxh-flex-container > .qxh-flex-item:hover,
