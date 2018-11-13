@@ -2546,7 +2546,7 @@
 	}
 	.video-js {
 		color: var(--txt-aside-clr);
-		background-color: rgba(0, 0, 0, 0.5);
+		background-color: rgba(18, 21, 22, 0.75);
 	}
 	.hexagon .video-js[class*="video_"][class*="-dimensions"] {
 		position: relative;
