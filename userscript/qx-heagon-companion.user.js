@@ -41,7 +41,7 @@ function setVisible(selector, visible) {
 	document.querySelector(selector).style.display = visible ? 'block' : 'none';
 }
 onReady(function() {/* TODO Remove #whole when beta period is over */
-	setVisible('.page-container,#whole', true),
+	setVisible('.page-container, #whole, #satellite, body[onload="timer()"] div[style="margin: 10px"]', true),
 	setVisible('#qxh_loading', false),
 	$(document.body).removeClass('qxh-loading');
 });
