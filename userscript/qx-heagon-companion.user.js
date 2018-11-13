@@ -85,6 +85,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		//HexaGon.sMemFsTwoCleanUp = $(HexaGon.sMembFormName+' fieldset.qxh-set--specify');
 		//HexaGon.sMemFsThreeCleanUp = $(HexaGon.sMembFormName+' fieldset.qxh-set--savesettings');
 		HexaGon.sMemObsoleteClean = $( HexaGon.sMembFormName+' .floatleft,'+HexaGon.sMembFormName+' .input-spacing');
+		HexaGon.SateliteWrapper	= $('div[style="margin: 10px"]');
 		// NOTE QX URLs */
 		HexaGon.bodyURL			= HexaGon.pathName.match(/^\/?(\w+)\b/);
 		HexaGon.nudgeSent		= HexaGon.hrefLoc.indexOf('/buffs.php?type=sent');
@@ -128,6 +129,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.ThredURL		= HexaGon.hrefLoc.indexOf("&view=");
 		HexaGon.CatURL			= HexaGon.hrefLoc.indexOf("/?category=");
 		HexaGon.ClubMembers		= HexaGon.hrefLoc.indexOf("clubmembers.php");
+		HexaGon.SatelliteURL	= HexaGon.hrefLoc.indexOf('/satellite.php');
 		HexaGon.Thread_Id		= HexaGon.hrefLoc.split("&view=");
 		HexaGon.Categori_Id		= HexaGon.hrefLoc.split("?category=");
 		HexaGon.Club_Id			= HexaGon.hrefLoc.split("?club=");
@@ -155,6 +157,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.sMemFsThreeWrap	= HexaGon.FragmentFsetSubClass+'set--savesettings'+HexaGon.FragmentSuffix;
 
 		// NOTE HexaGon Classes
+		HexaGon.ClassSatellite		= HexaGon.ClassPrefix+'satellite';
 		HexaGon.ClassMakeClubsGrid	= HexaGon.ClassPrefix+'grid-container';
 		HexaGon.ClassForm			= HexaGon.ClassPrefix+'form';
 		HexaGon.ClassSearch			= HexaGon.ClassForm+'-search';
@@ -253,6 +256,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		if(HexaGon.InfoAdvertise	> -1) HexaGon.Body.addClass(HexaGon.ClassInfoAdvertise);
 		if(HexaGon.InfoGdpr			> -1) HexaGon.Body.addClass(HexaGon.ClassInfoGdpr);
 		if(HexaGon.InfoFaq			> -1) HexaGon.Body.addClass(HexaGon.ClassInfoFaq);
+		if(HexaGon.SatelliteURL		> -1) HexaGon.SateliteWrapper.addClass(HexaGon.ClassSatellite);
 	};
 	// NOTE Clean out unwanted stuff
 	HexaGon.ClassCleanHTML = function() {
