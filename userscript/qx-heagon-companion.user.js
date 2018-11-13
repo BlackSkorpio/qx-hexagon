@@ -401,6 +401,10 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		{
 			var hq_QruiserLogo		= $('img#logo_qruiser, #satellite img[alt="Qruiser"], body[onload="timer()"] div[style="border: 1px solid #B21B1B; color: #B21B1B; width: auto; padding: 8px; font-size: 12px; line-height: 18px; font-weight: bold; background-color: #FEFCF3; margin-bottom:10px;"] > img[src$="exclamation.gif"]');
 			var hq_qxLogo			= $('.blog-teasers .gaymap h3');
+			var hq_Sat_Mail			= $('#satellite #moodstatus > p > b > a[href*="messages.php"]');
+			var hq_Sat_Heart		= $('#satellite #moodstatus > p > b > a[href*="favourites.php"]');
+			var hq_Sat_Reload		= $('#satellite p > a[href*="?"]:not([href*="logout"])');
+			var hq_Sat_LogOut		= $('#satellite p > a[href*="?logout=true"]');
 			var hq_qmenuLogout		= $('#qmenu_logout > a');
 			var hq_qmenuHome		= $('#qmenu_home > a, .homeicon');
 			var hq_emptyAvatar		= $('.emptymembericon > a, .emptymemberlargeicon');
@@ -584,6 +588,10 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			hq_MemDiscussions.prepend( hq_MemDiscussionsSVG );
 			hq_BlogHeader.prepend( hq_BlogHeaderSVG );
 			hq_FavHeader.prepend( hq_FavHeaderSVG );
+			hq_Sat_Mail.prepend( hq_mailSVG );
+			hq_Sat_Heart.prepend( hq_heartIconSVG );
+			hq_Sat_Reload.prepend( hq_reloadSVG );
+			hq_Sat_LogOut.prepend( hq_logoutSVG );
 		};
 		pngBeGone();
 	};
