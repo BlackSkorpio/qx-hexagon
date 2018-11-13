@@ -3103,6 +3103,9 @@
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** TEST AREA ***/
 @supports (display: grid) {
+	.column-content > #error_texts + script + p:empty + .insertmember {
+		margin-top: var(--margin-xlr);
+	}
 	.qxh-ellipse {}
 	.qxh-template-pics-faces .memberlargeicon {
 		border: var(--brd-type-1) transparent;
