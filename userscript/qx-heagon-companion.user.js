@@ -399,7 +399,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		}
 		// Selectors
 		{
-			var hq_QruiserLogo		= $('img#logo_qruiser');
+			var hq_QruiserLogo		= $('img#logo_qruiser, #satellite img[alt="Qruiser"], body[onload="timer()"] div[style="border: 1px solid #B21B1B; color: #B21B1B; width: auto; padding: 8px; font-size: 12px; line-height: 18px; font-weight: bold; background-color: #FEFCF3; margin-bottom:10px;"] > img[src$="exclamation.gif"]');
 			var hq_qxLogo			= $('.blog-teasers .gaymap h3');
 			var hq_qmenuLogout		= $('#qmenu_logout > a');
 			var hq_qmenuHome		= $('#qmenu_home > a, .homeicon');
