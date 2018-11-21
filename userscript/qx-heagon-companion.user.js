@@ -7,14 +7,14 @@
  *	@url http://varoystrand.se | http://kokensupport.com
 **/
 // ==UserScript==
-// @name				 QX Hexagon companion
+// @name			QX Hexagon companion
 // @version			1.0
-// @description	Fixes that goes hand in hand with the QX Hexagon userstyle
-// @icon				 https://github.com/BlackSkorpio/qx-hexagon/raw/master/screens/hexagon-logo.jpg
+// @description		Fixes that goes hand in hand with the QX Hexagon userstyle
+// @icon			https://github.com/BlackSkorpio/qx-hexagon/raw/master/screens/hexagon-logo.jpg
 // @author			 Bjarne Varöystrand
-// @homepageURL	https://varoystrand.se
-// @homepageURL	https://github.com/BlackSkorpio/qx-hexagon
-// @downloadURL	https://github.com/BlackSkorpio/qx-hexagon/raw/master/js/qx-hexagon-companion.user.js
+// @homepageURL		https://varoystrand.se
+// @homepageURL		https://github.com/BlackSkorpio/qx-hexagon
+// @downloadURL		https://github.com/BlackSkorpio/qx-hexagon/raw/master/js/qx-hexagon-companion.user.js
 // @updateURL		https://github.com/BlackSkorpio/qx-hexagon/raw/master/js/qx-hexagon-companion.user.js
 // @include https://beta.qruiser.com/*
 // @include https://www.qruiser.com/*
@@ -787,7 +787,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		// NOTE Move the Favorites widget above the Mail/Message Widget
 		hq_FavoritesDiv.insertBefore( hq_MailBox );
 
-		// HACK for the old not logged in index
+		// TEMP HACK for the old not logged in index
 		if ( !$(document.body).hasClass("signed-in") ) {
 			var hq_ClassDot			= '.';
 			var hq_ClassFrontCols	= hq_ClassPrefix+'front-columns';
