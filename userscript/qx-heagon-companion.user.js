@@ -381,7 +381,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		// NOTE Our Send msg window
 		if(HexaGon.msgSend	> -1) window.resizeTo('450', '800');
 		// NOTE The satellite
-		if(HexaGon.satellite > -1) window.resizeTo('320', '500');
+		if(HexaGon.satellite > -1) window.resizeTo('340', '500');
 	};
 	// NOTE This is stuff that we realy need to make sure they have been executed!
 	function addSprite() {
