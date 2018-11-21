@@ -448,6 +448,30 @@
 		color: var(--txt-base-clr);
 		box-shadow: var(--shadow-size-1) var(--shadow-light);
 	}
+	/*-------------*/
+	#qxh_up,
+	#qxh_down {
+		opacity: 0;
+		position: fixed;
+		height: 36px;
+		width: 36px;
+		right: 10px;
+		margin-top: -24px;
+		border-radius: var(--brd-rad-s);
+		/*background: no-repeat scroll 50% 50% rgba(18, 21, 22, 0.7);*/
+		transition-duration: 0.2s;
+		cursor: pointer;
+		z-index: 1;
+	}
+	#qxh_up {
+		bottom: 53%;
+		/*background-image: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAYAAACAl21KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB+SURBVDhPY1i1atV/amAGahgCMoNhaIGlS5cKAp19BoRBbLJcj2QILDJINwzoAmMgfoclIkBixkS5DI8hMJcRNgxoSBoOl6CnNZBhaVhdBjWE1MSJahjQkA4KEmYH2GUrV66cSYEhYB+AzKBtFiHkQqKiH6Ro1CDCQTWgYQQAs81DU0G/83sAAAAASUVORK5CYII=);*/
+	}
+	#qxh_down {
+		top: 53%;
+		/*background-image: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAYAAACAl21KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACPSURBVDhPY2DAAlatWvUfH8amB6vYqEGEg2pgw4iQ7cTKM6xcuXImsYpxqQOZAQ4woIIOCgzrQAl1oEFpZBiWhitFgwx7R4SBIDXYDYGZDFRgTMAwkCHGhBMRJMxwGUa8ITCbli5dKgg08AySN8+AxIhyCboiJMPIN4Qsm6miiYioxltawvSDYogohYTUAQC80UNTOht/YwAAAABJRU5ErkJggg==);*/
+		transform: rotate(180deg);
+	}
 }
 /*** Let's start cooking ***/
 @supports (display: grid) {
