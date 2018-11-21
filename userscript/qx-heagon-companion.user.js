@@ -979,6 +979,9 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 
 	NeedsToBeDone();
 	addSprite();
+	setTimeout(function() {
+		Scroller();
+	}, 1000);
 	// NOTE Don't Look Back, Just Get it Done!
 	$(document).on("ready",HexaGon.init);
 })(window, document, jQuery);
