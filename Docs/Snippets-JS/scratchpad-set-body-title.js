@@ -13,8 +13,8 @@
 if ( $(document.body).hasClass("signed-in") ) {
 	function setWindowTitles() {
 		var url				= window.location.href;
-		var PrefixTitle		= 'Qruiser - ';
-		var SuffixTitle		= ' - The Nordic Gay & Queer Online Community';
+		var TitlePrefix		= 'Qruiser - ';
+		var TitleSuffix		= ' - The Nordic Gay & Queer Online Community';
 		var TitleSpacer		= ' - ';
 		var GetTemplateName	= $('#current_page');
 		var GetSubNavTitle	= $('#subnavbar .subnavbar-item--active > a');
@@ -96,7 +96,7 @@ if ( $(document.body).hasClass("signed-in") ) {
 		}
 
 		if ( ( url_clubs > -1 ) || ( url_movies > -1 ) || ( url_texts > -1 ) ) {
-			var MembersTitle = PrefixTitle + SubNavTitle + ' ' + TemplateName + SuffixTitle;
+			var MembersTitle = TitlePrefix + SubNavTitle + ' ' + TemplateName + TitleSuffix;
 			document.title = MembersTitle;
 		}
 		if ( ( url_members > -1 ) || ( url_forum > -1 ) || ( url_info > -1 ) ) {
@@ -105,42 +105,42 @@ if ( $(document.body).hasClass("signed-in") ) {
 			} else {
 				var MembersTitle = SubNavTitle + ' ' + TemplateName;
 			}
-			document.title = PrefixTitle + MembersTitle + SuffixTitle;
+			document.title = TitlePrefix + MembersTitle + TitleSuffix;
 		}
 		if ( ( url_pics > -1 ) || ( url_chat > -1 ) ) {
-			var PicsTitle = PrefixTitle + SubNavTitle + SuffixTitle;
+			var PicsTitle = TitlePrefix + SubNavTitle + TitleSuffix;
 			document.title = PicsTitle;
 		}
 		// NOTE Clubs
 		if ( url_clubs > -1 ) {
 			if ( url_Club > -1 ) {
-				var ClubsTitle = PrefixTitle + ClubName + SuffixTitle;
+				var ClubsTitle = TitlePrefix + ClubName + TitleSuffix;
 				document.title = ClubsTitle;
 			}
 			// NOTE Club Sections
 			if ( ( url_Cmembers > -1 ) || ( url_Cscribbles > -1 ) || ( url_Cpolls > -1 ) ) {
-				var ClubSectionTitle = PrefixTitle + ClubName + ' ' +  ClubSection + SuffixTitle;
+				var ClubSectionTitle = TitlePrefix + ClubName + ' ' +  ClubSection + TitleSuffix;
 				document.title = ClubSectionTitle;
 			}
 			// NOTE Club discussions
 			if ( url_Cdiscussions > -1 ) {
-				var ClubDiscussTitle = PrefixTitle + ClubName + ' ' +  ClubSection + ' ' + ClubThread + SuffixTitle;
+				var ClubDiscussTitle = TitlePrefix + ClubName + ' ' +  ClubSection + ' ' + ClubThread + TitleSuffix;
 				document.title = ClubDiscussTitle;
 			}
 		}
 		// NOTE The profile
 		if ( url_profile > -1 ) {
-			var ProfileTitle = PrefixTitle + NickName + SuffixTitle;
+			var ProfileTitle = TitlePrefix + NickName + TitleSuffix;
 			document.title = ProfileTitle;
 		}
 		// NOTE Your Position
 		if ( url_map > -1 ) {
-			var PositionTitle = PrefixTitle + MapTitle + SuffixTitle;
+			var PositionTitle = TitlePrefix + MapTitle + TitleSuffix;
 			document.title = PositionTitle;
 		}
 		// NOTE Your clubs
 		if ( url_showclubs > -1 ) {
-			var ShowClubsTitle = PrefixTitle + ShowClubsSection + SuffixTitle;
+			var ShowClubsTitle = TitlePrefix + ShowClubsSection + TitleSuffix;
 			document.title = ShowClubsTitle;
 		}
 		// NOTE Profile Sections
@@ -149,19 +149,19 @@ if ( $(document.body).hasClass("signed-in") ) {
 			( url_buffs > -1 ) || ( url_showMovies > -1 ) || ( url_moviesDigged > -1 ) ||
 			( url_showPolls > -1 ) || ( url_verified > -1 ) || ( url_verifiedBy > -1 )
 			) {
-			var YourSectionsTitle = PrefixTitle + SubNavTitle + SuffixTitle;
+			var YourSectionsTitle = TitlePrefix + SubNavTitle + TitleSuffix;
 			document.title = YourSectionsTitle;
 		}
 		// NOTE Updated content at your favorites
 		if ( ( url_favUpdated > -1 ) || ( url_blogOverview > -1 ) || ( url_blogCreate > -1 ) ||
 			( url_showDiary > -1 ) || ( url_giftCards > -1 )
 			) {
-			var UpdatedTitle = PrefixTitle + UpdatedSection + SuffixTitle;
+			var UpdatedTitle = TitlePrefix + UpdatedSection + TitleSuffix;
 			document.title = UpdatedTitle;
 		}
 		// NOTE Ask Sentry
 		if ( url_askSentry > -1 ) {
-			document.title = PrefixTitle + SentryTitle + SuffixTitle;
+			document.title = TitlePrefix + SentryTitle + TitleSuffix;
 		}
 	};
 	setWindowTitles();

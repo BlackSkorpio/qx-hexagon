@@ -53,6 +53,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 	// NOTE Store our functions so we can run them on window.ready
 	HexaGon.init = function() {
 		HexaGon.cacheSelectors();
+		HexaGon.SetWindowTitles();
 		HexaGon.setBody();
 		HexaGon.SetUpMemberSearch();
 		HexaGon.ClassCleanHTML();
@@ -86,6 +87,18 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		//HexaGon.sMemFsThreeCleanUp = $(HexaGon.sMembFormName+' fieldset.qxh-set--savesettings');
 		HexaGon.sMemObsoleteClean = $( HexaGon.sMembFormName+' .floatleft,'+HexaGon.sMembFormName+' .input-spacing');
 		HexaGon.SateliteWrapper	= $('div[style="margin: 10px"]');
+		HexaGon.TitlePrefix		= 'Qruiser - ';
+		HexaGon.TitleSuffix		= ' - The Nordic Gay & Queer Online Community';
+		HexaGon.TitleSpacer		= ' - ';
+		HexaGon.GetTemplateName	= $('#current_page');
+		HexaGon.GetSubNavTitle	= $('#subnavbar .subnavbar-item--active > a');
+		HexaGon.GetClubName		= $('.column-content h2:first-of-type > a');
+		HexaGon.GetClubSection	= $('.column-content h2:first-of-type + p > b > a');
+		HexaGon.GetClubThread	= $('.column-content .odd > div > h2:first-of-type');
+		HexaGon.GetShowClubsTitle = $('#clubinfo_text + p:empty + div > b > a');
+		HexaGon.GetUpdatedTitle	= $('.column-content #error_texts ~ h2:first-of-type');
+		HexaGon.GetMapTitle		= $('.column-content #error_texts + div.small + p + .insertmember + p + h2:first-of-type');
+		HexaGon.GetSentryTitle	= $('#column_right .container-header > a[href="/sentry.php"]');
 		// NOTE QX URLs */
 		HexaGon.bodyURL			= HexaGon.pathName.match(/^\/?(\w+)\b/);
 		HexaGon.nudgeSent		= HexaGon.hrefLoc.indexOf('/buffs.php?type=sent');
@@ -130,6 +143,38 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.CatURL			= HexaGon.hrefLoc.indexOf("/?category=");
 		HexaGon.ClubMembers		= HexaGon.hrefLoc.indexOf("clubmembers.php");
 		HexaGon.SatelliteURL	= HexaGon.hrefLoc.indexOf('/satellite.php');
+		HexaGon.ClubsURL		= HexaGon.hrefLoc.indexOf( '/clubs/' );
+		HexaGon.MoviesURL		= HexaGon.hrefLoc.indexOf( '/movies/' );
+		HexaGon.TextsURL		= HexaGon.hrefLoc.indexOf( '/texts/' );
+		HexaGon.MembersURL		= HexaGon.hrefLoc.indexOf( '/members/' );
+		HexaGon.ForumURL		= HexaGon.hrefLoc.indexOf( '/forum/' );
+		HexaGon.InfoURL			= HexaGon.hrefLoc.indexOf( '/info/' );
+		HexaGon.PicsURL			= HexaGon.hrefLoc.indexOf( '/pics/' );
+		HexaGon.ChatURL			= HexaGon.hrefLoc.indexOf( '/chat/' );
+		HexaGon.ScribblesURL	= HexaGon.hrefLoc.indexOf( 'clubscribble.php' );
+		HexaGon.PollsURL		= HexaGon.hrefLoc.indexOf( 'clubpolls.php' );
+		HexaGon.DiscussionsURL	= HexaGon.hrefLoc.indexOf( 'clubdiscuss.php' );
+		HexaGon.MapURL			= HexaGon.hrefLoc.indexOf('/map.php');
+		HexaGon.ShowclubsURL	= HexaGon.hrefLoc.indexOf('/showclubs.php');
+		HexaGon.CloseToYouURL	= HexaGon.hrefLoc.indexOf( '/members/close_to_you/' );
+		HexaGon.FavoritesURL	= HexaGon.hrefLoc.indexOf('/favourites.php');
+		HexaGon.ShowFavsURL		= HexaGon.hrefLoc.indexOf('/showfavourites.php');
+		HexaGon.YouasFavURL		= HexaGon.hrefLoc.indexOf('/youasfavourite.php');
+		HexaGon.IgnoredURL		= HexaGon.hrefLoc.indexOf('/ignored.php');
+		HexaGon.VisitorsURL		= HexaGon.hrefLoc.indexOf('/visitors.php');
+		HexaGon.VisitedURL		= HexaGon.hrefLoc.indexOf('/visited.php');
+		HexaGon.BuffsURL		= HexaGon.hrefLoc.indexOf('/buffs.php');
+		HexaGon.ShowMoviesURL	= HexaGon.hrefLoc.indexOf('/showmovies.php');
+		HexaGon.MoviesDiggedURL = HexaGon.hrefLoc.indexOf('/showmovies_digged.php');
+		HexaGon.ShowPollsURL	= HexaGon.hrefLoc.indexOf('/showpolls.php');
+		HexaGon.VerifiedURL		= HexaGon.hrefLoc.indexOf('/verified.php');
+		HexaGon.VerifiedByURL	= HexaGon.hrefLoc.indexOf('/verified_byme.php');
+		HexaGon.FavUpdatedURL	= HexaGon.hrefLoc.indexOf('/favourites_updated.php');
+		HexaGon.BlogOverviewURL = HexaGon.hrefLoc.indexOf('/blog_overview.php');
+		HexaGon.BlogCreateURL	= HexaGon.hrefLoc.indexOf('/blog_create.php');
+		HexaGon.ShowDiaryURL	= HexaGon.hrefLoc.indexOf('/showdiary.php');
+		HexaGon.GiftCardsURL	= HexaGon.hrefLoc.indexOf('/yourgiftcards.php');
+		HexaGon.AskSentryURL	= HexaGon.hrefLoc.indexOf('/sentry.php');
 		HexaGon.Thread_Id		= HexaGon.hrefLoc.split("&view=");
 		HexaGon.Categori_Id		= HexaGon.hrefLoc.split("?category=");
 		HexaGon.Club_Id			= HexaGon.hrefLoc.split("?club=");
@@ -201,6 +246,109 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.ThreadId			= HexaGon.IdPrefix+"thread_"+HexaGon.Thread_Id[1];
 		HexaGon.CatId				= HexaGon.IdPrefix+"category_"+HexaGon.Categori_Id[1];
 		HexaGon.ScribbleId			= HexaGon.IdPrefix+"club_"+HexaGon.Club_Id[1]+"_scribble"
+	};
+	// NOTE Set the browser title
+	HexaGon.SetWindowTitles = function() {
+		if ( typeof HexaGon.GetClubName !== 'undefined' || HexaGon.GetClubName !== null ) {
+			var ClubName = HexaGon.GetClubName.text();
+		}
+		if ( typeof HexaGon.GetClubSection !== 'undefined' || HexaGon.GetClubSection !== null ) {
+			var ClubSection = HexaGon.GetClubSection.text();
+		}
+		if ( typeof HexaGon.GetClubThread !== 'undefined' || HexaGon.GetClubThread !== null ) {
+			var ClubThread = HexaGon.GetClubThread.text();
+		}
+		if ( typeof HexaGon.GetTemplateName !== 'undefined' || HexaGon.GetTemplateName !== null ) {
+			var TemplateName = HexaGon.GetTemplateName.text();
+		}
+		if ( typeof HexaGon.GetSubNavTitle !== 'undefined' || HexaGon.GetSubNavTitle !== null ) {
+			var SubNavTitle = HexaGon.GetSubNavTitle.text();
+		}
+		/*if ( typeof HexaGon.GetNickName !== 'undefined' || HexaGon.GetNickName !== null ) {
+			// Replace any _ with space: https://stackoverflow.com/a/34671415/6820262
+			var NickName = HexaGon.GetNickName.text().replace(/_/g, " ");
+		}*/
+		if ( typeof HexaGon.GetShowClubsTitle !== 'undefined' || HexaGon.GetShowClubsTitle !== null ) {
+			var ShowClubsSection = HexaGon.GetShowClubsTitle.text();
+		}
+		if ( typeof HexaGon.GetUpdatedTitle !== 'undefined' || HexaGon.GetUpdatedTitle !== null ) {
+			var UpdatedSection = HexaGon.GetUpdatedTitle.text();
+		}
+		if ( typeof HexaGon.GetMapTitle !== 'undefined' || HexaGon.GetMapTitle !== null ) {
+			var MapTitle = HexaGon.GetMapTitle.text();
+		}
+		if ( typeof HexaGon.GetSentryTitle !== 'undefined' || HexaGon.GetSentryTitle !== null ) {
+			var SentryTitle = HexaGon.GetSentryTitle.text();
+		}
+
+		if ( ( HexaGon.ClubsURL > -1 ) || ( HexaGon.MoviesURL > -1 ) || ( HexaGon.TextsURL > -1 ) ) {
+			var MembersTitle = HexaGon.TitlePrefix + SubNavTitle + ' ' + TemplateName + HexaGon.TitleSuffix;
+			document.title = MembersTitle;
+		}
+		if ( ( HexaGon.MembersURL > -1 ) || ( HexaGon.ForumURL > -1 ) || ( HexaGon.InfoURL > -1 ) ) {
+			if ( HexaGon.CloseToYouURL > -1 ) {
+				var MembersTitle = TemplateName + ' ' + SubNavTitle;
+			} else {
+				var MembersTitle = SubNavTitle + ' ' + TemplateName;
+			}
+			document.title = HexaGon.TitlePrefix + MembersTitle + HexaGon.TitleSuffix;
+		}
+		if ( ( HexaGon.PicsURL > -1 ) || ( HexaGon.ChatURL > -1 ) ) {
+			var PicsTitle = HexaGon.TitlePrefix + SubNavTitle + HexaGon.TitleSuffix;
+			document.title = PicsTitle;
+		}
+		// NOTE Clubs
+		if ( HexaGon.ClubsURL > -1 ) {
+			if ( HexaGon.ClubMain > -1 ) {
+				var ClubsTitle = HexaGon.TitlePrefix + ClubName + HexaGon.TitleSuffix;
+				document.title = ClubsTitle;
+			}
+			// NOTE Club Sections
+			if ( ( HexaGon.MembersURL > -1 ) || ( HexaGon.ScribblesURL > -1 ) || ( HexaGon.PollsURL > -1 ) ) {
+				var ClubSectionTitle = HexaGon.TitlePrefix + ClubName + ' ' +  ClubSection + HexaGon.TitleSuffix;
+				document.title = ClubSectionTitle;
+			}
+			// NOTE Club discussions
+			if ( HexaGon.DiscussionsURL > -1 ) {
+				var ClubDiscussTitle = HexaGon.TitlePrefix + ClubName + ' ' +  ClubSection + ' ' + ClubThread + HexaGon.TitleSuffix;
+				document.title = ClubDiscussTitle;
+			}
+		}
+		// NOTE The profile
+		/*if ( url_profile > -1 ) {
+			var ProfileTitle = HexaGon.TitlePrefix + NickName + HexaGon.TitleSuffix;
+			document.title = ProfileTitle;
+		}*/
+		// NOTE Your Position
+		if ( HexaGon.MapURL > -1 ) {
+			var PositionTitle = HexaGon.TitlePrefix + MapTitle + HexaGon.TitleSuffix;
+			document.title = PositionTitle;
+		}
+		// NOTE Your clubs
+		if ( HexaGon.ShowclubsURL > -1 ) {
+			var ShowClubsTitle = HexaGon.TitlePrefix + ShowClubsSection + HexaGon.TitleSuffix;
+			document.title = ShowClubsTitle;
+		}
+		// NOTE Profile Sections
+		if ( ( HexaGon.FavoritesURL > -1 ) || ( HexaGon.ShowFavsURL > -1 ) || ( HexaGon.YouasFavURL > -1 ) ||
+			( HexaGon.IgnoredURL > -1 ) || ( HexaGon.VisitorsURL > -1 ) || ( HexaGon.VisitedURL > -1 ) ||
+			( HexaGon.BuffsURL > -1 ) || ( HexaGon.ShowMoviesURL > -1 ) || ( HexaGon.MoviesDiggedURL > -1 ) ||
+			( HexaGon.ShowPollsURL > -1 ) || ( HexaGon.VerifiedURL > -1 ) || ( HexaGon.VerifiedByURL > -1 )
+			) {
+			var YourSectionsTitle = HexaGon.TitlePrefix + SubNavTitle + HexaGon.TitleSuffix;
+			document.title = YourSectionsTitle;
+		}
+		// NOTE Updated content at your favorites
+		if ( ( HexaGon.FavUpdatedURL > -1 ) || ( HexaGon.BlogOverviewURL > -1 ) || ( HexaGon.BlogCreateURL > -1 ) ||
+			( HexaGon.ShowDiaryURL > -1 ) || ( HexaGon.GiftCardsURL > -1 )
+			) {
+			var UpdatedTitle = HexaGon.TitlePrefix + UpdatedSection + HexaGon.TitleSuffix;
+			document.title = UpdatedTitle;
+		}
+		// NOTE Ask Sentry
+		if ( HexaGon.AskSentryURL > -1 ) {
+			document.title = HexaGon.TitlePrefix + SentryTitle + HexaGon.TitleSuffix;
+		}
 	};
 	// NOTE SetUp the body with classes and ID's
 	HexaGon.setBody = function() {
@@ -821,6 +969,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		};
 		// TEMP Dirty HACK to be able to keep functionality on member profiles!
 		if( hq_MemberProfileLink > -1) {
+			var hq_GetNickName		= $('.column-content h2:first-of-type > a');
 			var hq_BuyGoldToFlower	= $('.hideself_ > a:first-of-type[href^="javascript:buygold"]');
 			var hq_BuyGoldToName	= $('.hideself_ > a:last-of-type[href^="javascript:buygold"] > b');
 			var hq_BuyGoldCleanUp	= $('.hideself_ > a:last-of-type[href^="javascript:buygold"]');
@@ -835,7 +984,12 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_ClassVisitors	= hq_ClassPrefix+'member-visitors';
 			var hq_ClassOther		= hq_ClassPrefix+'other-members';
 
-			console.info("Qruiser: We have a renegade template"),
+			//console.info("Qruiser: We have a renegade template"),
+			if ( typeof hq_GetNickName !== 'undefined' || hq_GetNickName !== null ) {
+				// Replace() any _ with space: https://stackoverflow.com/a/34671415/6820262
+				var hq_NickName = hq_GetNickName.text().replace(/_/g, " ");
+				document.title = 'Qruiser - ' + hq_NickName + ' - The Nordic Gay & Queer Online Community';
+			};
 			hq_DocBody.addClass( hq_ClassMemberBody ).attr("id", hq_IdMemberBody),
 			hq_MemberPres.addClass( hq_ClassMemIntro ),
 			hq_ProfileFacePic.addClass( hq_ClassMemberFace ).css('margin-right',''),
