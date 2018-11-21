@@ -1058,6 +1058,7 @@
 	.qxh-member-intro > img[src^="/thumbcorners.php"] {
 		grid-area: avatar;
 		margin-left: 0;
+		border-radius: var(--brd-rad-m);
 	}
 	.qxh-member-intro > h2 {
 		grid-area: name;
