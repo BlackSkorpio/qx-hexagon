@@ -16,8 +16,7 @@
 // @homepageURL		https://github.com/BlackSkorpio/qx-hexagon
 // @downloadURL		https://github.com/BlackSkorpio/qx-hexagon/raw/master/js/qx-hexagon-companion.user.js
 // @updateURL		https://github.com/BlackSkorpio/qx-hexagon/raw/master/js/qx-hexagon-companion.user.js
-// @include https://beta.qruiser.com/*
-// @include https://www.qruiser.com/*
+// @include *qruiser.com*
 // @require https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js
 // ==/UserScript==
 
