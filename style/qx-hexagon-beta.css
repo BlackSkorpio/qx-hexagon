@@ -3128,6 +3128,11 @@
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** TEST AREA ***/
 @supports (display: grid) {
+	.photoalbum-body .photoalbum-prev[aria-disabled="true"],
+	.photoalbum-body .photoalbum-next[aria-disabled="true"] {
+		display: none !important;
+	}
+	/*-------------*/
 	.column-content > #error_texts + script + p:empty + .insertmember {
 		margin-top: var(--margin-xlr);
 	}
