@@ -3142,6 +3142,20 @@
 		padding: 1em 0;
 	}
 	/*-------------*/
+	#qxh_up,
+	#qxh_down {
+		color: var(--txt-aside-clr);
+		background-image: none;
+	}
+	#qxh_up svg,
+	#qxh_down svg {
+		width: 100%;
+		height: 100%;
+	}
+	#qxh_down svg {
+		transform: rotate(180deg);
+	}
+	/*-------------*/
 	.column-content > #error_texts + script + p:empty + .insertmember {
 		margin-top: var(--margin-xlr);
 	}
