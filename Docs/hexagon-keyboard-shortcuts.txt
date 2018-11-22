@@ -1,0 +1,24 @@
+SCROLL FUNKTIONER
+Q = Till toppen av sidan
+E = Till slutet av sidan
+W = Skrolla uppåt långsamt
+A = Skrolla uppåt en sida
+S = Skrolla nedåt långsamt
+D = Skrolla nedåt en sida
+
+Genvägar
+1 = Till medlemmarna
+2 = Till klubbarna
+3 = Till bilderna
+4 = Till filmerna
+5 = Till bloggarna
+6 = Till Forumet
+7 = Till konversationerna
+8 = Till FAQn
+H = Till din egen profil
+V = Senaste besökare
+F = Dina Favoriter
+
+
+https://greasyfork.org/sv/scripts/15173-visited-lite
+https://openuserjs.org/scripts/anka-213/Webcomic_Reader
