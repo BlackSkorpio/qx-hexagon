@@ -3133,6 +3133,15 @@
 		display: none !important;
 	}
 	/*-------------*/
+	.shop-container .payments,
+	.shop-container .content,
+	.shop-container footer {background-color: var(--bkgrd-w2);}
+	.shop-container .payments {
+		width: 100%;
+		margin: 0 auto;
+		padding: 1em 0;
+	}
+	/*-------------*/
 	.column-content > #error_texts + script + p:empty + .insertmember {
 		margin-top: var(--margin-xlr);
 	}
