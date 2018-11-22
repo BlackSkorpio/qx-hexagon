@@ -936,7 +936,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		hq_FavoritesDiv.insertBefore( hq_MailBox );
 
 		// TEMP HACK for the old not logged in index
-		if ( !$(document.body).hasClass("signed-in") ) {
+		if ( !hq_DocBody.hasClass('signed-in') ) {
 			var hq_ClassDot			= '.';
 			var hq_ClassFrontCols	= hq_ClassPrefix+'front-columns';
 			var hq_ClassFrontImg	= hq_ClassPrefix+'front-image';
