@@ -180,6 +180,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.GiftCardsURL	= HexaGon.hrefLoc.indexOf('/yourgiftcards.php');
 		HexaGon.AskSentryURL	= HexaGon.hrefLoc.indexOf('/sentry.php');
 		HexaGon.ShowMovieURL	= HexaGon.hrefLoc.indexOf('&movieid=');
+		HexaGon.SupportURL		= HexaGon.hrefLoc.indexOf('/support.php');
 		HexaGon.Thread_Id		= HexaGon.hrefLoc.split("&view=");
 		HexaGon.Categori_Id		= HexaGon.hrefLoc.split("?category=");
 		HexaGon.Club_Id			= HexaGon.hrefLoc.split("?club=");
@@ -357,7 +358,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		}
 		// NOTE Updated content at your favorites
 		if ( ( HexaGon.FavUpdatedURL > -1 ) || ( HexaGon.BlogOverviewURL > -1 ) || ( HexaGon.BlogCreateURL > -1 ) ||
-			( HexaGon.ShowDiaryURL > -1 ) || ( HexaGon.GiftCardsURL > -1 )
+			( HexaGon.SupportURL > -1 ) || ( HexaGon.ShowDiaryURL > -1 ) || ( HexaGon.GiftCardsURL > -1 )
 			) {
 			var UpdatedTitle = HexaGon.TitlePrefix + UpdatedSection + HexaGon.TitleSuffix;
 			document.title = UpdatedTitle;
