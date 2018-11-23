@@ -29,6 +29,12 @@ function keyNav() {
 		} else {
 			var hq_LinkFavorites = $('#column_left .container--favourites > .container-heading > a');
 		};
+		var hq_NewClubCont	= $('#column_left .container--personal .container-inner > div:nth-of-type(2) > div:nth-of-type(1) > b > a[href="/showclubs.php?updated=1"]');
+		if ( hq_NewClubCont.is(":visible") ) {
+			var hq_LinkYourClubs = $('#column_left .container--personal .container-inner > div:nth-of-type(2) > div:nth-of-type(1) > b > a');
+		} else {
+			var hq_LinkYourClubs = $('#column_left .container--personal .container-inner > div:nth-of-type(2) > div:nth-of-type(1) > a');
+		};
 		var hq_FormElements	= event.target.tagName.toLowerCase() !== 'input' && event.target.tagName.toLowerCase() !== 'textarea';
 		var hq_KeyMembers	= event.which == 49 || event.which == 97;  /* 1 */
 		var hq_KeyClubs		= event.which == 50 || event.which == 98;  /* 2 */
@@ -42,6 +48,7 @@ function keyNav() {
 		var hq_KeyHome		= event.which == 72; /* H */
 		var hq_KeyVisitors	= event.which == 86; /* V */
 		var hq_KeyFavorites = event.which == 70; /* F */
+		var hq_KeyYourClubs	= event.which == 67; /* C */
 		//var preventDefault	= event.preventDefault();
 		//var stopPropagation	= event.stopPropagation();
 		/*var hq_Keys = {
@@ -95,6 +102,11 @@ function keyNav() {
 		};*/
 		if ( hq_FormElements && hq_KeyHome ) {
 			window.location = hq_LinkHome.attr('href');
+			event.preventDefault();
+			event.stopPropagation();
+		};
+		if ( hq_FormElements && hq_KeyYourClubs ) {
+			window.location = hq_LinkYourClubs.attr('href');
 			event.preventDefault();
 			event.stopPropagation();
 		};
