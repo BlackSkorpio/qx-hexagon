@@ -17,7 +17,8 @@ Genvägar
 8 = Till FAQn
 H = Till din egen profil
 V = Senaste besökare
-F = Dina Favoriter
+F = Dina Favoriter/Dina Inloggade Favoriter 
+C = Dina Klubbar/Dina uppdaterade klubbar
 
 
 https://greasyfork.org/sv/scripts/15173-visited-lite
