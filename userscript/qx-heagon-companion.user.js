@@ -99,6 +99,10 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.GetUpdatedTitle	= $('.column-content #error_texts ~ h2:first-of-type');
 		HexaGon.GetMapTitle		= $('.column-content #error_texts + div.small + p + .insertmember + p + h2:first-of-type');
 		HexaGon.GetSentryTitle	= $('#column_right .container-header > a[href="/sentry.php"]');
+		HexaGon.GetOwnerNick	= $('.column-content #error_texts + script ~  p + .insertmember .link > a > span.longname');
+		HexaGon.GetMovieSection	= $('.column-content h2:first-of-type > a');
+		HexaGon.GetAlbumTitle	= $('.column-content .insertmember + p + p + div + div + p + p > span:first-of-type');
+		HexaGon.GetMovieTitle	= $('#videoblock h2:first-of-type');
 		// NOTE QX URLs */
 		HexaGon.bodyURL			= HexaGon.pathName.match(/^\/?(\w+)\b/);
 		HexaGon.nudgeSent		= HexaGon.hrefLoc.indexOf('/buffs.php?type=sent');
@@ -175,6 +179,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.ShowDiaryURL	= HexaGon.hrefLoc.indexOf('/showdiary.php');
 		HexaGon.GiftCardsURL	= HexaGon.hrefLoc.indexOf('/yourgiftcards.php');
 		HexaGon.AskSentryURL	= HexaGon.hrefLoc.indexOf('/sentry.php');
+		HexaGon.ShowMovieURL	= HexaGon.hrefLoc.indexOf('&movieid=');
 		HexaGon.Thread_Id		= HexaGon.hrefLoc.split("&view=");
 		HexaGon.Categori_Id		= HexaGon.hrefLoc.split("?category=");
 		HexaGon.Club_Id			= HexaGon.hrefLoc.split("?club=");
@@ -280,6 +285,18 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		if ( typeof HexaGon.GetSentryTitle !== 'undefined' || HexaGon.GetSentryTitle !== null ) {
 			var SentryTitle = HexaGon.GetSentryTitle.text();
 		}
+		if ( typeof HexaGon.GetOwnerNick !== 'undefined' || HexaGon.GetOwnerNick !== null ) {
+			var OwnerNick = HexaGon.GetOwnerNick.text();
+		}
+		if ( typeof HexaGon.GetMovieSection !== 'undefined' || GHexaGon.etMovieSection !== null ) {
+			var MovieSection = HexaGon.GetMovieSection.text();
+		}
+		if ( typeof HexaGon.GetAlbumTitle !== 'undefined' || HexaGon.GetAlbumTitle !== null ) {
+			var AlbumTitle = HexaGon.GetAlbumTitle.text();
+		}
+		if ( typeof HexaGon.GetMovieTitle !== 'undefined' || HexaGon.GetMovieTitle !== null ) {
+			var MovieTitle = HexaGon.GetMovieTitle.text();
+		}
 
 		if ( ( HexaGon.ClubsURL > -1 ) || ( HexaGon.MoviesURL > -1 ) || ( HexaGon.TextsURL > -1 ) ) {
 			var MembersTitle = HexaGon.TitlePrefix + SubNavTitle + ' ' + TemplateName + HexaGon.TitleSuffix;
@@ -348,6 +365,11 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		// NOTE Ask Sentry
 		if ( HexaGon.AskSentryURL > -1 ) {
 			document.title = HexaGon.TitlePrefix + SentryTitle + HexaGon.TitleSuffix;
+		}
+		// NOTE Set movie title
+		if ( HexaGon.ShowMovieURL > -1 ) {
+			var ViewedMovieTilte = OwnerNick + ': ' + MovieSection + '/ ' + AlbumTitle + '/ ' + MovieTitle;
+			document.title = ViewedMovieTilte;
 		}
 	};
 	// NOTE SetUp the body with classes and ID's
