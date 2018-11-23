@@ -2130,6 +2130,10 @@
 		align-self: center;
 		margin: 0;
 	}
+	/* NOTE Experimental */
+	textarea {
+		scrollbar-width: thin;
+	}
 
 	/*** Main ***/
 
@@ -2675,6 +2679,23 @@
 		width: auto !important;
 		height: 100%;
 	}
+	/* HACK to make the scribble content div 100% high */
+	.qxh-flex-item div[style*="background-color:"] {
+		height:100%;
+	}
+	.qxh-flex-item div[style*="background-color:"] {
+		display: flex;
+		flex-flow: column;
+		-web-kit-block-size: 100%;
+		         block-size: 100%;
+	}
+	.qxh-flex-item div[style*="background-color:"] > div:nth-child(3) {
+		flex: 1 1 100%;
+	}
+	.qxh-flex-item div[style*="background-color:"] > .insertmember {
+		-web-kit-min-block-size: initial;
+		         min-block-size: initial;
+	}
 
 	/* No XXX Content */
 	.clubxxx1hidden > div[style*="position: relative; width:"],
@@ -2739,6 +2760,13 @@
 		/*box-shadow: inset 0 0 0 99999px rgba(255,255,255,0.2);*/
 		transform: translateY(0.1875em);
 		z-index: 1;
+	}
+	/*-------------*/
+
+	/*** Members photo album ***/
+	.photoalbum-body .photoalbum-prev[aria-disabled="true"],
+	.photoalbum-body .photoalbum-next[aria-disabled="true"] {
+		display: none !important;
 	}
 	/*-------------*/
 
@@ -2808,6 +2836,10 @@
 		flex-flow: column;
 	}
 
+	/* HACK för att unvika att det blir grid containers ( FIXME Rad 2649 )*/
+	[class*="discussions"] .odd + .list.qxh-flex-container.qxh-w100 > .qxh-flex-item {
+		display: block;
+	}
 	/* HACK to get the Add Scribble button on it's own row */
 	[id^="qxh_club_"].qxh-template-clubs-scribble .column-content > div > br + p:last-of-type {
 		display: flow-root;
@@ -2908,6 +2940,31 @@
 	#sentry_frame {
 		width: 100%;
 		margin: 0;
+	}
+	/* NOTE The buy gold nagging page */
+	.shop-container .payments,
+	.shop-container .content,
+	.shop-container footer {
+		background-color: var(--bkgrd-w2);
+	}
+	.shop-container .payments {
+		width: 100%;
+		margin: 0 auto;
+		padding: 1em 0;
+	}
+	/* NOTE The styles for the scroll function */
+	#qxh_up,
+	#qxh_down {
+		color: var(--txt-aside-clr);
+		background-image: none;
+	}
+	#qxh_up svg,
+	#qxh_down svg {
+		width: 100%;
+		height: 100%;
+	}
+	#qxh_down svg {
+		transform: rotate(180deg);
 	}
 
 }
@@ -3111,39 +3168,6 @@
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** TEST AREA ***/
 @supports (display: grid) {
-	.photoalbum-body .photoalbum-prev[aria-disabled="true"],
-	.photoalbum-body .photoalbum-next[aria-disabled="true"] {
-		display: none !important;
-	}
-	/*-------------*/
-	.shop-container .payments,
-	.shop-container .content,
-	.shop-container footer {background-color: var(--bkgrd-w2);}
-	.shop-container .payments {
-		width: 100%;
-		margin: 0 auto;
-		padding: 1em 0;
-	}
-	/*-------------*/
-	#qxh_up,
-	#qxh_down {
-		color: var(--txt-aside-clr);
-		background-image: none;
-	}
-	#qxh_up svg,
-	#qxh_down svg {
-		width: 100%;
-		height: 100%;
-	}
-	#qxh_down svg {
-		transform: rotate(180deg);
-	}
-	/*-------------*/
-	.column-center * .link a:visited {
-		color: currentColor;
-		opacity: 0.7;
-	}
-	/*-------------*/
 	.column-content > #error_texts + script + p:empty + .insertmember {
 		margin-top: var(--margin-xlr);
 	}
@@ -3163,51 +3187,6 @@
 		box-shadow: var(--shadow-size-1);
 	}
 	/*-------------*/
-	/*.homepageblock.qxh-member-heroimage .background-image,
-	.qxh-source-clubs img[style*="/clubimages/"].background-image,
-	.qxh-source-clubs h2 + img[style*="/discussionsimages/"].background-image {
-		-webkit-transition: var(--ui-time-f) ease-in-out;
-		        transition: var(--ui-time-f) ease-in-out;
-		will-change: transform, box-shadow;
-	}
-	.homepageblock.qxh-member-heroimage:hover .background-image,
-	.qxh-source-clubs img[style*="/clubimages/"].background-image:hover,
-	.qxh-source-clubs h2 + img[style*="/discussionsimages/"].background-image:hover {
-		border: var(--brd-type-1) var(--brd-clr-h);
-		box-shadow: 0 0 var(--ui-svg-l) currentColor;
-		transform: scale(1.3);
-		animation-delay: 0.9s;
-		z-index: 2;
-	}*/
-	/*-------------*/
-	/* HACK för att unvika att det blir grid containers ( FIXME Rad 2649 )*/
-	[class*="discussions"] .odd + .list.qxh-flex-container.qxh-w100 > .qxh-flex-item {
-		display: block;
-	}
-	/*-------------*/
-	.qxh-flex-item div[style*="background-color:"] {
-		height:100%;
-	}
-	/*-------------*/
-	/* NOTE Experimental */
-	textarea {
-		scrollbar-width: thin;
-	}
-	.qxh-flex-item div[style*="background-color:"] {
-		display: flex;
-		flex-flow: column;
-		-web-kit-block-size: 100%;
-		         block-size: 100%;
-	}
-	.qxh-flex-item div[style*="background-color:"] > div:nth-child(3) {
-		flex: 1 1 100%;
-	}
-	.qxh-flex-item div[style*="background-color:"] > .insertmember {
-		-web-kit-min-block-size: initial;
-		         min-block-size: initial;
-	}
-	/*-------------*/
-
 	#qxh_loading > span.qxh-loading-text {
 		position: fixed;
 		text-align: center;
