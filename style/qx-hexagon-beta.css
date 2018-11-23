@@ -914,6 +914,9 @@
 		border-bottom: none;
 		border-radius: var(--brd-rad-top);
 	}
+	#qmenu li a {
+		padding-bottom: 6px;
+	}
 	/* Top menu */
 	.qxh-shadow {
 		box-shadow: calc(-1 * var(--ui-size-1)) var(--ui-size-2) var(--ui-size-5) var(--ui-clr-black);
