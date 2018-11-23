@@ -1153,9 +1153,123 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 				}, false);
 		})();
 	}
+	function keyNav() {
+		$(window).keydown(function (event) {
+			var hq_LinkMembers	= $('#qmenu_members > a');
+			var hq_LinkClubs	= $('#qmenu_clubs > a');
+			var hq_LinkPics		= $('#qmenu_pics > a');
+			var hq_LinkMovies	= $('#qmenu_movies > a');
+			var hq_LinkBlogs	= $('#qmenu_texts > a');
+			var hq_LinkForum	= $('#qmenu_forum > a');
+			var hq_LinkChat		= $('#qmenu_chat > a');
+			var hq_LinkInfo		= $('#qmenu_info > a');
+			//var hq_LinkLogOut		= $('#qmenu_logut > a');
+			var hq_LinkHome		= $('#column_left .leftcolumn-membericon > .insertmember > .link > a');
+			var hq_LinkVisitors	= $('.container--latest-visitors .container-header > a');
+			var hq_LoggedInFavs	= $('#column_left .container--favourites > .container-inner > div > a[href="/favourites.php?onlyloggedin=1"]');
+			if ( hq_LoggedInFavs.is(":visible") ) {
+				var hq_LinkFavorites = $('#column_left .container--favourites > .container-inner > div > a');
+			} else {
+				var hq_LinkFavorites = $('#column_left .container--favourites > .container-heading > a');
+			};
+			var hq_NewClubCont	= $('#column_left .container--personal .container-inner > div:nth-of-type(2) > div:nth-of-type(1) > b > a[href="/showclubs.php?updated=1"]');
+			if ( hq_NewClubCont.is(":visible") ) {
+				var hq_LinkYourClubs = $('#column_left .container--personal .container-inner > div:nth-of-type(2) > div:nth-of-type(1) > b > a');
+			} else {
+				var hq_LinkYourClubs = $('#column_left .container--personal .container-inner > div:nth-of-type(2) > div:nth-of-type(1) > a');
+			};
+			var hq_FormElements	= event.target.tagName.toLowerCase() !== 'input' && event.target.tagName.toLowerCase() !== 'textarea';
+			var hq_KeyMembers	= event.which == 49 || event.which == 97;  /* 1 */
+			var hq_KeyClubs		= event.which == 50 || event.which == 98;  /* 2 */
+			var hq_KeyPics		= event.which == 51 || event.which == 99;  /* 3 */
+			var hq_KeyMovies	= event.which == 52 || event.which == 100; /* 4 */
+			var hq_KeyBlogs		= event.which == 53 || event.which == 101; /* 5 */
+			var hq_KeyForum		= event.which == 54 || event.which == 102; /* 6 */
+			var hq_KeyChat		= event.which == 55 || event.which == 103; /* 7 */
+			var hq_KeyInfo		= event.which == 56 || event.which == 104; /* 8 */
+			//var hq_KeyLogOut	= event.which == 57 || event.which == 105; /* 9 */
+			var hq_KeyHome		= event.which == 72; /* H */
+			var hq_KeyVisitors	= event.which == 86; /* V */
+			var hq_KeyFavorites = event.which == 70; /* F */
+			var hq_KeyYourClubs	= event.which == 67; /* C */
+			//var preventDefault	= event.preventDefault();
+			//var stopPropagation	= event.stopPropagation();
+			/*var hq_Keys = {
+				Home: 'event.which == 72';
+			}*/
+
+			if ( hq_FormElements && hq_KeyMembers ) {
+				window.location = hq_LinkMembers.attr('href');
+				event.preventDefault();
+				event.stopPropagation();
+			};
+			if ( hq_FormElements && hq_KeyClubs ) {
+				window.location = hq_LinkClubs.attr('href');
+				event.preventDefault();
+				event.stopPropagation();
+			};
+			if ( hq_FormElements && hq_KeyPics ) {
+				window.location = hq_LinkPics.attr('href');
+				event.preventDefault();
+				event.stopPropagation();
+			};
+			if ( hq_FormElements && hq_KeyMovies ) {
+				window.location = hq_LinkMovies.attr('href');
+				event.preventDefault();
+				event.stopPropagation();
+			};
+			if ( hq_FormElements && hq_KeyBlogs ) {
+				window.location = hq_LinkBlogs.attr('href');
+				event.preventDefault();
+				event.stopPropagation();
+			};
+			if ( hq_FormElements && hq_KeyForum ) {
+				window.location = hq_LinkForum.attr('href');
+				event.preventDefault();
+				event.stopPropagation();
+			};
+			if ( hq_FormElements && hq_KeyChat ) {
+				window.location = hq_LinkChat.attr('href');
+				event.preventDefault();
+				event.stopPropagation();
+			};
+			if ( hq_FormElements && hq_KeyInfo ) {
+				window.location = hq_LinkInfo.attr('href');
+				event.preventDefault();
+				event.stopPropagation();
+			};
+			/*if ( hq_FormElements && hq_KeyLogOut ) {
+				window.location = hq_LinkLogOut.attr('href');
+				event.preventDefault();
+				event.stopPropagation();
+			};*/
+			if ( hq_FormElements && hq_KeyHome ) {
+				window.location = hq_LinkHome.attr('href');
+				event.preventDefault();
+				event.stopPropagation();
+			};
+			if ( hq_FormElements && hq_KeyYourClubs ) {
+				window.location = hq_LinkYourClubs.attr('href');
+				event.preventDefault();
+				event.stopPropagation();
+			};
+			if ( hq_FormElements && hq_KeyFavorites ) {
+				window.location = hq_LinkFavorites.attr('href');
+				event.preventDefault();
+				event.stopPropagation();
+			};
+			if ( hq_FormElements && hq_KeyVisitors ) {
+				window.location = hq_LinkVisitors.attr('href');
+				event.preventDefault();
+				event.stopPropagation();
+			};
+			//console.log(event.which);
+		})
+	};
 
 	NeedsToBeDone();
 	addSprite();
+	keyNav();
 	setTimeout(function() {
 		Scroller();
 	}, 1000);
