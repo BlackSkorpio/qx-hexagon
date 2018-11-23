@@ -23,6 +23,12 @@ function keyNav() {
 		//var hq_LinkLogOut		= $('#qmenu_logut > a');
 		var hq_LinkHome		= $('#column_left .leftcolumn-membericon > .insertmember > .link > a');
 		var hq_LinkVisitors	= $('.container--latest-visitors .container-header > a');
+		var hq_LoggedInFavs	= $('#column_left .container--favourites > .container-inner > div > a[href="/favourites.php?onlyloggedin=1"]');
+		if ( hq_LoggedInFavs.is(":visible") ) {
+			var hq_LinkFavorites = $('#column_left .container--favourites > .container-inner > div > a');
+		} else {
+			var hq_LinkFavorites = $('#column_left .container--favourites > .container-heading > a');
+		};
 		var hq_FormElements	= event.target.tagName.toLowerCase() !== 'input' && event.target.tagName.toLowerCase() !== 'textarea';
 		var hq_KeyMembers	= event.which == 49 || event.which == 97;  /* 1 */
 		var hq_KeyClubs		= event.which == 50 || event.which == 98;  /* 2 */
@@ -35,6 +41,7 @@ function keyNav() {
 		//var hq_KeyLogOut	= event.which == 57 || event.which == 105; /* 9 */
 		var hq_KeyHome		= event.which == 72; /* H */
 		var hq_KeyVisitors	= event.which == 86; /* V */
+		var hq_KeyFavorites = event.which == 70; /* F */
 		//var preventDefault	= event.preventDefault();
 		//var stopPropagation	= event.stopPropagation();
 		/*var hq_Keys = {
@@ -91,6 +98,8 @@ function keyNav() {
 			event.preventDefault();
 			event.stopPropagation();
 		};
+		if ( hq_FormElements && hq_KeyFavorites ) {
+			window.location = hq_LinkFavorites.attr('href');
 			event.preventDefault();
 			event.stopPropagation();
 		};
