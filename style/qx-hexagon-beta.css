@@ -10,24 +10,6 @@
 	GitHub: github.com/BlackSkorpio/qx-hexagon
 	QX: www.qruiser.com/?id=469474
 ******************************************/
-/***
-
-	TODO OBS!!!!!!!!!!!!!!!!!!!!!!
-
-		Gul färg:  fill: #FF0
-		QX Röd: fill: #bc152a
-
-	KOLLA VARFÖR KLUBB ID INTE SÄTTS PÅ BODY:
-	https://beta.qruiser.com/clubs/club.php?id=142118
-	KOLLA WHITESPACE NODES PÅ SAMMA SIDA (H2)
-
-	PICS
-	Albumilder 20%
-	Hemsidesbilder 33&
-	Ansiktsbilder 33&
-
-***/
-
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** Colors, sizes & such ***/
 :root {
@@ -2776,8 +2758,6 @@
 	[id^="qxh_category_"].qxh-template-clubs-discussions .list > .odd.qxh-grid-container,
 	[id^="qxh_category_"].qxh-template-clubs-discussions .list > .even.qxh-grid-container,/* QUESTION Obsolete? */
 	[id^="qxh_category_"].qxh-template-forum-discussions .list.qxh-flex-container > .qxh-flex-item,
-
-
 	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .column-content > div.list.qxh-flex-container.qxh-w100:nth-of-type(2) > .qxh-flex-item,
 	/* FIXME Raden ovan ersätter denna rad!!!!! ( Kanske... )*/
 	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .list.qxh-flex-container > .qxh-flex-item {
