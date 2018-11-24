@@ -100,7 +100,8 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.GetUpdatedTitle	= $('.column-content #error_texts ~ h2:first-of-type');
 		HexaGon.GetMapTitle		= $('.column-content #error_texts + div.small + p + .insertmember + p + h2:first-of-type');
 		HexaGon.GetSentryTitle	= $('#column_right .container-header > a[href="/sentry.php"]');
-		HexaGon.GetOwnerNick	= $('.column-content #error_texts + script ~  p + .insertmember .link > a > span.longname');
+		HexaGon.GetOwnerNick	= $('.column-content #error_texts ~  p + .insertmember .link a > .longname');
+		//HexaGon.GetOwnerNick	= $('.column-content #error_texts + script ~  p + .insertmember .link > a > span.longname');
 		HexaGon.GetMovieSection	= $('.column-content h2:first-of-type > a');
 		HexaGon.GetAlbumTitle	= $('.column-content .insertmember + p + p + div + div + p + p > span:first-of-type');
 		HexaGon.GetMovieTitle	= $('#videoblock h2:first-of-type');
