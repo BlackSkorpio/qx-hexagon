@@ -1,4 +1,4 @@
-/* minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: ../dist/userscript/$1.min.$2 */
+/* minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: ../dist/userscript/$1.$2 */
 /*! QX Hexagon Companion qx-hexagon-companion.user.js
  *	@copyright	(c) 2018 Bjarne Varoystrand - bjarne ○ kokensupport • com
  *	@license GPL
