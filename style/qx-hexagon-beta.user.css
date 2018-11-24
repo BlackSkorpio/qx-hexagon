@@ -1,15 +1,16 @@
-/* minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: ../dist/css/$1.min.$2 */
-/*!*****************************************
-	QRUISER HEXAGON
-	Theme Name: QX Hexagon Beta
-	Theme URI: https://qruiser.com
-	Description: A modernized theme for qruiser.com
-	Version: 1.0.0
-	Author: Bjarne Varöystrand
-	www: varoystrand.se
-	GitHub: github.com/BlackSkorpio/qx-hexagon
-	QX: www.qruiser.com/?id=469474
-******************************************/
+/* minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: ../dist/css/$1.$2 */
+/*! ==UserStyle==
+@name			QX Hexagon
+@namespace		github.com/BlackSkorpio/qx-hexagon
+@version		1.0.0-beta
+@description	A modernized theme for qruiser.com
+@author			Bjarne Varöystrand (https://github.com/BlackSkorpio/qx-hexagon)
+@homepageURL	https://varoystrand.se
+@supportURL		https://beta.qruiser.com/clubs/club.php?id=142118
+@updateURL		https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon.user.css
+@license		MIT
+@preprocessor	default
+==/UserStyle== */
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** Colors, sizes & such ***/
 :root {
@@ -3165,7 +3166,7 @@
 }
 }
 
-@-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
+@-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*") {
 /*** TEST AREA ***/
 @supports (display: grid) {
 	.column-content > #error_texts + script + p:empty + .insertmember {
