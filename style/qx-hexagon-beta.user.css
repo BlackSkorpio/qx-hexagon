@@ -2422,7 +2422,8 @@
 		display: flex;
 		height: auto;
 	}
-	.homepage [data-user-input] {
+	.homepage [data-user-input],
+	.column-content .qxh-flex-item div[style*="background-color:"] {
 		max-width: calc(var(--ui-wrapper) - (var(--ui-aside) + var(--ui-aside-r)));
 		overflow: hidden;
 	}
