@@ -162,6 +162,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.DiscussionsURL	= HexaGon.hrefLoc.indexOf( 'clubdiscuss.php' );
 		HexaGon.MapURL			= HexaGon.hrefLoc.indexOf('/map.php');
 		HexaGon.ShowclubsURL	= HexaGon.hrefLoc.indexOf('/showclubs.php');
+		HexaGon.ShowMemclubsURL	= HexaGon.hrefLoc.indexOf('/showclubs.php?id=');
 		HexaGon.CloseToYouURL	= HexaGon.hrefLoc.indexOf( '/members/close_to_you/' );
 		HexaGon.FavoritesURL	= HexaGon.hrefLoc.indexOf('/favourites.php');
 		HexaGon.ShowFavsURL		= HexaGon.hrefLoc.indexOf('/showfavourites.php');
@@ -373,6 +374,11 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		if ( HexaGon.ShowMovieURL > -1 ) {
 			var ViewedMovieTilte = OwnerNick + ': ' + MovieSection + '/ ' + AlbumTitle + '/ ' + MovieTitle;
 			document.title = ViewedMovieTilte;
+		}
+		// NOTE Showing a members clubs
+		if ( HexaGon.ShowMemclubsURL > -1 ) {
+			var ShowMemberClubsTitle = HexaGon.TitlePrefix + OwnerNick + ': ' + UpdatedSection + HexaGon.TitleSuffix;
+			document.title = ShowMemberClubsTitle;
 		}
 	};
 	// NOTE SetUp the body with classes and ID's
