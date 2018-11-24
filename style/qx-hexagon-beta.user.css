@@ -1104,6 +1104,9 @@
 		border-radius: var(--brd-rad-l);
 		border: var(--brd-type-2);
 	}
+	.qxh-member-intro + .homepageblock + .block {
+	  margin-top: 1em;
+	}
 	/*-------------*/
 	/* Img gallery */
 	.block > a[href^="javascript:openPhotoPopup"] > img {
