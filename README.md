@@ -2,7 +2,7 @@
 
 QX HexaGon is a marrige of a UserScript and a UserStyle that gives [qruiser.com](https://www.qruiser.com/) a new cleaner layout and adding some keyboard navigation shortcuts.
 
-![QX HexaGon preview] (screens/hexagon-logo.png)
+![QX HexaGon preview](screens/hexagon-logo.png)
 
 ## QX HexaGon UserStyle
 A modernized theme for qruiser.com
