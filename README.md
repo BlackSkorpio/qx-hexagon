@@ -6,6 +6,7 @@ QX HexaGon is a marrige between a [UserScript](@greasemonkey) and a UserStyle th
 
 ## QX HexaGon UserStyle
 A modernized theme for qruiser.com
+You can have [a closer look at how it look here](screens/screens.md).
 
 #### Install [the UserStyle](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon.user.css)
 
