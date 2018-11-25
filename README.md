@@ -2,7 +2,7 @@
 
 QX HexaGon is a marrige between a [@greasemonkey UserScript](http://www.greasespot.net/) and a [@openstyles UserStyle](https://add0n.com/stylus.html) that gives [qruiser.com](https://www.qruiser.com/) a new cleaner layout and adding some usefull keyboard navigation shortcuts together with some usability tweaks to make the whole experience more enjoyable.
 
-![QX HexaGon logo](dist/svg/qx-hexagon-logo.svg)
+![QX HexaGon logo](screens/hexagon-logo.png)
 
 ## QX HexaGon UserStyle
 A modernized theme for [qruiser.com](https://www.qruiser.com/) that rewrites the new layout using flexbox and display grid.
