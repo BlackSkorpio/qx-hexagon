@@ -9,15 +9,15 @@
 **/
 // ==UserScript==
 // @name			QX Hexagon companion
+// @namespace		https://github.com/BlackSkorpio/qx-hexagon
 // @version			1.0
 // @description		Fixes that goes hand in hand with the QX Hexagon userstyle
 // @icon			https://github.com/BlackSkorpio/qx-hexagon/raw/master/screens/hexagon-logo.jpg
 // @author			 Bjarne Varöystrand
 // @homepageURL		https://varoystrand.se
 // @homepageURL		https://github.com/BlackSkorpio/qx-hexagon
-// @downloadURL		https://github.com/BlackSkorpio/qx-hexagon/raw/master/js/qx-hexagon-companion.user.js
-// @updateURL		https://github.com/BlackSkorpio/qx-hexagon/raw/master/js/qx-hexagon-companion.user.js
-// @namespace		https://github.com/BlackSkorpio/
+// @downloadURL		https://github.com/BlackSkorpio/qx-hexagon/raw/master/dist/userscript/qx-hexagon-companion.user.js
+// @updateURL		https://github.com/BlackSkorpio/qx-hexagon/raw/master/dist/userscript/qx-hexagon-companion.user.js
 // @include *qruiser.com*
 // @require https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js
 // ==/UserScript==
