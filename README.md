@@ -2,7 +2,7 @@
 
 QX HexaGon is a marrige between a [@greasemonkey UserScript](http://www.greasespot.net/) and a [@openstyles UserStyle](https://add0n.com/stylus.html) that gives [qruiser.com](https://www.qruiser.com/) a new cleaner layout and adding some usefull keyboard navigation shortcuts together with some usability tweaks to make the whole experience more enjoyable.
 
-![QX HexaGon preview](screens/hexagon-logo.png)
+![QX HexaGon logo](dist/svg/qx-hexagon-logo.svg)
 
 ## QX HexaGon UserStyle
 A modernized theme for [qruiser.com](https://www.qruiser.com/) that rewrites the new layout using flexbox and display grid.
@@ -32,7 +32,7 @@ The [UserScript](https://github.com/BlackSkorpio/qx-hexagon/raw/master/dist/user
   * **F** - Takes you to your **_current online favorites_**, or if non of them are online at the moment, it takes you to the **_all favorites_** page.
   * **V** - Takes you to the **_Your last visitors_** page
   * **C** - Takes you to the **_updated clubs page_**, if any, if no clubs is found updated it takes you the **_Your clubs page_**.
-*.*.*
+* **
 * **Scroll keys**
   * **Q** - Back to the top
     * **W** - Scroll upwards slowly
@@ -40,7 +40,7 @@ The [UserScript](https://github.com/BlackSkorpio/qx-hexagon/raw/master/dist/user
   * **E** - Down to the end
     * **S** - Scroll downwards slowly
     * **D** - Scroll down one "page"/One viewport height
-*.*.*
+* **
 * **Sections Keyboard shortcuts**
   * **1** - Members Section
   * **2** - Clubs Section
