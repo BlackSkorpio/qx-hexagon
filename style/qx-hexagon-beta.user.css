@@ -1,4 +1,5 @@
 /* minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: ../dist/css/$1.$2 */
+@-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*! ==UserStyle==
 @name			QX Hexagon
 @namespace		github.com/BlackSkorpio/qx-hexagon
@@ -11,7 +12,7 @@
 @license		MIT
 @preprocessor	default
 ==/UserStyle== */
-@-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
+
 /*** Colors, sizes & such ***/
 :root {
 	--ui-clr-disabled: rgb(188, 194, 191);
