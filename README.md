@@ -5,6 +5,7 @@ QX HexaGon is a marrige between a [@greasemonkey UserScript](http://www.greasesp
 | Install UserStyle | Install UserScript |
 | :---------------: | :----------------: |
 | [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon.user.css) | [![Install directly with Greasemokey](https://img.shields.io/badge/Install%20Directly%20With-Greasemonkey-%236e4e8e.svg)](https://github.com/BlackSkorpio/qx-hexagon/raw/master/dist/userscript/qx-hexagon-companion.user.js) |
+
 ![QX HexaGon logo](screens/hexagon-logo.png)
 
 ## QX HexaGon UserStyle
