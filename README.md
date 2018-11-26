@@ -1,6 +1,6 @@
 # QX HexaGon
 
-QX HexaGon is a marrige between a [@greasemonkey UserScript](http://www.greasespot.net/) and a [@openstyles UserStyle](https://add0n.com/stylus.html) that gives [qruiser.com](https://www.qruiser.com/) a new cleaner layout and adding some usefull keyboard navigation shortcuts together with some usability tweaks to make the whole experience more enjoyable.
+**QX HexaGon** is a marrige between a [@greasemonkey UserScript](http://www.greasespot.net/) and a [@openstyles UserStyle](https://add0n.com/stylus.html) that gives [qruiser.com](https://www.qruiser.com/) a new cleaner layout and adding some usefull keyboard navigation shortcuts together with some usability tweaks to make the whole experience more enjoyable.
 
 | Install UserStyle | Install UserScript |
 | :---------------: | :----------------: |
