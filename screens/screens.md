@@ -2,6 +2,8 @@
 ![QX HexaGon profile](QX1.PNG)
 ### Profile without [QX HexaGon](../README.md)
 ![QX HexaGon profile](QX-clean.jpg)
+## Some highlights
+![QX HexaGon closeup](close-ups.png)
 ## Index page, when not logged in
 ![QX HexaGon index](QX2.PNG)
 ## Your Clubs page
