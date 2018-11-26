@@ -9,7 +9,20 @@ QX HexaGon is a marrige between a [@greasemonkey UserScript](http://www.greasesp
 ![QX HexaGon logo](screens/hexagon-logo.png)
 
 ## QX HexaGon UserStyle
-A modernized theme for [qruiser.com](https://www.qruiser.com/) that rewrites the new layout using flexbox and display grid.
+A modernized theme for [qruiser.com](https://www.qruiser.com/) that rewrites the new layout using flexbox and grid containers.
+
+### Some style highlight of QX HexaGon
+* Merged **Logged in favorites** and **Favorites** widget
+* Sticky sidebar sections
+  * **Left sidebar**
+    * Mood/Status widget
+    * Favorites widget
+    * Messages widget
+    * Your stuff widget
+  * **Right sidebar**
+    * Latest logged in members widget
+* Animated notifications
+* SVG icons instead of the old raster images
 
 You can have [a closer look at how it looks here](screens/screens.md).
 
