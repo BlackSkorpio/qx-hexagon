@@ -1,0 +1,100 @@
+/* Font sizes */
+*,
+*:before,
+*:after {
+	font-size: inherit;
+}
+#searchdroplist {
+	font-size: 75%;
+}
+#queueAdFeedback {
+	font-size: 1.1em;
+}
+.line,
+.orangeline,
+.modal-close,
+#album .album-item,
+#album_navigation .album-navigation-item {
+	font-size: 0;
+}
+.notification-bubble {
+	font-size: 8px;
+}
+.mood,
+#footer,
+.insertmember,
+.smalldivider div span,
+.spotlight .clubcomment,
+.blog-and-news .teaser h3,
+.insertmember .description,
+.movies-listing .video-thumb,
+.rightcolumn-discussion-category {
+	font-size: 9px;
+}
+h4,
+.small,
+.listlink,
+.datetime,
+.smalltext,
+#satellite,
+.memberinfo,
+.gallerylink,
+#column_left,
+.line .header,
+.line .header_red,
+#homepageinfo .infoblock,
+#column_right_blog_general {
+	font-size: 10px;
+}
+body,
+.box,
+#qmenu ul,
+.feedback,
+#signup h4,
+.divider span,
+#search input,
+#search select,
+.listpagenumber,
+.chat-header-meta,
+.column-left .container-header {
+	font-size: 11px;
+}
+h3,
+.error,
+#loggedinname,
+.biggestcommunity
+.chat-header-meta-toggle-info,
+.chat-header-meta-toggle-actions {
+	font-size: 12px;
+}
+.html_checkboxes_cols,
+#currentmedia .standardbanner .action {
+	font-size: 13px;
+}
+#qmenu a {
+	font-size: 14px;
+}
+.menutext,
+.searchtext {
+	font-size: 15px;
+}
+h2,
+.modal-header {
+	font-size: 16px;
+}
+.limitedbanner .message h3,
+.standardbanner .message h3:first-child:nth-last-child(2) {
+	font-size: 17px;
+}
+@media(max-width: 767px) {
+	#column_left,
+	.column-left .container-header {
+		font-size: 14px;
+	}
+}
+@media(min-width: 768px) {
+	#qmenu a {
+		font-size: 11px;
+	}
+}
+@media(min-width: 1290px) {}

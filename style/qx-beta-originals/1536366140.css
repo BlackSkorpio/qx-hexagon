@@ -1,0 +1,305 @@
+#column_center {
+	background-color: #ffffff;
+	font-family: Verdana, sans-serif;
+	color: #000000;
+}
+
+.homeborder {
+	border: 1px solid #ededed;
+	width: auto;
+	padding: 8px;
+	min-height: 22px;
+}
+
+.blogbox {
+	border:1px solid #ededed;
+}
+
+.feedback, .homepage {
+	font-family: Verdana, sans-serif;
+	color: #000000;
+}
+
+.column-center * a {
+	color: #000000;
+}
+
+.column-center * .link a:visited {
+	color: #4c4c4c;
+}
+
+.column-center * .clublink:visited {
+	color: #4c4c4c;
+}
+
+.column-center .black {
+	color: black;
+}
+
+.column-center #subnavbar * a {
+	color: black;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+.column-center * .mood {
+	color: #000000;
+}
+
+.column-center * .homelink {
+	color: #000000;
+}
+
+.column-center * h2 {
+	color: #000000;
+}
+
+.column-center * h3 {
+	color: #000000;
+}
+
+.column-center * h4 {
+	color: #000000;
+}
+
+.column-center h2 {
+	color: #000000;
+}
+
+.column-center h3 {
+	color: #000000;
+}
+
+.column-center h4 {
+	color: #000000;
+}
+
+
+    .column-center .filldot {
+        background-color: #565656;
+        height: 8px;
+    }
+
+        .column-center .clubscribble .filldot {
+            background-color: #000;
+        }
+
+        .column-center .list .odd {
+            background-color: #ededed !important;
+        }
+
+        .column-center .gallery-list .odd {
+            background-color: transparent !important;
+        }
+
+        .column-center .clubscribble .list .odd {
+            background-color: inherit !important;
+        }
+
+    .column-center .odd .membericonlink {
+        color: #ededed;
+    }
+
+    .column-center .membericonlink {
+        color: #ffffff;
+    }
+
+    .line .header {
+        background-color: #ffffff;
+    }
+
+    .column-center .soundicon {
+        width: 11px;
+    }
+
+    .column-center .movielargeicon {
+        width: 19px;
+    }
+
+    .column-center .verifiedlargeicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/verified_large.png);
+    }
+
+    .column-center .maillargeicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/mail_large.png);
+    }
+
+    .column-center .diarylargeicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/diary_large.png);
+    }
+
+    .column-center .bloglargeicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/blog_large.png);
+    }
+
+    .column-center .chatlargeicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/chat_large.png);
+    }
+
+    .column-center .polllargeicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/poll_large.png);
+    }
+
+    .column-center .movielargeicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/movie_large.png);
+    }
+
+    .column-center .photoalbumlargeicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/photo_large.png);
+    }
+
+    .column-center .textlargeicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/text_large.png);
+    }
+
+    .column-center .toplistlargeicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/toplist_large.png);
+    }
+
+    .column-center .guestbooklargeicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/guestbook_large.png);
+    }
+
+    .column-center .mailunreadicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/unread.png);
+    }
+
+    .column-center .mailansweredicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/answered.png);
+    }
+
+    .column-center .dropupicon {
+        background-image: url(https://icon.qruiser.com/images/dropup_565656.gif);
+    }
+
+    .column-center .dropdownicon {
+        background-image: url(https://icon.qruiser.com/images/dropdown_565656.gif);
+    }
+
+    .column-center .line {
+        background-image: url(https://icon.qruiser.com/images/dottedline_565656_long.png);
+    }
+
+    .column-center .emptymembericon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/noicon.png);
+    }
+
+    .column-center .homeicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/home.png);
+    }
+
+    .column-center .infoicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/info.png);
+    }
+
+    .column-center .rightarrowicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/rightarrow.png);
+    }
+
+    .column-center .mailicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/mail.png);
+    }
+
+    .column-center .diaryicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/diary.png);
+    }
+
+    .column-center .blogicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/blog.png);
+    }
+
+    .column-center .chaticon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/chat.png);
+    }
+
+    .column-center .pollicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/poll.png);
+    }
+
+    .column-center .commenticon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/comment.png);
+    }
+
+    .column-center .movieicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/movie.png);
+    }
+
+    .column-center .photoalbumicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/photo.png);
+    }
+
+    .column-center .soundicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/sound.png);
+    }
+
+    .column-center .texticon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/text.png);
+    }
+
+    .column-center .toplisticon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/toplist.png);
+    }
+
+    .column-center .guestbookicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/guestbook.png);
+    }
+
+    .column-center .verifiedicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/verified.png);
+    }
+
+    .column-center .attachedicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/attachment.png);
+    }
+
+    .column-center .lockicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/lock.png);
+    }
+
+    .column-center #largeediticon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/editblock.png);
+    }
+
+    .column-center #largefavouriteicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/favourite.png);
+    }
+
+    .column-center #largeflirticon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/flirt.png);
+    }
+
+    .column-center #largeignoreicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/ignore.png);
+    }
+
+    .column-center #largeunfavouriteicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/ignore.png);
+    }
+
+    .column-center #largeunignoreicon {
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/favourite.png);
+    }
+
+    .column-center .externalicon {
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        background-image: url(https://icon.qruiser.com/images/extern_565656.gif);
+        background-repeat: none;
+    }
+
+    .column-center .staricon {
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/star.png);
+        background-repeat: none;
+    }
+
+    .column-center .commicon {
+        width: 13px;
+        height: 12px;
+        display: inline-block;
+        background-image: url(https://icon.qruiser.com/images/pngicons/565656/comment.png);
+        background-repeat: none;
+    }
+
