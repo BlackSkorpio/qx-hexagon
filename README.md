@@ -68,6 +68,7 @@ The [UserScript](https://github.com/BlackSkorpio/qx-hexagon/raw/master/dist/user
   * **6** - Forums Section
   * **7** - Conversations Section
   * **8** - Info Section
+  * **9** - Logout
 
 #### Install HexaGon
 
