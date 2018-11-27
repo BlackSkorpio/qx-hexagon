@@ -3,7 +3,7 @@
 /*! ==UserStyle==
 @name			QX Hexagon
 @namespace		github.com/BlackSkorpio/qx-hexagon
-@version		1.0.0-beta
+@version		1.0.0
 @description	A modernized theme for qruiser.com
 @author			Bjarne Varöystrand (https://github.com/BlackSkorpio/qx-hexagon)
 @homepageURL	https://varoystrand.se
@@ -3211,31 +3211,331 @@
 @-moz-document domain("www.qruiser.com") {
 /*** LOGIN & INDEX ***/
 @supports (display: grid) {
-	:root {--ui--wrapperOld:65.625rem;--ui--asideOld:12.5rem}
-	body:not([class*="signed-in"]) .divider span,body:not([class*="signed-in"]) .smalldivider span a,body:not([class*="signed-in"]) h2{color:var(--txt-high-clr)}
-	.smalldivider div span{font-size:var(--font-0)}
-	body:not([class*="signed-in"]) ul[style*="visible"],body:not([class*="signed-in"]) #qmenu_home,body:not([class*="signed-in"]) #search,body:not([class*="signed-in"]) div[style*="height:55px;width:1024px;"]>div>div:last-child{display:none!important}
-	body:not([class*="signed-in"]) #langnav{left:auto;right:0}
-	body:not([class*="signed-in"]) [style*="width: 410px"],body:not([class*="signed-in"]) #column_right>*{width:100%!important}
-	body:not([class*="signed-in"]) div[style*="height:55px;width:1024px;"]>div{margin-top:0!important}
-	body:not([class*="signed-in"]) img[src*="puff_qruiser.gif"]{padding:6px 26.5px;background-color:var(--bkgrd-w1);background-position:center;vertical-align:text-bottom}
-	body:not([class*="signed-in"]) div[style="margin:auto auto auto 1px;height:55px;width:1024px;border:0;overflow:hidden;"]{margin:var(--margin-s) auto 0!important;width:var(--ui--wrapperOld)!important;color:var(--txt-aside-clr);background-color: var(--bkgrd-b1);border: var(--brd-type-1) var(--brd-clr-h) !important;border-radius: var(--brd-rad-s);padding: var(--padding-s)}
-	body:not([class*="signed-in"]) svg.qxh-sprite-icon.qxh-icon-logo{height:45px;width:150px}
-	body:not([class*="signed-in"]) #column_left,body:not([class*="signed-in"]) #column_right{color:var(--txt-aside-clr);font-size:var(--font-2);background-color:var(--bkgrd-b1);background-image:none!important}
-	body:not([class*="signed-in"]) #column_right div>b>a,body:not([class*="signed-in"]) #column_right .qxh-text+a,body:not([class*="signed-in"]) #column_right div>a{color:var(--txt-aside-clr)!important}
-	body:not([class*="signed-in"]) #column_left{border-left-color: var(--brd-clr-h);border-right-color: var(--brd-clr-t);border-bottom-color: var(--brd-clr-h);border-bottom-left-radius: var(--brd-rad-s);}
-	body:not([class*="signed-in"]) #column_right{border-right-color: var(--brd-clr-h);border-left-color: var(--brd-clr-t);border-bottom-color: var(--brd-clr-h);border-bottom-right-radius: var(--brd-rad-s);}
-	body:not([class*="signed-in"]) #column_left select,body:not([class*="signed-in"]) #loginbox form,input,select{width:100%;max-width:none}
-	/*Layout*/body:not([class*="signed-in"]):not(.qxh-loading) #whole{display:grid!important}body:not([class*="signed-in"]) #whole,body:not([class*="signed-in"]) #qmenu{display: grid}body:not([class*="signed-in"]) #whole{grid-template-rows:auto;grid-template-columns:[left] var(--ui--asideOld) [center] 1fr [right] var(--ui--asideOld);grid-template-areas:"top top top""menu menu menu""left content right";padding:0;width:var(--ui--wrapperOld);margin:0 auto;padding-bottom:var(--padding-xl)}body:not([class*="signed-in"]) #top{grid-area:top}body:not([class*="signed-in"]) #qmenu{grid-area:menu;grid-template-rows:auto;grid-template-columns:repeat(8, min-content [auto-cols]);grid-template-areas:"members clubs pics movies texts forums info .";width:auto;border:var(--brd-type-1) var(--brd-clr-h);border-bottom:none;border-radius:var(--brd-rad-top)}body:not([class*="signed-in"]) #column_left,body:not([class*="signed-in"]) #column_right,body:not([class*="signed-in"]) #column_center{width:auto!important}body:not([class*="signed-in"]) #column_left{grid-area:left}body:not([class*="signed-in"]) #column_right{grid-area:right}body:not([class*="signed-in"]) #column_center{grid-area:content;padding:0 var(--padding-s) var(--padding-l);border-radius:var(--brd-rad-top);border-bottom:var(--brd-type-1) var(--brd-clr-h)}body:not([class*="signed-in"]) .divider{width:100%}
-	/*Top menu*/body:not([class*="signed-in"]) li#qmenu_members{grid-area:members}body:not([class*="signed-in"]) li#qmenu_clubs{grid-area:clubs}body:not([class*="signed-in"]) li#qmenu_pics{grid-area:pics}body:not([class*="signed-in"]) li#qmenu_movies{grid-area:movies}body:not([class*="signed-in"]) li#qmenu_texts{grid-area:texts}body:not([class*="signed-in"]) li#qmenu_forum{grid-area:forums}body:not([class*="signed-in"]) li#qmenu_info{grid-area:info}
-	/*Flex Containers*/body:not([class*="signed-in"]) #top,body:not([class*="signed-in"]) #subnavbar,body:not([class*="signed-in"]) div[style*="height:55px;width:1024px;"]>div{display:flex;flex-flow:row wrap;}
-	/*Flex Items*/body:not([class*="signed-in"]) #subnavbar>*{flex:1 1 auto}body:not([class*="signed-in"]) #topstatus{flex:0 1 100px}body:not([class*="signed-in"]) #top>*{flex:1 1 150px}body:not([class*="signed-in"]) div[style*="height:55px;width:1024px;"]>div>*{flex:1 1 180px}body:not([class*="signed-in"]) #top>a,body:not([class*="signed-in"]) #langnav{-webkit-box-flex:0;-ms-flex-positive:0;flex-grow:0}
-	/*LOGIN*/body:not([class*="signed-in"]) #loginbox{top:2.5em;background-color:var(--bkgrd-b1);border:var(--brd-type-1) var(--brd-clr-h);border-radius: var(--brd-rad-s);width: 90%;margin: var(--margin-c);padding: var(--padding-s);}body:not([class*="signed-in"]) #loginbox h3{font-size:var(--font-1);text-align:center;text-transform:uppercase;margin:var(--margin-m) auto;padding-bottom: var(--padding-m);border-bottom: var(--brd-type-1) var(--brd-clr-h)}body:not([class*="signed-in"]) #loginbox h4{font-size:var(--font-4);text-indent:0.5em;padding-bottom:var(--padding-m)}body:not([class*="signed-in"]) #loginbox h3,body:not([class*="signed-in"]) #loginbox h4 {color:var(--txt-high-clr)}body:not([class*="signed-in"]) #column_left #loginbox~p:nth-last-of-type(2){width:90%;margin:var(--margin-l) auto;text-align:center;font-weight: 700}body:not([class*="signed-in"]) #loginbox~h3{text-indent:1em}
-	body:not([class*="signed-in"]) #column_left select,body:not([class*="signed-in"]) #loginbox form,input,select{width:100%;max-width:none}
-	/*TOP*/body:not([class*="signed-in"]) #top>a{display:inline-block;width:150px;height:45px}body:not([class*="signed-in"]) #topstatus a{color:var(--txt-aside-clr)}body:not([class*="signed-in"]) #topstatus br{display:none}
-	/*TOP NAVIGATION*/body:not([class*="signed-in"]) #qmenu,body:not([class*="signed-in"]) #qmenu a,body:not([class*="signed-in"]) #qmenu ul{background-color:var(--bkgrd-b1);font-size:var(--font-3r);color: var(--link-clr2);letter-spacing: var(--ls-s);padding: 3px 8px 4px}body:not([class*="signed-in"]) #qmenu a:hover,body:not([class*="signed-in"]) #qmenu a.menu_selected{background-color:var(--bkgrd-w2);color:var(--link-clr2-h)}body:not([class*="signed-in"]) #qmenu,body:not([class*="signed-in"]) #qmenu ul{height:auto;width:auto}body:not([class*="signed-in"]) #qmenu{top:0}
-	/* BLOGS */body:not([class*="signed-in"]) #column_center .qxh-front-columns,body:not([class*="signed-in"]) #column_center>.qxh-flex-container:not(.gallery){display:flex;flex-flow:row wrap}body:not([class*="signed-in"]) #column_center .qxh-front-columns{flex-flow:row nowrap}body:not([class*="signed-in"]) #column_center>.qxh-flex-container:not(.gallery)>.qxh-flex-item{flex:1 1 50%;max-width:50%;max-height:105px;overflow:hidden;margin-bottom:var(--margin-l)}.qxh-front-columns>.qxh-front-image{flex:0 0 80px}.qxh-front-columns>.qxh-front-text{flex:1 1 auto;padding-left:var(--padding-s)}.qxh-front-text>div:nth-last-child(2){font-size:var(--font-2)}
-	/*3 MEMBERS*/body:not([class*="signed-in"]) .gallery .insertmember{grid-template-rows:auto;grid-template-columns:auto;grid-template-areas:"avatar" "link" "description" "icons" "mood"}body:not([class*="signed-in"]) .gallery .memberlargeicon{margin:auto;background-size:cover;border-radius:var(--brd-rad-m)}body:not([class*="signed-in"]) .gallery .memberlargeicon *{width:100%!important}
+	:root {
+		--ui--wrapperOld: 65.625rem;
+		--ui--asideOld: 12.5rem;
+	}
+	body:not([class*="signed-in"]) #column_left,
+	body:not([class*="signed-in"]) #column_right {
+		font-size:var(--font-2);
+		background-color:var(--bkgrd-b1);
+		background-image:none!important;
+	}
+	body:not([class*="signed-in"]) #column_left,
+	body:not([class*="signed-in"]) #column_right,
+	body:not([class*="signed-in"]) #column_left a,
+	body:not([class*="signed-in"]) #column_right a {
+		color:var(--txt-aside-clr)!important;
+	}
+	body:not([class*="signed-in"]) h2,
+	body:not([class*="signed-in"]) #column_left p > a + b,
+	body:not([class*="signed-in"]) .spotlight .clubcomment,
+	body:not([class*="signed-in"]) #column_left [id^="lc_"],
+	body:not([class*="signed-in"]) #column_right [id^="lc_"],
+	body:not([class*="signed-in"]) #column_left p > a + b > a,
+	body:not([class*="signed-in"]) #column_left .smalldivider a,
+	body:not([class*="signed-in"]) #column_right .smalldivider a,
+	body:not([class*="signed-in"]) #column_left .insertmember .link a,
+	body:not([class*="signed-in"]) #column_right .insertmember .link a {
+		color: var(--ui-clr-highlight) !important;
+	}
+	body:not([class*="signed-in"]) #column_right>*,
+	body:not([class*="signed-in"]) [style*="width: 410px"],
+	body:not([class*="signed-in"]) #column_left #changemood,
+	body:not([class*="signed-in"]) #column_left .smalldivider,
+	body:not([class*="signed-in"]) #column_right .smalldivider,
+	body:not([class*="signed-in"]) #column_right .smalldivider + a img,
+	body:not([class*="signed-in"]) #column_right .smalldivider + div a img,
+	body:not([class*="signed-in"]) #column_right [style*="width: 127px;"] {
+		width: 100% !important;
+	}
+	.smalldivider div span {
+		font-size: var(--font-0);
+	}
+	body:not([class*="signed-in"]) ul[style*="visible"],
+	body:not([class*="signed-in"]) #qmenu_home,
+	body:not([class*="signed-in"]) #search,
+	body:not([class*="signed-in"]) div[style*="height:55px;width:1024px;"]>div>div:last-child {
+		display: none !important;
+	}
+	body:not([class*="signed-in"]) #langnav {
+		left: auto;
+		right: 0;
+	}
+	body:not([class*="signed-in"]) div[style*="height:55px;width:1024px;"]>div {
+		margin-top: 0 !important;
+	}
+	body:not([class*="signed-in"]) img[src*="puff_qruiser.gif"] {
+		padding: 6px 26.5px;
+		background-color: var(--bkgrd-w1);
+		background-position: center;
+		vertical-align: text-bottom;
+	}
+	body:not([class*="signed-in"]) div[style="margin:auto auto auto 1px;height:55px;width:1024px;border:0;overflow:hidden;"] {
+		margin: var(--margin-s) auto 0 !important;
+		width: var(--ui--wrapperOld) !important;
+		color: var(--txt-aside-clr);
+		background-color: var(--bkgrd-b1);
+		border: var(--brd-type-1) var(--brd-clr-h) !important;
+		border-radius: var(--brd-rad-s);
+		padding: var(--padding-s);
+	}
+	body:not([class*="signed-in"]) svg.qxh-sprite-icon.qxh-icon-logo {
+		height: 45px;
+		width: 150px;
+	}
+	body:not([class*="signed-in"]) #column_left {
+		border-left-color: var(--brd-clr-h);
+		border-right-color: var(--brd-clr-t);
+		border-bottom-color: var(--brd-clr-h);
+		border-bottom-left-radius: var(--brd-rad-s);
+	}
+	body:not([class*="signed-in"]) #column_right {
+		border-right-color: var(--brd-clr-h);
+		border-left-color: var(--brd-clr-t);
+		border-bottom-color: var(--brd-clr-h);
+		border-bottom-right-radius: var(--brd-rad-s);
+	}
+	body:not([class*="signed-in"]) #column_left select, body:not([class*="signed-in"]) #loginbox form, input, select {
+		width: 100%;
+		max-width: none;
+	}
+	/*Layout*/
+	body:not([class*="signed-in"]):not(.qxh-loading) #whole {
+		display: grid !important;
+	}
+	body:not([class*="signed-in"]) #whole, body:not([class*="signed-in"]) #qmenu {
+		display: grid;
+	}
+	body:not([class*="signed-in"]) #whole {
+		grid-template-rows: auto;
+		grid-template-columns: [left] var(--ui--asideOld) [center] 1fr [right] var(--ui--asideOld);
+		grid-template-areas: "top top top""menu menu menu""left content right";
+		padding: 0;
+		width: var(--ui--wrapperOld);
+		margin: 0 auto;
+		padding-bottom: var(--padding-xl)
+	}
+	body:not([class*="signed-in"]) #top {
+		grid-area: top;
+	}
+	body:not([class*="signed-in"]) #qmenu {
+		grid-area: menu;
+		grid-template-rows: auto;
+		grid-template-columns: repeat(8, min-content [auto-cols]);
+		grid-template-areas: "members clubs pics movies texts forums info .";
+		width: auto;
+		border: var(--brd-type-1) var(--brd-clr-h);
+		border-bottom: none;
+		border-radius: var(--brd-rad-top);
+	}
+	body:not([class*="signed-in"]) #column_left, body:not([class*="signed-in"]) #column_right, body:not([class*="signed-in"]) #column_center {
+		width: auto !important;
+	}
+	body:not([class*="signed-in"]) #column_left {
+		grid-area: left;
+	}
+	body:not([class*="signed-in"]) #column_right {
+		grid-area: right;
+	}
+	body:not([class*="signed-in"]) #column_center {
+		grid-area: content;
+		padding: 0 var(--padding-s) var(--padding-l);
+		border-radius: var(--brd-rad-top);
+		border-bottom: var(--brd-type-1) var(--brd-clr-h);
+	}
+	body:not([class*="signed-in"]) .divider {
+		width: 100%;
+	}
+	/*Top menu*/
+	body:not([class*="signed-in"]) li#qmenu_members {
+		grid-area: members;
+	}
+	body:not([class*="signed-in"]) li#qmenu_clubs {
+		grid-area: clubs;
+	}
+	body:not([class*="signed-in"]) li#qmenu_pics {
+		grid-area: pics;
+	}
+	body:not([class*="signed-in"]) li#qmenu_movies {
+		grid-area: movies;
+	}
+	body:not([class*="signed-in"]) li#qmenu_texts {
+		grid-area: texts;
+	}
+	body:not([class*="signed-in"]) li#qmenu_forum {
+		grid-area: forums;
+	}
+	body:not([class*="signed-in"]) li#qmenu_info {
+		grid-area: info;
+	}
+	/*Flex Containers*/
+	body:not([class*="signed-in"]) #top, body:not([class*="signed-in"]) #subnavbar, body:not([class*="signed-in"]) div[style*="height:55px;width:1024px;"]>div {
+		display: flex;
+		flex-flow: row wrap;
+	}
+	/*Flex Items*/
+	body:not([class*="signed-in"]) #subnavbar>* {
+		flex: 1 1 auto;
+	}
+	body:not([class*="signed-in"]) #topstatus {
+		flex: 0 1 100px;
+	}
+	body:not([class*="signed-in"]) #top>* {
+		flex: 1 1 150px;
+	}
+	body:not([class*="signed-in"]) div[style*="height:55px;width:1024px;"]>div>* {
+		flex: 1 1 180px;
+	}
+	body:not([class*="signed-in"]) #top>a, body:not([class*="signed-in"]) #langnav {
+		-webkit-box-flex: 0;
+		-ms-flex-positive: 0;
+		flex-grow: 0;
+	}
+	/*Changemood*/
+	body:not([class*="signed-in"]) #column_left #changemood input[type="text"]{
+		width: calc(100% - 36px)
+	}
+	body:not([class*="signed-in"]) #column_left #changemood select,
+	body:not([class*="signed-in"]) #column_left #changemood input[type="text"] {
+		margin-bottom: var(--ui-size-xl);
+	}
+	/* Right & Left Columns*/
+	body:not([class*="signed-in"]) #column_left .smalldivider,
+	body:not([class*="signed-in"]) #column_right .smalldivider {
+		padding: var(--padding-s) 0;
+		border-bottom: var(--brd-type-1) var(--ui-clr-highlight);
+		margin-bottom: var(--ui-size-xl);
+	}
+
+	body:not([class*="signed-in"]) #column_right [style*="background-color: #63300E;"] {
+		background-color: var(--ui-clr-highlight) !important;
+	}
+	body:not([class*="signed-in"]) #column_right .smalldivider + a img,
+	body:not([class*="signed-in"]) #column_right .smalldivider + div a img {
+		background-size: cover !important;
+	}
+	body:not([class*="signed-in"]) #column_right .insertmember .link a {
+		max-width: 100% !important;
+	}
+	body:not([class*="signed-in"]) #column_right .smalldivider + a img {
+		border-radius: var(--ui-size-m);
+	}
+	body:not([class*="signed-in"]) #column_right .smallclubname {
+		text-overflow: ellipsis;
+		width: calc(100% - 4em);
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	/*LOGIN*/
+	body:not([class*="signed-in"]) #loginbox {
+		top: 2.5em;
+		background-color: var(--bkgrd-b1);
+		border: var(--brd-type-1) var(--brd-clr-h);
+		border-radius: var(--brd-rad-s);
+		width: 90%;
+		margin: var(--margin-c);
+		padding: var(--padding-s);
+	}
+	body:not([class*="signed-in"]) #loginbox h3 {
+		font-size: var(--font-1);
+		text-align: center;
+		text-transform: uppercase;
+		margin: var(--margin-m) auto;
+		padding-bottom: var(--padding-m);
+		border-bottom: var(--brd-type-1) var(--brd-clr-h);
+	}
+	body:not([class*="signed-in"]) #loginbox h4 {
+		font-size: var(--font-4);
+		text-indent: 0.5em;
+		padding-bottom: var(--padding-m);
+	}
+	body:not([class*="signed-in"]) #loginbox h3, body:not([class*="signed-in"]) #loginbox h4 {
+		color: var(--txt-high-clr);
+	}
+	body:not([class*="signed-in"]) #column_left #loginbox~p:nth-last-of-type(2) {
+		width: 90%;
+		margin: var(--margin-l) auto;
+		text-align: center;
+		font-weight: 700;
+	}
+	body:not([class*="signed-in"]) #loginbox~h3 {
+		text-indent: 1em;
+	}
+	body:not([class*="signed-in"]) #column_left select, body:not([class*="signed-in"]) #loginbox form, input, select {
+		width: 100%;
+		max-width: none;
+	}
+	/*TOP*/
+	body:not([class*="signed-in"]) #top>a {
+		display: inline-block;
+		width: 150px;
+		height: 45px;
+	}
+	body:not([class*="signed-in"]) #topstatus a {
+		color: var(--txt-aside-clr);
+	}
+	body:not([class*="signed-in"]) #topstatus br {
+		display: none;
+	}
+	/*TOP NAVIGATION*/
+	body:not([class*="signed-in"]) #qmenu, body:not([class*="signed-in"]) #qmenu a, body:not([class*="signed-in"]) #qmenu ul {
+		background-color: var(--bkgrd-b1);
+		font-size: var(--font-3r);
+		color: var(--link-clr2);
+		letter-spacing: var(--ls-s);
+		padding: 3px 8px 4px;
+	}
+	body:not([class*="signed-in"]) #qmenu a:hover, body:not([class*="signed-in"]) #qmenu a.menu_selected {
+		background-color: var(--bkgrd-w2);
+		color: var(--link-clr2-h);
+	}
+	body:not([class*="signed-in"]) #qmenu, body:not([class*="signed-in"]) #qmenu ul {
+		height: auto;
+		width: auto;
+	}
+	body:not([class*="signed-in"]) #qmenu {
+		top: 0;
+	}
+	/* BLOGS */
+	body:not([class*="signed-in"]) #column_center .qxh-front-columns, body:not([class*="signed-in"]) #column_center>.qxh-flex-container:not(.gallery) {
+		display: flex;
+		flex-flow: row wrap;
+	}
+	body:not([class*="signed-in"]) #column_center .qxh-front-columns {
+		flex-flow: row nowrap;
+	}
+	body:not([class*="signed-in"]) #column_center>.qxh-flex-container:not(.gallery)>.qxh-flex-item {
+		flex: 1 1 50%;
+		max-width: 50%;
+		max-height: 105px;
+		overflow: hidden;
+		margin-bottom: var(--margin-l);
+	}
+	.qxh-front-columns>.qxh-front-image {
+		flex: 0 0 80px;
+	}
+	.qxh-front-columns>.qxh-front-text {
+		flex: 1 1 auto;
+		padding-left: var(--padding-s);
+	}
+	.qxh-front-text>div:nth-last-child(2) {
+		font-size: var(--font-2);
+	}
+	/*3 MEMBERS*/
+	body:not([class*="signed-in"]) .gallery .insertmember {
+		grid-template-rows: auto;
+		grid-template-columns: auto;
+		grid-template-areas: "avatar""link""description""icons""mood";
+	}
+	body:not([class*="signed-in"]) .gallery .memberlargeicon {
+		margin: auto;
+		background-size: cover;
+		border-radius: var(--brd-rad-m);
+	}
+	body:not([class*="signed-in"]) .gallery .memberlargeicon * {
+		width: 100% !important;
+	}
 }
 }
 @-moz-document url-prefix("https://beta.qruiser.com/satellite.php"), url-prefix("https://www.qruiser.com/satellite.php")  {

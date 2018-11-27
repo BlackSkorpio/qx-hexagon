@@ -1171,7 +1171,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_LinkForum	= $('#qmenu_forum > a');
 			var hq_LinkChat		= $('#qmenu_chat > a');
 			var hq_LinkInfo		= $('#qmenu_info > a');
-			//var hq_LinkLogOut		= $('#qmenu_logut > a');
+			var hq_LinkLogOut	= $('#qlogout');
 			var hq_LinkHome		= $('#column_left .leftcolumn-membericon > .insertmember > .link > a');
 			var hq_LinkVisitors	= $('.container--latest-visitors .container-header > a');
 			var hq_LoggedInFavs	= $('#column_left .container--favourites > .container-inner > div > a[href="/favourites.php?onlyloggedin=1"]');
@@ -1195,7 +1195,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_KeyForum		= event.which == 54 || event.which == 102; /* 6 */
 			var hq_KeyChat		= event.which == 55 || event.which == 103; /* 7 */
 			var hq_KeyInfo		= event.which == 56 || event.which == 104; /* 8 */
-			//var hq_KeyLogOut	= event.which == 57 || event.which == 105; /* 9 */
+			var hq_KeyLogOut	= event.which == 57 || event.which == 105; /* 9 */
 			var hq_KeyHome		= event.which == 72; /* H */
 			var hq_KeyVisitors	= event.which == 86; /* V */
 			var hq_KeyFavorites = event.which == 70; /* F */
@@ -1246,11 +1246,11 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 				event.preventDefault();
 				event.stopPropagation();
 			};
-			/*if ( hq_FormElements && hq_KeyLogOut ) {
-				window.location = hq_LinkLogOut.attr('href');
+			if ( hq_FormElements && hq_KeyLogOut ) {
+				hq_LinkLogOut.trigger( "click" );
 				event.preventDefault();
 				event.stopPropagation();
-			};*/
+			};
 			if ( hq_FormElements && hq_KeyHome ) {
 				window.location = hq_LinkHome.attr('href');
 				event.preventDefault();

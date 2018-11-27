@@ -2,11 +2,11 @@
 
 **QX HexaGon** is a marrige between a [@greasemonkey UserScript](http://www.greasespot.net/) and a [@openstyles UserStyle](https://add0n.com/stylus.html) that gives [qruiser.com](https://www.qruiser.com/) a new cleaner layout and adding some usefull keyboard navigation shortcuts together with some usability tweaks to make the whole experience more enjoyable.
 
-| Install UserStyle | Install UserScript |
-| :---------------: | :----------------: |
-| [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon-beta.user.css) | [![Install directly with Greasemokey](https://img.shields.io/badge/Install%20Directly%20With-Greasemonkey-%236e4e8e.svg)](https://github.com/BlackSkorpio/qx-hexagon/raw/master/dist/userscript/qx-heagon-companion.user.js) |
+| QX HexaGon | QX HexaGon Clean | QX HexaGon Companion |
+| :--------: | :--------------: | :------------------: |
+| [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon-beta.user.css) | [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon-clean.user.css) | [![Install directly with Greasemokey](https://img.shields.io/badge/Install%20Directly%20With-Greasemonkey-%236e4e8e.svg)](https://github.com/BlackSkorpio/qx-hexagon/raw/master/dist/userscript/qx-heagon-companion.user.js) |
 
-![QX HexaGon logo](screens/hexagon-logo.png)
+![QX HexaGon logo](svg-src/hexagon-logo.svg)
 
 ## QX HexaGon UserStyle
 A modernized theme for [qruiser.com](https://www.qruiser.com/) that rewrites the new layout using flexbox and grid containers.
@@ -24,7 +24,7 @@ A modernized theme for [qruiser.com](https://www.qruiser.com/) that rewrites the
 * Animated notifications
 * SVG icons instead of the old raster images
 
-You can have [a closer look at how it looks here](screens/screens.md).
+You can have [a closer look at how it looks here](screens/screens.md#shortcuts).
 
 #### Install [the UserStyle](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon-beta.user.css)
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon-beta.user.css)
@@ -32,7 +32,7 @@ You can have [a closer look at how it looks here](screens/screens.md).
 ## QX HexaGon Companion UserScript
 Fixes that goes hand in hand with the QX Hexagon userstyle.
 
-The [UserScript](https://github.com/BlackSkorpio/qx-hexagon/raw/master/dist/userscript/qx-heagon-companion.user.js) is required to be able to enjoy the above [UserStyle](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon-beta.user.css) since here we are cleaning up a lot of the annoyencies that comes with the original layout and adding a lot of goodies!
+**_The [UserScript](https://github.com/BlackSkorpio/qx-hexagon/raw/master/dist/userscript/qx-heagon-companion.user.js) is required_** to be able to enjoy the above [UserStyle](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon-beta.user.css) since here we are cleaning up a lot of the annoyencies that comes with the original layout and adding a lot of goodies!
 
 ### FIXES
 * Removing the `.odd` and `.even` classes in favor for the `.qxh-flex-item` and `.qxh-grid-item`.
@@ -68,6 +68,10 @@ The [UserScript](https://github.com/BlackSkorpio/qx-hexagon/raw/master/dist/user
   * **6** - Forums Section
   * **7** - Conversations Section
   * **8** - Info Section
+  * **9** - Logout
 
-#### Install [the UserScript](https://github.com/BlackSkorpio/qx-hexagon/raw/master/dist/userscript/qx-heagon-companion.user.js)
-[![Install directly with Greasemokey](https://img.shields.io/badge/Install%20Directly%20With-Greasemonkey-%236e4e8e.svg)](https://github.com/BlackSkorpio/qx-hexagon/raw/master/dist/userscript/qx-heagon-companion.user.js)
+#### Install HexaGon
+
+| QX HexaGon | QX HexaGon Clean | QX HexaGon Companion |
+| :--------: | :--------------: | :------------------: |
+| [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon-beta.user.css) | [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon-clean.user.css) | [![Install directly with Greasemokey](https://img.shields.io/badge/Install%20Directly%20With-Greasemonkey-%236e4e8e.svg)](https://github.com/BlackSkorpio/qx-hexagon/raw/master/dist/userscript/qx-heagon-companion.user.js) |
