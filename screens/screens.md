@@ -22,17 +22,17 @@ ___________________________________________________________
 ## Some highlights
 ![QX HexaGon closeup](close-ups.png)
 
-**[:house: Back to the docs](https://github.com/BlackSkorpio/qx-hexagon#qx-hexagon)** | **[:point_up: Up](#shortcuts)**
+**[:house: Back to the docs](../README.md#qx-hexagon)** | **[:point_up: Up](#shortcuts)**
 
 ## Welcome page
 ![QX HexaGon Welcome](welcome-screen.png)
 
-**[:house: Back to the docs](https://github.com/BlackSkorpio/qx-hexagon#qx-hexagon)** | **[:point_up: Up](#shortcuts)**
+**[:house: Back to the docs](../README.md#qx-hexagon)** | **[:point_up: Up](#shortcuts)**
 
 ## When in que
 ![QX HexaGon index](queing.png)
 
-**[:house: Back to the docs](https://github.com/BlackSkorpio/qx-hexagon#qx-hexagon)** | **[:point_up: Up](#shortcuts)**
+**[:house: Back to the docs](../README.md#qx-hexagon)** | **[:point_up: Up](#shortcuts)**
 
 ## Satellite
 
@@ -45,19 +45,19 @@ ___________________________________________________________
 ## The personal profile page
 ![QX HexaGon profile](profile.png)
 
-**[:house: Back to the docs](https://github.com/BlackSkorpio/qx-hexagon#qx-hexagon)** | **[:point_up: Up](#shortcuts)**
+**[:house: Back to the docs](../README.md#qx-hexagon)** | **[:point_up: Up](#shortcuts)**
 
 ### Profile without [QX HexaGon](../README.md)
 ![QX HexaGon profile](profile-no-heagon.png)
 
-**[:house: Back to the docs](https://github.com/BlackSkorpio/qx-hexagon#qx-hexagon)** | **[:point_up: Up](#shortcuts)**
+**[:house: Back to the docs](../README.md#qx-hexagon)** | **[:point_up: Up](#shortcuts)**
 
 ### Profile with custom colors
 ![QX HexaGon profile](profile-with-custom-colors.png)
 
-**[:house: Back to the docs](https://github.com/BlackSkorpio/qx-hexagon#qx-hexagon)** | **[:point_up: Up](#shortcuts)**
+**[:house: Back to the docs](../README.md#qx-hexagon)** | **[:point_up: Up](#shortcuts)**
 
 ## Your Clubs page
 ![QX HexaGon index](clubs.png)
 
-**[:house: Back to the docs](https://github.com/BlackSkorpio/qx-hexagon#qx-hexagon)** | **[:point_up: Up](#shortcuts)**
+**[:house: Back to the docs](../README.md#qx-hexagon)** | **[:point_up: Up](#shortcuts)**
