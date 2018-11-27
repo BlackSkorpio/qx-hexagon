@@ -1187,23 +1187,27 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 				var hq_LinkYourClubs = $('#column_left .container--personal .container-inner > div:nth-of-type(2) > div:nth-of-type(1) > a');
 			};
 			var hq_FormElements	= event.target.tagName.toLowerCase() !== 'input' && event.target.tagName.toLowerCase() !== 'textarea';
-			var hq_KeyMembers	= event.which == 49 || event.which == 97;  /* 1 */
-			var hq_KeyClubs		= event.which == 50 || event.which == 98;  /* 2 */
-			var hq_KeyPics		= event.which == 51 || event.which == 99;  /* 3 */
-			var hq_KeyMovies	= event.which == 52 || event.which == 100; /* 4 */
-			var hq_KeyBlogs		= event.which == 53 || event.which == 101; /* 5 */
-			var hq_KeyForum		= event.which == 54 || event.which == 102; /* 6 */
-			var hq_KeyChat		= event.which == 55 || event.which == 103; /* 7 */
-			var hq_KeyInfo		= event.which == 56 || event.which == 104; /* 8 */
-			var hq_KeyLogOut	= event.which == 57 || event.which == 105; /* 9 */
-			var hq_KeyHome		= event.which == 72; /* H */
-			var hq_KeyVisitors	= event.which == 86; /* V */
-			var hq_KeyFavorites = event.which == 70; /* F */
-			var hq_KeyYourClubs	= event.which == 67; /* C */
+			var hq_code = (event.keyCode ? event.keyCode : event.which);
+			/* NOTE When using the numerical keys we want to take in to account:
+			   numerical keys or the numpad with and without NumLock active
+			   49 (numerical key) 97 (Num Lock not active) 35 (Num Lock Active) == 1 */
+			var hq_KeyMembers	= hq_code == 49 || hq_code == 97 || hq_code == 35;  /* 1 */
+			var hq_KeyClubs		= hq_code == 50 || hq_code == 98 || hq_code == 40;  /* 2 */
+			var hq_KeyPics		= hq_code == 51 || hq_code == 99 || hq_code == 34;  /* 3 */
+			var hq_KeyMovies	= hq_code == 52 || hq_code == 100 || hq_code == 37; /* 4 */
+			var hq_KeyBlogs		= hq_code == 53 || hq_code == 101 || hq_code == 12; /* 5 */
+			var hq_KeyForum		= hq_code == 54 || hq_code == 102 || hq_code == 39; /* 6 */
+			var hq_KeyChat		= hq_code == 55 || hq_code == 103 || hq_code == 36; /* 7 */
+			var hq_KeyInfo		= hq_code == 56 || hq_code == 104 || hq_code == 38; /* 8 */
+			var hq_KeyLogOut	= hq_code == 57 || hq_code == 105 || hq_code == 33; /* 9 */
+			var hq_KeyHome		= hq_code == 72; /* H */
+			var hq_KeyVisitors	= hq_code == 86; /* V */
+			var hq_KeyFavorites = hq_code == 70; /* F */
+			var hq_KeyYourClubs	= hq_code == 67; /* C */
 			//var preventDefault	= event.preventDefault();
 			//var stopPropagation	= event.stopPropagation();
 			/*var hq_Keys = {
-				Home: 'event.which == 72';
+				Home: 'hq_code == 72';
 			}*/
 
 			if ( hq_FormElements && hq_KeyMembers ) {
