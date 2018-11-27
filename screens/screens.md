@@ -40,7 +40,7 @@ ___________________________________________________________
 | :---------------------: | :-----------------: |
 |![QX HexaGon satellite](satellite-not-logged-in.png)|![QX HexaGon satellite](satellite-logged-in.png)|
 
-**[:house: Back to the docs](https://github.com/BlackSkorpio/qx-hexagon#qx-hexagon)** | **[:point_up: Up](#shortcuts)**
+**[:house: Back to the docs](../README.md#qx-hexagon)** | **[:point_up: Up](#shortcuts)**
 
 ## The personal profile page
 ![QX HexaGon profile](profile.png)
