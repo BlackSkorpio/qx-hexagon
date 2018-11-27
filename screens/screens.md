@@ -1,17 +1,24 @@
 ### Shortcuts
 [Welcome page](#welcome-page) | [When in que](#when-in-que) | [Satellite](#satellite) | [Profile](#the-personal-profile-page) | [Your Clubs](#your-clubs-page)
 <table>
-	<thead><tr colspan="5"><td>Shortcuts</th></tr></thead>
+	<thead>
+		<tr colspan="5">
+			<td colspan="5">
+				Shortcuts
+			</th>
+		</tr>
+	</thead>
 	<tbody>
 		<tr>
-			<td>[Welcome page](#welcome-page)</td>
-			<td>[When in que](#when-in-que)</td>
-			<td>[Satellite](#satellite)</td>
-			<td>[Profile](#the-personal-profile-page)</td>
-			<td>[Your Clubs](#your-clubs-page)</td>
+			<td> [Welcome page](#welcome-page) </td>
+			<td> [When in que](#when-in-que) </td>
+			<td> [Satellite](#satellite) </td>
+			<td> [Profile](#the-personal-profile-page) </td>
+			<td> [Your Clubs](#your-clubs-page) </td>
 		</tr>
 	</tbody>
 </table>
+
 ___________________________________________________________
 ## Some highlights
 ![QX HexaGon closeup](close-ups.png)
