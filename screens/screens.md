@@ -9,7 +9,7 @@
 **[<< Back to the docs](https://github.com/BlackSkorpio/qx-hexagon#qx-hexagon)**
 
 ## When in que
-![QX HexaGon index](QX2.PNG)
+![QX HexaGon index](queing.png)
 
 ## Satellite
 
@@ -25,7 +25,12 @@
 **[<< Back to the docs](https://github.com/BlackSkorpio/qx-hexagon#qx-hexagon)**
 
 ### Profile without [QX HexaGon](../README.md)
-![QX HexaGon profile](QX-clean.jpg)
+![QX HexaGon profile](profile-no-heagon.png)
+
+**[<< Back to the docs](https://github.com/BlackSkorpio/qx-hexagon#qx-hexagon)**
+
+### Profile with custom colors
+![QX HexaGon profile](profile-with-custom-colors.png)
 
 **[<< Back to the docs](https://github.com/BlackSkorpio/qx-hexagon#qx-hexagon)**
 
