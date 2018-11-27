@@ -1,3 +1,6 @@
+### Shortcuts
+[Welcome page](#welcome-page) | [When in que](#when-in-que) | [Satellite](#satellite) | [Profile](#the-personal-profile-page) | [Your Clubs](#your-clubs-page)
+___________________________________________________________
 ## Some highlights
 ![QX HexaGon closeup](close-ups.png)
 
