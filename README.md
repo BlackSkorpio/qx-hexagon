@@ -24,7 +24,7 @@ A modernized theme for [qruiser.com](https://www.qruiser.com/) that rewrites the
 * Animated notifications
 * SVG icons instead of the old raster images
 
-You can have [a closer look at how it looks here](screens/screens.md).
+You can have [a closer look at how it looks here](screens/screens.md#shortcuts).
 
 #### Install [the UserStyle](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon-beta.user.css)
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon-beta.user.css)
@@ -32,7 +32,7 @@ You can have [a closer look at how it looks here](screens/screens.md).
 ## QX HexaGon Companion UserScript
 Fixes that goes hand in hand with the QX Hexagon userstyle.
 
-The [UserScript](https://github.com/BlackSkorpio/qx-hexagon/raw/master/dist/userscript/qx-heagon-companion.user.js) is required to be able to enjoy the above [UserStyle](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon-beta.user.css) since here we are cleaning up a lot of the annoyencies that comes with the original layout and adding a lot of goodies!
+**_The [UserScript](https://github.com/BlackSkorpio/qx-hexagon/raw/master/dist/userscript/qx-heagon-companion.user.js) is required_** to be able to enjoy the above [UserStyle](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon-beta.user.css) since here we are cleaning up a lot of the annoyencies that comes with the original layout and adding a lot of goodies!
 
 ### FIXES
 * Removing the `.odd` and `.even` classes in favor for the `.qxh-flex-item` and `.qxh-grid-item`.
