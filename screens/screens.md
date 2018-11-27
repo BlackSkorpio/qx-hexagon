@@ -1,7 +1,7 @@
 ### Shortcuts
 [Welcome page](#welcome-page) | [When in que](#when-in-que) | [Satellite](#satellite) | [Profile](#the-personal-profile-page) | [Your Clubs](#your-clubs-page)
 <table>
-	<thead><tr colspan="5">Shortcuts</tr></thead>
+	<thead><tr colspan="5"><td>Shortcuts</th></tr></thead>
 	<tbody>
 		<tr>
 			<td>[Welcome page](#welcome-page)</td>
