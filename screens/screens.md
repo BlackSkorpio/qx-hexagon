@@ -1,3 +1,6 @@
+<style>
+	.markdown-body table td, .markdown-body table th {border:none;}
+</style>
 <table>
 	<thead>
 		<tr colspan="5">
