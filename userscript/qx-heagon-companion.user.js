@@ -1174,6 +1174,18 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_LinkLogOut	= $('#qlogout');
 			var hq_LinkHome		= $('#column_left .leftcolumn-membericon > .insertmember > .link > a');
 			var hq_LinkVisitors	= $('.container--latest-visitors .container-header > a');
+			/* NOTE Clear notifications */
+			if ( HexaGon.ShowclubsURL > -1 ) {
+				var hq_LinkClearAll = $('.column-content #clubinfo_text + p + .small + .list.qxh-flex-container + p + .qxh-button > a[href="/showclubs.php?action=zeroall"]:nth-child(2)');
+			};
+			/* TODO Fix the urls for this button */
+			/*if {
+				var hq_LinkClearAll = $('#column_center #zeroall a:first-of-type')
+			};*/
+			if ( HexaGon.msgOld > -1 ) {
+				var hq_LinkClearAll = $('.qxh-button a[href*="markasread"]');
+			};
+
 			var hq_LoggedInFavs	= $('#column_left .container--favourites > .container-inner > div > a[href="/favourites.php?onlyloggedin=1"]');
 			if ( hq_LoggedInFavs.is(":visible") ) {
 				var hq_LinkFavorites = $('#column_left .container--favourites > .container-inner > div > a');
@@ -1206,6 +1218,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_KeyYourClubs	= hq_code == 67; /* C */
 			//var preventDefault	= event.preventDefault();
 			//var stopPropagation	= event.stopPropagation();
+			var hq_KeyClearAll	= hq_code == 88; /* X */
 			/*var hq_Keys = {
 				Home: 'hq_code == 72';
 			}*/
@@ -1272,6 +1285,11 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			};
 			if ( hq_FormElements && hq_KeyVisitors ) {
 				window.location = hq_LinkVisitors.attr('href');
+				event.preventDefault();
+				event.stopPropagation();
+			};
+			if ( hq_FormElements && hq_KeyClearAll ) {
+				window.location = hq_LinkClearAll.attr('href');
 				event.preventDefault();
 				event.stopPropagation();
 			};
