@@ -1216,8 +1216,6 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_KeyVisitors	= hq_code == 86; /* V */
 			var hq_KeyFavorites = hq_code == 70; /* F */
 			var hq_KeyYourClubs	= hq_code == 67; /* C */
-			//var preventDefault	= event.preventDefault();
-			//var stopPropagation	= event.stopPropagation();
 			var hq_KeyClearAll	= hq_code == 88; /* X */
 			/*var hq_Keys = {
 				Home: 'hq_code == 72';
