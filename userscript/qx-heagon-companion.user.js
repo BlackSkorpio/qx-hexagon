@@ -468,7 +468,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 				HexaGon.sMemIClean.contents().filter(function() {
 					return this.nodeType == 3 && $.trim(this.nodeValue).length;
 				}).wrap( HexaGon.sMemCleanWrap );
-				console.log('We are done with text nodes, jump over to the fields');
+				//console.log('We are done with text nodes, jump over to the fields');
 
 				return WrapText;
 			};
@@ -481,7 +481,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 				//HexaGon.sMemFsOne.wrapAll( HexaGon.sMemFsOneWrap ),
 				HexaGon.sMemFsTwo.wrapAll( HexaGon.sMemFsTwoWrap ),
 				HexaGon.sMemFsThree.wrapAll( HexaGon.sMemFsThreeWrap );
-				console.log('Stitching fields and text together is done, so lets get the broom');
+				//console.log('Stitching fields and text together is done, so lets get the broom');
 
 				return WrapFields;
 			};
@@ -503,7 +503,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 				}).remove();
 				HexaGon.sMemObsoleteClean.remove();
 				HexaGon.sMembForm.addClass( HexaGon.ClassMemSearchNear );
-				console.log('Form cleaned up and ready to use');
+				//console.log('Form cleaned up and ready to use');
 
 				return TheBroom;
 			};
@@ -888,14 +888,14 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		// NOTE Make sure that the right column realy is where it should be!
 		// TODO Remove ASAP
 		if ( hq_colRight.parent().is( hq_wholeID ) ) {
-			hq_colRight.appendTo( hq_mainContent ),
-			console.log('#column_right.column-right was moved to '+hq_mainContent);
-		} else {
-			console.info('#column_right.column-right is already in place');
+			hq_colRight.appendTo( hq_mainContent );
+			//console.log('#column_right.column-right was moved to '+hq_mainContent);
+		//} else {
+			//console.info('#column_right.column-right is already in place');
 		}
 		// NOTE Move .blog-teasers to #header
 		if ( hq_TeaserDiv.parent().not( hq_topContent ) ) hq_TeaserDiv.appendTo(hq_topContent),
-			console.log('.blog-teasers was moved to '+hq_topContent);
+			//console.log('.blog-teasers was moved to '+hq_topContent);
 		// NOTE Remove inline styles
 		hq_inlineCleaning.removeAttr("style").addClass( hq_ClassClean );
 		hq_ScribbleImages.removeAttr("style").addClass( hq_ClassScribbleImg );
@@ -992,7 +992,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			hq_frontImg.css( hq_frontCssArray );
 			hq_frontText.removeAttr("style");
 			$( '#column_center > .qxh-flex-item' ).wrapAll( hq_frontMainWrap );
-			console.log('Frontpage done');
+			//console.log('Frontpage done');
 		}
 		//
 		if( hq_msgOld > -1 ) {
