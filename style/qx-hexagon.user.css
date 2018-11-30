@@ -3252,6 +3252,7 @@
 	.smalldivider div span {
 		font-size: var(--font-0);
 	}
+	body:not([class*="signed-in"]) #subnavbar,
 	body:not([class*="signed-in"]) ul[style*="visible"],
 	body:not([class*="signed-in"]) #qmenu_home,
 	body:not([class*="signed-in"]) #search,
