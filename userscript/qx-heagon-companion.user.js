@@ -6,7 +6,6 @@
  *	@version 1.0
  *	@description Fixes that goes hand in hand with the QX Hexagon userstyle
  *	@url http://varoystrand.se | http://kokensupport.com
-**/
 // ==UserScript==
 // @name			QX Hexagon companion
 // @namespace		https://github.com/BlackSkorpio/qx-hexagon
@@ -21,7 +20,7 @@
 // @include *qruiser.com*
 // @require https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js
 // ==/UserScript==
-
+**/
 // NOTE HexaGon Loading
 function onReady(callback) {
 	var hq_ClassPrefix		= 'qxh-';
