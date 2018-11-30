@@ -887,15 +887,14 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		});
 		// NOTE Make sure that the right column realy is where it should be!
 		// TODO Remove ASAP
-		if ( hq_colRight.parent().is( hq_wholeID ) ) {
-			hq_colRight.appendTo( hq_mainContent );
-			//console.log('#column_right.column-right was moved to '+hq_mainContent);
+		if ( hq_colRight.parent().is( hq_wholeID ) ) hq_colRight.appendTo( hq_mainContent );
+		//	console.log('#column_right.column-right was moved to '+hq_mainContent);
 		//} else {
-			//console.info('#column_right.column-right is already in place');
-		}
+		//	console.info('#column_right.column-right is already in place');
+		//}
 		// NOTE Move .blog-teasers to #header
 		if ( hq_TeaserDiv.parent().not( hq_topContent ) ) hq_TeaserDiv.appendTo(hq_topContent),
-			//console.log('.blog-teasers was moved to '+hq_topContent);
+		//	console.log('.blog-teasers was moved to '+hq_topContent);
 		// NOTE Remove inline styles
 		hq_inlineCleaning.removeAttr("style").addClass( hq_ClassClean );
 		hq_ScribbleImages.removeAttr("style").addClass( hq_ClassScribbleImg );
