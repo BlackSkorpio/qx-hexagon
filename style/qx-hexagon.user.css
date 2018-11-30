@@ -1,4 +1,4 @@
-/* minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: ../dist/css/$1.$2 */
+/* clean-css, minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: ../dist/css/$1.$2 */
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*! ==UserStyle==
 @name			QX Hexagon
