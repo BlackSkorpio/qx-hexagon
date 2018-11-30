@@ -1201,15 +1201,17 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			/* NOTE When using the numerical keys we want to take in to account:
 			   numerical keys or the numpad with and without NumLock active
 			   49 (numerical key) 97 (Num Lock not active) 35 (Num Lock Active) == 1 */
-			var hq_KeyMembers	= hq_code == 49 || hq_code ==  97 || hq_code == 35; /* 1 */
-			var hq_KeyClubs		= hq_code == 50 || hq_code ==  98 || hq_code == 40; /* 2 */
-			var hq_KeyPics		= hq_code == 51 || hq_code ==  99 || hq_code == 34; /* 3 */
-			var hq_KeyMovies	= hq_code == 52 || hq_code == 100 || hq_code == 37; /* 4 */
-			var hq_KeyBlogs		= hq_code == 53 || hq_code == 101 || hq_code == 12; /* 5 */
-			var hq_KeyForum		= hq_code == 54 || hq_code == 102 || hq_code == 39; /* 6 */
-			var hq_KeyChat		= hq_code == 55 || hq_code == 103 || hq_code == 36; /* 7 */
-			var hq_KeyInfo		= hq_code == 56 || hq_code == 104 || hq_code == 38; /* 8 */
-			var hq_KeyLogOut	= hq_code == 57 || hq_code == 105 || hq_code == 33; /* 9 */
+			var hq_KeyMembers	= hq_code == 49 || hq_code ==  97/* || hq_code == 35*/; /* 1 */ /*35=End*/
+			var hq_KeyClubs		= hq_code == 50 || hq_code ==  98/* || hq_code == 40*/; /* 2 */ /*40=ArrowDown*/
+			var hq_KeyPics		= hq_code == 51 || hq_code ==  99/* || hq_code == 34*/; /* 3 */ /*34=PgDn*/
+			var hq_KeyMovies	= hq_code == 52 || hq_code == 100/* || hq_code == 37*/; /* 4 */ /*37=ArrowLeft*/
+			var hq_KeyBlogs		= hq_code == 53 || hq_code == 101/* || hq_code == 12*/; /* 5 */
+			var hq_KeyForum		= hq_code == 54 || hq_code == 102/* || hq_code == 39*/; /* 6 */ /*39=ArrowRight*/
+			var hq_KeyChat		= hq_code == 55 || hq_code == 103/* || hq_code == 36*/; /* 7 */ /*36=Home*/
+			var hq_KeyInfo		= hq_code == 56 || hq_code == 104/* || hq_code == 38*/; /* 8 */ /*38=ArrowUp*/
+			var hq_KeyLogOut	= hq_code == 57 || hq_code == 105/* || hq_code == 33*/; /* 9 */ /* 33=PgUp*/
+																						/* commented out the last since this will
+																						   also translate to the Home/End/Arrow keys! */
 			var hq_KeyHome		= hq_code == 72; /* H */
 			var hq_KeyVisitors	= hq_code == 86; /* V */
 			var hq_KeyFavorites = hq_code == 70; /* F */
