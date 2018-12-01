@@ -1,4 +1,4 @@
-/*! ==UserStyle==
+@-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"){/*! ==UserStyle==
 @name			QX Hexagon Clean
 @namespace		github.com/BlackSkorpio/qx-hexagon
 @version		1.0.0-beta
@@ -9,4 +9,4 @@
 @updateURL		https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/Develop/style/qx-hexagon-clean.user.css
 @license		MIT
 @preprocessor	default
-==/UserStyle== */@-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"){#ads,#adtech_takeover,#blogads,#goldmemberbanner.standardbanner.warningbanner,#qruiser-panorama,.external-ad,div#stripe,div[style="margin:auto auto auto 1px;height:55px;width:1024px;border:0;overflow:hidden;"],hr.dotline{display:none!important}}
+==/UserStyle== */#ads,#adtech_takeover,#blogads,#goldmemberbanner.standardbanner.warningbanner,#qruiser-panorama,.external-ad,div#stripe,div[style="margin:auto auto auto 1px;height:55px;width:1024px;border:0;overflow:hidden;"],hr.dotline{display:none!important}}
