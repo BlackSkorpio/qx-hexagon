@@ -1,4 +1,5 @@
 /* minifier: clean-css, minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: ../dist/css/$1.$2 */
+@-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*") {
 /*! ==UserStyle==
 @name			QX Hexagon Clean
 @namespace		github.com/BlackSkorpio/qx-hexagon
@@ -11,7 +12,7 @@
 @license		MIT
 @preprocessor	default
 ==/UserStyle== */
-@-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*") {
+
 /* General rules */
 #qruiser-panorama,
 #goldmemberbanner.standardbanner.warningbanner,
