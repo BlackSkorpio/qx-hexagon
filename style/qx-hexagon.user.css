@@ -1,4 +1,4 @@
-/* minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: ../dist/css/$1.$2 */
+/* clean-css, minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: ../dist/css/$1.$2 */
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*! ==UserStyle==
 @name			QX Hexagon
@@ -454,7 +454,7 @@
 	#qxh_down {
 		top: 53%;
 		/*background-image: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAYAAACAl21KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACPSURBVDhPY2DAAlatWvUfH8amB6vYqEGEg2pgw4iQ7cTKM6xcuXImsYpxqQOZAQ4woIIOCgzrQAl1oEFpZBiWhitFgwx7R4SBIDXYDYGZDFRgTMAwkCHGhBMRJMxwGUa8ITCbli5dKgg08AySN8+AxIhyCboiJMPIN4Qsm6miiYioxltawvSDYogohYTUAQC80UNTOht/YwAAAABJRU5ErkJggg==);*/
-		transform: rotate(180deg);
+		/*transform: rotate(180deg);*/
 	}
 }
 /*** Let's start cooking ***/
@@ -3199,6 +3199,17 @@
 		color: var(--text-aside-clr);
 	}
 	/*-------------*/
+	button#designMode {
+		position: fixed;
+		top: 0;
+		left: 1em;
+		background: var(--bkgrd-h1);
+		color: var(--txt-aside-clr);
+		border-color: var(--brd-clr-w);
+	}
+	button#designMode:hover {
+		color: var(--ui-clr-black) !important;
+	}
 }
 }
 
@@ -3252,6 +3263,7 @@
 	.smalldivider div span {
 		font-size: var(--font-0);
 	}
+	body:not([class*="signed-in"]) #subnavbar,
 	body:not([class*="signed-in"]) ul[style*="visible"],
 	body:not([class*="signed-in"]) #qmenu_home,
 	body:not([class*="signed-in"]) #search,

@@ -6,7 +6,6 @@
  *	@version 1.0
  *	@description Fixes that goes hand in hand with the QX Hexagon userstyle
  *	@url http://varoystrand.se | http://kokensupport.com
-**/
 // ==UserScript==
 // @name			QX Hexagon companion
 // @namespace		https://github.com/BlackSkorpio/qx-hexagon
@@ -21,7 +20,7 @@
 // @include *qruiser.com*
 // @require https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js
 // ==/UserScript==
-
+**/
 // NOTE HexaGon Loading
 function onReady(callback) {
 	var hq_ClassPrefix		= 'qxh-';
@@ -468,7 +467,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 				HexaGon.sMemIClean.contents().filter(function() {
 					return this.nodeType == 3 && $.trim(this.nodeValue).length;
 				}).wrap( HexaGon.sMemCleanWrap );
-				console.log('We are done with text nodes, jump over to the fields');
+				//console.log('We are done with text nodes, jump over to the fields');
 
 				return WrapText;
 			};
@@ -481,7 +480,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 				//HexaGon.sMemFsOne.wrapAll( HexaGon.sMemFsOneWrap ),
 				HexaGon.sMemFsTwo.wrapAll( HexaGon.sMemFsTwoWrap ),
 				HexaGon.sMemFsThree.wrapAll( HexaGon.sMemFsThreeWrap );
-				console.log('Stitching fields and text together is done, so lets get the broom');
+				//console.log('Stitching fields and text together is done, so lets get the broom');
 
 				return WrapFields;
 			};
@@ -503,7 +502,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 				}).remove();
 				HexaGon.sMemObsoleteClean.remove();
 				HexaGon.sMembForm.addClass( HexaGon.ClassMemSearchNear );
-				console.log('Form cleaned up and ready to use');
+				//console.log('Form cleaned up and ready to use');
 
 				return TheBroom;
 			};
@@ -887,15 +886,14 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		});
 		// NOTE Make sure that the right column realy is where it should be!
 		// TODO Remove ASAP
-		if ( hq_colRight.parent().is( hq_wholeID ) ) {
-			hq_colRight.appendTo( hq_mainContent ),
-			console.log('#column_right.column-right was moved to '+hq_mainContent);
-		} else {
-			console.info('#column_right.column-right is already in place');
-		}
+		if ( hq_colRight.parent().is( hq_wholeID ) ) hq_colRight.appendTo( hq_mainContent );
+		//	console.log('#column_right.column-right was moved to '+hq_mainContent);
+		//} else {
+		//	console.info('#column_right.column-right is already in place');
+		//}
 		// NOTE Move .blog-teasers to #header
 		if ( hq_TeaserDiv.parent().not( hq_topContent ) ) hq_TeaserDiv.appendTo(hq_topContent),
-			console.log('.blog-teasers was moved to '+hq_topContent);
+		//	console.log('.blog-teasers was moved to '+hq_topContent);
 		// NOTE Remove inline styles
 		hq_inlineCleaning.removeAttr("style").addClass( hq_ClassClean );
 		hq_ScribbleImages.removeAttr("style").addClass( hq_ClassScribbleImg );
@@ -992,7 +990,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			hq_frontImg.css( hq_frontCssArray );
 			hq_frontText.removeAttr("style");
 			$( '#column_center > .qxh-flex-item' ).wrapAll( hq_frontMainWrap );
-			console.log('Frontpage done');
+			//console.log('Frontpage done');
 		}
 		//
 		if( hq_msgOld > -1 ) {
@@ -1174,6 +1172,18 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_LinkLogOut	= $('#qlogout');
 			var hq_LinkHome		= $('#column_left .leftcolumn-membericon > .insertmember > .link > a');
 			var hq_LinkVisitors	= $('.container--latest-visitors .container-header > a');
+			/* NOTE Clear notifications */
+			if ( HexaGon.ShowclubsURL > -1 ) {
+				var hq_LinkClearAll = $('.column-content #clubinfo_text + p + .small + .list.qxh-flex-container + p + .qxh-button > a[href="/showclubs.php?action=zeroall"]:nth-child(2)');
+			};
+			/* TODO Fix the urls for this button */
+			/*if {
+				var hq_LinkClearAll = $('#column_center #zeroall a:first-of-type')
+			};*/
+			if ( HexaGon.msgOld > -1 ) {
+				var hq_LinkClearAll = $('.qxh-button a[href*="markasread"]');
+			};
+
 			var hq_LoggedInFavs	= $('#column_left .container--favourites > .container-inner > div > a[href="/favourites.php?onlyloggedin=1"]');
 			if ( hq_LoggedInFavs.is(":visible") ) {
 				var hq_LinkFavorites = $('#column_left .container--favourites > .container-inner > div > a');
@@ -1187,23 +1197,28 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 				var hq_LinkYourClubs = $('#column_left .container--personal .container-inner > div:nth-of-type(2) > div:nth-of-type(1) > a');
 			};
 			var hq_FormElements	= event.target.tagName.toLowerCase() !== 'input' && event.target.tagName.toLowerCase() !== 'textarea';
-			var hq_KeyMembers	= event.which == 49 || event.which == 97;  /* 1 */
-			var hq_KeyClubs		= event.which == 50 || event.which == 98;  /* 2 */
-			var hq_KeyPics		= event.which == 51 || event.which == 99;  /* 3 */
-			var hq_KeyMovies	= event.which == 52 || event.which == 100; /* 4 */
-			var hq_KeyBlogs		= event.which == 53 || event.which == 101; /* 5 */
-			var hq_KeyForum		= event.which == 54 || event.which == 102; /* 6 */
-			var hq_KeyChat		= event.which == 55 || event.which == 103; /* 7 */
-			var hq_KeyInfo		= event.which == 56 || event.which == 104; /* 8 */
-			var hq_KeyLogOut	= event.which == 57 || event.which == 105; /* 9 */
-			var hq_KeyHome		= event.which == 72; /* H */
-			var hq_KeyVisitors	= event.which == 86; /* V */
-			var hq_KeyFavorites = event.which == 70; /* F */
-			var hq_KeyYourClubs	= event.which == 67; /* C */
-			//var preventDefault	= event.preventDefault();
-			//var stopPropagation	= event.stopPropagation();
+			var hq_code = (event.keyCode ? event.keyCode : event.which);
+			/* NOTE When using the numerical keys we want to take in to account:
+			   numerical keys or the numpad with and without NumLock active
+			   49 (numerical key) 97 (Num Lock not active) 35 (Num Lock Active) == 1 */
+			var hq_KeyMembers	= hq_code == 49 || hq_code ==  97/* || hq_code == 35*/; /* 1 */ /*35=End*/
+			var hq_KeyClubs		= hq_code == 50 || hq_code ==  98/* || hq_code == 40*/; /* 2 */ /*40=ArrowDown*/
+			var hq_KeyPics		= hq_code == 51 || hq_code ==  99/* || hq_code == 34*/; /* 3 */ /*34=PgDn*/
+			var hq_KeyMovies	= hq_code == 52 || hq_code == 100/* || hq_code == 37*/; /* 4 */ /*37=ArrowLeft*/
+			var hq_KeyBlogs		= hq_code == 53 || hq_code == 101/* || hq_code == 12*/; /* 5 */
+			var hq_KeyForum		= hq_code == 54 || hq_code == 102/* || hq_code == 39*/; /* 6 */ /*39=ArrowRight*/
+			var hq_KeyChat		= hq_code == 55 || hq_code == 103/* || hq_code == 36*/; /* 7 */ /*36=Home*/
+			var hq_KeyInfo		= hq_code == 56 || hq_code == 104/* || hq_code == 38*/; /* 8 */ /*38=ArrowUp*/
+			var hq_KeyLogOut	= hq_code == 57 || hq_code == 105/* || hq_code == 33*/; /* 9 */ /* 33=PgUp*/
+																						/* commented out the last since this will
+																						   also translate to the Home/End/Arrow keys! */
+			var hq_KeyHome		= hq_code == 72; /* H */
+			var hq_KeyVisitors	= hq_code == 86; /* V */
+			var hq_KeyFavorites = hq_code == 70; /* F */
+			var hq_KeyYourClubs	= hq_code == 67; /* C */
+			var hq_KeyClearAll	= hq_code == 88; /* X */
 			/*var hq_Keys = {
-				Home: 'event.which == 72';
+				Home: 'hq_code == 72';
 			}*/
 
 			if ( hq_FormElements && hq_KeyMembers ) {
@@ -1268,6 +1283,11 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			};
 			if ( hq_FormElements && hq_KeyVisitors ) {
 				window.location = hq_LinkVisitors.attr('href');
+				event.preventDefault();
+				event.stopPropagation();
+			};
+			if ( hq_FormElements && hq_KeyClearAll ) {
+				window.location = hq_LinkClearAll.attr('href');
 				event.preventDefault();
 				event.stopPropagation();
 			};

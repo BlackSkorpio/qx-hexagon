@@ -50,6 +50,7 @@ Fixes that goes hand in hand with the QX Hexagon userstyle.
   * **F** - Takes you to your **_current online favorites_**, or if non of them are online at the moment, it takes you to the **_all favorites_** page.
   * **V** - Takes you to the **_Your last visitors_** page
   * **C** - Takes you to the **_updated clubs page_**, if any, if no clubs is found updated it takes you the **_Your clubs page_**.
+  * **X** - Clear all notifications/mark all messages as read.
 * **
 * **Scroll keys**
   * **Q** - Back to the top
