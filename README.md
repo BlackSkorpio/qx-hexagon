@@ -8,6 +8,8 @@
 | **T h e** | **B l e e d i n g** | **E d g e** |
 | [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/develop/style/qx-hexagon.user.css) | [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/develop/style/qx-hexagon-clean.user.css) | [![Install directly with Greasemokey](https://img.shields.io/badge/Install%20Directly%20With-Greasemonkey-%236e4e8e.svg)](https://github.com/BlackSkorpio/qx-hexagon/raw/develop/userscript/qx-heagon-companion.user.js) |
 
+#### You need a Userstyle Manager to use these, I recommend [stylus](https://github.com/openstyles/stylus) as it supports UserCSS, which allows for auto-updating of styles.
+
 ![QX HexaGon logo](svg-src/hexagon-logo.svg)
 
 ## QX HexaGon UserStyle
