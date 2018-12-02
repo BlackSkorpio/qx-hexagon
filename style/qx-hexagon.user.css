@@ -952,7 +952,7 @@
 	/* Left Column */
 	#column_left.column-left {
 		grid-area: left;
-		width: auto;
+		width: var(--ui-aside);
 	}
 	/* Main Content */
 	#whole .main-content {
@@ -972,6 +972,7 @@
 	}
 	#column_right.column-right {
 		grid-area: right;
+		width: var(--ui-aside-r);
 		margin: 0;
 	}
 	/* insertmember */
