@@ -68,9 +68,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.Body			= $(document.body);
 		HexaGon.formSearchGeo	= $('a[href^="javascript:selectgeo"], a[href^="javascript:reset"]');
 		HexaGon.MakeClubsGrid	= $(".column-content > div:nth-of-type(2) > .list:nth-of-type(4) > .qxh-flex-item, .column-content > div[class ^='club']:not([class*='hidden']) .list:nth-of-type(4) > .qxh-flex-item, .column-content form[name='sort'] + .list > .qxh-flex-item");
-		//HexaGon.MakeClubsGrid	= $(".column-content > div:nth-of-type(2) > .list:nth-of-type(5) > .odd, .column-content > div:nth-of-type(2) > .list:nth-of-type(5) > .even, .column-content > div[class ^='club']:not([class*='hidden']) .list:nth-of-type(5) > .odd, .column-content > div[class ^='club']:not([class*='hidden']) .list:nth-of-type(5) > .even, .column-content form[name='sort'] + .list > .odd, .column-content form[name='sort'] + .list > .even");
 		HexaGon.RemoveWhiteSpace = $('.column-content p + h2 + p[style*="margin-top: 0.5em;"]');
-		//HexaGon.WarningImg		= $('img[src$="warning_icon.png"].banner_icon');// NOTE HACK
 		// NOTE Search Member Forms
 		HexaGon.sMemUrlClose	= HexaGon.hrefLoc.indexOf("/members/close_to_you/");
 		HexaGon.sMemUrlTheRest	= HexaGon.hrefLoc.indexOf("/members/online/" || "/members/new/" || "/members/updated/" || "/members/birthday/" || "/members/all/");
@@ -82,9 +80,6 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.sMemFsOne		= $('select[name="sex"], input[name="lowerage"], input[name="lowerage"] + span.qxh-formtext, input[name="upperage"], input[name="upperage"] + span.qxh-formtext');
 		HexaGon.sMemFsTwo		= $('input[name="faceimage"][type="hidden"], input#faceimage, label[for="faceimage"], input[name="verified"][type="hidden"], input#verified, label[for="verified"], input[name="active"][type="hidden"], input#active, label[for="active"]');
 		HexaGon.sMemFsThree		= $('input#savesettings, label[for="savesettings"], label + a[href="/goldmember.php?gore=9"]');
-		//HexaGon.sMemFsOneCleanUp	= $(HexaGon.sMembFormName+' fieldset');
-		//HexaGon.sMemFsTwoCleanUp = $(HexaGon.sMembFormName+' fieldset.qxh-set--specify');
-		//HexaGon.sMemFsThreeCleanUp = $(HexaGon.sMembFormName+' fieldset.qxh-set--savesettings');
 		HexaGon.sMemObsoleteClean = $( HexaGon.sMembFormName+' .floatleft,'+HexaGon.sMembFormName+' .input-spacing');
 		HexaGon.SateliteWrapper	= $('div[style="margin: 10px"]');
 		HexaGon.TitlePrefix		= 'Qruiser - ';
@@ -100,7 +95,6 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.GetMapTitle		= $('.column-content #error_texts + div.small + p + .insertmember + p + h2:first-of-type');
 		HexaGon.GetSentryTitle	= $('#column_right .container-header > a[href="/sentry.php"]');
 		HexaGon.GetOwnerNick	= $('.column-content #error_texts ~  p + .insertmember .link a > .longname');
-		//HexaGon.GetOwnerNick	= $('.column-content #error_texts + script ~  p + .insertmember .link > a > span.longname');
 		HexaGon.GetMovieSection	= $('.column-content h2:first-of-type > a');
 		HexaGon.GetAlbumTitle	= $('.column-content .insertmember + p + p + div + div + p + p > span:first-of-type');
 		HexaGon.GetMovieTitle	= $('#videoblock h2:first-of-type');
@@ -438,16 +432,6 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 	};
 	// NOTE Clean out unwanted stuff
 	HexaGon.ClassCleanHTML = function() {
-		// NOTE HACK to fix the warning icon not displaying
-		/*if(HexaGon.msgOld > -1) {
-			var delay = 3000;
-			setTimeout(function() {
-			HexaGon.WarningImg
-				.removeAttr('hidden')
-				.removeAttr('style')
-				.addClass('qxh-warning');
-			}, delay);
-		};*/
 		// NOTE Deletes the whitespace text only nodes
 		// https://stackoverflow.com/a/11633703/6820262
 		HexaGon.DeleteWhiteSpace = function() {
@@ -477,7 +461,6 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 
 				HexaGon.sMemLang.wrapAll( HexaGon.sMemLangWrap ),
 				sMemFsOne.wrapAll( HexaGon.sMemFsOneWrap ),
-				//HexaGon.sMemFsOne.wrapAll( HexaGon.sMemFsOneWrap ),
 				HexaGon.sMemFsTwo.wrapAll( HexaGon.sMemFsTwoWrap ),
 				HexaGon.sMemFsThree.wrapAll( HexaGon.sMemFsThreeWrap );
 				//console.log('Stitching fields and text together is done, so lets get the broom');
@@ -895,7 +878,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		//	console.info('#column_right.column-right is already in place');
 		//}
 		// NOTE Move .blog-teasers to #header
-		if ( hq_TeaserDiv.parent().not( hq_topContent ) ) hq_TeaserDiv.appendTo(hq_topContent),
+		if ( hq_TeaserDiv.parent().not( hq_topContent ) ) hq_TeaserDiv.appendTo(hq_topContent);
 		//	console.log('.blog-teasers was moved to '+hq_topContent);
 		// NOTE Remove inline styles
 		hq_inlineCleaning.removeAttr("style").addClass( hq_ClassClean );
@@ -917,7 +900,6 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		hq_MovieTitle.addClass( hq_ClassMovieTitle );
 		hq_TitleWrapper.addClass( hqClassTitleWrapper ).removeAttr('style');
 		hq_MakeGridContainer.addClass( hq_ClassGridContainer ),
-		//hq_MakeFlexContainer.addClass( hq_ClassFlexContainer );
 		hq_MakeList.addClass( hq_ClassMakeList ),
 		// https://stackoverflow.com/a/31116022/6820262 & http://jsfiddle.net/tusharj/rv2jc04c/
 		hq_MakeFlexContainer.addClass( hq_ClassFlexContainer ).each(function() {
@@ -953,7 +935,6 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var text = $(this).text().split(' ');
 			var first = text.shift();
 			return (text.length > 0 ? hq_FragmentSpan+'hidden '+hq_ClassFirstWord+'">'+first+'</span> ' : first) + text.join(" ");
-			//return (text.length > 0 ? '<span class="qxh-hidden qxh-firstWord">'+first+'</span> ' : first) + text.join(" ");
 		});
 		// NOTE Last word in title
 		//$('.sidebar-primary .widget-title').html(function(){
