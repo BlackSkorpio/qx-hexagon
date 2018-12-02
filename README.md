@@ -8,6 +8,8 @@
 | **T h e** | **B l e e d i n g** | **E d g e** |
 | [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/develop/style/qx-hexagon.user.css) | [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/develop/style/qx-hexagon-clean.user.css) | [![Install directly with Greasemokey](https://img.shields.io/badge/Install%20Directly%20With-Greasemonkey-%236e4e8e.svg)](https://github.com/BlackSkorpio/qx-hexagon/raw/develop/userscript/qx-heagon-companion.user.js) |
 
+#### You need a Userstyle Manager to use these, I recommend [stylus](https://github.com/openstyles/stylus) as it supports UserCSS, which allows for auto-updating of styles.
+
 ![QX HexaGon logo](svg-src/hexagon-logo.svg)
 
 ## QX HexaGon UserStyle
@@ -78,3 +80,23 @@ Fixes that goes hand in hand with the QX Hexagon userstyle.
 | QX HexaGon | QX HexaGon Clean | QX HexaGon Companion |
 | :--------: | :--------------: | :------------------: |
 | [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon.user.css) | [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon-clean.user.css) | [![Install directly with Greasemokey](https://img.shields.io/badge/Install%20Directly%20With-Greasemonkey-%236e4e8e.svg)](https://github.com/BlackSkorpio/qx-hexagon/raw/master/dist/userscript/qx-heagon-companion.user.js) |
+--------------------------------------------------------------------------------
+
+## FAQ
+* **Question:** Is the style available on userstyles.org?
+  * **Answer:** No, the style there is just a placeholder pointing here.
+* **Question:** What is a UserStyle manager?
+  * **Answer:** Simply said: it's a browser extension that will help you keep your custom styles in a neat order.
+* **Question:** Is there a special manager that you can recomend?
+  * **Answer:** I personaly prefer to use [Stylus](https://github.com/openstyles/stylus) that is available for [Firefox](https://addons.mozilla.org/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/clngdbkpkpeebahjckkjfobafhncgmne) and [Opera](https://addons.opera.com/extensions/details/stylus/).
+* **Question:** Do I need the [QX HexaGon Companion UserScript](#qx-hexagon-companion-userscript)?
+  * **Answer:** Yes the companion script is neccesary since it does a lot of the heavy lifting for the style.
+* **Question:** Is there any UserScript manager that you can recomend?
+  * **Answer:** Once again, this is from my personal point of view, but I prefer the [Greasemokey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) UserScript Manager.
+  If your using **Google Chrome**, **Microsoft Edge**, **Opera** or **Safari** I would recomend the [Tampermonkey extension](https://tampermonkey.net/).
+  **Tampermonkey for:**
+    * [Google Chrome](https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+    * [Microsoft Edge](https://www.microsoft.com/store/apps/9NBLGGH5162S)
+    * [Opera](https://addons.opera.com/en/extensions/details/tampermonkey-beta/)
+    * [Safari](https://safari-extensions.apple.com/details/?id=net.tampermonkey.safari-G3XV72R5TC)
+    * [Firefox](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
