@@ -1,9 +1,9 @@
-/* clean-css, minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: ../dist/css/$1.$2 */
+/*minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: ../dist/css/$1.$2 */
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*! ==UserStyle==
 @name			QX Hexagon
 @namespace		github.com/BlackSkorpio/qx-hexagon
-@version		1.0.0
+@version		1.0.1
 @description	A modernized theme for qruiser.com
 @author			Bjarne Varöystrand (https://github.com/BlackSkorpio/qx-hexagon)
 @homepageURL	https://varoystrand.se
@@ -1466,6 +1466,13 @@
 	}
 	[id^="column_"]:not([id$="center"]) .qxh-sprite-icon {
 		fill-opacity: 0.5;
+	}
+	.icon-online-2 svg.qxh-icon-online-active {
+		fill-opacity: 0.4;
+		/*filter: invert(40%);*/
+	}
+	.icon-online-4 .qxh-icon-online-que {
+		animation: qxh_globe 20s infinite linear;
 	}
 	.qxh-sprite-icon.qxh-icon-dropup,
 	.qxh-sprite-icon.qxh-icon-dropdown,
