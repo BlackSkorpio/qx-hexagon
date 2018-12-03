@@ -12,6 +12,8 @@
 @license		MIT
 @preprocessor	default
 @var	range	ui-wrapper			"Page Width"		[65.625, 60, 85, 0.001, "rem"]
+@var	range	ui-aside			"Left Column Width"	[12.5, 10, 20, 0.1, "rem"]
+@var	range	ui-aside-r			"Right Column Width" [18.75, 10, 20, 0.01, "rem"]
 @var	color	ui-clr-black		"Background Color"	rgb(18, 21, 22)
 @var	color	ui-clr-highlight	"Header Color"		rgb(170, 139, 89)
 @var	color	ui-clr-gray1		"Text Color"		rgb(63, 63, 63)
@@ -37,7 +39,7 @@
 	--ui-clr-t: transparent;
 	/*--ui-wrapper: 65.625rem;
 	--ui-aside: 12.5rem;
-	--ui-aside-r: 18.75rem;
+	--ui-aside-r: 18.75rem;*/
 	--ui-size-1: 0.0625rem;
 	--ui-size-2: 0.125em;
 	--ui-size-3: 0.1875em;
