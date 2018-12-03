@@ -11,19 +11,28 @@
 @updateURL		https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon.user.css
 @license		MIT
 @preprocessor	default
+@var	color	ui-clr-black		"Background Color"	rgb(18, 21, 22)
+@var	color	ui-clr-highlight	"Header Color"		rgb(170, 139, 89)
+@var	color	ui-clr-gray1		"Text Color"		rgb(63, 63, 63)
+@var	color	ui-clr-white1		"Aside Color"		rgb(242, 242, 242)
+@var	color	ui-clr-disabled		"Color Disabled"	rgb(188, 194, 191)
+@var	color	ui-clr-white2		"Color White 2"		rgb(230, 230, 230)
+@var	color	ui-clr-gray2		"Color Gray 2"		rgba(159, 159, 159, 0.92)
+@var	color	ui-clr-red			"Color Red"			rgb(188, 21, 42)
+@var	color	ui-clr-alert		"Color Alert"		rgba(188, 21, 42, 0.64)
 ==/UserStyle== */
 
 /*** Colors, sizes & such ***/
 :root {
-	--ui-clr-disabled: rgb(188, 194, 191);
+	/*--ui-clr-disabled: rgb(188, 194, 191);
 	--ui-clr-highlight: rgb(170, 139, 89);
 	--ui-clr-white1: rgb(242, 242, 242);
 	--ui-clr-white2: rgb(230, 230, 230);
 	--ui-clr-black: rgb(18, 21, 22);
 	--ui-clr-gray1: rgb(63, 63, 63);
 	--ui-clr-gray2: rgba(159, 159, 159, 0.92);
-	--ui-clr-red: rgb(188, 21, 42); /* QX red */ /*rgb(178, 27, 27);*/
-	--ui-clr-alert: rgba(188, 21, 42, 0.64);
+	--ui-clr-red: rgb(188, 21, 42);*/ /* QX red */ /*rgb(178, 27, 27);*/
+	/*--ui-clr-alert: rgba(188, 21, 42, 0.64);*/
 	--ui-clr-t: transparent;
 	--ui-wrapper: 65.625rem;
 	--ui-aside: 12.5rem;
