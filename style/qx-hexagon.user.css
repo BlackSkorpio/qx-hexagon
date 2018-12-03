@@ -11,6 +11,7 @@
 @updateURL		https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon.user.css
 @license		MIT
 @preprocessor	default
+@var	range	ui-wrapper			"Page Width"		[65.625, 60, 85, 0.001, "rem"]
 @var	color	ui-clr-black		"Background Color"	rgb(18, 21, 22)
 @var	color	ui-clr-highlight	"Header Color"		rgb(170, 139, 89)
 @var	color	ui-clr-gray1		"Text Color"		rgb(63, 63, 63)
@@ -34,7 +35,7 @@
 	--ui-clr-red: rgb(188, 21, 42);*/ /* QX red */ /*rgb(178, 27, 27);*/
 	/*--ui-clr-alert: rgba(188, 21, 42, 0.64);*/
 	--ui-clr-t: transparent;
-	--ui-wrapper: 65.625rem;
+	/*--ui-wrapper: 65.625rem;
 	--ui-aside: 12.5rem;
 	--ui-aside-r: 18.75rem;
 	--ui-size-1: 0.0625rem;
