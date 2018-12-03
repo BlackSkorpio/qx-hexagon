@@ -11,9 +11,9 @@
 @updateURL		https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon.user.css
 @license		MIT
 @preprocessor	default
-@var	range	ui-wrapper			"Page Width"		[65.625, 60, 85, 0.001, "rem"]
-@var	range	ui-aside			"Left Column Width"	[12.5, 10, 20, 0.1, "rem"]
-@var	range	ui-aside-r			"Right Column Width" [18.75, 10, 20, 0.01, "rem"]
+@var	range	ui-wrapper-width	"Page Width"		[65.625, 60, 85, 0.001, "rem"]
+@var	range	ui-aside-l-width	"Left Column Width"	[12.5, 10, 20, 0.1, "rem"]
+@var	range	ui-aside-r-width	"Right Column Width" [18.75, 10, 20, 0.01, "rem"]
 @var	color	ui-clr-black		"Background Color"	rgb(18, 21, 22)
 @var	color	ui-clr-highlight	"Header Color"		rgb(170, 139, 89)
 @var	color	ui-clr-gray1		"Text Color"		rgb(63, 63, 63)
@@ -38,9 +38,9 @@
 	--ui-clr-red: rgb(188, 21, 42);*/ /* QX red */ /*rgb(178, 27, 27);*/
 	/*--ui-clr-alert: rgba(188, 21, 42, 0.64);*/
 	--ui-clr-t: transparent;
-	/*--ui-wrapper: 65.625rem;
-	--ui-aside: 12.5rem;
-	--ui-aside-r: 18.75rem;*/
+	/*--ui-wrapper-width: 65.625rem;
+	--ui-aside-l-width: 12.5rem;
+	--ui-aside-r-width: 18.75rem;*/
 	--ui-size-1: 0.0625rem;
 	--ui-size-2: 0.125em;
 	--ui-size-3: 0.1875em;
@@ -860,14 +860,14 @@
 	/*** Grid Items ***/
 	.page-container #whole {
 		grid-template-rows: auto;
-		grid-template-columns: [left] var(--ui-aside) [main] 1fr;
+		grid-template-columns: [left] var(--ui-aside-l-width) [main] 1fr;
 		grid-template-areas:
 			"top  top"
 			"menu menu"
 			"left subnav"
 			"left content";
 		padding: 0;
-		width: var(--ui-wrapper);
+		width: var(--ui-wrapper-width);
 		margin: 0 auto;
 		padding-bottom: var(--padding-xl);
 	}
@@ -965,13 +965,13 @@
 	/* Left Column */
 	#column_left.column-left {
 		grid-area: left;
-		width: var(--ui-aside);
+		width: var(--ui-aside-l-width);
 	}
 	/* Main Content */
 	#whole .main-content {
 		grid-area: content;
 		grid-template-rows: auto;
-		grid-template-columns: [center] 1fr [right] var(--ui-aside-r);
+		grid-template-columns: [center] 1fr [right] var(--ui-aside-r-width);
 		grid-template-areas: "center right";
 		width: auto;
 	}
@@ -985,7 +985,7 @@
 	}
 	#column_right.column-right {
 		grid-area: right;
-		width: var(--ui-aside-r);
+		width: var(--ui-aside-r-width);
 		margin: 0;
 	}
 	/* insertmember */
@@ -1040,7 +1040,7 @@
 	#subnavbar {
 		grid-area: subnav;
 		grid-template-rows: auto;
-		grid-template-columns: [inlinegrid] 1fr [rightcol] calc(var(--ui-aside-r) - var(--ui-size-1));
+		grid-template-columns: [inlinegrid] 1fr [rightcol] calc(var(--ui-aside-r-width) - var(--ui-size-1));
 		grid-template-areas: "inlinegrid .";
 		background-color: var(--bkgrd-b1);
 		border-right: var(--brd-type-1) var(--brd-clr-h);
@@ -1742,7 +1742,7 @@
 	.list .insertmember {
 		font-size: inherit;
 		line-height: normal;
-		max-width: calc(var(--ui-aside) - var(--ui-size-l));
+		max-width: calc(var(--ui-aside-l-width) - var(--ui-size-l));
 	}
 
 	.insertmember .icon {
@@ -1757,16 +1757,16 @@
 		flex: 1 1 auto;
 	}
 	#column_left .insertmember .link a {
-		max-width: calc(var(--ui-aside) - 4rem);
+		max-width: calc(var(--ui-aside-l-width) - 4rem);
 	}
 	#column_right .insertmember .link a {
-		max-width: calc(var(--ui-aside-r) / 2 - 5rem);
+		max-width: calc(var(--ui-aside-r-width) / 2 - 5rem);
 	}
 	#column_center .insertmember .link a,
 	#column_center .list .insertmember .link a,
 	#column_center .qxh-list .insertmember .link a,
 	#column_center .gallery .insertmember .link a {
-		max-width: var(--ui-aside);
+		max-width: var(--ui-aside-l-width);
 	}
 	.insertmember .link i,
 	.insertmember .link span {
@@ -1826,7 +1826,7 @@
 	/*** Top ***/
 	#header {
 		margin: var(--margin-s) auto var(--margin-l);
-		width: var(--ui-wrapper) !important;
+		width: var(--ui-wrapper-width) !important;
 		height: auto;
 		color: var(--txt-aside-clr);
 		background-color: var(--bkgrd-b1);
@@ -2434,7 +2434,7 @@
 	}
 	.homepage [data-user-input],
 	.column-content .qxh-flex-item div[style*="background-color:"] {
-		max-width: calc(var(--ui-wrapper) - (var(--ui-aside) + var(--ui-aside-r)));
+		max-width: calc(var(--ui-wrapper-width) - (var(--ui-aside-l-width) + var(--ui-aside-r-width)));
 		overflow: hidden;
 	}
 	.homepage .block > [data-user-input] {
@@ -2898,7 +2898,7 @@
 	.qxh-source-visitors .list .insertmember,
 	.qxh-source-visited .list .insertmember .description,
 	.qxh-source-visitors .list .insertmember .description {
-		max-width: calc(var(--ui-aside) + var(--ui-icon-l));
+		max-width: calc(var(--ui-aside-l-width) + var(--ui-icon-l));
 	}
 
 	.qxh-template-pics-homepage .images-homepage-image,
