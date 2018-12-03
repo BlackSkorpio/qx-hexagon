@@ -1,9 +1,9 @@
-/* clean-css, minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: ../dist/css/$1.$2 */
+/*minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: ../dist/css/$1.$2 */
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*! ==UserStyle==
 @name			QX Hexagon
 @namespace		github.com/BlackSkorpio/qx-hexagon
-@version		1.0.0
+@version		1.0.1
 @description	A modernized theme for qruiser.com
 @author			Bjarne Varöystrand (https://github.com/BlackSkorpio/qx-hexagon)
 @homepageURL	https://varoystrand.se
@@ -421,7 +421,7 @@
 		        transition: color,height,width,font-size var(--ui-time-m) linear var(--ui-time-m);
 	}
 	body.hexagon:not([onload="timer()"])::before {
-		content: "QX Hexagon v3.2.0";
+		content: "QX Hexagon v1.0.1";
 		height: auto;
 		width: auto;
 		min-width: 4.125rem;
@@ -442,19 +442,15 @@
 		right: 10px;
 		margin-top: -24px;
 		border-radius: var(--brd-rad-s);
-		/*background: no-repeat scroll 50% 50% rgba(18, 21, 22, 0.7);*/
 		transition-duration: 0.2s;
 		cursor: pointer;
 		z-index: 1;
 	}
 	#qxh_up {
 		bottom: 53%;
-		/*background-image: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAYAAACAl21KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB+SURBVDhPY1i1atV/amAGahgCMoNhaIGlS5cKAp19BoRBbLJcj2QILDJINwzoAmMgfoclIkBixkS5DI8hMJcRNgxoSBoOl6CnNZBhaVhdBjWE1MSJahjQkA4KEmYH2GUrV66cSYEhYB+AzKBtFiHkQqKiH6Ro1CDCQTWgYQQAs81DU0G/83sAAAAASUVORK5CYII=);*/
 	}
 	#qxh_down {
 		top: 53%;
-		/*background-image: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAYAAACAl21KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACPSURBVDhPY2DAAlatWvUfH8amB6vYqEGEg2pgw4iQ7cTKM6xcuXImsYpxqQOZAQ4woIIOCgzrQAl1oEFpZBiWhitFgwx7R4SBIDXYDYGZDFRgTMAwkCHGhBMRJMxwGUa8ITCbli5dKgg08AySN8+AxIhyCboiJMPIN4Qsm6miiYioxltawvSDYogohYTUAQC80UNTOht/YwAAAABJRU5ErkJggg==);*/
-		/*transform: rotate(180deg);*/
 	}
 }
 /*** Let's start cooking ***/
@@ -606,10 +602,7 @@
 	.clubxxx2hidden > div + svg.qxh-icon-noclubicon,
 	.clubxxx3hidden > div + svg.qxh-icon-noclubicon,
 	.clubxxx4hidden > div + svg.qxh-icon-noclubicon,
-	/*form div[style*="height: 16px; width: 16px"] > a,*/
-	/*.movies-listing .qxh-list .video-thumb-holder.qxh-clean,*/
 	.video-thumb-holder img[style*="https://video.qruiser.com"],
-	/*.movies-listing > .qxh-list .video-thumb-holder .video-thumb-img,*/
 	.movies-listing .qxh-flex-container .video-thumb-holder.qxh-clean,
 	.movies-listing > .qxh-flex-container .video-thumb-holder .video-thumb-img {
 		Width: 100% !important;
@@ -959,7 +952,7 @@
 	/* Left Column */
 	#column_left.column-left {
 		grid-area: left;
-		width: auto;
+		width: var(--ui-aside);
 	}
 	/* Main Content */
 	#whole .main-content {
@@ -979,6 +972,7 @@
 	}
 	#column_right.column-right {
 		grid-area: right;
+		width: var(--ui-aside-r);
 		margin: 0;
 	}
 	/* insertmember */
@@ -1174,7 +1168,6 @@
 	}
 	#homepageinfo .infoblock,
 	/* Hexagon Videoplayer */
-	/*.movies-listing .qxh-list > .qxh-flex-item,*/
 	#scroller .qxh-flex-container > .qxh-flex-item,
 	.movies-listing .qxh-flex-container > .qxh-flex-item,
 	.homepageblock > .block > a[href^="javascript:openPhotoPopup"].qxh-flex-item,
@@ -1467,6 +1460,13 @@
 	[id^="column_"]:not([id$="center"]) .qxh-sprite-icon {
 		fill-opacity: 0.5;
 	}
+	.icon-online-2 svg.qxh-icon-online-active {
+		fill-opacity: 0.4;
+		/*filter: invert(40%);*/
+	}
+	.icon-online-4 .qxh-icon-online-que {
+		animation: qxh_globe 20s infinite linear;
+	}
 	.qxh-sprite-icon.qxh-icon-dropup,
 	.qxh-sprite-icon.qxh-icon-dropdown,
 	.insertmember svg.qxh-icon-ignored,
@@ -1590,6 +1590,7 @@
 	/*-------------*/
 
 	/*** Filters ***/
+	/* FIXME QUESTION Obsolete?
 	body.popup .icons li,
 	body.popup .simple li,
 	body.popup #largeicons li {
@@ -1601,7 +1602,7 @@
 	body.popup #largeicons li:hover {
 		-webkit-filter: var(--filter-inv-2);
 		        filter: var(--filter-inv-2);
-	}
+	}*/
 	/* Gold member icon */
 	.qxh-sprite-icon.qxh-icon-flower {
 		-webkit-filter: var(--filter-flower);
@@ -1766,7 +1767,6 @@
 	}
 	.insertmember .mood,
 	.insertmember .link a {
-		/*color: var(--txt-high-clr);*/
 		color: currentColor;
 	}
 	.insertmember .mood {
@@ -2173,7 +2173,6 @@
 		margin: var(--margin-m) 0;
 		text-transform: uppercase;
 		text-overflow: ellipsis;
-		/*white-space: normal;*/
 		overflow: initial;
 	}
 	/* NOTE TEST Evaluate */
@@ -2359,7 +2358,6 @@
 		display: flow-root;
 		font-family: "Roboto Slab", serif;
 		text-transform: uppercase;
-		/*color: var(--txt-high-clr);*/
 		font-weight: 700;
 		line-height: var(--lh-n);
 		height: var(--lh-1);
@@ -2367,7 +2365,7 @@
 		white-space: normal;
 		margin: var(--margin-l) var(--margin-z);
 		vertical-align: initial;
-		border-bottom: var(--brd-type-1)/* var(--brd-clr-h)*/;
+		border-bottom: var(--brd-type-1);
 	}
 	.line,
 	.divider,
@@ -2390,8 +2388,6 @@
 		display: inline;
 		padding-right: var(--padding-s);
 		line-height: var(--lh-3);
-		/*color: var(--txt-high-clr);
-		background-color: inherit;*/
 	}
 	.line a,
 	.divider a,
@@ -2621,13 +2617,11 @@
 	}
 
 	/* Movies New */
-	/*.movies-listing .qxh-list > .qxh-flex-item,*/
 	.movies-listing .qxh-flex-container > .qxh-flex-item {
 		padding: 0;
 		margin: 0 auto;
 		max-width: 33%;
 	}
-	/*.movies-listing .qxh-list .video-thumb-holder.qxh-clean,*/
 	.movies-listing .qxh-flex-container .video-thumb-holder.qxh-clean {
 		height: auto;
 	}
@@ -2635,7 +2629,6 @@
 	.video-thumb-holder a.qxh-clean {
 		line-height: 0;
 	}
-	/*.movies-listing .qxh-list .video-thumb-holder + div.qxh-clean,*/
 	.movies-listing .qxh-flex-container .video-thumb-holder + div.qxh-clean,
 	.movies-listing .qxh-flex-item > .qxh-clean > .qxh-clean > div[class^="hq_heartIcon"].qxh-clean {
 		overflow: hidden;
@@ -2646,7 +2639,6 @@
 		text-align: center;
 	}
 	.video-thumb-holder img[style*="https://video.qruiser.com"],
-	/*.movies-listing > .qxh-list .video-thumb-holder .video-thumb-img,*/
 	.movies-listing > .qxh-flex-container .video-thumb-holder .video-thumb-img {
 		border-radius: var(--brd-rad-top);
 		background-position: center !important;
@@ -2661,7 +2653,6 @@
 		margin: auto;
 	}
 	.video-thumb,
-	/*.movies-listing .qxh-list .video-thumb,*/
 	.movies-listing .qxh-flex-container .video-thumb {
 		background-color: var(--bkgrd-h1);
 		border-radius: var(--brd-rad-btm);
@@ -2732,7 +2723,6 @@
 	#verifiedinfo .qxh-flex-item,
 	.homepage .qxh-list > .qxh-flex-item,
 	.scribbleboard-holder > .qxh-flex-item,
-	/*.movies-listing .qxh-list > .qxh-flex-item,*/
 	.column-content > .qxh-list > .qxh-flex-item,
 	.movies-listing .qxh-flex-container > .qxh-flex-item,
 	.column-content > .qxh-flex-container > .qxh-flex-item,
@@ -2752,7 +2742,6 @@
 	#verifiedinfo .qxh-flex-item:hover,
 	.homepage .qxh-list > .qxh-flex-item:hover,
 	.scribbleboard-holder > .qxh-flex-item:hover,
-	/*.movies-listing .qxh-list > .qxh-flex-item:hover,*/
 	.column-content > .qxh-list > .qxh-flex-item:hover,
 	.movies-listing .qxh-flex-container > .qxh-flex-item:hover,
 	.column-content > .qxh-flex-container > .qxh-flex-item:hover,
@@ -2763,7 +2752,6 @@
 	.column-content > [class^="clubxxx"] > .qxh-flex-container > .qxh-flex-item:hover {
 		border-radius: var(--brd-rad-s);
 		box-shadow: 0 0 var(--ui-svg-l) currentColor;
-		/*box-shadow: inset 0 0 0 99999px rgba(255,255,255,0.2);*/
 		transform: translateY(0.1875em);
 		z-index: 1;
 	}
@@ -3677,12 +3665,5 @@
 		font-size: 0.8rem;
 		margin-right: var(--margin-m);
 	}
-	/*#satellite > a[href='javascript:openloc("", 0)'] img {
-		display: block;
-		margin: var(--margin-c);
-	}*/
-	/*#satellite #moodstatus > div > div {
-		font-size: var(--font-2);
-	}*/
 }
 }
