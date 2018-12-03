@@ -421,7 +421,7 @@
 		        transition: color,height,width,font-size var(--ui-time-m) linear var(--ui-time-m);
 	}
 	body.hexagon:not([onload="timer()"])::before {
-		content: "QX Hexagon v3.2.0";
+		content: "QX Hexagon v1.0.1";
 		height: auto;
 		width: auto;
 		min-width: 4.125rem;
