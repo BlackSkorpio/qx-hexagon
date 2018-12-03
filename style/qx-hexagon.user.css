@@ -27,6 +27,7 @@
 
 /*** Colors, sizes & such ***/
 :root {
+	--ui-version: "QX Hexagon v1.1.0";
 	/*--ui-clr-disabled: rgb(188, 194, 191);
 	--ui-clr-highlight: rgb(170, 139, 89);
 	--ui-clr-white1: rgb(242, 242, 242);
@@ -433,7 +434,7 @@
 		        transition: color,height,width,font-size var(--ui-time-m) linear var(--ui-time-m);
 	}
 	body.hexagon:not([onload="timer()"])::before {
-		content: "QX Hexagon v1.0.1";
+		content: var(--ui-version);
 		height: auto;
 		width: auto;
 		min-width: 4.125rem;
