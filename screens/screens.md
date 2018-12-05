@@ -21,6 +21,7 @@
 ___________________________________________________________
 ## Some highlights
 ![QX HexaGon closeup](close-ups.png)
+![QX HexaGon Fixed Elements](aside-sticky-elements.png)
 
 **[:house: Back to the docs](../README.md#qx-hexagon)** | **[:point_up: Up](#shortcuts)**
 
