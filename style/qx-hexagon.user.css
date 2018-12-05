@@ -1076,7 +1076,7 @@
 	}
 	/** Member presentation **/
 	/* Starsign */
-	@supports  ((-webkit-shape-outside: circle()) or (shape-outside: circle())) {
+	@supports ((-webkit-shape-outside: circle()) or (shape-outside: circle())) {
 		.qxh-starsign,
 		.qxh-starsign img[src*="/starsigns/"] {
 			width: 3.75em !important;
@@ -1117,7 +1117,8 @@
 		border: var(--brd-type-2);
 	}
 	.qxh-member-intro + .homepageblock + .block {
-	  margin-top: 1em;
+		margin-top: 1em;
+	}
 	/* Visitors Actions */
 	.qxh-action.qxh-action--sendmsg {
 		margin-bottom: var(--margin-m);
@@ -1564,7 +1565,7 @@
 	.line:hover .header .icons + span {
 		color: var(--txt-high-clr);
 	}
-	#column_center  svg.qxh-icon-noclubicon {
+	#column_center svg.qxh-icon-noclubicon {
 		float: left;
 		margin-right: var(--margin-s);
 	}
@@ -3563,7 +3564,7 @@
 	}
 }
 }
-@-moz-document url-prefix("https://beta.qruiser.com/satellite.php"), url-prefix("https://www.qruiser.com/satellite.php")  {
+@-moz-document url-prefix("https://beta.qruiser.com/satellite.php"), url-prefix("https://www.qruiser.com/satellite.php") {
 /* SATELITE */
 @supports (display: grid) {
 	body:not([class*="signed-in"]) .qxh-satellite svg.qxh-sprite-icon.qxh-icon-logo {
