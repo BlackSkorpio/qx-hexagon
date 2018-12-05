@@ -1009,6 +1009,10 @@
 			"icons"
 			"mood";
 	}
+	.container.logged-in .insertmember {
+		min-height: 5.625em;
+		align-content: start;
+	}
 	.insertmember .membericon,
 	.insertmember > [class^="xxx"],
 	.insertmember .emptymembericon,
@@ -1264,6 +1268,10 @@
 	}
 	.container.logged-in.qxh-widget--sticky {
 		top: 2em;
+		z-index: 2;
+	}
+	.container.clubs.qxh-widget--sticky {
+		top: 20.1em;
 	}
 	/* NOTE TEST Evaluate */
 	.container--personal.qxh-widget--sticky,
