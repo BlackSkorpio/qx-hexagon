@@ -1118,6 +1118,9 @@
 	}
 	.qxh-member-intro + .homepageblock + .block {
 	  margin-top: 1em;
+	/* Visitors Actions */
+	.qxh-action.qxh-action--sendmsg {
+		margin-bottom: var(--margin-m);
 	}
 	/*-------------*/
 	/* Img gallery */
@@ -1549,6 +1552,7 @@
 	.block-icons i:hover svg.qxh-sprite-icon,
 	#largeicons li:hover svg.qxh-sprite-icon,
 	.homebuttons li:hover svg.qxh-sprite-icon,
+	.qxh-actions .qxh-action:hover svg.qxh-sprite-icon,
 	.line:hover .qxh-sprite-icon.qxh-icon-clubs--header {
 		color: var(--txt-high-clr);
 		transform: scale(1.2);
