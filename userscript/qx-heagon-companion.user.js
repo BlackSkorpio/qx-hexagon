@@ -98,6 +98,8 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.GetMovieSection	= $('.column-content h2:first-of-type > a');
 		HexaGon.GetAlbumTitle	= $('.column-content .insertmember + p + p + div + div + p + p > span:first-of-type');
 		HexaGon.GetMovieTitle	= $('#videoblock h2:first-of-type');
+		HexaGon.GetNotiBoardMainTitlen = $('#error_texts + br + h3');
+		HexaGon.GetNotiBoardSubTitle = $('#error_texts + br + h3 + h2');
 		// NOTE QX URLs */
 		HexaGon.bodyURL			= HexaGon.pathName.match(/^\/?(\w+)\b/);
 		HexaGon.nudgeSent		= HexaGon.hrefLoc.indexOf('/buffs.php?type=sent');
@@ -177,6 +179,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.AskSentryURL	= HexaGon.hrefLoc.indexOf('/sentry.php');
 		HexaGon.ShowMovieURL	= HexaGon.hrefLoc.indexOf('&movieid=');
 		HexaGon.SupportURL		= HexaGon.hrefLoc.indexOf('/support.php');
+		HexaGon.NoticeBoardURL	= HexaGon.hrefLoc.indexOf('/noticeboard.php');
 		HexaGon.Thread_Id		= HexaGon.hrefLoc.split("&view=");
 		HexaGon.Categori_Id		= HexaGon.hrefLoc.split("?category=");
 		HexaGon.Club_Id			= HexaGon.hrefLoc.split("?club=");
@@ -294,6 +297,12 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		if ( typeof HexaGon.GetMovieTitle !== 'undefined' || HexaGon.GetMovieTitle !== null ) {
 			var MovieTitle = HexaGon.GetMovieTitle.text();
 		}
+		if ( typeof HexaGon.GetNotiBoardMainTitlen !== 'undefined' || HexaGon.GetNotiBoardMainTitlen !== null ) {
+			var NoticeBoardMainTitlen = HexaGon.GetNotiBoardMainTitlen.text();
+		}
+		if ( typeof HexaGon.GetNotiBoardSubTitle !== 'undefined' || HexaGon.GetNotiBoardSubTitle !== null ) {
+			var NoticeBoardSubTitle = '/ ' + HexaGon.GetNotiBoardSubTitle.text();
+		}
 
 		if ( ( HexaGon.ClubsURL > -1 ) || ( HexaGon.MoviesURL > -1 ) || ( HexaGon.TextsURL > -1 ) ) {
 			var MembersTitle = HexaGon.TitlePrefix + SubNavTitle + ' ' + TemplateName + HexaGon.TitleSuffix;
@@ -372,6 +381,11 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		if ( HexaGon.ShowMemclubsURL > -1 ) {
 			var ShowMemberClubsTitle = HexaGon.TitlePrefix + OwnerNick + ': ' + UpdatedSection + HexaGon.TitleSuffix;
 			document.title = ShowMemberClubsTitle;
+		}
+		// NOTE Notice Board
+		if ( HexaGon.NoticeBoardURL > -1 ) {
+			var NoticeBoardTitle = HexaGon.TitlePrefix + NoticeBoardMainTitlen + NoticeBoardSubTitle + HexaGon.TitleSuffix;
+			document.title = NoticeBoardTitle;
 		}
 	};
 	// NOTE SetUp the body with classes and ID's
