@@ -559,6 +559,11 @@ onReady(function() {
 		if(HexaGon.satellite > -1) window.resizeTo('340', '500');
 	};
 	// NOTE This is stuff that we realy need to make sure they have been executed!
+	function injectStyle() {
+		var hq_Body		= $(document.body);
+		var hq_HexStyle	= '';
+		hq_Body.append( hq_HexStyle );
+	};
 	function addSprite() {
 		// NOTE pngBeGone
 		var hq_Body				= $(document.body);
