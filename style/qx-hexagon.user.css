@@ -1796,8 +1796,13 @@
 		display: none;
 	}
 	.insertmember .mood,
-	.insertmember .link a {
+	.insertmember .link a,
+	.hexagon .gallery-scroll .insertmember .link a/* FIX for #28*/ {
 		color: currentColor;
+	}
+	/* FIX for #28*/
+	.hexagon .gallery-scroll .insertmember .link a:visited {
+		color: inherit;
 	}
 	.insertmember .mood {
 		padding: 0 var(--padding-s);
@@ -1813,6 +1818,16 @@
 	.list .memberinfo,
 	.gallery .memberinfo {
 		display: flow-root;
+	}
+	/* FIX for #28*/
+	.hexagon .gallery-scroll .insertmember .description,
+	.hexagon .gallery-scroll .insertmember .icon-flag,
+	.hexagon .gallery-scroll .insertmember .icons,
+	.hexagon .gallery-scroll .insertmember .mood {
+		display: initial;
+	}
+	.hexagon .gallery-scroll .insertmember .link {
+		background: inherit;
 	}
 	/*-------------*/
 	.smalltext {
