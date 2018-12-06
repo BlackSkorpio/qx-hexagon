@@ -1850,8 +1850,8 @@
 		display: flow-root;
 	}
 	/* Main Wrapper */
-	.hexagon page-container {
-		overflow: auto;
+	.hexagon .page-container {
+		/*overflow: auto;*/
 		margin-top: var(--margin-l);
 		padding: 0;
 	}
@@ -2905,7 +2905,7 @@
 		display: inline-block;
 		font-style: italic;
 	}
-	.qxh-template-clubs-scribble .qxh-list > qxh-flex--item {
+	.qxh-template-clubs-scribble .qxh-list > .qxh-flex--item {
 		flex: 1 1 50%;
 	}
 
