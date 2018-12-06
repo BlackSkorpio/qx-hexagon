@@ -2262,6 +2262,7 @@
 		text-overflow: ellipsis;
 	}
 	/* Counters */
+	#column_left .notification-bubble,
 	#column_left .counter,
 	#column_left [href^="/show"] + b,
 	#column_left [href^="/your"] + b,
@@ -2274,6 +2275,17 @@
 		-webkit-transition: var(--ui-time-s);
 		        transition: var(--ui-time-s);
 	}
+	/* Unread in msg archive */
+	#column_left .notification-bubble {
+		background: inherit;
+	}
+	#column_left .notification-bubble:before {
+		content: "(";
+	}
+	#column_left .notification-bubble:after {
+		content: ")";
+	}
+	#column_left a:hover + .counter,
 	.container--favourites .notextdecoration:hover > .qxh-text,
 	#column_left .container-inner > div a:hover + b,
 	#column_left .container-inner > div a:hover + b > .qxh-clean {
