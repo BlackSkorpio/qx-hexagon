@@ -1212,10 +1212,9 @@ onReady(function() {
 			if ( HexaGon.ShowclubsURL > -1 ) {
 				var hq_LinkClearAll = $('.column-content #clubinfo_text + p + .small + .list.qxh-flex-container + p + .qxh-button > a[href="/showclubs.php?action=zeroall"]:nth-child(2)');
 			};
-			/* TODO Fix the urls for this button */
-			/*if {
-				var hq_LinkClearAll = $('#column_center #zeroall a:first-of-type')
-			};*/
+			if ( HexaGon.FavUpdatedURL > -1 ) {
+				var hq_LinkClearAll = $('#column_center #zeroall > a:last-of-type');
+			};
 			if ( HexaGon.msgOld > -1 ) {
 				var hq_LinkClearAll = $('.qxh-button a[href*="markasread"]');
 			};
