@@ -529,7 +529,7 @@
 	input[type="submit"],
 	button[type="submit"],
 	#column_center #zeroall,
-	#column_left.column-left,
+	#column_left,
 	#column_right.column-right,
 	body[onload="timer()"] > p > a,
 	.insertmember + br[clear="all"] + b,
@@ -585,7 +585,7 @@
 	.relative .block-icons,
 	.standardbanner .message h3,
 	#column_center.column-center .line a,
-	#column_left.column-left .container-header,
+	#column_left .container-header,
 	#column_right.column-right .container-header,
 	.gallery .insertmember .emptymemberlargeicon {
 		font-size: var(--font-0);
@@ -837,6 +837,7 @@
 		grid-gap: 0.3em;
 		margin-bottom: var(--margin-xl);
 	}
+	.guest-access .gallery .insertmember,
 	.homepageblock .gallery.gallery-scroll .insertmember {
 		grid-template-columns: auto;
 		grid-template-areas: "avatar" "link" "description" "icons" "mood";
@@ -963,7 +964,7 @@
 		transform: translate3d(var(--ui-size-s), 0, 0);
 	}
 	/* Left Column */
-	#column_left.column-left {
+	#column_left {
 		grid-area: left;
 		width: var(--ui-aside-l-width);
 	}
@@ -1154,7 +1155,8 @@
 	}
 	.qxh-list,
 	.qxh-subnav-grid,
-	.qxh-flex-container {
+	.qxh-flex-container,
+	.guest-access .start-content {
 		display: flex;
 		flex-flow: row wrap;
 		width: 100%;
@@ -1177,6 +1179,7 @@
 	/*-------------*/
 
 	/* flex-basis: 33% */
+	.guest-access .start-content > .qxh-flex-item,
 	.gallery:not(.gallery-scroll) > .qxh-flex-item,
 	.homepageblock .qxh-list > .qxh-flex-item:not(:only-child),
 	.qxh-template-showmovies_digged-digged .column-content .qxh-flex-item,
@@ -1213,7 +1216,8 @@
 	#largeicons li {
 		flex: 0 0 auto;
 	}
-	#subnavbar > .subnavbar-item {
+	#subnavbar > .subnavbar-item,
+	.guest-access .qxh-flex-item > * {
 		flex: 1 1 auto;
 		text-align: center;
 	}
@@ -1735,9 +1739,9 @@
 	#qmenu,
 	.container,
 	.container-header,
-	#column_left.column-left,
+	#column_left,
 	#column_right.column-right,
-	#column_left.column-left .container,
+	#column_left .container,
 	#column_right.column-right .container {
 		background-color: var(--bkgrd-b1);
 		color: var(--txt-aside-clr);
@@ -2171,8 +2175,8 @@
 	/*** Common Left & Right ***/
 	.container-column h4,
 	.rightcolumn-scribble-content b,
-	#column_left.column-left .insertmember .link,
-	#column_left.column-left .insertmember .mood,
+	#column_left .insertmember .link,
+	#column_left .insertmember .mood,
 	#column_right.column-right .insertmember .link,
 	#column_right.column-right .insertmember .mood {
 		color: var(--txt-high-clr);
@@ -2184,11 +2188,11 @@
 		text-overflow: ellipsis;
 	}
 	/*-------------*/
-	#column_left.column-left,
+	#column_left,
 	#column_right.column-right {
 		border: var(--brd-type-1) var(--brd-clr-h);
 	}
-	#column_left.column-left .container-header,
+	#column_left .container-header,
 	#column_right.column-right .container-header {
 		color: var(--txt-high-clr);
 		font-size: inherit;
@@ -2219,7 +2223,7 @@
 		pointer-events: none;
 		border-bottom: var(--ui-size-s) solid;
 	}
-	#column_left.column-left .container-header::after {
+	#column_left .container-header::after {
 		left: calc(-1 * var(--ui-size-l)); /* NOTE calc() is used to be able to use negative values for the variable value */
 		border-image: var(--brd-img-right);
 		transform-origin: 0 50%;
@@ -2258,22 +2262,21 @@
 		text-overflow: ellipsis;
 	}
 	/* Counters */
-	#column_left.column-left .counter,
-	#column_left.column-left [href^="/show"] + b,
-	#column_left.column-left [href^="/your"] + b,
-	#column_left.column-left b a[href$="?updated=1"],
+	#column_left .counter,
+	#column_left [href^="/show"] + b,
+	#column_left [href^="/your"] + b,
+	#column_left b a[href$="?updated=1"],
 	.container--favourites .notextdecoration > .qxh-text,
-	#column_left.column-left [href="/blog_overview.php"] + b {
+	#column_left [href="/blog_overview.php"] + b {
 		color: var(--txt-high-clr);
 		font-weight: 700;
 		animation: qxh_view_notice 6s infinite;
 		-webkit-transition: var(--ui-time-s);
 		        transition: var(--ui-time-s);
 	}
-	#column_left.column-left a:hover + .counter,
 	.container--favourites .notextdecoration:hover > .qxh-text,
-	#column_left.column-left .container-inner > div a:hover + b,
-	#column_left.column-left .container-inner > div a:hover + b > .qxh-clean {
+	#column_left .container-inner > div a:hover + b,
+	#column_left .container-inner > div a:hover + b > .qxh-clean {
 		animation-play-state: paused !important;
 	}
 	/* HACK Fixing the odd aperence of full width widgets headers */
@@ -2299,7 +2302,7 @@
 		margin-bottom: var(--margin-l);
 	}
 	/*-------------*/
-	#column_left.column-left {
+	#column_left {
 		border-top: none;
 		border-right: none;
 		border-bottom-left-radius: var(--brd-rad-s);
@@ -2986,6 +2989,63 @@
 	#qxh_down svg {
 		transform: rotate(180deg);
 	}
+	/*** Not Logged In ***/
+	body.guest-access #loginbox {
+		background-color: var(--bkgrd-b1);
+		border: var(--brd-type-1) var(--brd-clr-h);
+		border-radius: var(--brd-rad-s);
+		width: 90%;
+		margin: var(--margin-c);
+		padding: var(--padding-s);
+	}
+	body.guest-access #loginbox h3 {
+		color: var(--txt-high-clr);
+		font-size: var(--font-1);
+		text-align: center;
+		text-transform: uppercase;
+		margin: var(--margin-m) auto;
+		padding-bottom: var(--padding-m);
+		border-bottom: var(--brd-type-1) var(--brd-clr-h);
+	}
+	body.guest-access #loginbox form,
+	body.guest-access #loginbox .select-style,
+	body.guest-access #loginbox input[type="text"],
+	body.guest-access #loginbox input[type="password"] {
+		width: 100%;
+		max-width: none;
+	}
+	body.guest-access .container.login h3:last-child {
+		text-align: center;
+		margin: 0 auto;
+	}
+	/* The Blogs */
+	.guest-access .column-center .qxh-flex-item .faceimg,
+	.guest-access .column-center .qxh-flex-item .blog-text {
+		float: none;
+		overflow: visible;
+		width: auto;
+		height: auto;
+		margin-right: auto;
+		margin-bottom: auto;
+		margin-top: auto;
+	}
+	.guest-access .start-content > .qxh-flex-item {
+		display: flex;
+		flex-flow: column;
+	}
+	.guest-access .start-content > .qxh-flex-item:not(:last-child) {
+		padding-right: var(--padding-s);
+		margin-bottom: var(--margin-m);
+	}
+	.guest-access .column-center .qxh-flex-item .faceimg,
+	.guest-access .column-center .qxh-flex-item .faceimg img {
+		width: 100% !important;
+		height: 140px !important;
+		max-height: 140px;
+		background-size: cover;
+		background-position: left top !important;
+		border-radius: var(--brd-rad-m);
+	}
 
 }
 /*** Let's animate things ***/
@@ -3185,7 +3245,7 @@
 }
 }
 
-@-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*") {
+@-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** TEST AREA ***/
 @supports (display: grid) {
 	.column-content > #error_texts + script + p:empty + .insertmember {
@@ -3233,10 +3293,10 @@
 	max-width: 100%;
 }
 }
-@-moz-document domain("www.qruiser.com") {
+/*@-moz-document domain("www.qruiser.com") {*/
 /*** LOGIN & INDEX ***/
-@supports (display: grid) {
-	:root {
+/*@supports (display: grid) {*/
+	/*:root {
 		--ui--wrapperOld: 65.625rem;
 		--ui--asideOld: 12.5rem;
 	}
@@ -3325,9 +3385,9 @@
 	body:not([class*="signed-in"]) #column_left select, body:not([class*="signed-in"]) #loginbox form, input, select {
 		width: 100%;
 		max-width: none;
-	}
+	}*/
 	/*Layout*/
-	body:not([class*="signed-in"]):not(.qxh-loading) #whole {
+	/*body:not([class*="signed-in"]):not(.qxh-loading) #whole {
 		display: grid !important;
 	}
 	body:not([class*="signed-in"]) #whole, body:not([class*="signed-in"]) #qmenu {
@@ -3372,9 +3432,9 @@
 	}
 	body:not([class*="signed-in"]) .divider {
 		width: 100%;
-	}
+	}*/
 	/*Top menu*/
-	body:not([class*="signed-in"]) li#qmenu_members {
+	/*body:not([class*="signed-in"]) li#qmenu_members {
 		grid-area: members;
 	}
 	body:not([class*="signed-in"]) li#qmenu_clubs {
@@ -3394,14 +3454,14 @@
 	}
 	body:not([class*="signed-in"]) li#qmenu_info {
 		grid-area: info;
-	}
+	}*/
 	/*Flex Containers*/
-	body:not([class*="signed-in"]) #top, body:not([class*="signed-in"]) #subnavbar, body:not([class*="signed-in"]) div[style*="height:55px;width:1024px;"]>div {
+	/*body:not([class*="signed-in"]) #top, body:not([class*="signed-in"]) #subnavbar, body:not([class*="signed-in"]) div[style*="height:55px;width:1024px;"]>div {
 		display: flex;
 		flex-flow: row wrap;
-	}
+	}*/
 	/*Flex Items*/
-	body:not([class*="signed-in"]) #subnavbar>* {
+	/*body:not([class*="signed-in"]) #subnavbar>* {
 		flex: 1 1 auto;
 	}
 	body:not([class*="signed-in"]) #topstatus {
@@ -3417,24 +3477,24 @@
 		-webkit-box-flex: 0;
 		-ms-flex-positive: 0;
 		flex-grow: 0;
-	}
+	}*/
 	/*Changemood*/
-	body:not([class*="signed-in"]) #column_left #changemood input[type="text"]{
+	/*body:not([class*="signed-in"]) #column_left #changemood input[type="text"]{
 		width: calc(100% - 36px)
 	}
 	body:not([class*="signed-in"]) #column_left #changemood select,
 	body:not([class*="signed-in"]) #column_left #changemood input[type="text"] {
 		margin-bottom: var(--ui-size-xl);
-	}
+	}*/
 	/* Right & Left Columns*/
-	body:not([class*="signed-in"]) #column_left .smalldivider,
+	/*body:not([class*="signed-in"]) #column_left .smalldivider,
 	body:not([class*="signed-in"]) #column_right .smalldivider {
 		padding: var(--padding-s) 0;
 		border-bottom: var(--brd-type-1) var(--ui-clr-highlight);
 		margin-bottom: var(--ui-size-xl);
-	}
+	}*/
 
-	body:not([class*="signed-in"]) #column_right [style*="background-color: #63300E;"] {
+/*	body:not([class*="signed-in"]) #column_right [style*="background-color: #63300E;"] {
 		background-color: var(--ui-clr-highlight) !important;
 	}
 	body:not([class*="signed-in"]) #column_right .smalldivider + a img,
@@ -3452,48 +3512,9 @@
 		width: calc(100% - 4em);
 		white-space: nowrap;
 		overflow: hidden;
-	}
-	/*LOGIN*/
-	body:not([class*="signed-in"]) #loginbox {
-		top: 2.5em;
-		background-color: var(--bkgrd-b1);
-		border: var(--brd-type-1) var(--brd-clr-h);
-		border-radius: var(--brd-rad-s);
-		width: 90%;
-		margin: var(--margin-c);
-		padding: var(--padding-s);
-	}
-	body:not([class*="signed-in"]) #loginbox h3 {
-		font-size: var(--font-1);
-		text-align: center;
-		text-transform: uppercase;
-		margin: var(--margin-m) auto;
-		padding-bottom: var(--padding-m);
-		border-bottom: var(--brd-type-1) var(--brd-clr-h);
-	}
-	body:not([class*="signed-in"]) #loginbox h4 {
-		font-size: var(--font-4);
-		text-indent: 0.5em;
-		padding-bottom: var(--padding-m);
-	}
-	body:not([class*="signed-in"]) #loginbox h3, body:not([class*="signed-in"]) #loginbox h4 {
-		color: var(--txt-high-clr);
-	}
-	body:not([class*="signed-in"]) #column_left #loginbox~p:nth-last-of-type(2) {
-		width: 90%;
-		margin: var(--margin-l) auto;
-		text-align: center;
-		font-weight: 700;
-	}
-	body:not([class*="signed-in"]) #loginbox~h3 {
-		text-indent: 1em;
-	}
-	body:not([class*="signed-in"]) #column_left select, body:not([class*="signed-in"]) #loginbox form, input, select {
-		width: 100%;
-		max-width: none;
-	}
+	}*/
 	/*TOP*/
-	body:not([class*="signed-in"]) #top>a {
+	/*body:not([class*="signed-in"]) #top>a {
 		display: inline-block;
 		width: 150px;
 		height: 45px;
@@ -3503,9 +3524,9 @@
 	}
 	body:not([class*="signed-in"]) #topstatus br {
 		display: none;
-	}
+	}*/
 	/*TOP NAVIGATION*/
-	body:not([class*="signed-in"]) #qmenu, body:not([class*="signed-in"]) #qmenu a, body:not([class*="signed-in"]) #qmenu ul {
+	/*body:not([class*="signed-in"]) #qmenu, body:not([class*="signed-in"]) #qmenu a, body:not([class*="signed-in"]) #qmenu ul {
 		background-color: var(--bkgrd-b1);
 		font-size: var(--font-3r);
 		color: var(--link-clr2);
@@ -3522,9 +3543,9 @@
 	}
 	body:not([class*="signed-in"]) #qmenu {
 		top: 0;
-	}
+	}*/
 	/* BLOGS */
-	body:not([class*="signed-in"]) #column_center .qxh-front-columns, body:not([class*="signed-in"]) #column_center>.qxh-flex-container:not(.gallery) {
+	/*body:not([class*="signed-in"]) #column_center .qxh-front-columns, body:not([class*="signed-in"]) #column_center>.qxh-flex-container:not(.gallery) {
 		display: flex;
 		flex-flow: row wrap;
 	}
@@ -3547,9 +3568,9 @@
 	}
 	.qxh-front-text>div:nth-last-child(2) {
 		font-size: var(--font-2);
-	}
+	}*/
 	/*3 MEMBERS*/
-	body:not([class*="signed-in"]) .gallery .insertmember {
+	/*body:not([class*="signed-in"]) .gallery .insertmember {
 		grid-template-rows: auto;
 		grid-template-columns: auto;
 		grid-template-areas: "avatar""link""description""icons""mood";
@@ -3561,9 +3582,9 @@
 	}
 	body:not([class*="signed-in"]) .gallery .memberlargeicon * {
 		width: 100% !important;
-	}
-}
-}
+	}*/
+/*}
+}*/
 @-moz-document url-prefix("https://beta.qruiser.com/satellite.php"), url-prefix("https://www.qruiser.com/satellite.php") {
 /* SATELITE */
 @supports (display: grid) {

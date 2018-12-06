@@ -791,13 +791,13 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_searchXxxNodes		= $('.column-content .odd > div[style*="float"] > [class*="clubxxx"]:not([class$="hidden"]) + div > [class*="clubxxx"]:not([class$="hidden"]) > div:nth-of-type(2), .column-content .even > div[style*="float"] > [class*="clubxxx"]:not([class$="hidden"]) + div > [class*="clubxxx"]:not([class$="hidden"]) > div:nth-of-type(2)');
 			var hq_GetTitleText			= $('.container.scribbles a.rightcolumn-scribble-content, .container.gaymap-today > a[href^="https://gaymap.qx"], .container.discussions .rightcolumn-discussion > a.rightcolumn-discussion-category, .container.discussions .rightcolumn-discussion > .rightcolumn-discussion-content > h4, .container.polls .rightcolumn-poll-header > h4 > a, #column_left [href^="/chat/"], [href*="addscribble"], [href*="becomemember"], [href*="adddiscussion"], [onclick^="abusereport"], [onclick^="toggleAbuse"], a[href="javascript:toggleShowas()"], .container-header a, .header a, .homepageblock a[href^="/showmovies.php"], .video-thumb-holder + div, a[onclick^="openEdit"] > span, .small > a[onclick^="openEdit"], [class^="clubxxx"] a.clublink + .smalltext, a.clublink, .insertmember .mood');
 			var hq_logoLink				= $('#whole > #header > #home > a[href="/"]');
-			var hq_Sticky				= $('.container.clubs:first, .container.container--favourites, #loginbox, #whole #qmenu, #column_left.column-left .container:first-of-type, .container--chat-list, .container--personal, .container--your-search, .container.logged-in, .column-content p + h2 + p[style*="margin-top: 0.5em;"]');
+			var hq_Sticky				= $('.container.clubs:first, .container.container--favourites, .container.login, #whole #qmenu, #column_left.column-left .container:first-of-type, .container--chat-list, .container--personal, .container--your-search, .container.logged-in, .column-content p + h2 + p[style*="margin-top: 0.5em;"]');
 			var hq_MakeButton			= $('body[onload="timer()"] > p > a[href=\'javascript:openloc("", 1)\'], [onclick^="abusereport"], [onclick^="toggleAbuse"], [class*="banner"] .actions .action, .column-center #goldmemberbanner .actions .action, .column-center #profilewizard .actions .action, [type="reset"],[type="button"],[type="submit"],input[type="submit"],button[type="submit"],[href*="addscribble"],[href*="becomemember"],[href*="adddiscussion"],#column_center #zeroall,h3 [href^="/signup.php"],[href$="&show_admin_members=1"],[href*="/clubs/club_edit.php?clubid="],#column_center button,button.modal-close,div:not([class*="button"]):not([class*="subnavbar-item"]) > [href*="/createclub/"],#column_center .small + .list + p + div[style="float:right;"], form[name="sort"] + .list + div[style="margin-top:10px; float: right"]:last-of-type');
 			var hq_MakeGridContainer	= $('#whole, #header, #qmenu, #whole .main-content, .insertmember');
 			var hq_MakeGridItem			= $('');
 			var hq_MakeList				= $('#column_center.column-center h2 + p[style="margin-top: 0.5em;"] + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"]), .column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"])');
-			var hq_MakeFlexContainer	= $('.column-content p:empty + .insertmember + p:empty + p + div + div + p:empty + p + #scroller > div:first-of-type, .movies-listing > div[style="width: 100%; padding: 0px;"], #digexplained_text + p:empty + .small + div, .homepageblock > #homepageinfo, .homepageblock > [id^="album_"][id$="_info"].block, .images-homepage-image, .images-homepage, .list, .gallery, .container-columns, .insertmember .link, .insertmember .icons, .scribbleboard-holder, .blog-teasers, #scroller > div[style*="width:41"], #column_center.column-center h2 + p[style="margin-top: 0.5em;"] + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"]), .column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"])');
-			var hq_MakeFlexItem			= $('.movies-listing > div[style="width: 100%; padding: 0px;"] > .odd,.movies-listing > div[style="width: 100%; padding: 0px;"] > .even,.homepageblock > #homepageinfo > .infoblock, .homepageblock > .block > a[href^="javascript:openPhotoPopup"], .list > .odd, .list > .even, .odd, .even');
+			var hq_MakeFlexContainer	= $('.guest-access .start-content, .column-content p:empty + .insertmember + p:empty + p + div + div + p:empty + p + #scroller > div:first-of-type, .movies-listing > div[style="width: 100%; padding: 0px;"], #digexplained_text + p:empty + .small + div, .homepageblock > #homepageinfo, .homepageblock > [id^="album_"][id$="_info"].block, .images-homepage-image, .images-homepage, .list, .gallery, .container-columns, .insertmember .link, .insertmember .icons, .scribbleboard-holder, .blog-teasers, #scroller > div[style*="width:41"], #column_center.column-center h2 + p[style="margin-top: 0.5em;"] + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"]), .column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"])');
+			var hq_MakeFlexItem			= $('.guest-access .start-content > .blog-list, .movies-listing > div[style="width: 100%; padding: 0px;"] > .odd,.movies-listing > div[style="width: 100%; padding: 0px;"] > .even,.homepageblock > #homepageinfo > .infoblock, .homepageblock > .block > a[href^="javascript:openPhotoPopup"], .list > .odd, .list > .even, .odd, .even');
 			var hq_SubNavButtons		= $('#subnavbar .subnavbar-item ');
 			var hq_HomePageFlex			= $('.homepageblock');
 			var hq_HomePagePresentation	= $('.homepage > div[style="padding-top: 10px"] + .block');
@@ -962,35 +962,39 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		// NOTE Move the Favorites widget above the Mail/Message Widget
 		hq_FavoritesDiv.insertBefore( hq_MailBox );
 
-		// TEMP HACK for the old not logged in index
-		if ( !hq_DocBody.hasClass('signed-in') ) {
-			var hq_ClassDot			= '.';
-			var hq_ClassFrontCols	= hq_ClassPrefix+'front-columns';
-			var hq_ClassFrontImg	= hq_ClassPrefix+'front-image';
-			var hq_ClassFrontText	= hq_ClassPrefix+'front-text';
-			var hq_frontImgDiv		= 'div[style*="width:80px;"]';
-			var hq_frontTextDiv		= 'div[style*="width:105px;"]';
-			var hq_frontCssArray	= {"float" : "","margin-top" : "","margin-right" : "","margin-bottom" : "","overflow" : ""};
-
-			var hq_frontImg			= $( hq_frontImgDiv ).addClass( hq_ClassFrontImg );
-			var hq_frontText		= $( hq_frontTextDiv ).addClass( hq_ClassFrontText );
-			var hq_flexItem			= hq_ClassDot+hq_ClassFlexItem;
-
-			var hq_divTargets		= $(hq_frontImgDiv + ',' + hq_frontTextDiv);
-			var hq_frontGroups		= hq_divTargets.length;
-			var hq_frontMainWrap	= '<div class="'+hq_ClassFlexContainer+'" />';
-			var hq_frontGroupDiv	= '<div class="'+hq_ClassFrontCols+' '+hq_ClassFlexItem+'" />';
-			// https://stackoverflow.com/questions/13489450/wrap-every-2-divs-in-a-new-div
-			for ( var i = 0;i < hq_frontGroups;i+=2 ){
-				hq_divTargets.filter( ':eq('+i+'),:eq('+(i+1)+')' ).wrapAll( hq_frontGroupDiv );
-			};
-
-			hq_frontImg.css( hq_frontCssArray );
-			hq_frontText.removeAttr("style");
-			$( '#column_center > .qxh-flex-item' ).wrapAll( hq_frontMainWrap );
-			//console.log('Frontpage done');
+		if ( hq_DocBody.hasClass('guest-access') ) {
+			var hq_LogInContainer	= $('.container.login');
+			var hq_ColLeft			= $('#column_left');
+			var hq_colContent		= $('#column_center.column-center .column-content.qxh-w100');
+			// NOTE HACK Move the login in contaioner to where it belongs
+			if ( hq_LogInContainer.parent().is( hq_colContent ) ) hq_LogInContainer.appendTo( hq_ColLeft );
 		}
-		//
+		// TEMP HACK for the old not logged in index
+		//if ( !hq_DocBody.hasClass('signed-in') ) {
+		//	var hq_ClassDot			= '.';
+		//	var hq_ClassFrontCols	= hq_ClassPrefix+'front-columns';
+		//	var hq_ClassFrontImg	= hq_ClassPrefix+'front-image';
+		//	var hq_ClassFrontText	= hq_ClassPrefix+'front-text';
+		//	var hq_frontImgDiv		= 'div[style*="width:80px;"]';
+		//	var hq_frontTextDiv		= 'div[style*="width:105px;"]';
+		//	var hq_frontCssArray	= {"float" : "","margin-top" : "","margin-right" : "","margin-bottom" : "","overflow" : ""};
+		//	var hq_frontImg			= $( hq_frontImgDiv ).addClass( hq_ClassFrontImg );
+		//	var hq_frontText		= $( hq_frontTextDiv ).addClass( hq_ClassFrontText );
+		//	var hq_flexItem			= hq_ClassDot+hq_ClassFlexItem;
+		//	var hq_divTargets		= $(hq_frontImgDiv + ',' + hq_frontTextDiv);
+		//	var hq_frontGroups		= hq_divTargets.length;
+		//	var hq_frontMainWrap	= '<div class="'+hq_ClassFlexContainer+'" />';
+		//	var hq_frontGroupDiv	= '<div class="'+hq_ClassFrontCols+' '+hq_ClassFlexItem+'" />';
+		//	 https://stackoverflow.com/questions/13489450/wrap-every-2-divs-in-a-new-div
+		//	for ( var i = 0;i < hq_frontGroups;i+=2 ){
+		//		hq_divTargets.filter( ':eq('+i+'),:eq('+(i+1)+')' ).wrapAll( hq_frontGroupDiv );
+		//	};
+		//	hq_frontImg.css( hq_frontCssArray );
+		//	hq_frontText.removeAttr("style");
+		//	$( '#column_center > .qxh-flex-item' ).wrapAll( hq_frontMainWrap );
+		//	console.log('Frontpage done');
+		//}
+
 		if( hq_msgOld > -1 ) {
 			hq_AdminUser.parents( '.'+hq_ClassFlexItem ).addClass( hq_ClassAlert );
 		};
