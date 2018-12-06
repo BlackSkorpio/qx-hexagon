@@ -3,13 +3,13 @@
  *	@copyright	(c) 2018 Bjarne Varoystrand - bjarne ○ kokensupport • com
  *	@license GPL
  *	@author Bjarne Varoystrand (@black_skorpio)
- *	@version 1.0.1
+ *	@version 1.1.0
  *	@description Fixes that goes hand in hand with the QX Hexagon userstyle
  *	@url http://varoystrand.se | http://kokensupport.com
 // ==UserScript==
 // @name			QX Hexagon companion
 // @namespace		https://github.com/BlackSkorpio/qx-hexagon
-// @version			1.0.1
+// @version			1.1.0
 // @description		Fixes that goes hand in hand with the QX Hexagon userstyle
 // @icon			https://github.com/BlackSkorpio/qx-hexagon/raw/master/screens/hexagon-logo.jpg
 // @author			Bjarne Varöystrand
@@ -40,8 +40,8 @@ function onReady(callback) {
 function setVisible(selector, visible) {
 	document.querySelector(selector).style.display = visible ? 'block' : 'none';
 }
-onReady(function() {/* TODO Remove #whole when beta period is over */
-	setVisible('.page-container, #whole, #satellite, body[onload="timer()"] div[style="margin: 10px"]', true),
+onReady(function() {
+	setVisible('.page-container, #satellite, body[onload="timer()"] div[style="margin: 10px"]', true),
 	setVisible('#qxh_loading', false),
 	$(document.body).removeClass('qxh-loading');
 });
@@ -98,6 +98,8 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.GetMovieSection	= $('.column-content h2:first-of-type > a');
 		HexaGon.GetAlbumTitle	= $('.column-content .insertmember + p + p + div + div + p + p > span:first-of-type');
 		HexaGon.GetMovieTitle	= $('#videoblock h2:first-of-type');
+		HexaGon.GetNotiBoardMainTitlen = $('#error_texts + br + h3');
+		HexaGon.GetNotiBoardSubTitle = $('#error_texts + br + h3 + h2');
 		// NOTE QX URLs */
 		HexaGon.bodyURL			= HexaGon.pathName.match(/^\/?(\w+)\b/);
 		HexaGon.nudgeSent		= HexaGon.hrefLoc.indexOf('/buffs.php?type=sent');
@@ -177,6 +179,7 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		HexaGon.AskSentryURL	= HexaGon.hrefLoc.indexOf('/sentry.php');
 		HexaGon.ShowMovieURL	= HexaGon.hrefLoc.indexOf('&movieid=');
 		HexaGon.SupportURL		= HexaGon.hrefLoc.indexOf('/support.php');
+		HexaGon.NoticeBoardURL	= HexaGon.hrefLoc.indexOf('/noticeboard.php');
 		HexaGon.Thread_Id		= HexaGon.hrefLoc.split("&view=");
 		HexaGon.Categori_Id		= HexaGon.hrefLoc.split("?category=");
 		HexaGon.Club_Id			= HexaGon.hrefLoc.split("?club=");
@@ -294,6 +297,12 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		if ( typeof HexaGon.GetMovieTitle !== 'undefined' || HexaGon.GetMovieTitle !== null ) {
 			var MovieTitle = HexaGon.GetMovieTitle.text();
 		}
+		if ( typeof HexaGon.GetNotiBoardMainTitlen !== 'undefined' || HexaGon.GetNotiBoardMainTitlen !== null ) {
+			var NoticeBoardMainTitlen = HexaGon.GetNotiBoardMainTitlen.text();
+		}
+		if ( typeof HexaGon.GetNotiBoardSubTitle !== 'undefined' || HexaGon.GetNotiBoardSubTitle !== null ) {
+			var NoticeBoardSubTitle = '/ ' + HexaGon.GetNotiBoardSubTitle.text();
+		}
 
 		if ( ( HexaGon.ClubsURL > -1 ) || ( HexaGon.MoviesURL > -1 ) || ( HexaGon.TextsURL > -1 ) ) {
 			var MembersTitle = HexaGon.TitlePrefix + SubNavTitle + ' ' + TemplateName + HexaGon.TitleSuffix;
@@ -372,6 +381,11 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		if ( HexaGon.ShowMemclubsURL > -1 ) {
 			var ShowMemberClubsTitle = HexaGon.TitlePrefix + OwnerNick + ': ' + UpdatedSection + HexaGon.TitleSuffix;
 			document.title = ShowMemberClubsTitle;
+		}
+		// NOTE Notice Board
+		if ( HexaGon.NoticeBoardURL > -1 ) {
+			var NoticeBoardTitle = HexaGon.TitlePrefix + NoticeBoardMainTitlen + NoticeBoardSubTitle + HexaGon.TitleSuffix;
+			document.title = NoticeBoardTitle;
 		}
 	};
 	// NOTE SetUp the body with classes and ID's
@@ -545,6 +559,11 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		if(HexaGon.satellite > -1) window.resizeTo('340', '500');
 	};
 	// NOTE This is stuff that we realy need to make sure they have been executed!
+	function injectStyle() {
+		var hq_Body		= $(document.body);
+		var hq_HexStyle	= '';
+		hq_Body.append( hq_HexStyle );
+	};
 	function addSprite() {
 		// NOTE pngBeGone
 		var hq_Body				= $(document.body);
@@ -775,15 +794,15 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_inlineCleaning		= $('div[style="position:relative; left:270px;"], .movies-listing .even div, .movies-listing .odd div, .movies-listing > div:nth-of-type(3), .video-thumb img[src$="star.png"], .video-thumb span, .attachedicon, span.homelink, div[style*="font-size: 10px;"], .block[style*="font-size: 11px;"], .icons li, .line .header span, #search form, #largeediticon, a[style*="text-decoration"]:not([style*="bold"]):not([href*="javascript:dropContent"]), i.icon, .emptymembericon, .noticetext');
 			var hq_searchNodes			= $('[id^="column_"], .odd, .even, .container--favourites .notextdecoration');
 			var hq_searchXxxNodes		= $('.column-content .odd > div[style*="float"] > [class*="clubxxx"]:not([class$="hidden"]) + div > [class*="clubxxx"]:not([class$="hidden"]) > div:nth-of-type(2), .column-content .even > div[style*="float"] > [class*="clubxxx"]:not([class$="hidden"]) + div > [class*="clubxxx"]:not([class$="hidden"]) > div:nth-of-type(2)');
-			var hq_GetTitleText			= $('#column_left [href^="/chat/"], [href*="addscribble"], [href*="becomemember"], [href*="adddiscussion"], [onclick^="abusereport"], [onclick^="toggleAbuse"], a[href="javascript:toggleShowas()"], .container-header a, .header a, .homepageblock a[href^="/showmovies.php"], .video-thumb-holder + div, a[onclick^="openEdit"] > span, .small > a[onclick^="openEdit"], [class^="clubxxx"] a.clublink + .smalltext, a.clublink, .insertmember .mood');
+			var hq_GetTitleText			= $('.container.scribbles a.rightcolumn-scribble-content, .container.gaymap-today > a[href^="https://gaymap.qx"], .container.discussions .rightcolumn-discussion > a.rightcolumn-discussion-category, .container.discussions .rightcolumn-discussion > .rightcolumn-discussion-content > h4, .container.polls .rightcolumn-poll-header > h4 > a, #column_left [href^="/chat/"], [href*="addscribble"], [href*="becomemember"], [href*="adddiscussion"], [onclick^="abusereport"], [onclick^="toggleAbuse"], a[href="javascript:toggleShowas()"], .container-header a, .header a, .homepageblock a[href^="/showmovies.php"], .video-thumb-holder + div, a[onclick^="openEdit"] > span, .small > a[onclick^="openEdit"], [class^="clubxxx"] a.clublink + .smalltext, a.clublink, .insertmember .mood');
 			var hq_logoLink				= $('#whole > #header > #home > a[href="/"]');
-			var hq_Sticky				= $('.container.container--favourites, #loginbox, #whole #qmenu, #column_left.column-left .container:first-of-type, .container--chat-list, .container--personal, .container--your-search, .container.logged-in, .column-content p + h2 + p[style*="margin-top: 0.5em;"]');
+			var hq_Sticky				= $('.container.clubs:first, .container.container--favourites, .container.login, #whole #qmenu, #column_left.column-left .container:first-of-type, .container--chat-list, .container--personal, .container--your-search, .container.logged-in, .column-content p + h2 + p[style*="margin-top: 0.5em;"]');
 			var hq_MakeButton			= $('body[onload="timer()"] > p > a[href=\'javascript:openloc("", 1)\'], [onclick^="abusereport"], [onclick^="toggleAbuse"], [class*="banner"] .actions .action, .column-center #goldmemberbanner .actions .action, .column-center #profilewizard .actions .action, [type="reset"],[type="button"],[type="submit"],input[type="submit"],button[type="submit"],[href*="addscribble"],[href*="becomemember"],[href*="adddiscussion"],#column_center #zeroall,h3 [href^="/signup.php"],[href$="&show_admin_members=1"],[href*="/clubs/club_edit.php?clubid="],#column_center button,button.modal-close,div:not([class*="button"]):not([class*="subnavbar-item"]) > [href*="/createclub/"],#column_center .small + .list + p + div[style="float:right;"], form[name="sort"] + .list + div[style="margin-top:10px; float: right"]:last-of-type');
 			var hq_MakeGridContainer	= $('#whole, #header, #qmenu, #whole .main-content, .insertmember');
 			var hq_MakeGridItem			= $('');
 			var hq_MakeList				= $('#column_center.column-center h2 + p[style="margin-top: 0.5em;"] + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"]), .column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"])');
-			var hq_MakeFlexContainer	= $('.column-content p:empty + .insertmember + p:empty + p + div + div + p:empty + p + #scroller > div:first-of-type, .movies-listing > div[style="width: 100%; padding: 0px;"], #digexplained_text + p:empty + .small + div, .homepageblock > #homepageinfo, .homepageblock > [id^="album_"][id$="_info"].block, .images-homepage-image, .images-homepage, .list, .gallery, .container-columns, .insertmember .link, .insertmember .icons, .scribbleboard-holder, .blog-teasers, #scroller > div[style*="width:41"], #column_center.column-center h2 + p[style="margin-top: 0.5em;"] + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"]), .column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"])');
-			var hq_MakeFlexItem			= $('.movies-listing > div[style="width: 100%; padding: 0px;"] > .odd,.movies-listing > div[style="width: 100%; padding: 0px;"] > .even,.homepageblock > #homepageinfo > .infoblock, .homepageblock > .block > a[href^="javascript:openPhotoPopup"], .list > .odd, .list > .even, .odd, .even');
+			var hq_MakeFlexContainer	= $('.guest-access .start-content, .column-content p:empty + .insertmember + p:empty + p + div + div + p:empty + p + #scroller > div:first-of-type, .movies-listing > div[style="width: 100%; padding: 0px;"], #digexplained_text + p:empty + .small + div, .homepageblock > #homepageinfo, .homepageblock > [id^="album_"][id$="_info"].block, .images-homepage-image, .images-homepage, .list, .gallery, .container-columns, .insertmember .link, .insertmember .icons, .scribbleboard-holder, .blog-teasers, #scroller > div[style*="width:41"], #column_center.column-center h2 + p[style="margin-top: 0.5em;"] + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"]), .column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"])');
+			var hq_MakeFlexItem			= $('.guest-access .start-content > .blog-list, .movies-listing > div[style="width: 100%; padding: 0px;"] > .odd,.movies-listing > div[style="width: 100%; padding: 0px;"] > .even,.homepageblock > #homepageinfo > .infoblock, .homepageblock > .block > a[href^="javascript:openPhotoPopup"], .list > .odd, .list > .even, .odd, .even');
 			var hq_SubNavButtons		= $('#subnavbar .subnavbar-item ');
 			var hq_HomePageFlex			= $('.homepageblock');
 			var hq_HomePagePresentation	= $('.homepage > div[style="padding-top: 10px"] + .block');
@@ -948,35 +967,39 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 		// NOTE Move the Favorites widget above the Mail/Message Widget
 		hq_FavoritesDiv.insertBefore( hq_MailBox );
 
-		// TEMP HACK for the old not logged in index
-		if ( !hq_DocBody.hasClass('signed-in') ) {
-			var hq_ClassDot			= '.';
-			var hq_ClassFrontCols	= hq_ClassPrefix+'front-columns';
-			var hq_ClassFrontImg	= hq_ClassPrefix+'front-image';
-			var hq_ClassFrontText	= hq_ClassPrefix+'front-text';
-			var hq_frontImgDiv		= 'div[style*="width:80px;"]';
-			var hq_frontTextDiv		= 'div[style*="width:105px;"]';
-			var hq_frontCssArray	= {"float" : "","margin-top" : "","margin-right" : "","margin-bottom" : "","overflow" : ""};
-
-			var hq_frontImg			= $( hq_frontImgDiv ).addClass( hq_ClassFrontImg );
-			var hq_frontText		= $( hq_frontTextDiv ).addClass( hq_ClassFrontText );
-			var hq_flexItem			= hq_ClassDot+hq_ClassFlexItem;
-
-			var hq_divTargets		= $(hq_frontImgDiv + ',' + hq_frontTextDiv);
-			var hq_frontGroups		= hq_divTargets.length;
-			var hq_frontMainWrap	= '<div class="'+hq_ClassFlexContainer+'" />';
-			var hq_frontGroupDiv	= '<div class="'+hq_ClassFrontCols+' '+hq_ClassFlexItem+'" />';
-			// https://stackoverflow.com/questions/13489450/wrap-every-2-divs-in-a-new-div
-			for ( var i = 0;i < hq_frontGroups;i+=2 ){
-				hq_divTargets.filter( ':eq('+i+'),:eq('+(i+1)+')' ).wrapAll( hq_frontGroupDiv );
-			};
-
-			hq_frontImg.css( hq_frontCssArray );
-			hq_frontText.removeAttr("style");
-			$( '#column_center > .qxh-flex-item' ).wrapAll( hq_frontMainWrap );
-			//console.log('Frontpage done');
+		if ( hq_DocBody.hasClass('guest-access') ) {
+			var hq_LogInContainer	= $('.container.login');
+			var hq_ColLeft			= $('#column_left');
+			var hq_colContent		= $('#column_center.column-center .column-content.qxh-w100');
+			// NOTE HACK Move the login in contaioner to where it belongs
+			if ( hq_LogInContainer.parent().is( hq_colContent ) ) hq_LogInContainer.appendTo( hq_ColLeft );
 		}
-		//
+		// TEMP HACK for the old not logged in index
+		//if ( !hq_DocBody.hasClass('signed-in') ) {
+		//	var hq_ClassDot			= '.';
+		//	var hq_ClassFrontCols	= hq_ClassPrefix+'front-columns';
+		//	var hq_ClassFrontImg	= hq_ClassPrefix+'front-image';
+		//	var hq_ClassFrontText	= hq_ClassPrefix+'front-text';
+		//	var hq_frontImgDiv		= 'div[style*="width:80px;"]';
+		//	var hq_frontTextDiv		= 'div[style*="width:105px;"]';
+		//	var hq_frontCssArray	= {"float" : "","margin-top" : "","margin-right" : "","margin-bottom" : "","overflow" : ""};
+		//	var hq_frontImg			= $( hq_frontImgDiv ).addClass( hq_ClassFrontImg );
+		//	var hq_frontText		= $( hq_frontTextDiv ).addClass( hq_ClassFrontText );
+		//	var hq_flexItem			= hq_ClassDot+hq_ClassFlexItem;
+		//	var hq_divTargets		= $(hq_frontImgDiv + ',' + hq_frontTextDiv);
+		//	var hq_frontGroups		= hq_divTargets.length;
+		//	var hq_frontMainWrap	= '<div class="'+hq_ClassFlexContainer+'" />';
+		//	var hq_frontGroupDiv	= '<div class="'+hq_ClassFrontCols+' '+hq_ClassFlexItem+'" />';
+		//	 https://stackoverflow.com/questions/13489450/wrap-every-2-divs-in-a-new-div
+		//	for ( var i = 0;i < hq_frontGroups;i+=2 ){
+		//		hq_divTargets.filter( ':eq('+i+'),:eq('+(i+1)+')' ).wrapAll( hq_frontGroupDiv );
+		//	};
+		//	hq_frontImg.css( hq_frontCssArray );
+		//	hq_frontText.removeAttr("style");
+		//	$( '#column_center > .qxh-flex-item' ).wrapAll( hq_frontMainWrap );
+		//	console.log('Frontpage done');
+		//}
+
 		if( hq_msgOld > -1 ) {
 			hq_AdminUser.parents( '.'+hq_ClassFlexItem ).addClass( hq_ClassAlert );
 		};
@@ -990,12 +1013,36 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			var hq_ProfileHeroImg	= $('.homepage > div[style="padding-top: 10px"]');
 			var hq_MemberPosition	= $('.homepageblock #map_canvas');
 			var hq_HomeMembers		= $('.homepageblock > .gallery.gallery-scroll');// FIXME Adds it self to the favorites widget
+			var hq_VisitorActions	= $('.homepage > .dontshowself > .homepageblock');
+			var hq_VisitorActionsMain = $('.homepage > .dontshowself > .homepageblock > div[style="margin: 5px 0px 5px 0px"]');
+			var hq_VisitorSendMsgIcon = '.dontshowself > div > br[clear="all"] + div > .homebuttons:first-child';
+			var hq_VisitorSendMsgText = hq_VisitorSendMsgIcon + '+ span';
+			var hq_FavList			= '#favouritelist';
+			var hq_UnFavList		= '#unfavouritelist';
+			var hq_IgnList			= '#ignorelist';
+			var hq_UnIgnList		= '#unignorelist';
+			var hq_FlirtList		= '#flirtlist';
+			var hq_HomeLink			= '.homelink';
 			var hq_ClassMemberFace	= hq_ClassPrefix+'member-faceimage';
 			var hq_ClassMemHeroImg	= hq_ClassPrefix+'member-heroimage';
 			var hq_ClassMemPosition	= hq_ClassPrefix+'member-position';
 			var hq_ClassMembers		= hq_ClassPrefix+'members';
 			var hq_ClassVisitors	= hq_ClassPrefix+'member-visitors';
 			var hq_ClassOther		= hq_ClassPrefix+'other-members';
+			var hq_ClassActions		= hq_ClassPrefix+'actions';
+			var hq_ClassAction		= 'action';
+			var hq_ClassActFavorite	= hq_ClassPrefix+hq_ClassAction+'--favorite';
+			var hq_ClassActIgnore	= hq_ClassPrefix+hq_ClassAction+'--ignore';
+			var hq_ClassActFlirt	= hq_ClassPrefix+hq_ClassAction+'--flirt';
+			var hq_ClassActSendMsg	= hq_ClassPrefix+hq_ClassAction+'--sendmsg';
+			var hq_SpanActionFav	= hq_FragmentSpan+hq_ClassAction+' '+hq_ClassActFavorite+hq_FragmentSuffix;
+			var hq_SpanActionIgn	= hq_FragmentSpan+hq_ClassAction+' '+hq_ClassActIgnore+hq_FragmentSuffix;
+			var hq_SpanActionFlirt	= hq_FragmentSpan+hq_ClassAction+' '+hq_ClassActFlirt+hq_FragmentSuffix;
+			var hq_DivVisitorSendMsg = hq_FragmentDiv+hq_ClassAction+' '+hq_ClassActSendMsg+hq_FragmentSuffix;
+			var hq_ActionFavorite	= $(hq_FavList + ',' + hq_FavList + '+' + hq_HomeLink + ',' + hq_UnFavList + ',' + hq_UnFavList + '+' + hq_HomeLink);
+			var hq_ActionIgnore		= $(hq_IgnList + ',' + hq_IgnList + '+' + hq_HomeLink + ',' + hq_UnIgnList + ',' + hq_UnIgnList + '+' + hq_HomeLink);
+			var hq_ActionFlirt		= $(hq_FlirtList + ',' + hq_FlirtList + '+' + hq_HomeLink);
+			var hq_ActionSendMsg	= $(hq_VisitorSendMsgIcon + ',' + hq_VisitorSendMsgText);
 
 			//console.info("Qruiser: We have a renegade template"),
 			if ( typeof hq_GetNickName !== 'undefined' || hq_GetNickName !== null ) {
@@ -1010,6 +1057,16 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			hq_starSign.wrap( hq_SpanStarSign ),
 			hq_HomePageStats.addClass( hq_ClassHpStats ),
 			hq_HomePagePresentation.addClass( 'homepageblock '+hq_ClassHpPresentation ),
+			// Baptise the Visitor Actions Div
+			hq_VisitorActions.addClass( hq_ClassActions ),
+			// Fav Actions
+			hq_ActionFavorite.wrapAll( hq_SpanActionFav ),
+			// Ignore Actions
+			hq_ActionIgnore.wrapAll( hq_SpanActionIgn ),
+			// Flirt Actions
+			hq_ActionFlirt.wrapAll( hq_SpanActionFlirt ),
+			// Send Msg Actions
+			hq_ActionSendMsg.wrapAll( hq_DivVisitorSendMsg ),
 			hq_HomePageLookingFor.addClass( hq_ClassHpLookingFor ),
 			hq_MemberPosition.parent().addClass( hq_ClassMemPosition ),
 			hq_HomePageFlex.not( ( hq_NoHomePageList ) ).addClass( hq_ClassFlexContainer ),
@@ -1160,10 +1217,9 @@ onReady(function() {/* TODO Remove #whole when beta period is over */
 			if ( HexaGon.ShowclubsURL > -1 ) {
 				var hq_LinkClearAll = $('.column-content #clubinfo_text + p + .small + .list.qxh-flex-container + p + .qxh-button > a[href="/showclubs.php?action=zeroall"]:nth-child(2)');
 			};
-			/* TODO Fix the urls for this button */
-			/*if {
-				var hq_LinkClearAll = $('#column_center #zeroall a:first-of-type')
-			};*/
+			if ( HexaGon.FavUpdatedURL > -1 ) {
+				var hq_LinkClearAll = $('#column_center #zeroall > a:last-of-type');
+			};
 			if ( HexaGon.msgOld > -1 ) {
 				var hq_LinkClearAll = $('.qxh-button a[href*="markasread"]');
 			};

@@ -1,7 +1,7 @@
-@-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"){/*! ==UserStyle==
+@-moz-document regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*"),regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"){/*! ==UserStyle==
 @name			QX Hexagon Clean
 @namespace		github.com/BlackSkorpio/qx-hexagon
-@version		1.0.0
+@version		1.0.2
 @description	An up-to-date adblocker for qruiser.com
 @author			Bjarne Varöystrand (https://github.com/BlackSkorpio/qx-hexagon)
 @homepageURL	https://varoystrand.se
@@ -9,4 +9,4 @@
 @updateURL		https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/Develop/style/qx-hexagon-clean.user.css
 @license		MIT
 @preprocessor	default
-==/UserStyle== */#qruiser-panorama,#goldmemberbanner.standardbanner.warningbanner,.external-ad,hr.dotline,div#stripe,#ads,#blogads,#adtech_takeover,div[style="margin:auto auto auto 1px;height:55px;width:1024px;border:0;overflow:hidden;"]{display:none!important}}
+==/UserStyle== */#qruiser-panorama,#qruiser_panorama,#goldmemberbanner.standardbanner.warningbanner,.external-ad,hr.dotline,div#stripe,#ads,#blogads,#adtech_takeover,div[style="margin:auto auto auto 1px;height:55px;width:1024px;border:0;overflow:hidden;"]{display:none!important}}
