@@ -2340,6 +2340,15 @@
 	.column-left .insertmember {
 		margin: 0;
 	}
+	/* Msg Archive */
+	.qxh-msg-archive {
+		margin-top: var(--margin-s);
+	}
+	.qxh-msg-archive h4 {
+		color: var(--txt-high-clr);
+		border-bottom: var(--brd-type-1);
+		padding-bottom: var(--padding-m);
+	}
 	/* Restrict Aside headers */
 	#column_left .container:not(.container--your-search) .container-header {
 		width: 100%;
