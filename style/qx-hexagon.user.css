@@ -27,7 +27,7 @@
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** Colors, sizes & such ***/
 :root {
-	--ui-version: "QX Hexagon v1.1.0";
+	--ui-version: "QX Hexagon v1.1.1";
 	/*--ui-clr-disabled: rgb(188, 194, 191);
 	--ui-clr-highlight: rgb(170, 139, 89);
 	--ui-clr-white1: rgb(242, 242, 242);

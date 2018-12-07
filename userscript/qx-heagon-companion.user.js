@@ -3,13 +3,13 @@
  *	@copyright	(c) 2018 Bjarne Varoystrand - bjarne ○ kokensupport • com
  *	@license GPL
  *	@author Bjarne Varoystrand (@black_skorpio)
- *	@version 1.1.0
+ *	@version 1.1.1
  *	@description Fixes that goes hand in hand with the QX Hexagon userstyle
  *	@url http://varoystrand.se | http://kokensupport.com
 // ==UserScript==
 // @name			QX Hexagon companion
 // @namespace		https://github.com/BlackSkorpio/qx-hexagon
-// @version			1.1.0
+// @version			1.1.1
 // @description		Fixes that goes hand in hand with the QX Hexagon userstyle
 // @icon			https://github.com/BlackSkorpio/qx-hexagon/raw/master/screens/hexagon-logo.jpg
 // @author			Bjarne Varöystrand
