@@ -3742,6 +3742,7 @@
 		transform: translateY(0px);
 	}
 	#satellite svg.qxh-icon-mail,
+	#satellite svg.qxh-icon-nudge,
 	#satellite svg.qxh-icon-reload,
 	#satellite svg.qxh-icon-logout,
 	#satellite svg.qxh-icon-favorite {
