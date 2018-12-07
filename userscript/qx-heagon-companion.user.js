@@ -787,6 +787,7 @@ onReady(function() {
 			var hq_MemberProfileLink	= window.location.href.indexOf("/?id=");
 			var hq_msgOld				= window.location.href.indexOf('/messages.php');// NOTE HACK
 			var hq_MemberProfileId		= window.location.href.split('?id=');
+			var hq_IndexLink			= window.location.href.indexOf('/');
 			var hq_DocBody				= $(document.body);
 			var hq_Window				= $(window);
 			var hq_HtmlBody				= $('html, body');
@@ -823,6 +824,7 @@ onReady(function() {
 			var hq_colRight				= $('#column_right.column-right');
 			var hq_TeaserDiv	 		= $('.blog-teasers');
 			var hq_wholeID				= $('#whole');
+			var hq_MemberProfile		= $('[id^="home_"].homepage');
 			var hq_MemberPres			= $('.homepage div[style="display: block; min-height:150px;"]:first-of-type, .homepage #buff_block + div');
 			var hq_AdminUser			= $('.insertmember > a[href="/support.php"]');
 			var hq_MovieTitle			= $('div:not(.video-thumb-holder) > a[href^="/showmovies.php"], .homepage div[style="font-weight: bold; line-height: 14px;"] > a[href^="/showmovies.php"]');
@@ -1043,7 +1045,7 @@ onReady(function() {
 			hq_AdminUser.parents( '.'+hq_ClassFlexItem ).addClass( hq_ClassAlert );
 		};
 		// TEMP Dirty HACK to be able to keep functionality on member profiles!
-		if( hq_MemberProfileLink > -1) {
+		if( hq_MemberProfileLink > -1 || ( hq_IndexLink > -1 && typeof hq_MemberProfile !== 'undefined' || hq_MemberProfile !== null ) ) {
 			var hq_GetNickName		= $('.column-content h2:first-of-type > a');
 			var hq_BuyGoldToFlower	= $('.hideself_ > a:first-of-type[href^="javascript:buygold"]');
 			var hq_BuyGoldToName	= $('.hideself_ > a:last-of-type[href^="javascript:buygold"] > b');
