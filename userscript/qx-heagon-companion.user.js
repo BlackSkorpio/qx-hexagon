@@ -644,7 +644,7 @@ onReady(function() {
 			var hq_MemberSearching	= $('.homepage > a[name="looking_for"] + .homepageblock .line .header');
 			var hq_MemPosition		= $('.homepageblock.'+hq_ClassPrefix+'member-position .line .header');
 			var hq_MemDiscussions	= $('.homepage > div > .homepageblock > .line > .header');
-			var hq_MemberVisitors	= $('.homepageblock.'+hq_ClassPrefix+'members:first .line .header');// FIXME Adds it self to the favorites widget
+			var hq_MemberVisitors	= $('.homepageblock.'+hq_ClassPrefix+'member-visitors .line .header');// FIXME Adds it self to the favorites widget
 			var hq_MemberOther		= $('.homepageblock.'+hq_ClassPrefix+'members:last .line .header');
 		}
 		// The actual SVG's
@@ -763,8 +763,10 @@ onReady(function() {
 			hq_clubXXX.append( hq_clubXXXSVG );
 			hq_MemberSearching.prepend( hq_MemberSearchingSVG );
 			hq_MemPosition.prepend( hq_MemPositionSVG );
-			hq_MemberVisitors.prepend( hq_MemberVisitorsSVG );// FIXME Adds it self to the favorites widget
-			hq_MemberOther.prepend( hq_MemberOtherSVG );
+			setTimeout(function() {
+				hq_MemberVisitors.prepend( hq_MemberVisitorsSVG );
+				hq_MemberOther.prepend( hq_MemberOtherSVG );
+			}, 800);
 			hq_clubPublic.append( hq_clubPublicSVG );
 			hq_clubHidden.append( hq_clubHiddenSVG );
 			hq_InfoHeader.prepend( hq_InfoHeaderSVG );
@@ -787,7 +789,7 @@ onReady(function() {
 			var hq_MemberProfileLink	= window.location.href.indexOf("/?id=");
 			var hq_msgOld				= window.location.href.indexOf('/messages.php');// NOTE HACK
 			var hq_MemberProfileId		= window.location.href.split('?id=');
-			var hq_IndexLink			= window.location.href.indexOf('/');
+			//var hq_IndexLink			= window.location.href.indexOf('/');
 			var hq_DocBody				= $(document.body);
 			var hq_Window				= $(window);
 			var hq_HtmlBody				= $('html, body');
