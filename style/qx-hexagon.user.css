@@ -3169,6 +3169,7 @@
 		        transform: rotate(360deg);
 	}
 }
+/*@-webkit-keyframes qxh_loader {
 	0% {
 		-webkit-transform: rotate(0deg);
 		        transform: rotate(0deg);
@@ -3229,7 +3230,7 @@
 		        transform: rotate(360deg);
 		border-top-color: rgba(18, 21, 22, 0.5);
 	}
-}
+}*/
 /*@-webkit-keyframes qxh_notice {
 	0% {
 		color: inherit;
