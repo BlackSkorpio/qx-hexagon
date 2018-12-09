@@ -379,7 +379,7 @@
 		border-top-color: #3498db;
 		-webkit-animation: qxh_loader 2s linear infinite;
 		        animation: qxh_loader 2s linear infinite;
-		z-index: 102;
+		z-index: 103;
 	}
 	#qxh_loader:before {
 		content: "";
@@ -414,7 +414,7 @@
 		height: 100%;
 		background: #222222;
 		background: var(--gray) var(--ui-hex-bkrgd);
-		z-index: 103;
+		z-index: 102;
 		-webkit-transform: translateX(0);
 		        transform: translateX(0);
 	}
