@@ -1,13 +1,12 @@
 /*minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: ../dist/css/$1.$2 */
-@-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*! ==UserStyle==
 @name			QX Hexagon
 @namespace		github.com/BlackSkorpio/qx-hexagon
-@version		1.1.0
+@version		1.1.1
 @description	A modernized theme for qruiser.com
 @author			Bjarne Varöystrand (https://github.com/BlackSkorpio/qx-hexagon)
 @homepageURL	https://varoystrand.se
-@supportURL		https://beta.qruiser.com/clubs/club.php?id=142118
+@supportURL		https://www.qruiser.com/clubs/club.php?id=142118
 @updateURL		https://raw.githubusercontent.com/BlackSkorpio/qx-hexagon/master/dist/css/qx-hexagon.user.css
 @license		MIT
 @preprocessor	default
@@ -25,9 +24,10 @@
 @var	color	ui-clr-alert		"Color Alert"		rgba(188, 21, 42, 0.64)
 ==/UserStyle== */
 
+@-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** Colors, sizes & such ***/
 :root {
-	--ui-version: "QX Hexagon v1.1.0";
+	--ui-version: "QX Hexagon v1.1.1";
 	/*--ui-clr-disabled: rgb(188, 194, 191);
 	--ui-clr-highlight: rgb(170, 139, 89);
 	--ui-clr-white1: rgb(242, 242, 242);
@@ -195,7 +195,7 @@
 	[class*="sticky"] + [class*="hidden"] > svg.qxh-icon-noclubicon,
 	[class^="clubxxx"][class$="hidden"] > div[style*="height: 110px;"]:first-child,
 	[class$="hidden"] > img.xxx1, [class$="hidden"] > img.xxx3, [class$="hidden"] > img.xxx4,
-	div:not(#error_texts):empty:not(.divider):not(.orangeline):not(.poll-fill):not(.filldot):not(.jwpreview):not(.jwicon):not(.teaser-image):not(.memberlargeicon):not(#thumb):not(#colorpicker):not(#documentspecs):not([data-qruiser-chat]):not(.bounce):not(.modal-header) {
+	div:not(#error_texts):empty:not(.divider):not(.orangeline):not(.poll-fill):not(.filldot):not(.jwpreview):not(.jwicon):not(.teaser-image):not(.memberlargeicon):not(#thumb):not(#colorpicker):not(#documentspecs):not([data-qruiser-chat]):not(.bounce):not(.modal-header):not(#qxh_loader):not(.qxh-loader-section) {
 		display: none !important;
 	}
 	.qxh-hidden {
@@ -317,6 +317,7 @@
 		background: var(--gray) var(--ui-hex-bkrgd);
 	}
 	body {
+		position: relative !important; /* FIXME for the modal pushing the whole page to the far left */
 		min-width: auto;
 		background: var(--ui-radial-bkrgd);
 		font-size: 100%;
@@ -357,46 +358,98 @@
 	body.qxh-loading .page-container {
 		display: none;
 	}
-	body.qxh-loading #qxh_loading {
-		display: flex;
-		position: absolute;
+	#qxh_loader_wrapper {
+		position: fixed;
 		top: 0;
 		left: 0;
-		width: 100vw;
-		height: 100vh;
-		background-color: var(--gray);
-		background-image: var(--ui-hex-bkrgd);
-		background-repeat: repeat;
-		background-position: center;
-		overflow: hidden !important;
+		width: 100%;
+		height: 100%;
 		z-index: 101;
 	}
-	body.qxh-loading .qxh-loader {
-		display: flex;
+	#qxh_loader {
+		display: block;
 		position: relative;
+		left: 50%;
+		top: 50%;
 		width: 150px;
 		height: 150px;
-		margin: auto;
-		overflow: hidden;
-		z-index: 102;
+		margin: -75px 0 0 -75px;
+		border-radius: 50%;
+		border: 3px solid transparent;
+		border-top-color: #3498db;
+		-webkit-animation: qxh_loader 2s linear infinite;
+		        animation: qxh_loader 2s linear infinite;
+		z-index: 103;
 	}
-	body.qxh-loading .qxh-loader div {
+	#qxh_loader:before {
+		content: "";
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		right: 5px;
+		bottom: 5px;
+		border-radius: 50%;
+		border: 3px solid transparent;
+		border-top-color: #e74c3c;
+		-webkit-animation: qxh_loader 3s linear infinite;
+		        animation: qxh_loader 3s linear infinite;
+	}
+	#qxh_loader:after {
+		content: "";
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		right: 15px;
+		bottom: 15px;
+		border-radius: 50%;
+		border: 3px solid transparent;
+		border-top-color: #f9c922;
+		-webkit-animation: qxh_loader 1.5s linear infinite;
+		        animation: qxh_loader 1.5s linear infinite;
+	}
+	#qxh_loader_wrapper .qxh-loader-section {
+		position: fixed;
+		top: 0;
+		width: 51%;
 		height: 100%;
+		background: #222222;
+		background: var(--gray) var(--ui-hex-bkrgd);
+		z-index: 102;
+		-webkit-transform: translateX(0);
+		        transform: translateX(0);
 	}
-	body.qxh-loading .qxh-loader,
-	body.qxh-loading .qxh-loader div {
-		border-radius: 50%;
-		padding: 8px;
-		border: 2px solid transparent;
-		-webkit-animation: qxh_loader linear 3.5s infinite;
-		        animation: qxh_loader linear 3.5s infinite;
-		border-radius: 50%;
-		padding: 4px;
-		-webkit-animation: qxh_loader2 4s infinite linear;
-		        animation: qxh_loader2 4s infinite linear;
+	#qxh_loader_wrapper .qxh-loader-section.qxh-section-left {
+		left: 0;
 	}
-	body.qxh-loading .qxh-loader, body.qxh-loading .qxh-loader * {
-		will-change: transform;
+	#qxh_loader_wrapper .qxh-loader-section.qxh-section-right {
+		right: 0;
+	}
+	/* Loaded */
+	.hexagon-loaded #qxh_loader_wrapper .qxh-loader-section.qxh-section-left {
+		-webkit-transform: translateX(-100%);
+		        transform: translateX(-100%);
+		-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	}
+	.hexagon-loaded #qxh_loader_wrapper .qxh-loader-section.qxh-section-right {
+		-webkit-transform: translateX(100%);
+		        transform: translateX(100%);
+		-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	}
+	.hexagon-loaded #qxh_loader {
+		opacity: 0;
+		-webkit-animation-play-state: paused;
+		        animation-play-state: paused;
+		-webkit-transition: all 0.3s ease-out;
+		        transition: all 0.3s ease-out;
+	}
+	.hexagon-loaded #qxh_loader_wrapper {
+		visibility: hidden;
+		-webkit-transform: translateY(-100%);
+		        transform: translateY(-100%);
+		-webkit-transition: all 0.3s 1s ease-out;
+		        transition: all 0.3s 1s ease-out;
 	}
 	svg.qxh-icon.qxh-sprite {
 		width: 0;
@@ -941,7 +994,7 @@
 	li#qmenu_forum {
 		grid-area: forums;
 	}
-	li#qmenu_chat {
+	li#qmenu_messages {
 		grid-area: chat;
 	}
 	li#qmenu_info {
@@ -962,6 +1015,11 @@
 	#qmenu li ul li a:hover {
 		opacity: 1;
 		transform: translate3d(var(--ui-size-s), 0, 0);
+	}
+	#qmenu_home ul li,
+	#qmenu_home ul li a {
+		width: auto !important;
+		white-space: nowrap;
 	}
 	/* Left Column */
 	#column_left {
@@ -1173,7 +1231,7 @@
 
 	/** Flex items **/
 	/* flex-basis: 25% */
-	.hexagon #header .blog-teasers > .teaser {
+	.hexagon #header .blog-teasers .teaser {
 		flex: 1 1 25%;
 	}
 	/*-------------*/
@@ -1257,7 +1315,7 @@
 		z-index: 3;
 	}
 	.container--favourites.qxh-widget--sticky {
-		top: 21.8em;
+		top: 29em;
 		min-height: 10em;
 		min-block-size: 10em;
 		z-index: 2;
@@ -1267,7 +1325,7 @@
 		max-block-size: 5.7em;
 	}
 	.container--personal.qxh-widget--sticky {
-		top:32.0em;
+		top: 40.7em;
 		z-index: 1;
 	}
 	.container--your-search.qxh-widget--sticky {
@@ -1872,14 +1930,20 @@
 		width: 98%;
 		z-index: auto;
 	}
-	.hexagon #header .blog-teasers {
+	.hexagon #header .blog-teasers,
+	.hexagon .blog-teasers-wrapper {
 		position: relative;
 		flex-flow: row;
 		max-width: none;
+	}
+	.hexagon #header .blog-teasers {
 		top: auto;
 		right: auto;
 		padding: 0;
 		margin: 0.3em 0.3em 0 auto;
+	}
+	.hexagon .blog-teasers-wrapper {
+		margin-left: auto;
 	}
 	.hexagon #header .blog-teasers .teaser-image {
 		border-radius: var(--brd-rad-top);
@@ -2339,6 +2403,15 @@
 	}
 	.column-left .insertmember {
 		margin: 0;
+	}
+	/* Msg Archive */
+	.qxh-msg-archive {
+		margin-top: var(--margin-s);
+	}
+	.qxh-msg-archive h4 {
+		color: var(--txt-high-clr);
+		border-bottom: var(--brd-type-1);
+		padding-bottom: var(--padding-m);
 	}
 	/* Restrict Aside headers */
 	#column_left .container:not(.container--your-search) .container-header {
@@ -2836,9 +2909,9 @@
 	[id^="qxh_category_"].qxh-template-clubs-discussions .list > .odd.qxh-grid-container,
 	[id^="qxh_category_"].qxh-template-clubs-discussions .list > .even.qxh-grid-container,/* QUESTION Obsolete? */
 	[id^="qxh_category_"].qxh-template-forum-discussions .list.qxh-flex-container > .qxh-flex-item,
-	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .column-content > div.list.qxh-flex-container.qxh-w100:nth-of-type(2) > .qxh-flex-item,
+	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .column-content > div.list.qxh-flex-container.qxh-w100:nth-of-type(2) > .qxh-flex-item/*,*/
 	/* FIXME Raden ovan ersätter denna rad!!!!! ( Kanske... )*/
-	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .list.qxh-flex-container > .qxh-flex-item {
+	/*:not([id^="qxh_thread_"]).qxh-template-forum-discussions .list.qxh-flex-container > .qxh-flex-item*//* QUESTION Obsolete? */ {
 		display: grid;
 		grid-template-rows: [heading] min-content [date] min-content [member] min-content;
 		grid-template-columns: [title] 1fr [number] auto [status] auto;
@@ -3077,6 +3150,26 @@
 }
 /*** Let's animate things ***/
 @-webkit-keyframes qxh_loader {
+	0%   {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
+@keyframes qxh_loader {
+	0%   {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
+/*@-webkit-keyframes qxh_loader {
 	0% {
 		-webkit-transform: rotate(0deg);
 		        transform: rotate(0deg);
@@ -3137,7 +3230,7 @@
 		        transform: rotate(360deg);
 		border-top-color: rgba(18, 21, 22, 0.5);
 	}
-}
+}*/
 /*@-webkit-keyframes qxh_notice {
 	0% {
 		color: inherit;
@@ -3275,6 +3368,48 @@
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** TEST AREA ***/
 @supports (display: grid) {
+	/** Aside visited member, club and poll links **/
+	.rightcolumn-discussion a:visited > h4,
+	.rightcolumn-poll-header h4 a:visited,
+	.rightcolumn-club-content h4 a:visited,
+	#column_left .insertmember .link a:visited,
+	#column_right .insertmember .link a:visited {
+		color: rgb(125, 114, 96);
+	}
+	/*-------------*/
+	/** Messages List **/
+	.qxh-source-messages .chat-messages.qxh-flex-container {
+		flex-flow: column;
+	}
+	/* Truncation from: http://hackingui.com/front-end/
+	   a-pure-css-solution-for-multiline-text-truncation/ */
+	.chat-message.qxh-flex-item {
+		overflow: hidden;
+		position: relative;
+		text-align: justify;
+	}
+	.chat-message-content,
+	.chat-message.qxh-flex-item {
+		max-height: 100px;
+	}
+	.chat-message.qxh-flex-item:before,
+	.chat-message.qxh-flex-item:after {
+		position: absolute;
+		right: 0;
+	}
+	.chat-message.qxh-flex-item:before {
+		content: "...";
+		content: "\2026";
+		font-weight: 700;
+		bottom: 0;
+	}
+	.chat-message.qxh-flex-item:after {
+		width: 1em;
+		height: 1em;
+		content: "";
+		background-color: inherit;
+	}
+	/*-------------*/
 	.column-content > #error_texts + script + p:empty + .insertmember {
 		margin-top: var(--margin-xlr);
 	}
@@ -3733,6 +3868,7 @@
 		transform: translateY(0px);
 	}
 	#satellite svg.qxh-icon-mail,
+	#satellite svg.qxh-icon-nudge,
 	#satellite svg.qxh-icon-reload,
 	#satellite svg.qxh-icon-logout,
 	#satellite svg.qxh-icon-favorite {

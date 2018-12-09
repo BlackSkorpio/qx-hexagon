@@ -3,13 +3,13 @@
  *	@copyright	(c) 2018 Bjarne Varoystrand - bjarne ○ kokensupport • com
  *	@license GPL
  *	@author Bjarne Varoystrand (@black_skorpio)
- *	@version 1.1.0
+ *	@version 1.1.1
  *	@description Fixes that goes hand in hand with the QX Hexagon userstyle
  *	@url http://varoystrand.se | http://kokensupport.com
 // ==UserScript==
 // @name			QX Hexagon companion
 // @namespace		https://github.com/BlackSkorpio/qx-hexagon
-// @version			1.1.0
+// @version			1.1.1
 // @description		Fixes that goes hand in hand with the QX Hexagon userstyle
 // @icon			https://github.com/BlackSkorpio/qx-hexagon/raw/master/screens/hexagon-logo.jpg
 // @author			Bjarne Varöystrand
@@ -22,29 +22,23 @@
 // ==/UserScript==
 **/
 // NOTE HexaGon Loading
-function onReady(callback) {
-	var hq_ClassPrefix		= 'qxh-';
-	var hq_ClassLoader		= hq_ClassPrefix+'loader';
-	var ReadyBody			= $(document.body);
-	var ReadyLoadingClass	= hq_ClassPrefix+'loading';
-	var ReadyLoader			= '<div id="qxh_loading"><div class="'+hq_ClassLoader+'"><div><div><div><div><div><div><div><div><div><div></div></div></div></div></div></div></div></div></div></div></div></div>';
+function hex_loader() {
+	var hex_DocBody = $(document.body);
+	var hex_Document = $(document);
+	var hex_TimeLoading = 3000;
+	var hex_ClassLoading = 'qxh-loading';
+	var hex_ClassLoaded = 'hexagon-loaded';
+	var hex_DivLoading = '<div id="qxh_loader_wrapper"><div id="qxh_loader"></div><div class="qxh-loader-section qxh-section-left"></div><div class="qxh-loader-section qxh-section-right"></div></div>';
 
-	var intervalId = window.setInterval(function() {
-		if (document.getElementsByTagName('body')[0] !== undefined) {
-			window.clearInterval(intervalId);
-			callback.call(this);
-		}
-	}, 1000);
-	ReadyBody.addClass(ReadyLoadingClass).prepend(ReadyLoader);
-}
-function setVisible(selector, visible) {
-	document.querySelector(selector).style.display = visible ? 'block' : 'none';
-}
-onReady(function() {
-	setVisible('.page-container, #satellite, body[onload="timer()"] div[style="margin: 10px"]', true),
-	setVisible('#qxh_loading', false),
-	$(document.body).removeClass('qxh-loading');
-});
+	hex_DocBody.addClass( hex_ClassLoading ).prepend( hex_DivLoading );
+
+	hex_Document.ready(function() {
+		setTimeout(function() {
+			hex_DocBody.removeClass( hex_ClassLoading ).addClass( hex_ClassLoaded );
+		}, hex_TimeLoading);
+	});
+};
+hex_loader();
 (function(window, document, $, undefined) {
 	// NOTE Be A Real Pain In The Ass!
 	"use strict";
@@ -559,11 +553,11 @@ onReady(function() {
 		if(HexaGon.satellite > -1) window.resizeTo('340', '500');
 	};
 	// NOTE This is stuff that we realy need to make sure they have been executed!
-	function injectStyle() {
+	/*function injectStyle() {
 		var hq_Body		= $(document.body);
 		var hq_HexStyle	= '';
 		hq_Body.append( hq_HexStyle );
-	};
+	};*/
 	function addSprite() {
 		// NOTE pngBeGone
 		var hq_Body				= $(document.body);
@@ -581,6 +575,7 @@ onReady(function() {
 		{
 			var hq_QruiserLogo		= $('img#logo_qruiser, #satellite img[alt="Qruiser"], body[onload="timer()"] div[style="border: 1px solid #B21B1B; color: #B21B1B; width: auto; padding: 8px; font-size: 12px; line-height: 18px; font-weight: bold; background-color: #FEFCF3; margin-bottom:10px;"] > img[src$="exclamation.gif"]');
 			var hq_qxLogo			= $('.blog-teasers .gaymap h3');
+			var hq_SatNudge			= $('#satellite #moodstatus > p > b > a[href*="buffs.php"]');
 			var hq_Sat_Mail			= $('#satellite #moodstatus > p > b > a[href*="messages.php"]');
 			var hq_Sat_Heart		= $('#satellite #moodstatus > p > b > a[href*="favourites.php"]');
 			var hq_Sat_Reload		= $('#satellite p > a[href*="?"]:not([href*="logout"])');
@@ -643,7 +638,7 @@ onReady(function() {
 			var hq_MemberSearching	= $('.homepage > a[name="looking_for"] + .homepageblock .line .header');
 			var hq_MemPosition		= $('.homepageblock.'+hq_ClassPrefix+'member-position .line .header');
 			var hq_MemDiscussions	= $('.homepage > div > .homepageblock > .line > .header');
-			var hq_MemberVisitors	= $('.homepageblock.'+hq_ClassPrefix+'members:first .line .header');// FIXME Adds it self to the favorites widget
+			var hq_MemberVisitors	= $('.homepageblock.'+hq_ClassPrefix+'member-visitors .line .header');// FIXME Adds it self to the favorites widget
 			var hq_MemberOther		= $('.homepageblock.'+hq_ClassPrefix+'members:last .line .header');
 		}
 		// The actual SVG's
@@ -657,6 +652,7 @@ onReady(function() {
 			var hq_verifiedSVG		= hq_svgFragment+'-verified'+hq_svgFragmentUse+'#member-verified'+hq_svgFragmentSuffix;
 			var hq_chatSVG			= hq_svgFragment+'-chat'+hq_svgFragmentUse+'#member-chat'+hq_svgFragmentSuffix;
 			var hq_mailSVG			= hq_svgFragment+'-mail'+hq_svgFragmentUse+'#member-messages'+hq_svgFragmentSuffix;
+			var hq_nudgeSVG			= hq_svgFragment+'-nudge'+hq_svgFragmentUse+'#member-buffs'+hq_svgFragmentSuffix;
 			var hq_mailUnreadSVG	= hq_svgFragment+'-unread'+hq_svgFragmentUse+'#messages-unread'+hq_svgFragmentSuffix;
 			var hq_mailAnsweredSVG	= hq_svgFragment+'-answered'+hq_svgFragmentUse+'#messages-answered'+hq_svgFragmentSuffix;
 			var hq_mailAttachmentSVG = hq_svgFragment+'-attachment'+hq_svgFragmentUse+'#messages-attachment'+hq_svgFragmentSuffix;
@@ -761,8 +757,10 @@ onReady(function() {
 			hq_clubXXX.append( hq_clubXXXSVG );
 			hq_MemberSearching.prepend( hq_MemberSearchingSVG );
 			hq_MemPosition.prepend( hq_MemPositionSVG );
-			hq_MemberVisitors.prepend( hq_MemberVisitorsSVG );// FIXME Adds it self to the favorites widget
-			hq_MemberOther.prepend( hq_MemberOtherSVG );
+			setTimeout(function() {
+				hq_MemberVisitors.prepend( hq_MemberVisitorsSVG );
+				hq_MemberOther.prepend( hq_MemberOtherSVG );
+			}, 800);
 			hq_clubPublic.append( hq_clubPublicSVG );
 			hq_clubHidden.append( hq_clubHiddenSVG );
 			hq_InfoHeader.prepend( hq_InfoHeaderSVG );
@@ -771,6 +769,7 @@ onReady(function() {
 			hq_MemDiscussions.prepend( hq_MemDiscussionsSVG );
 			hq_BlogHeader.prepend( hq_BlogHeaderSVG );
 			hq_FavHeader.prepend( hq_FavHeaderSVG );
+			hq_SatNudge.prepend( hq_nudgeSVG );
 			hq_Sat_Mail.prepend( hq_mailSVG );
 			hq_Sat_Heart.prepend( hq_heartIconSVG );
 			hq_Sat_Reload.prepend( hq_reloadSVG );
@@ -784,6 +783,7 @@ onReady(function() {
 			var hq_MemberProfileLink	= window.location.href.indexOf("/?id=");
 			var hq_msgOld				= window.location.href.indexOf('/messages.php');// NOTE HACK
 			var hq_MemberProfileId		= window.location.href.split('?id=');
+			//var hq_IndexLink			= window.location.href.indexOf('/');
 			var hq_DocBody				= $(document.body);
 			var hq_Window				= $(window);
 			var hq_HtmlBody				= $('html, body');
@@ -801,7 +801,7 @@ onReady(function() {
 			var hq_MakeGridContainer	= $('#whole, #header, #qmenu, #whole .main-content, .insertmember');
 			var hq_MakeGridItem			= $('');
 			var hq_MakeList				= $('#column_center.column-center h2 + p[style="margin-top: 0.5em;"] + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"]), .column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"])');
-			var hq_MakeFlexContainer	= $('.guest-access .start-content, .column-content p:empty + .insertmember + p:empty + p + div + div + p:empty + p + #scroller > div:first-of-type, .movies-listing > div[style="width: 100%; padding: 0px;"], #digexplained_text + p:empty + .small + div, .homepageblock > #homepageinfo, .homepageblock > [id^="album_"][id$="_info"].block, .images-homepage-image, .images-homepage, .list, .gallery, .container-columns, .insertmember .link, .insertmember .icons, .scribbleboard-holder, .blog-teasers, #scroller > div[style*="width:41"], #column_center.column-center h2 + p[style="margin-top: 0.5em;"] + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"]), .column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"])');
+			var hq_MakeFlexContainer	= $('.guest-access .start-content, .column-content p:empty + .insertmember + p:empty + p + div + div + p:empty + p + #scroller > div:first-of-type, .movies-listing > div[style="width: 100%; padding: 0px;"], #digexplained_text + p:empty + .small + div, .homepageblock > #homepageinfo, .homepageblock > [id^="album_"][id$="_info"].block, .images-homepage-image, .images-homepage, .list, .gallery, .container-columns, .insertmember .link, .insertmember .icons, .scribbleboard-holder, .blog-teasers, .blog-teasers-wrapper, #scroller > div[style*="width:41"], #column_center.column-center h2 + p[style="margin-top: 0.5em;"] + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"]), .column-content .line + div:not(#homepageinfo):not(#map_canvas):not(.list):not([id^="album_"]):not(.odd):not(.even):not(.gallery):not([class*="hidden"])');
 			var hq_MakeFlexItem			= $('.guest-access .start-content > .blog-list, .movies-listing > div[style="width: 100%; padding: 0px;"] > .odd,.movies-listing > div[style="width: 100%; padding: 0px;"] > .even,.homepageblock > #homepageinfo > .infoblock, .homepageblock > .block > a[href^="javascript:openPhotoPopup"], .list > .odd, .list > .even, .odd, .even');
 			var hq_SubNavButtons		= $('#subnavbar .subnavbar-item ');
 			var hq_HomePageFlex			= $('.homepageblock');
@@ -820,6 +820,7 @@ onReady(function() {
 			var hq_colRight				= $('#column_right.column-right');
 			var hq_TeaserDiv	 		= $('.blog-teasers');
 			var hq_wholeID				= $('#whole');
+			var hq_MemberProfile		= $('[id^="home_"].homepage');
 			var hq_MemberPres			= $('.homepage div[style="display: block; min-height:150px;"]:first-of-type, .homepage #buff_block + div');
 			var hq_AdminUser			= $('.insertmember > a[href="/support.php"]');
 			var hq_MovieTitle			= $('div:not(.video-thumb-holder) > a[href^="/showmovies.php"], .homepage div[style="font-weight: bold; line-height: 14px;"] > a[href^="/showmovies.php"]');
@@ -962,10 +963,60 @@ onReady(function() {
 		//	return text.join(" ") + (text.length > 0 ? ' <span class="qxh-lastWord">'+last+'</span>' : last);
 		//});
 
-		// NOTE Move Latest logged in favorites to the Favorites widget
-		hq_LatestFavMember.appendTo( hq_Favorites ),hq_LatestFavDiv.remove();
-		// NOTE Move the Favorites widget above the Mail/Message Widget
-		hq_FavoritesDiv.insertBefore( hq_MailBox );
+		function AsideLeft() {
+			// NOTE Move Latest logged in favorites to the Favorites widget
+			hq_LatestFavMember.appendTo( hq_Favorites ),hq_LatestFavDiv.remove();
+			// NOTE Move msg archive to the new msg widget
+			var CreateMsgArchive = function() {
+				var hq_ArchiveTitle = $('.container.container--mailbox > .container-header > a').text();
+				var hq_NewArchive = $('<div class="qxh-msg-archive">' + hq_ArchiveTitle +'</div>');
+				var hq_ChatList = '.container.container--chat-list > .container-inner';
+
+				var NewMsgArchive = $.Deferred();
+
+				hq_NewArchive.appendTo( hq_ChatList );
+
+				return NewMsgArchive;
+			};
+			var GetArchiveLinks = function() {
+				var hq_ArchiveLinks = $('.container.container--mailbox > .container-inner > div');
+				var hq_NewArchiveLinks = '.container.container--chat-list > .container-inner > .qxh-msg-archive';
+
+				var ArchiveLinks = $.Deferred();
+
+				hq_ArchiveLinks.appendTo( hq_NewArchiveLinks );
+
+				return ArchiveLinks;
+			};
+			var MoveNudges = function() {
+				var hq_ClassNudge = hq_ClassPrefix+'nudges';
+				var hq_DivRecentNudge = $('.'+hq_ClassNudge);
+				var hq_DivNudges = $('.container.container--recent > .container-inner > div:nth-child(2)');
+				var hq_TargetNudge = '.container.container--chat-list > .container-inner';
+
+				var NudgeNewHome = $.Deferred();
+
+				hq_DivNudges.addClass( hq_ClassNudge );
+				hq_DivRecentNudge.appendTo( hq_TargetNudge );
+
+				return NudgeNewHome;
+			};
+			var CleanUpArchive = function() {
+				var hq_MailBoxArchive = $('.container.container--mailbox');
+
+				var CleanUp = $.Deferred();
+
+				hq_MailBoxArchive.remove();
+
+				return CleanUp;
+			};
+			CreateMsgArchive().done( GetArchiveLinks() ),
+			GetArchiveLinks().done( MoveNudges() ),
+			MoveNudges().done( CleanUpArchive() );
+			// NOTE Move the Favorites widget above the Mail/Message Widget
+			hq_FavoritesDiv.insertBefore( hq_MailBox );
+		};
+		AsideLeft();
 
 		if ( hq_DocBody.hasClass('guest-access') ) {
 			var hq_LogInContainer	= $('.container.login');
@@ -1004,7 +1055,108 @@ onReady(function() {
 			hq_AdminUser.parents( '.'+hq_ClassFlexItem ).addClass( hq_ClassAlert );
 		};
 		// TEMP Dirty HACK to be able to keep functionality on member profiles!
-		if( hq_MemberProfileLink > -1) {
+		function memberProfile() {
+			if ( hq_MemberProfile.is(':visible') ) {
+				//console.info('we have a profile');
+				var hq_GetNickName		= $('.column-content h2:first-of-type > a');
+				var hq_BuyGoldToFlower	= $('.hideself_ > a:first-of-type[href^="javascript:buygold"]');
+				var hq_BuyGoldToName	= $('.hideself_ > a:last-of-type[href^="javascript:buygold"] > b');
+				var hq_BuyGoldCleanUp	= $('.hideself_ > a:last-of-type[href^="javascript:buygold"]');
+				var hq_ProfileFacePic	= $('img[src^="/thumbcorners.php"][style*="/memberthumbnails/"]');
+				var hq_ProfileHeroImg	= $('.homepage > div[style="padding-top: 10px"]');
+				var hq_MemberPosition	= $('.homepageblock #map_canvas');
+				var hq_HomeMembers		= $('.homepageblock > .gallery.gallery-scroll');// FIXME Adds it self to the favorites widget
+				var hq_VisitorActions	= $('.homepage > .dontshowself > .homepageblock');
+				var hq_VisitorActionsMain = $('.homepage > .dontshowself > .homepageblock > div[style="margin: 5px 0px 5px 0px"]');
+				var hq_VisitorSendMsgIcon = '.dontshowself > div > br[clear="all"] + div > .homebuttons:first-child';
+				var hq_VisitorSendMsgText = hq_VisitorSendMsgIcon + '+ span';
+				var hq_FavList			= '#favouritelist';
+				var hq_UnFavList		= '#unfavouritelist';
+				var hq_IgnList			= '#ignorelist';
+				var hq_UnIgnList		= '#unignorelist';
+				var hq_FlirtList		= '#flirtlist';
+				var hq_HomeLink			= '.homelink';
+				var hq_ClassMemberFace	= hq_ClassPrefix+'member-faceimage';
+				var hq_ClassMemHeroImg	= hq_ClassPrefix+'member-heroimage';
+				var hq_ClassMemPosition	= hq_ClassPrefix+'member-position';
+				var hq_ClassMembers		= hq_ClassPrefix+'members';
+				var hq_ClassVisitors	= hq_ClassPrefix+'member-visitors';
+				var hq_ClassOther		= hq_ClassPrefix+'other-members';
+				var hq_ClassActions		= hq_ClassPrefix+'actions';
+				var hq_ClassAction		= 'action';
+				var hq_ClassActFavorite	= hq_ClassPrefix+hq_ClassAction+'--favorite';
+				var hq_ClassActIgnore	= hq_ClassPrefix+hq_ClassAction+'--ignore';
+				var hq_ClassActFlirt	= hq_ClassPrefix+hq_ClassAction+'--flirt';
+				var hq_ClassActSendMsg	= hq_ClassPrefix+hq_ClassAction+'--sendmsg';
+				var hq_SpanActionFav	= hq_FragmentSpan+hq_ClassAction+' '+hq_ClassActFavorite+hq_FragmentSuffix;
+				var hq_SpanActionIgn	= hq_FragmentSpan+hq_ClassAction+' '+hq_ClassActIgnore+hq_FragmentSuffix;
+				var hq_SpanActionFlirt	= hq_FragmentSpan+hq_ClassAction+' '+hq_ClassActFlirt+hq_FragmentSuffix;
+				var hq_DivVisitorSendMsg = hq_FragmentDiv+hq_ClassAction+' '+hq_ClassActSendMsg+hq_FragmentSuffix;
+				var hq_ActionFavorite	= $(hq_FavList + ',' + hq_FavList + '+' + hq_HomeLink + ',' + hq_UnFavList + ',' + hq_UnFavList + '+' + hq_HomeLink);
+				var hq_ActionIgnore		= $(hq_IgnList + ',' + hq_IgnList + '+' + hq_HomeLink + ',' + hq_UnIgnList + ',' + hq_UnIgnList + '+' + hq_HomeLink);
+				var hq_ActionFlirt		= $(hq_FlirtList + ',' + hq_FlirtList + '+' + hq_HomeLink);
+				var hq_ActionSendMsg	= $(hq_VisitorSendMsgIcon + ',' + hq_VisitorSendMsgText);
+
+				//console.info("Qruiser: We have a renegade template"),
+				if ( typeof hq_GetNickName !== 'undefined' || hq_GetNickName !== null ) {
+					// Replace() any _ with space: https://stackoverflow.com/a/34671415/6820262
+					var hq_NickName = hq_GetNickName.text().replace(/_/g, " ");
+					document.title = 'Qruiser - ' + hq_NickName + ' - The Nordic Gay & Queer Online Community';
+				};
+				function setProfileClasses() {
+					if ( hq_MemberProfileLink > -1 ) {hq_DocBody.attr("id", hq_IdMemberBody);};
+					hq_DocBody.addClass( hq_ClassMemberBody ),
+					hq_MemberPres.addClass( hq_ClassMemIntro ),
+					hq_ProfileFacePic.addClass( hq_ClassMemberFace ).css('margin-right',''),
+					hq_ProfileHeroImg.addClass( 'homepageblock '+hq_ClassMemHeroImg ).removeAttr('style'),
+					hq_HomePageStats.addClass( hq_ClassHpStats ),
+					hq_HomePagePresentation.addClass( 'homepageblock '+hq_ClassHpPresentation ),
+					// Baptise the Visitor Actions Div
+					hq_VisitorActions.addClass( hq_ClassActions ),
+					hq_HomePageLookingFor.addClass( hq_ClassHpLookingFor ),
+					hq_MemberPosition.parent().addClass( hq_ClassMemPosition ),
+					hq_HomePageFlex.not( ( hq_NoHomePageList ) ).addClass( hq_ClassFlexContainer ),
+					hq_MakeFlexItem.addClass( hq_ClassFlexItem ).removeClass('odd even');
+				};
+				function tidyUpProfile() {
+					hq_starSign.wrap( hq_SpanStarSign ),
+					// Fav Actions
+					hq_ActionFavorite.wrapAll( hq_SpanActionFav ),
+					// Ignore Actions
+					hq_ActionIgnore.wrapAll( hq_SpanActionIgn ),
+					// Flirt Actions
+					hq_ActionFlirt.wrapAll( hq_SpanActionFlirt ),
+					// NOTE Merge the two buy gold links to one
+					hq_BuyGoldToName.appendTo( hq_BuyGoldToFlower ), hq_BuyGoldCleanUp.remove(),
+					// Send Msg Actions
+					hq_ActionSendMsg.wrapAll( hq_DivVisitorSendMsg );
+				};
+				function visitorSection() {
+					hq_HomeMembers.parent().addClass( hq_ClassMembers ),// FIXME Adds it self to the favorites widget
+					$('.'+hq_ClassMembers+':first').addClass( hq_ClassVisitors );// FIXME Adds it self to the favorites widget
+					// If .onlyshowself is visible we are on our profile
+					if ( $('.onlyshowself').is(":visible") ) {
+						$('.homepage > div > .homepageblock > .line > .header').replaceWith(function() {
+							return '<span class="header"><a href="/yourdiscussions.php">' + this.innerHTML + '</a></span>';
+						});
+						$('.'+hq_ClassMembers+':first > .line > .header').replaceWith(function() {
+							return '<span class="header"><a href="/visitors.php">' + this.innerHTML + '</a></span>';
+						});
+						//console.log('We are on our own profile');
+					};
+					$('.'+hq_ClassMembers+':last').addClass( hq_ClassOther );
+				}
+				setProfileClasses(),
+				tidyUpProfile(),
+				visitorSection();
+			}
+		};
+		// NOTE Wait on the QX core to execute
+		setTimeout(function() {
+			memberProfile();
+		}, 800);
+		//if( hq_MemberProfileLink > -1 || ( hq_IndexLink > -1 && typeof hq_MemberProfile !== 'undefined' || hq_MemberProfile !== null ) ) {
+		/*if ( ( hq_MemberProfileLink > -1 ) || hq_MemberProfile.is(':visible') ) {
 			var hq_GetNickName		= $('.column-content h2:first-of-type > a');
 			var hq_BuyGoldToFlower	= $('.hideself_ > a:first-of-type[href^="javascript:buygold"]');
 			var hq_BuyGoldToName	= $('.hideself_ > a:last-of-type[href^="javascript:buygold"] > b');
@@ -1094,7 +1246,7 @@ onReady(function() {
 			//$(".homepage > div.homepageblock").replaceWith(function() {
 			//	return "<section class='homepageblock'>" + this.innerHTML + "</section>";
 			//});
-		}
+		}*/
 		if ( hq_diggedMovies > -1 ) {
 			hq_searchXxxNodes.contents().filter(function() {
 				return this.nodeType == 3 && $.trim(this.nodeValue).length;
@@ -1208,7 +1360,7 @@ onReady(function() {
 			var hq_LinkMovies	= $('#qmenu_movies > a');
 			var hq_LinkBlogs	= $('#qmenu_texts > a');
 			var hq_LinkForum	= $('#qmenu_forum > a');
-			var hq_LinkChat		= $('#qmenu_chat > a');
+			var hq_LinkChat		= $('#qmenu_messages > a');
 			var hq_LinkInfo		= $('#qmenu_info > a');
 			var hq_LinkLogOut	= $('#qlogout');
 			var hq_LinkHome		= $('#column_left .leftcolumn-membericon > .insertmember > .link > a');
@@ -1230,11 +1382,11 @@ onReady(function() {
 			} else {
 				var hq_LinkFavorites = $('#column_left .container--favourites > .container-heading > a');
 			};
-			var hq_NewClubCont	= $('#column_left .container--personal .container-inner > div:nth-of-type(2) > div:nth-of-type(1) > b > a[href="/showclubs.php?updated=1"]');
+			var hq_NewClubCont	= $('#column_left .container--personal .container-inner > div:nth-of-type(1) > div:nth-of-type(1) > b > a[href="/showclubs.php?updated=1"]');
 			if ( hq_NewClubCont.is(":visible") ) {
-				var hq_LinkYourClubs = $('#column_left .container--personal .container-inner > div:nth-of-type(2) > div:nth-of-type(1) > b > a');
+				var hq_LinkYourClubs = $('#column_left .container--personal .container-inner > div:nth-of-type(1) > div:nth-of-type(1) > b > a');
 			} else {
-				var hq_LinkYourClubs = $('#column_left .container--personal .container-inner > div:nth-of-type(2) > div:nth-of-type(1) > a');
+				var hq_LinkYourClubs = $('#column_left .container--personal .container-inner > div:nth-of-type(1) > div:nth-of-type(1) > a');
 			};
 			var hq_FormElements	= event.target.tagName.toLowerCase() !== 'input' && event.target.tagName.toLowerCase() !== 'textarea';
 			var hq_code = (event.keyCode ? event.keyCode : event.which);
