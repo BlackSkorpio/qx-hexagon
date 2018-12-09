@@ -1262,7 +1262,7 @@
 		z-index: 3;
 	}
 	.container--favourites.qxh-widget--sticky {
-		top: 21.8em;
+		top: 29em;
 		min-height: 10em;
 		min-block-size: 10em;
 		z-index: 2;
@@ -1272,7 +1272,7 @@
 		max-block-size: 5.7em;
 	}
 	.container--personal.qxh-widget--sticky {
-		top:32.0em;
+		top: 40.7em;
 		z-index: 1;
 	}
 	.container--your-search.qxh-widget--sticky {
