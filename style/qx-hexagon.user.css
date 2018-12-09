@@ -963,6 +963,11 @@
 		opacity: 1;
 		transform: translate3d(var(--ui-size-s), 0, 0);
 	}
+	#qmenu_home ul li,
+	#qmenu_home ul li a {
+		width: auto !important;
+		white-space: nowrap;
+	}
 	/* Left Column */
 	#column_left {
 		grid-area: left;
