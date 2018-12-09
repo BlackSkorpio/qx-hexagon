@@ -969,10 +969,10 @@ onReady(function() {
 		//	return text.join(" ") + (text.length > 0 ? ' <span class="qxh-lastWord">'+last+'</span>' : last);
 		//});
 
-		// NOTE Move Latest logged in favorites to the Favorites widget
-		hq_LatestFavMember.appendTo( hq_Favorites ),hq_LatestFavDiv.remove();
-		// NOTE Move msg archive to the new msg widget
-		function MsgArchive() {
+		function AsideLeft() {
+			// NOTE Move Latest logged in favorites to the Favorites widget
+			hq_LatestFavMember.appendTo( hq_Favorites ),hq_LatestFavDiv.remove();
+			// NOTE Move msg archive to the new msg widget
 			var CreateMsgArchive = function() {
 				var hq_ArchiveTitle = $('.container.container--mailbox > .container-header > a').text();
 				var hq_NewArchive = $('<div class="qxh-msg-archive">' + hq_ArchiveTitle +'</div>');
