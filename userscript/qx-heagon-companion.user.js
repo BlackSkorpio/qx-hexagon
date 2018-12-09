@@ -1374,11 +1374,11 @@ onReady(function() {
 			} else {
 				var hq_LinkFavorites = $('#column_left .container--favourites > .container-heading > a');
 			};
-			var hq_NewClubCont	= $('#column_left .container--personal .container-inner > div:nth-of-type(2) > div:nth-of-type(1) > b > a[href="/showclubs.php?updated=1"]');
+			var hq_NewClubCont	= $('#column_left .container--personal .container-inner > div:nth-of-type(1) > div:nth-of-type(1) > b > a[href="/showclubs.php?updated=1"]');
 			if ( hq_NewClubCont.is(":visible") ) {
-				var hq_LinkYourClubs = $('#column_left .container--personal .container-inner > div:nth-of-type(2) > div:nth-of-type(1) > b > a');
+				var hq_LinkYourClubs = $('#column_left .container--personal .container-inner > div:nth-of-type(1) > div:nth-of-type(1) > b > a');
 			} else {
-				var hq_LinkYourClubs = $('#column_left .container--personal .container-inner > div:nth-of-type(2) > div:nth-of-type(1) > a');
+				var hq_LinkYourClubs = $('#column_left .container--personal .container-inner > div:nth-of-type(1) > div:nth-of-type(1) > a');
 			};
 			var hq_FormElements	= event.target.tagName.toLowerCase() !== 'input' && event.target.tagName.toLowerCase() !== 'textarea';
 			var hq_code = (event.keyCode ? event.keyCode : event.which);
