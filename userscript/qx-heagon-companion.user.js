@@ -996,14 +996,14 @@ onReady(function() {
 			};
 			var MoveNudges = function() {
 				var hq_ClassNudge = hq_ClassPrefix+'nudges';
-				var hq_RecentNudge = $('.'+hq_ClassNudge);
+				var hq_DivRecentNudge = $('.'+hq_ClassNudge);
 				var hq_DivNudges = $('.container.container--recent > .container-inner > div:nth-child(2)');
 				var hq_TargetNudge = '.container.container--chat-list > .container-inner';
 
 				var NudgeNewHome = $.Deferred();
 
 				hq_DivNudges.addClass( hq_ClassNudge );
-				hq_RecentNudge.appendTo( hq_TargetNudge );
+				hq_DivRecentNudge.appendTo( hq_TargetNudge );
 
 				return NudgeNewHome;
 			};
