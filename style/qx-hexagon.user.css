@@ -3296,6 +3296,15 @@
 @-moz-document regexp("http[s]*:\/\/[beta.]*qruiser\.[a-z]{1,4}.*"), regexp("http[s]*:\/\/[www.]*qruiser\.[a-z]{1,4}.*") {
 /*** TEST AREA ***/
 @supports (display: grid) {
+	/** Aside visited member, club and poll links **/
+	.rightcolumn-discussion a:visited > h4,
+	.rightcolumn-poll-header h4 a:visited,
+	.rightcolumn-club-content h4 a:visited,
+	#column_left .insertmember .link a:visited,
+	#column_right .insertmember .link a:visited {
+		color: rgb(125, 114, 96);
+	}
+	/*-------------*/
 	.column-content > #error_texts + script + p:empty + .insertmember {
 		margin-top: var(--margin-xlr);
 	}
