@@ -2909,9 +2909,9 @@
 	[id^="qxh_category_"].qxh-template-clubs-discussions .list > .odd.qxh-grid-container,
 	[id^="qxh_category_"].qxh-template-clubs-discussions .list > .even.qxh-grid-container,/* QUESTION Obsolete? */
 	[id^="qxh_category_"].qxh-template-forum-discussions .list.qxh-flex-container > .qxh-flex-item,
-	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .column-content > div.list.qxh-flex-container.qxh-w100:nth-of-type(2) > .qxh-flex-item,
+	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .column-content > div.list.qxh-flex-container.qxh-w100:nth-of-type(2) > .qxh-flex-item/*,*/
 	/* FIXME Raden ovan ersätter denna rad!!!!! ( Kanske... )*/
-	:not([id^="qxh_thread_"]).qxh-template-forum-discussions .list.qxh-flex-container > .qxh-flex-item {
+	/*:not([id^="qxh_thread_"]).qxh-template-forum-discussions .list.qxh-flex-container > .qxh-flex-item*//* QUESTION Obsolete? */ {
 		display: grid;
 		grid-template-rows: [heading] min-content [date] min-content [member] min-content;
 		grid-template-columns: [title] 1fr [number] auto [status] auto;
