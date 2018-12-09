@@ -1352,7 +1352,7 @@ onReady(function() {
 			var hq_LinkMovies	= $('#qmenu_movies > a');
 			var hq_LinkBlogs	= $('#qmenu_texts > a');
 			var hq_LinkForum	= $('#qmenu_forum > a');
-			var hq_LinkChat		= $('#qmenu_chat > a');
+			var hq_LinkChat		= $('#qmenu_messages > a');
 			var hq_LinkInfo		= $('#qmenu_info > a');
 			var hq_LinkLogOut	= $('#qlogout');
 			var hq_LinkHome		= $('#column_left .leftcolumn-membericon > .insertmember > .link > a');

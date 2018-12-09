@@ -941,7 +941,7 @@
 	li#qmenu_forum {
 		grid-area: forums;
 	}
-	li#qmenu_chat {
+	li#qmenu_messages {
 		grid-area: chat;
 	}
 	li#qmenu_info {
