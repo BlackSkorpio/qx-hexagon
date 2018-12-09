@@ -1178,7 +1178,7 @@
 
 	/** Flex items **/
 	/* flex-basis: 25% */
-	.hexagon #header .blog-teasers > .teaser {
+	.hexagon #header .blog-teasers .teaser {
 		flex: 1 1 25%;
 	}
 	/*-------------*/
@@ -1877,14 +1877,20 @@
 		width: 98%;
 		z-index: auto;
 	}
-	.hexagon #header .blog-teasers {
+	.hexagon #header .blog-teasers,
+	.hexagon .blog-teasers-wrapper {
 		position: relative;
 		flex-flow: row;
 		max-width: none;
+	}
+	.hexagon #header .blog-teasers {
 		top: auto;
 		right: auto;
 		padding: 0;
 		margin: 0.3em 0.3em 0 auto;
+	}
+	.hexagon .blog-teasers-wrapper {
+		margin-left: auto;
 	}
 	.hexagon #header .blog-teasers .teaser-image {
 		border-radius: var(--brd-rad-top);
