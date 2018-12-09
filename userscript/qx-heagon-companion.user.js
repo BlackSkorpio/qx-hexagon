@@ -995,12 +995,15 @@ onReady(function() {
 				return ArchiveLinks;
 			};
 			var MoveNudges = function() {
-				var hq_RecentNudge = $('.container.container--recent > .container-inner > div:nth-child(2)');
-				var hq_NudgeHome = '.container.container--chat-list > .container-inner';
+				var hq_ClassNudge = hq_ClassPrefix+'nudges';
+				var hq_RecentNudge = $('.'+hq_ClassNudge);
+				var hq_DivNudges = $('.container.container--recent > .container-inner > div:nth-child(2)');
+				var hq_TargetNudge = '.container.container--chat-list > .container-inner';
 
 				var NudgeNewHome = $.Deferred();
 
-				hq_RecentNudge.appendTo( hq_NudgeHome );
+				hq_DivNudges.addClass( hq_ClassNudge );
+				hq_RecentNudge.appendTo( hq_TargetNudge );
 
 				return NudgeNewHome;
 			};
