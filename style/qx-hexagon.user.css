@@ -317,6 +317,7 @@
 		background: var(--gray) var(--ui-hex-bkrgd);
 	}
 	body {
+		position: relative !important; /* FIXME for the modal pushing the whole page to the far left */
 		min-width: auto;
 		background: var(--ui-radial-bkrgd);
 		font-size: 100%;
