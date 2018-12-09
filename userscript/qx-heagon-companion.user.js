@@ -22,29 +22,23 @@
 // ==/UserScript==
 **/
 // NOTE HexaGon Loading
-function onReady(callback) {
-	var hq_ClassPrefix		= 'qxh-';
-	var hq_ClassLoader		= hq_ClassPrefix+'loader';
-	var ReadyBody			= $(document.body);
-	var ReadyLoadingClass	= hq_ClassPrefix+'loading';
-	var ReadyLoader			= '<div id="qxh_loading"><div class="'+hq_ClassLoader+'"><div><div><div><div><div><div><div><div><div><div></div></div></div></div></div></div></div></div></div></div></div></div>';
+function hex_loader() {
+	var hex_DocBody = $(document.body);
+	var hex_Document = $(document);
+	var hex_TimeLoading = 3000;
+	var hex_ClassLoading = 'qxh-loading';
+	var hex_ClassLoaded = 'hexagon-loaded';
+	var hex_DivLoading = '<div id="qxh_loader_wrapper"><div id="qxh_loader"></div><div class="qxh-loader-section qxh-section-left"></div><div class="qxh-loader-section qxh-section-right"></div></div>';
 
-	var intervalId = window.setInterval(function() {
-		if (document.getElementsByTagName('body')[0] !== undefined) {
-			window.clearInterval(intervalId);
-			callback.call(this);
-		}
-	}, 1000);
-	ReadyBody.addClass(ReadyLoadingClass).prepend(ReadyLoader);
-}
-function setVisible(selector, visible) {
-	document.querySelector(selector).style.display = visible ? 'block' : 'none';
-}
-onReady(function() {
-	setVisible('.page-container, #satellite, body[onload="timer()"] div[style="margin: 10px"]', true),
-	setVisible('#qxh_loading', false),
-	$(document.body).removeClass('qxh-loading');
-});
+	hex_DocBody.addClass( hex_ClassLoading ).prepend( hex_DivLoading );
+
+	hex_Document.ready(function() {
+		setTimeout(function() {
+			hex_DocBody.removeClass( hex_ClassLoading ).addClass( hex_ClassLoaded );
+		}, hex_TimeLoading);
+	});
+};
+hex_loader();
 (function(window, document, $, undefined) {
 	// NOTE Be A Real Pain In The Ass!
 	"use strict";

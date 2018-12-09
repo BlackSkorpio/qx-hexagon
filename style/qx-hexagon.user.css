@@ -358,46 +358,98 @@
 	body.qxh-loading .page-container {
 		display: none;
 	}
-	body.qxh-loading #qxh_loading {
-		display: flex;
-		position: absolute;
+	#qxh_loader_wrapper {
+		position: fixed;
 		top: 0;
 		left: 0;
-		width: 100vw;
-		height: 100vh;
-		background-color: var(--gray);
-		background-image: var(--ui-hex-bkrgd);
-		background-repeat: repeat;
-		background-position: center;
-		overflow: hidden !important;
+		width: 100%;
+		height: 100%;
 		z-index: 101;
 	}
-	body.qxh-loading .qxh-loader {
-		display: flex;
+	#qxh_loader {
+		display: block;
 		position: relative;
+		left: 50%;
+		top: 50%;
 		width: 150px;
 		height: 150px;
-		margin: auto;
-		overflow: hidden;
+		margin: -75px 0 0 -75px;
+		border-radius: 50%;
+		border: 3px solid transparent;
+		border-top-color: #3498db;
+		-webkit-animation: qxh_loader 2s linear infinite;
+		        animation: qxh_loader 2s linear infinite;
 		z-index: 102;
 	}
-	body.qxh-loading .qxh-loader div {
+	#qxh_loader:before {
+		content: "";
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		right: 5px;
+		bottom: 5px;
+		border-radius: 50%;
+		border: 3px solid transparent;
+		border-top-color: #e74c3c;
+		-webkit-animation: qxh_loader 3s linear infinite;
+		        animation: qxh_loader 3s linear infinite;
+	}
+	#qxh_loader:after {
+		content: "";
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		right: 15px;
+		bottom: 15px;
+		border-radius: 50%;
+		border: 3px solid transparent;
+		border-top-color: #f9c922;
+		-webkit-animation: qxh_loader 1.5s linear infinite;
+		        animation: qxh_loader 1.5s linear infinite;
+	}
+	#qxh_loader_wrapper .qxh-loader-section {
+		position: fixed;
+		top: 0;
+		width: 51%;
 		height: 100%;
+		background: #222222;
+		background: var(--gray) var(--ui-hex-bkrgd);
+		z-index: 103;
+		-webkit-transform: translateX(0);
+		        transform: translateX(0);
 	}
-	body.qxh-loading .qxh-loader,
-	body.qxh-loading .qxh-loader div {
-		border-radius: 50%;
-		padding: 8px;
-		border: 2px solid transparent;
-		-webkit-animation: qxh_loader linear 3.5s infinite;
-		        animation: qxh_loader linear 3.5s infinite;
-		border-radius: 50%;
-		padding: 4px;
-		-webkit-animation: qxh_loader2 4s infinite linear;
-		        animation: qxh_loader2 4s infinite linear;
+	#qxh_loader_wrapper .qxh-loader-section.qxh-section-left {
+		left: 0;
 	}
-	body.qxh-loading .qxh-loader, body.qxh-loading .qxh-loader * {
-		will-change: transform;
+	#qxh_loader_wrapper .qxh-loader-section.qxh-section-right {
+		right: 0;
+	}
+	/* Loaded */
+	.hexagon-loaded #qxh_loader_wrapper .qxh-loader-section.qxh-section-left {
+		-webkit-transform: translateX(-100%);
+		        transform: translateX(-100%);
+		-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	}
+	.hexagon-loaded #qxh_loader_wrapper .qxh-loader-section.qxh-section-right {
+		-webkit-transform: translateX(100%);
+		        transform: translateX(100%);
+		-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	}
+	.hexagon-loaded #qxh_loader {
+		opacity: 0;
+		-webkit-animation-play-state: paused;
+		        animation-play-state: paused;
+		-webkit-transition: all 0.3s ease-out;
+		        transition: all 0.3s ease-out;
+	}
+	.hexagon-loaded #qxh_loader_wrapper {
+		visibility: hidden;
+		-webkit-transform: translateY(-100%);
+		        transform: translateY(-100%);
+		-webkit-transition: all 0.3s 1s ease-out;
+		        transition: all 0.3s 1s ease-out;
 	}
 	svg.qxh-icon.qxh-sprite {
 		width: 0;
@@ -3098,6 +3150,25 @@
 }
 /*** Let's animate things ***/
 @-webkit-keyframes qxh_loader {
+	0%   {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
+@keyframes qxh_loader {
+	0%   {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
 	0% {
 		-webkit-transform: rotate(0deg);
 		        transform: rotate(0deg);
