@@ -1047,7 +1047,108 @@ onReady(function() {
 			hq_AdminUser.parents( '.'+hq_ClassFlexItem ).addClass( hq_ClassAlert );
 		};
 		// TEMP Dirty HACK to be able to keep functionality on member profiles!
-		if( hq_MemberProfileLink > -1 || ( hq_IndexLink > -1 && typeof hq_MemberProfile !== 'undefined' || hq_MemberProfile !== null ) ) {
+		function memberProfile() {
+			if ( hq_MemberProfile.is(':visible') ) {
+				//console.info('we have a profile');
+				var hq_GetNickName		= $('.column-content h2:first-of-type > a');
+				var hq_BuyGoldToFlower	= $('.hideself_ > a:first-of-type[href^="javascript:buygold"]');
+				var hq_BuyGoldToName	= $('.hideself_ > a:last-of-type[href^="javascript:buygold"] > b');
+				var hq_BuyGoldCleanUp	= $('.hideself_ > a:last-of-type[href^="javascript:buygold"]');
+				var hq_ProfileFacePic	= $('img[src^="/thumbcorners.php"][style*="/memberthumbnails/"]');
+				var hq_ProfileHeroImg	= $('.homepage > div[style="padding-top: 10px"]');
+				var hq_MemberPosition	= $('.homepageblock #map_canvas');
+				var hq_HomeMembers		= $('.homepageblock > .gallery.gallery-scroll');// FIXME Adds it self to the favorites widget
+				var hq_VisitorActions	= $('.homepage > .dontshowself > .homepageblock');
+				var hq_VisitorActionsMain = $('.homepage > .dontshowself > .homepageblock > div[style="margin: 5px 0px 5px 0px"]');
+				var hq_VisitorSendMsgIcon = '.dontshowself > div > br[clear="all"] + div > .homebuttons:first-child';
+				var hq_VisitorSendMsgText = hq_VisitorSendMsgIcon + '+ span';
+				var hq_FavList			= '#favouritelist';
+				var hq_UnFavList		= '#unfavouritelist';
+				var hq_IgnList			= '#ignorelist';
+				var hq_UnIgnList		= '#unignorelist';
+				var hq_FlirtList		= '#flirtlist';
+				var hq_HomeLink			= '.homelink';
+				var hq_ClassMemberFace	= hq_ClassPrefix+'member-faceimage';
+				var hq_ClassMemHeroImg	= hq_ClassPrefix+'member-heroimage';
+				var hq_ClassMemPosition	= hq_ClassPrefix+'member-position';
+				var hq_ClassMembers		= hq_ClassPrefix+'members';
+				var hq_ClassVisitors	= hq_ClassPrefix+'member-visitors';
+				var hq_ClassOther		= hq_ClassPrefix+'other-members';
+				var hq_ClassActions		= hq_ClassPrefix+'actions';
+				var hq_ClassAction		= 'action';
+				var hq_ClassActFavorite	= hq_ClassPrefix+hq_ClassAction+'--favorite';
+				var hq_ClassActIgnore	= hq_ClassPrefix+hq_ClassAction+'--ignore';
+				var hq_ClassActFlirt	= hq_ClassPrefix+hq_ClassAction+'--flirt';
+				var hq_ClassActSendMsg	= hq_ClassPrefix+hq_ClassAction+'--sendmsg';
+				var hq_SpanActionFav	= hq_FragmentSpan+hq_ClassAction+' '+hq_ClassActFavorite+hq_FragmentSuffix;
+				var hq_SpanActionIgn	= hq_FragmentSpan+hq_ClassAction+' '+hq_ClassActIgnore+hq_FragmentSuffix;
+				var hq_SpanActionFlirt	= hq_FragmentSpan+hq_ClassAction+' '+hq_ClassActFlirt+hq_FragmentSuffix;
+				var hq_DivVisitorSendMsg = hq_FragmentDiv+hq_ClassAction+' '+hq_ClassActSendMsg+hq_FragmentSuffix;
+				var hq_ActionFavorite	= $(hq_FavList + ',' + hq_FavList + '+' + hq_HomeLink + ',' + hq_UnFavList + ',' + hq_UnFavList + '+' + hq_HomeLink);
+				var hq_ActionIgnore		= $(hq_IgnList + ',' + hq_IgnList + '+' + hq_HomeLink + ',' + hq_UnIgnList + ',' + hq_UnIgnList + '+' + hq_HomeLink);
+				var hq_ActionFlirt		= $(hq_FlirtList + ',' + hq_FlirtList + '+' + hq_HomeLink);
+				var hq_ActionSendMsg	= $(hq_VisitorSendMsgIcon + ',' + hq_VisitorSendMsgText);
+
+				//console.info("Qruiser: We have a renegade template"),
+				if ( typeof hq_GetNickName !== 'undefined' || hq_GetNickName !== null ) {
+					// Replace() any _ with space: https://stackoverflow.com/a/34671415/6820262
+					var hq_NickName = hq_GetNickName.text().replace(/_/g, " ");
+					document.title = 'Qruiser - ' + hq_NickName + ' - The Nordic Gay & Queer Online Community';
+				};
+				function setProfileClasses() {
+					if ( hq_MemberProfileLink > -1 ) {hq_DocBody.attr("id", hq_IdMemberBody);};
+					hq_DocBody.addClass( hq_ClassMemberBody ),
+					hq_MemberPres.addClass( hq_ClassMemIntro ),
+					hq_ProfileFacePic.addClass( hq_ClassMemberFace ).css('margin-right',''),
+					hq_ProfileHeroImg.addClass( 'homepageblock '+hq_ClassMemHeroImg ).removeAttr('style'),
+					hq_HomePageStats.addClass( hq_ClassHpStats ),
+					hq_HomePagePresentation.addClass( 'homepageblock '+hq_ClassHpPresentation ),
+					// Baptise the Visitor Actions Div
+					hq_VisitorActions.addClass( hq_ClassActions ),
+					hq_HomePageLookingFor.addClass( hq_ClassHpLookingFor ),
+					hq_MemberPosition.parent().addClass( hq_ClassMemPosition ),
+					hq_HomePageFlex.not( ( hq_NoHomePageList ) ).addClass( hq_ClassFlexContainer ),
+					hq_MakeFlexItem.addClass( hq_ClassFlexItem ).removeClass('odd even');
+				};
+				function tidyUpProfile() {
+					hq_starSign.wrap( hq_SpanStarSign ),
+					// Fav Actions
+					hq_ActionFavorite.wrapAll( hq_SpanActionFav ),
+					// Ignore Actions
+					hq_ActionIgnore.wrapAll( hq_SpanActionIgn ),
+					// Flirt Actions
+					hq_ActionFlirt.wrapAll( hq_SpanActionFlirt ),
+					// NOTE Merge the two buy gold links to one
+					hq_BuyGoldToName.appendTo( hq_BuyGoldToFlower ), hq_BuyGoldCleanUp.remove(),
+					// Send Msg Actions
+					hq_ActionSendMsg.wrapAll( hq_DivVisitorSendMsg );
+				};
+				function visitorSection() {
+					hq_HomeMembers.parent().addClass( hq_ClassMembers ),// FIXME Adds it self to the favorites widget
+					$('.'+hq_ClassMembers+':first').addClass( hq_ClassVisitors );// FIXME Adds it self to the favorites widget
+					// If .onlyshowself is visible we are on our profile
+					if ( $('.onlyshowself').is(":visible") ) {
+						$('.homepage > div > .homepageblock > .line > .header').replaceWith(function() {
+							return '<span class="header"><a href="/yourdiscussions.php">' + this.innerHTML + '</a></span>';
+						});
+						$('.'+hq_ClassMembers+':first > .line > .header').replaceWith(function() {
+							return '<span class="header"><a href="/visitors.php">' + this.innerHTML + '</a></span>';
+						});
+						//console.log('We are on our own profile');
+					};
+					$('.'+hq_ClassMembers+':last').addClass( hq_ClassOther );
+				}
+				setProfileClasses(),
+				tidyUpProfile(),
+				visitorSection();
+			}
+		};
+		// NOTE Wait on the QX core to execute
+		setTimeout(function() {
+			memberProfile();
+		}, 800);
+		//if( hq_MemberProfileLink > -1 || ( hq_IndexLink > -1 && typeof hq_MemberProfile !== 'undefined' || hq_MemberProfile !== null ) ) {
+		/*if ( ( hq_MemberProfileLink > -1 ) || hq_MemberProfile.is(':visible') ) {
 			var hq_GetNickName		= $('.column-content h2:first-of-type > a');
 			var hq_BuyGoldToFlower	= $('.hideself_ > a:first-of-type[href^="javascript:buygold"]');
 			var hq_BuyGoldToName	= $('.hideself_ > a:last-of-type[href^="javascript:buygold"] > b');
@@ -1137,7 +1238,7 @@ onReady(function() {
 			//$(".homepage > div.homepageblock").replaceWith(function() {
 			//	return "<section class='homepageblock'>" + this.innerHTML + "</section>";
 			//});
-		}
+		}*/
 		if ( hq_diggedMovies > -1 ) {
 			hq_searchXxxNodes.contents().filter(function() {
 				return this.nodeType == 3 && $.trim(this.nodeValue).length;
