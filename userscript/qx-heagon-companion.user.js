@@ -994,6 +994,16 @@ onReady(function() {
 
 				return ArchiveLinks;
 			};
+			var MoveNudges = function() {
+				var hq_RecentNudge = $('.container.container--recent > .container-inner > div:nth-child(2)');
+				var hq_NudgeHome = '.container.container--chat-list > .container-inner';
+
+				var NudgeNewHome = $.Deferred();
+
+				hq_RecentNudge.appendTo( hq_NudgeHome );
+
+				return NudgeNewHome;
+			};
 			var CleanUpArchive = function() {
 				var hq_MailBoxArchive = $('.container.container--mailbox');
 
@@ -1004,11 +1014,12 @@ onReady(function() {
 				return CleanUp;
 			};
 			CreateMsgArchive().done( GetArchiveLinks() ),
-			GetArchiveLinks().done( CleanUpArchive() );
+			GetArchiveLinks().done( MoveNudges() ),
+			MoveNudges().done( CleanUpArchive() );
+			// NOTE Move the Favorites widget above the Mail/Message Widget
+			hq_FavoritesDiv.insertBefore( hq_MailBox );
 		};
-		MsgArchive();
-		// NOTE Move the Favorites widget above the Mail/Message Widget
-		hq_FavoritesDiv.insertBefore( hq_MailBox );
+		AsideLeft();
 
 		if ( hq_DocBody.hasClass('guest-access') ) {
 			var hq_LogInContainer	= $('.container.login');
