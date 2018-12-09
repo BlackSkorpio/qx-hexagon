@@ -3377,6 +3377,39 @@
 		color: rgb(125, 114, 96);
 	}
 	/*-------------*/
+	/** Messages List **/
+	.qxh-source-messages .chat-messages.qxh-flex-container {
+		flex-flow: column;
+	}
+	/* Truncation from: http://hackingui.com/front-end/
+	   a-pure-css-solution-for-multiline-text-truncation/ */
+	.chat-message.qxh-flex-item {
+		overflow: hidden;
+		position: relative;
+		text-align: justify;
+	}
+	.chat-message-content,
+	.chat-message.qxh-flex-item {
+		max-height: 100px;
+	}
+	.chat-message.qxh-flex-item:before,
+	.chat-message.qxh-flex-item:after {
+		position: absolute;
+		right: 0;
+	}
+	.chat-message.qxh-flex-item:before {
+		content: "...";
+		content: "\2026";
+		font-weight: 700;
+		bottom: 0;
+	}
+	.chat-message.qxh-flex-item:after {
+		width: 1em;
+		height: 1em;
+		content: "";
+		background-color: inherit;
+	}
+	/*-------------*/
 	.column-content > #error_texts + script + p:empty + .insertmember {
 		margin-top: var(--margin-xlr);
 	}
