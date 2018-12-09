@@ -195,7 +195,7 @@
 	[class*="sticky"] + [class*="hidden"] > svg.qxh-icon-noclubicon,
 	[class^="clubxxx"][class$="hidden"] > div[style*="height: 110px;"]:first-child,
 	[class$="hidden"] > img.xxx1, [class$="hidden"] > img.xxx3, [class$="hidden"] > img.xxx4,
-	div:not(#error_texts):empty:not(.divider):not(.orangeline):not(.poll-fill):not(.filldot):not(.jwpreview):not(.jwicon):not(.teaser-image):not(.memberlargeicon):not(#thumb):not(#colorpicker):not(#documentspecs):not([data-qruiser-chat]):not(.bounce):not(.modal-header) {
+	div:not(#error_texts):empty:not(.divider):not(.orangeline):not(.poll-fill):not(.filldot):not(.jwpreview):not(.jwicon):not(.teaser-image):not(.memberlargeicon):not(#thumb):not(#colorpicker):not(#documentspecs):not([data-qruiser-chat]):not(.bounce):not(.modal-header):not(#qxh_loader):not(.qxh-loader-section) {
 		display: none !important;
 	}
 	.qxh-hidden {
